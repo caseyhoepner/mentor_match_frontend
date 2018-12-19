@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AdminDashboard.css';
 
-class AdminDashboard extends Component {
+export class AdminDashboard extends Component {
   constructor() {
     super()
   }

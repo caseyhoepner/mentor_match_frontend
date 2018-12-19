@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AdminMentorCard.css';
 
-class AdminMentorCard extends Component {
+export class AdminMentorCard extends Component {
   constructor() {
     super()
   }
