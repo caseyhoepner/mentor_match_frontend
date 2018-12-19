@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './MentorContainer.css';
+import hollowHeart from '../../utils/assets/heart.svg';
+import solidHeart from '../../utils/assets/solid-heart.svg';
 
 class MentorContainer extends Component {
   constructor() {
@@ -7,7 +9,8 @@ class MentorContainer extends Component {
 
     this.state = {
       localeSelected: '',
-      search: ''
+      search: '',
+      favClicked: false
     }
   }
 
@@ -17,7 +20,16 @@ class MentorContainer extends Component {
     this.setState({ [name]: value })
   }
 
+  toggleFavorite = (event) => {
+    let { favClicked } = this.state
+
+    this.setState({ favClicked: !favClicked })
+    
+  }
+
   render() {
+    let { favClicked, localeSelected, search } = this.state
+
     return (
       <div>
         <header className='mc-header'>
@@ -35,29 +47,41 @@ class MentorContainer extends Component {
           </div>
         </header>
         <div className='mc-search-container'>
-          <div className='mc-search-bar'>
-            <input 
-              name='search' 
-              type='text' 
-              value={this.state.search} 
-              onChange={this.handleChange} 
-              placeholder='Search here...'
-              className='mc-search-input'
-            />
-            <div className='mc-search-icon'>
+          <div className='mc-search-inputs-container'>
+            <div className='mc-search-bar'>
+              <input 
+                name='search' 
+                type='text' 
+                value={search} 
+                onChange={this.handleChange} 
+                placeholder='Search here...'
+                className='mc-search-input'
+              />
+              <div className='mc-search-icon'>
+              </div>
             </div>
+            <select
+              value={localeSelected}
+              onChange={this.handleChange}
+              name='localeSelected'
+              className='mc-location-dropdown'
+            >
+              <option value=''>--Select locale--</option>
+              <option value='Denver'>Denver</option>
+              <option value='Remote'>Remote</option>
+              <option></option>
+            </select>
+            </div>
+          <div className='mc-filter-btn-container'>
+            <button className='mc-filter-btn'>Filter by Preferences</button>
+            <button className='mc-filter-btn'>All Mentors</button>
+            <img
+              src={!favClicked ? hollowHeart : solidHeart}
+              alt='favorite button'
+              className={!favClicked ? 'mc-favorite-btn' : 'mc-favorite-btn selected'}
+              onClick={this.toggleFavorite}
+            />
           </div>
-          <select
-            value={this.state.localeSelected}
-            onChange={this.handleChange}
-            name='localeSelected'
-            className='mc-location-dropdown'
-          >
-            <option value=''>--Select locale--</option>
-            <option value='Denver'>Denver</option>
-            <option value='Remote'>Remote</option>
-            <option></option>
-          </select> 
         </div>
       </div>
       )
