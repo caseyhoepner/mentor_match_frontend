@@ -6,14 +6,15 @@ class MentorContainer extends Component {
     super();
 
     this.state = {
-      localeSelected: ''
+      localeSelected: '',
+      search: ''
     }
   }
 
   handleChange = (event) => {
-    let { value } = event.target
+    let { value, name } = event.target
 
-    this.setState({ localeSelected: value })
+    this.setState({ [name]: value })
   }
 
   render() {
@@ -34,10 +35,23 @@ class MentorContainer extends Component {
           </div>
         </header>
         <div className='mc-search-container'>
-          <input />
+          <div className='mc-search-bar'>
+            <input 
+              name='search' 
+              type='text' 
+              value={this.state.search} 
+              onChange={this.handleChange} 
+              placeholder='Search here...'
+              className='mc-search-input'
+            />
+            <div className='mc-search-icon'>
+            </div>
+          </div>
           <select
             value={this.state.localeSelected}
             onChange={this.handleChange}
+            name='localeSelected'
+            className='mc-location-dropdown'
           >
             <option value=''>--Select locale--</option>
             <option value='Denver'>Denver</option>

@@ -5,6 +5,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   margin: 0;
 }
