@@ -1,3 +1,51 @@
 .mc-header {
-    background-color: grey;
+  background-color: grey;
+}
+
+.mc-nav-btns {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.mc-github-btn {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-weight: 300;
+}
+
+.mc-gh-tagline {
+  letter-spacing: 1px;
+}
+
+.mc-github-logo {
+  height: 40px;
+  margin-left: 20px;
+  width: 40px;
+}
+
+.mc-turing-logo {
+  height: 100px;
+}
+
+.mc-title {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.75rem;
+  font-weight: 300;
+  padding: 100px 0;
+}
+
+.mc-line-break {
+  background-color: #03c1d1; 
+  height: 1px;
+  width: 300px;
+}
+
+.mc-tagline {
+  letter-spacing: 1px;
 }
