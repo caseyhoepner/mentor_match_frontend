@@ -3,7 +3,17 @@ import './MentorContainer.css';
 
 class MentorContainer extends Component {
   constructor() {
-    super()
+    super();
+
+    this.state = {
+      localeSelected: ''
+    }
+  }
+
+  handleChange = (event) => {
+    let { value } = event.target
+
+    this.setState({ localeSelected: value })
   }
 
   render() {
@@ -23,6 +33,18 @@ class MentorContainer extends Component {
             <p className='mc-tagline'>Browse current mentors to find your match!</p>
           </div>
         </header>
+        <div className='mc-search-container'>
+          <input />
+          <select
+            value={this.state.localeSelected}
+            onChange={this.handleChange}
+          >
+            <option value=''>--Select locale--</option>
+            <option value='Denver'>Denver</option>
+            <option value='Remote'>Remote</option>
+            <option></option>
+          </select> 
+        </div>
       </div>
       )
   }
