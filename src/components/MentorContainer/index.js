@@ -8,7 +8,11 @@ class MentorContainer extends Component {
 
   render() {
     return (
-      <h1>MentorContainer</h1>
+      <div>
+        <header className='mc-header'>
+          <img src={require('../../utils/assets/turing-logo.png')} alt='Turing Logo' />
+        </header>
+      </div>
       )
   }
 }
