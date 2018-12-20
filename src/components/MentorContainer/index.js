@@ -10,7 +10,9 @@ class MentorContainer extends Component {
     this.state = {
       localeSelected: '',
       search: '',
-      favClicked: false
+      favClicked: false,
+      allMentorsClicked: false,
+      preferencesClicked: false
     }
   }
 
@@ -20,15 +22,15 @@ class MentorContainer extends Component {
     this.setState({ [name]: value })
   }
 
-  toggleFavorite = (event) => {
-    let { favClicked } = this.state
+  toggleClicked = (event) => {
+    let { name } = event.target
 
-    this.setState({ favClicked: !favClicked })
+    this.setState({ [name]: !this.state[name] })
     
   }
 
   render() {
-    let { favClicked, localeSelected, search } = this.state
+    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked  } = this.state
 
     return (
       <div>
@@ -73,13 +75,26 @@ class MentorContainer extends Component {
             </select>
             </div>
           <div className='mc-filter-btn-container'>
-            <button className='mc-filter-btn'>Filter by Preferences</button>
-            <button className='mc-filter-btn'>All Mentors</button>
+            <button 
+              className={!preferencesClicked ? 'mc-filter-btn' : 'mc-filter-btn active'}
+              onClick={this.toggleClicked}
+              name='preferencesClicked'
+            >
+              Filter by Preferences
+            </button>
+            <button 
+              className={!allMentorsClicked ? 'mc-filter-btn' : 'mc-filter-btn active'}
+              onClick={this.toggleClicked}
+              name='allMentorsClicked'
+            >
+              All Mentors
+            </button>
             <img
               src={!favClicked ? hollowHeart : solidHeart}
               alt='favorite button'
               className={!favClicked ? 'mc-favorite-btn' : 'mc-favorite-btn selected'}
-              onClick={this.toggleFavorite}
+              onClick={this.toggleClicked}
+              name='favClicked'
             />
           </div>
         </div>

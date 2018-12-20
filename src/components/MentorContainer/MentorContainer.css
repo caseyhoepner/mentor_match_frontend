@@ -95,9 +95,12 @@
 }
 
 .mc-location-dropdown {
-    height: 60px;
-    font-size: 1.2rem;
-    width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  height: 60px;
+  font-size: 1.2rem;
+  width: 200px;
 }
 
 .mc-filter-btn-container {
@@ -124,6 +127,11 @@
   height: 44px;
   margin-left: 10px;
   padding: 8px;
+}
+
+.active {
+  background-color: #fff;
+  color: #7c8c8e;
 }
 
 .selected {
