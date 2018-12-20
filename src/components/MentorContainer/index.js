@@ -56,9 +56,27 @@ class MentorContainer extends Component {
 
     this.setState({ lgbtqiaSwitched: !lgbtqiaSwitched })
   }
+  toggleMale = (event) => {
+    let { maleSwitched } = this.state;
+
+    this.setState({ maleSwitched: !maleSwitched })
+  }
+
+  toggleFemale = (event) => {
+    let { femaleSwitched } = this.state;
+
+    this.setState({ femaleSwitched: !femaleSwitched })
+  }
+
+  toggleNonBinary = (event) => {
+    let { nonBinarySwitched } = this.state;
+
+    this.setState({ nonBinarySwitched: !nonBinarySwitched })
+  }
+
 
   render() {
-    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked, switched, veteranSwitched, parentSwitched, lgbtqiaSwitched, showPreferences } = this.state
+    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked, switched, veteranSwitched, parentSwitched, lgbtqiaSwitched, showPreferences, maleSwitched, femaleSwitched, nonBinarySwitched } = this.state
 
     return (
       <div>
@@ -149,6 +167,30 @@ class MentorContainer extends Component {
                 onClick={this.toggleLGBTQIA} 
                 on={lgbtqiaSwitched} 
                 name='lgbtqiaSwitched'
+              />
+          </div>          
+          <div className='mc-toggle-option'>
+            <p>Male-Identifying</p>
+              <Switch 
+                onClick={this.toggleMale} 
+                on={maleSwitched} 
+                name='maleSwitched'
+              />
+          </div>          
+          <div className='mc-toggle-option'>
+            <p>Female-Identifying</p>
+              <Switch 
+                onClick={this.toggleFemale} 
+                on={femaleSwitched} 
+                name='femaleSwitched'
+              />
+          </div>          
+          <div className='mc-toggle-option'>
+            <p>Non-Binary</p>
+              <Switch 
+                onClick={this.toggleNonBinary} 
+                on={nonBinarySwitched} 
+                name='nonBinarySwitched'
               />
           </div>
         </div>
