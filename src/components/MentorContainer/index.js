@@ -17,6 +17,7 @@ class MentorContainer extends Component {
       veteranSwitched: false,
       parentSwitched: false,
       lgbtqiaSwitched: false,
+      showPreferences: false
     }
   }
 
@@ -28,6 +29,12 @@ class MentorContainer extends Component {
 
   toggleClicked = (event) => {
     let { name } = event.target;
+
+    if (name === 'preferencesClicked') {
+      this.setState({
+        showPreferences: !this.state.showPreferences
+      }) 
+    }
 
     this.setState({ [name]: !this.state[name] })
   }
@@ -51,7 +58,7 @@ class MentorContainer extends Component {
   }
 
   render() {
-    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked, switched, veteranSwitched, parentSwitched, lgbtqiaSwitched } = this.state
+    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked, switched, veteranSwitched, parentSwitched, lgbtqiaSwitched, showPreferences } = this.state
 
     return (
       <div>
@@ -97,7 +104,7 @@ class MentorContainer extends Component {
             </div>
           <div className='mc-filter-btn-container'>
             <button 
-              className={!preferencesClicked ? 'mc-filter-btn' : 'mc-filter-btn active'}
+              className={preferencesClicked ? 'mc-filter-btn' : 'mc-filter-btn active'}
               onClick={this.toggleClicked}
               name='preferencesClicked'
             >
@@ -119,25 +126,31 @@ class MentorContainer extends Component {
             />
           </div>
         </div>
-        <div className='mc-preferences-container hide'>
-          <p>Veteran</p>
-            <Switch 
-            onClick={this.toggleVeteran} 
-            on={veteranSwitched}
-            name='veteranSwitched'
-            />
-          <p>Parent</p>
-            <Switch 
-            onClick={this.toggleParent} 
-            on={parentSwitched}
-            name='parentSwitched'
-           />
-          <p>LGBTQIA+</p>
-            <Switch 
-            onClick={this.toggleLGBTQIA} 
-            on={lgbtqiaSwitched} 
-            name='lgbtqiaSwitched'
-            />
+        <div className={!showPreferences ? 'mc-preferences-container' : 'hide'}>
+          <div className='mc-toggle-option'>
+            <p>Veteran</p>
+              <Switch 
+                onClick={this.toggleVeteran} 
+                on={veteranSwitched}
+                name='veteranSwitched'
+              />
+          </div>
+          <div className='mc-toggle-option'>
+            <p>Parent</p>
+              <Switch 
+                onClick={this.toggleParent} 
+                on={parentSwitched}
+                name='parentSwitched'
+              />
+          </div>
+          <div className='mc-toggle-option'>
+            <p>LGBTQIA+</p>
+              <Switch 
+                onClick={this.toggleLGBTQIA} 
+                on={lgbtqiaSwitched} 
+                name='lgbtqiaSwitched'
+              />
+          </div>
         </div>
       </div>
       )
