@@ -89,7 +89,7 @@ class MentorContainer extends Component {
             </div>
           </div>
           <div className='mc-title'>
-            <h1>Mentor Profiles</h1>
+            <h1 className='mc-title-text'>Mentor Profiles</h1>
             <div className='mc-line-break'></div>
             <p className='mc-tagline'>Browse current mentors to find your match!</p>
           </div>
