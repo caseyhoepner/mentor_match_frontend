@@ -102,6 +102,10 @@
 .mc-location-dropdown {
   -webkit-appearance: none;
   appearance: none;
+  background-image: url('../../utils/assets/down-arrow.svg');
+  background-position: right 8% bottom 45%;;
+  background-repeat: no-repeat;
+  background-size: 8%;
   border: none;
   height: 45px;
   font-size: 1.2rem;
