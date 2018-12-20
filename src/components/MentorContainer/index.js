@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './MentorContainer.css';
 import hollowHeart from '../../utils/assets/heart.svg';
 import solidHeart from '../../utils/assets/solid-heart.svg';
+import Switch from 'react-toggle-switch';
 
 class MentorContainer extends Component {
   constructor() {
@@ -12,25 +13,45 @@ class MentorContainer extends Component {
       search: '',
       favClicked: false,
       allMentorsClicked: false,
-      preferencesClicked: false
+      preferencesClicked: false,
+      veteranSwitched: false,
+      parentSwitched: false,
+      lgbtqiaSwitched: false,
     }
   }
 
   handleChange = (event) => {
-    let { value, name } = event.target
+    let { value, name } = event.target;
 
     this.setState({ [name]: value })
   }
 
   toggleClicked = (event) => {
-    let { name } = event.target
+    let { name } = event.target;
 
     this.setState({ [name]: !this.state[name] })
-    
+  }
+
+  toggleVeteran = (event) => {
+    let { veteranSwitched } = this.state;
+
+    this.setState({ veteranSwitched: !veteranSwitched })
+  }
+
+  toggleParent = (event) => {
+    let { parentSwitched } = this.state;
+
+    this.setState({ parentSwitched: !parentSwitched })
+  }
+
+  toggleLGBTQIA = (event) => {
+    let { lgbtqiaSwitched } = this.state;
+
+    this.setState({ lgbtqiaSwitched: !lgbtqiaSwitched })
   }
 
   render() {
-    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked  } = this.state
+    let { favClicked, localeSelected, search, allMentorsClicked, preferencesClicked, switched, veteranSwitched, parentSwitched, lgbtqiaSwitched } = this.state
 
     return (
       <div>
@@ -97,6 +118,26 @@ class MentorContainer extends Component {
               name='favClicked'
             />
           </div>
+        </div>
+        <div className='mc-preferences-container hide'>
+          <p>Veteran</p>
+            <Switch 
+            onClick={this.toggleVeteran} 
+            on={veteranSwitched}
+            name='veteranSwitched'
+            />
+          <p>Parent</p>
+            <Switch 
+            onClick={this.toggleParent} 
+            on={parentSwitched}
+            name='parentSwitched'
+           />
+          <p>LGBTQIA+</p>
+            <Switch 
+            onClick={this.toggleLGBTQIA} 
+            on={lgbtqiaSwitched} 
+            name='lgbtqiaSwitched'
+            />
         </div>
       </div>
       )
