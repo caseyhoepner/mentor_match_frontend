@@ -10,51 +10,36 @@ export class Preferences extends Component {
     this.state = {
       veteranSwitched: false,
       parentSwitched: false,
-      lgbtqiaSwitched: false,
-      maleSwitched: false,
-      femaleSwitched: false,
-      nonBinarySwitched: false,
-      showPreferences: false
+      frontEndSwitched: false,
+      backEndSwitched: false,
     }
   }
 
   toggleVeteran = () => {
-    let { veteranSwitched } = this.state;
+    const { veteranSwitched } = this.state;
 
     this.setState({ veteranSwitched: !veteranSwitched })
   }
 
   toggleParent = () => {
-    let { parentSwitched } = this.state;
+    const { parentSwitched } = this.state;
 
     this.setState({ parentSwitched: !parentSwitched })
   }
 
-  toggleLGBTQIA = () => {
-    let { lgbtqiaSwitched } = this.state;
+  toggleFE = () => {
+    const { frontEndSwitched } = this.state;
 
-    this.setState({ lgbtqiaSwitched: !lgbtqiaSwitched })
+    this.setState({ frontEndSwitched: !frontEndSwitched })
   }
-  toggleMale = () => {
-    let { maleSwitched } = this.state;
+  toggleBE = () => {
+    const { backEndSwitched } = this.state;
 
-    this.setState({ maleSwitched: !maleSwitched })
-  }
-
-  toggleFemale = () => {
-    let { femaleSwitched } = this.state;
-
-    this.setState({ femaleSwitched: !femaleSwitched })
-  }
-
-  toggleNonBinary = () => {
-    let { nonBinarySwitched } = this.state;
-
-    this.setState({ nonBinarySwitched: !nonBinarySwitched })
+    this.setState({ backEndSwitched: !backEndSwitched })
   }
 
   render() {
-    const { showPreferences, veteranSwitched, parentSwitched, lgbtqiaSwitched, maleSwitched, femaleSwitched, nonBinarySwitched } = this.state;
+    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched } = this.state;
 
     return (
       <div className={this.props.preferencesClicked ? 'p-preferences-container' : 'hide'}>
@@ -75,37 +60,21 @@ export class Preferences extends Component {
             />
         </div>
         <div className='p-toggle-option'>
-          <p>LGBTQIA+</p>
+          <p>Front-End</p>
             <Switch 
-              onClick={this.toggleLGBTQIA} 
-              on={lgbtqiaSwitched} 
-              name='lgbtqiaSwitched'
+              onClick={this.toggleFE} 
+              on={frontEndSwitched} 
+              name='frontEndSwitched'
             />
         </div>          
         <div className='p-toggle-option'>
-          <p>Male-Identifying</p>
+          <p>Back-End</p>
             <Switch 
-              onClick={this.toggleMale} 
-              on={maleSwitched} 
-              name='maleSwitched'
+              onClick={this.toggleBE} 
+              on={backEndSwitched} 
+              name='backEndSwitched'
             />
         </div>          
-        <div className='p-toggle-option'>
-          <p>Female-Identifying</p>
-            <Switch 
-              onClick={this.toggleFemale} 
-              on={femaleSwitched} 
-              name='femaleSwitched'
-            />
-        </div>          
-        <div className='p-toggle-option'>
-          <p>Non-Binary</p>
-            <Switch 
-              onClick={this.toggleNonBinary} 
-              on={nonBinarySwitched} 
-              name='nonBinarySwitched'
-            />
-        </div>
       </div>
     )
   }

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import './Search.css';
 import Preferences from '../../containers/Preferences';
 import hollowHeart from '../../utils/assets/heart.svg';
 import solidHeart from '../../utils/assets/solid-heart.svg';
+import { connect } from 'react-redux';
+import { setLocale, setSearch } from '../../actions/search-actions';
+import './Search.css';
 
 export class Search extends Component {
   constructor() {
@@ -18,19 +20,26 @@ export class Search extends Component {
   }
 
   handleChange = (event) => {
-    let { value, name } = event.target;
-
+    const { value, name } = event.target;
+    const { setLocale, setSearch } = this.props; 
+    
     this.setState({ [name]: value })
+
+    if(name === 'localeSelected') {
+      setLocale(value)
+    } else if (name === 'search') {
+      setSearch(value)
+    }
   }
 
   toggleClicked = (event) => {
-    let { name } = event.target;
+    const { name } = event.target;
 
     if (name === 'preferencesClicked') {
       this.setState({
         showPreferences: !this.state.showPreferences
       }) 
-    }
+    } 
 
     this.setState({ [name]: !this.state[name] })
   }
@@ -96,4 +105,13 @@ export class Search extends Component {
   }
 }
 
-export default Search;
+export const mapStateToProps = (state) => ({
+  locale: state.locale
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+    setLocale: locale => dispatch(setLocale(locale)),
+    setSearch: searchTerm => dispatch(setSearch(searchTerm))
+})
+
+export default connect(mapDispatchToProps, mapDispatchToProps)(Search);

@@ -85,3 +85,12 @@
   margin-left: 10px;
   padding: 5px;
 }
+
+.active {
+  background-color: #fff;
+  color: #7c8c8e;
+}
+
+.selected {
+  background-color: #fff;
+}
