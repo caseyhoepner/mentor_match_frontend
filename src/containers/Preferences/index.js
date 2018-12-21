@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './Preferences.css';
+import Switch from 'react-toggle-switch';
+
 
 export class Preferences extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       veteranSwitched: false,
@@ -11,7 +13,8 @@ export class Preferences extends Component {
       lgbtqiaSwitched: false,
       maleSwitched: false,
       femaleSwitched: false,
-      nonBinarySwitched: false
+      nonBinarySwitched: false,
+      showPreferences: false
     }
   }
 
@@ -51,9 +54,11 @@ export class Preferences extends Component {
   }
 
   render() {
+    const { showPreferences, veteranSwitched, parentSwitched, lgbtqiaSwitched, maleSwitched, femaleSwitched, nonBinarySwitched } = this.state;
+
     return (
-      <div className={!showPreferences ? 'mc-preferences-container' : 'hide'}>
-        <div className='mc-toggle-option'>
+      <div className={this.props.preferencesClicked ? 'p-preferences-container' : 'hide'}>
+        <div className='p-toggle-option'>
           <p>Veteran</p>
             <Switch 
               onClick={this.toggleVeteran} 
@@ -61,7 +66,7 @@ export class Preferences extends Component {
               name='veteranSwitched'
             />
         </div>
-        <div className='mc-toggle-option'>
+        <div className='p-toggle-option'>
           <p>Parent</p>
             <Switch 
               onClick={this.toggleParent} 
@@ -69,7 +74,7 @@ export class Preferences extends Component {
               name='parentSwitched'
             />
         </div>
-        <div className='mc-toggle-option'>
+        <div className='p-toggle-option'>
           <p>LGBTQIA+</p>
             <Switch 
               onClick={this.toggleLGBTQIA} 
@@ -77,7 +82,7 @@ export class Preferences extends Component {
               name='lgbtqiaSwitched'
             />
         </div>          
-        <div className='mc-toggle-option'>
+        <div className='p-toggle-option'>
           <p>Male-Identifying</p>
             <Switch 
               onClick={this.toggleMale} 
@@ -85,7 +90,7 @@ export class Preferences extends Component {
               name='maleSwitched'
             />
         </div>          
-        <div className='mc-toggle-option'>
+        <div className='p-toggle-option'>
           <p>Female-Identifying</p>
             <Switch 
               onClick={this.toggleFemale} 
@@ -93,7 +98,7 @@ export class Preferences extends Component {
               name='femaleSwitched'
             />
         </div>          
-        <div className='mc-toggle-option'>
+        <div className='p-toggle-option'>
           <p>Non-Binary</p>
             <Switch 
               onClick={this.toggleNonBinary} 

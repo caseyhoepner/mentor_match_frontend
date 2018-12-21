@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Search.css';
+import Preferences from '../../containers/Preferences';
+import hollowHeart from '../../utils/assets/heart.svg';
+import solidHeart from '../../utils/assets/solid-heart.svg';
 
 export class Search extends Component {
   constructor() {
@@ -10,8 +13,7 @@ export class Search extends Component {
       search: '',
       favClicked: false,
       allMentorsClicked: false,
-      preferencesClicked: false,
-      showPreferences: false
+      preferencesClicked: false
     }
   }
 
@@ -34,56 +36,61 @@ export class Search extends Component {
   }
 
   render() {
+    const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
+
     return (
-        <div className='mc-search-container'>
-        <div className='mc-search-inputs-container'>
-          <div className='mc-search-bar'>
-            <input 
-              name='search' 
-              type='text' 
-              value={search} 
-              onChange={this.handleChange} 
-              placeholder='Search here...'
-              className='mc-search-input'
-            />
-            <div className='mc-search-icon'>
+      <div>
+        <div className='s-search-container'>
+          <div className='s-search-inputs-container'>
+            <div className='s-search-bar'>
+              <input 
+                name='search' 
+                type='text' 
+                value={search} 
+                onChange={this.handleChange} 
+                placeholder='Search here...'
+                className='s-search-input'
+              />
+              <div className='s-search-icon'>
+              </div>
             </div>
+            <select
+              value={localeSelected}
+              onChange={this.handleChange}
+              name='localeSelected'
+              className='s-location-dropdown'
+            >
+              <option value=''>--Select locale--</option>
+              <option value='Denver'>Denver</option>
+              <option value='Remote'>Remote</option>
+              <option></option>
+            </select>
+            </div>
+          <div className='s-filter-btn-container'>
+            <button 
+              className={!preferencesClicked ? 's-filter-btn' : 's-filter-btn active'}
+              onClick={this.toggleClicked}
+              name='preferencesClicked'
+            >
+              Filter by Preferences
+            </button>
+            <button 
+              className={!allMentorsClicked ? 's-filter-btn' : 's-filter-btn active'}
+              onClick={this.toggleClicked}
+              name='allMentorsClicked'
+            >
+              All Mentors
+            </button>
+            <img
+              src={!favClicked ? hollowHeart : solidHeart}
+              alt='favorite button'
+              className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
+              onClick={this.toggleClicked}
+              name='favClicked'
+            />
           </div>
-          <select
-            value={localeSelected}
-            onChange={this.handleChange}
-            name='localeSelected'
-            className='mc-location-dropdown'
-          >
-            <option value=''>--Select locale--</option>
-            <option value='Denver'>Denver</option>
-            <option value='Remote'>Remote</option>
-            <option></option>
-          </select>
-          </div>
-        <div className='mc-filter-btn-container'>
-          <button 
-            className={preferencesClicked ? 'mc-filter-btn' : 'mc-filter-btn active'}
-            onClick={this.toggleClicked}
-            name='preferencesClicked'
-          >
-            Filter by Preferences
-          </button>
-          <button 
-            className={!allMentorsClicked ? 'mc-filter-btn' : 'mc-filter-btn active'}
-            onClick={this.toggleClicked}
-            name='allMentorsClicked'
-          >
-            All Mentors
-          </button>
-          <img
-            src={!favClicked ? hollowHeart : solidHeart}
-            alt='favorite button'
-            className={!favClicked ? 'mc-favorite-btn' : 'mc-favorite-btn selected'}
-            onClick={this.toggleClicked}
-            name='favClicked'
-          />
         </div>
+        <Preferences preferencesClicked={preferencesClicked}/>
       </div>
     )
   }
