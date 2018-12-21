@@ -4,6 +4,33 @@ import './Search.css';
 export class Search extends Component {
   constructor() {
     super();
+
+    this.state = {
+      localeSelected: '',
+      search: '',
+      favClicked: false,
+      allMentorsClicked: false,
+      preferencesClicked: false,
+      showPreferences: false
+    }
+  }
+
+  handleChange = (event) => {
+    let { value, name } = event.target;
+
+    this.setState({ [name]: value })
+  }
+
+  toggleClicked = (event) => {
+    let { name } = event.target;
+
+    if (name === 'preferencesClicked') {
+      this.setState({
+        showPreferences: !this.state.showPreferences
+      }) 
+    }
+
+    this.setState({ [name]: !this.state[name] })
   }
 
   render() {
