@@ -1,0 +1,913 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Search />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="s-search-container"
+        >
+          <div
+            className="s-search-inputs-container"
+          >
+            <div
+              className="s-search-bar"
+            >
+              <input
+                className="s-search-input"
+                name="search"
+                onChange={[Function]}
+                placeholder="Search here..."
+                type="text"
+                value=""
+              />
+              <div
+                className="s-search-icon"
+              />
+            </div>
+            <select
+              className="s-location-dropdown"
+              name="localeSelected"
+              onChange={[Function]}
+              value=""
+            >
+              <option
+                value=""
+              >
+                --Select locale--
+              </option>
+              <option
+                value="Denver"
+              >
+                Denver
+              </option>
+              <option
+                value="Remote"
+              >
+                Remote
+              </option>
+              <option />
+            </select>
+          </div>
+          <div
+            className="s-filter-btn-container"
+          >
+            <button
+              className="s-filter-btn"
+              name="preferencesClicked"
+              onClick={[Function]}
+            >
+              Filter by Preferences
+            </button>
+            <button
+              className="s-filter-btn"
+              name="allMentorsClicked"
+              onClick={[Function]}
+            >
+              All Mentors
+            </button>
+            <img
+              alt="favorite button"
+              className="s-favorite-btn"
+              name="favClicked"
+              onClick={[Function]}
+              src="heart.svg"
+            />
+          </div>
+        </div>,
+        <Preferences
+          preferencesClicked={false}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="s-search-inputs-container"
+            >
+              <div
+                className="s-search-bar"
+              >
+                <input
+                  className="s-search-input"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Search here..."
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="s-search-icon"
+                />
+              </div>
+              <select
+                className="s-location-dropdown"
+                name="localeSelected"
+                onChange={[Function]}
+                value=""
+              >
+                <option
+                  value=""
+                >
+                  --Select locale--
+                </option>
+                <option
+                  value="Denver"
+                >
+                  Denver
+                </option>
+                <option
+                  value="Remote"
+                >
+                  Remote
+                </option>
+                <option />
+              </select>
+            </div>,
+            <div
+              className="s-filter-btn-container"
+            >
+              <button
+                className="s-filter-btn"
+                name="preferencesClicked"
+                onClick={[Function]}
+              >
+                Filter by Preferences
+              </button>
+              <button
+                className="s-filter-btn"
+                name="allMentorsClicked"
+                onClick={[Function]}
+              >
+                All Mentors
+              </button>
+              <img
+                alt="favorite button"
+                className="s-favorite-btn"
+                name="favClicked"
+                onClick={[Function]}
+                src="heart.svg"
+              />
+            </div>,
+          ],
+          "className": "s-search-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="s-search-bar"
+                >
+                  <input
+                    className="s-search-input"
+                    name="search"
+                    onChange={[Function]}
+                    placeholder="Search here..."
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="s-search-icon"
+                  />
+                </div>,
+                <select
+                  className="s-location-dropdown"
+                  name="localeSelected"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    --Select locale--
+                  </option>
+                  <option
+                    value="Denver"
+                  >
+                    Denver
+                  </option>
+                  <option
+                    value="Remote"
+                  >
+                    Remote
+                  </option>
+                  <option />
+                </select>,
+              ],
+              "className": "s-search-inputs-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <input
+                      className="s-search-input"
+                      name="search"
+                      onChange={[Function]}
+                      placeholder="Search here..."
+                      type="text"
+                      value=""
+                    />,
+                    <div
+                      className="s-search-icon"
+                    />,
+                  ],
+                  "className": "s-search-bar",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "s-search-input",
+                      "name": "search",
+                      "onChange": [Function],
+                      "placeholder": "Search here...",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "s-search-icon",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value=""
+                    >
+                      --Select locale--
+                    </option>,
+                    <option
+                      value="Denver"
+                    >
+                      Denver
+                    </option>,
+                    <option
+                      value="Remote"
+                    >
+                      Remote
+                    </option>,
+                    <option />,
+                  ],
+                  "className": "s-location-dropdown",
+                  "name": "localeSelected",
+                  "onChange": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "--Select locale--",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": "--Select locale--",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Denver",
+                      "value": "Denver",
+                    },
+                    "ref": null,
+                    "rendered": "Denver",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Remote",
+                      "value": "Remote",
+                    },
+                    "ref": null,
+                    "rendered": "Remote",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "option",
+                  },
+                ],
+                "type": "select",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className="s-filter-btn"
+                  name="preferencesClicked"
+                  onClick={[Function]}
+                >
+                  Filter by Preferences
+                </button>,
+                <button
+                  className="s-filter-btn"
+                  name="allMentorsClicked"
+                  onClick={[Function]}
+                >
+                  All Mentors
+                </button>,
+                <img
+                  alt="favorite button"
+                  className="s-favorite-btn"
+                  name="favClicked"
+                  onClick={[Function]}
+                  src="heart.svg"
+                />,
+              ],
+              "className": "s-filter-btn-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Filter by Preferences",
+                  "className": "s-filter-btn",
+                  "name": "preferencesClicked",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Filter by Preferences",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "All Mentors",
+                  "className": "s-filter-btn",
+                  "name": "allMentorsClicked",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "All Mentors",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "favorite button",
+                  "className": "s-favorite-btn",
+                  "name": "favClicked",
+                  "onClick": [Function],
+                  "src": "heart.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "preferencesClicked": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="s-search-container"
+          >
+            <div
+              className="s-search-inputs-container"
+            >
+              <div
+                className="s-search-bar"
+              >
+                <input
+                  className="s-search-input"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Search here..."
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="s-search-icon"
+                />
+              </div>
+              <select
+                className="s-location-dropdown"
+                name="localeSelected"
+                onChange={[Function]}
+                value=""
+              >
+                <option
+                  value=""
+                >
+                  --Select locale--
+                </option>
+                <option
+                  value="Denver"
+                >
+                  Denver
+                </option>
+                <option
+                  value="Remote"
+                >
+                  Remote
+                </option>
+                <option />
+              </select>
+            </div>
+            <div
+              className="s-filter-btn-container"
+            >
+              <button
+                className="s-filter-btn"
+                name="preferencesClicked"
+                onClick={[Function]}
+              >
+                Filter by Preferences
+              </button>
+              <button
+                className="s-filter-btn"
+                name="allMentorsClicked"
+                onClick={[Function]}
+              >
+                All Mentors
+              </button>
+              <img
+                alt="favorite button"
+                className="s-favorite-btn"
+                name="favClicked"
+                onClick={[Function]}
+                src="heart.svg"
+              />
+            </div>
+          </div>,
+          <Preferences
+            preferencesClicked={false}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="s-search-inputs-container"
+              >
+                <div
+                  className="s-search-bar"
+                >
+                  <input
+                    className="s-search-input"
+                    name="search"
+                    onChange={[Function]}
+                    placeholder="Search here..."
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="s-search-icon"
+                  />
+                </div>
+                <select
+                  className="s-location-dropdown"
+                  name="localeSelected"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    --Select locale--
+                  </option>
+                  <option
+                    value="Denver"
+                  >
+                    Denver
+                  </option>
+                  <option
+                    value="Remote"
+                  >
+                    Remote
+                  </option>
+                  <option />
+                </select>
+              </div>,
+              <div
+                className="s-filter-btn-container"
+              >
+                <button
+                  className="s-filter-btn"
+                  name="preferencesClicked"
+                  onClick={[Function]}
+                >
+                  Filter by Preferences
+                </button>
+                <button
+                  className="s-filter-btn"
+                  name="allMentorsClicked"
+                  onClick={[Function]}
+                >
+                  All Mentors
+                </button>
+                <img
+                  alt="favorite button"
+                  className="s-favorite-btn"
+                  name="favClicked"
+                  onClick={[Function]}
+                  src="heart.svg"
+                />
+              </div>,
+            ],
+            "className": "s-search-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="s-search-bar"
+                  >
+                    <input
+                      className="s-search-input"
+                      name="search"
+                      onChange={[Function]}
+                      placeholder="Search here..."
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      className="s-search-icon"
+                    />
+                  </div>,
+                  <select
+                    className="s-location-dropdown"
+                    name="localeSelected"
+                    onChange={[Function]}
+                    value=""
+                  >
+                    <option
+                      value=""
+                    >
+                      --Select locale--
+                    </option>
+                    <option
+                      value="Denver"
+                    >
+                      Denver
+                    </option>
+                    <option
+                      value="Remote"
+                    >
+                      Remote
+                    </option>
+                    <option />
+                  </select>,
+                ],
+                "className": "s-search-inputs-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <input
+                        className="s-search-input"
+                        name="search"
+                        onChange={[Function]}
+                        placeholder="Search here..."
+                        type="text"
+                        value=""
+                      />,
+                      <div
+                        className="s-search-icon"
+                      />,
+                    ],
+                    "className": "s-search-bar",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "s-search-input",
+                        "name": "search",
+                        "onChange": [Function],
+                        "placeholder": "Search here...",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "s-search-icon",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <option
+                        value=""
+                      >
+                        --Select locale--
+                      </option>,
+                      <option
+                        value="Denver"
+                      >
+                        Denver
+                      </option>,
+                      <option
+                        value="Remote"
+                      >
+                        Remote
+                      </option>,
+                      <option />,
+                    ],
+                    "className": "s-location-dropdown",
+                    "name": "localeSelected",
+                    "onChange": [Function],
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "--Select locale--",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": "--Select locale--",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Denver",
+                        "value": "Denver",
+                      },
+                      "ref": null,
+                      "rendered": "Denver",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Remote",
+                        "value": "Remote",
+                      },
+                      "ref": null,
+                      "rendered": "Remote",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": "option",
+                    },
+                  ],
+                  "type": "select",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <button
+                    className="s-filter-btn"
+                    name="preferencesClicked"
+                    onClick={[Function]}
+                  >
+                    Filter by Preferences
+                  </button>,
+                  <button
+                    className="s-filter-btn"
+                    name="allMentorsClicked"
+                    onClick={[Function]}
+                  >
+                    All Mentors
+                  </button>,
+                  <img
+                    alt="favorite button"
+                    className="s-favorite-btn"
+                    name="favClicked"
+                    onClick={[Function]}
+                    src="heart.svg"
+                  />,
+                ],
+                "className": "s-filter-btn-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Filter by Preferences",
+                    "className": "s-filter-btn",
+                    "name": "preferencesClicked",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Filter by Preferences",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "All Mentors",
+                    "className": "s-filter-btn",
+                    "name": "allMentorsClicked",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "All Mentors",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "favorite button",
+                    "className": "s-favorite-btn",
+                    "name": "favClicked",
+                    "onClick": [Function],
+                    "src": "heart.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "preferencesClicked": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -53,7 +53,9 @@ ShallowWrapper {
           <div
             className="mc-title"
           >
-            <h1>
+            <h1
+              className="mc-title-text"
+            >
               Mentor Profiles
             </h1>
             <div
@@ -66,77 +68,7 @@ ShallowWrapper {
             </p>
           </div>
         </header>,
-        <div
-          className="mc-search-container"
-        >
-          <div
-            className="mc-search-inputs-container"
-          >
-            <div
-              className="mc-search-bar"
-            >
-              <input
-                className="mc-search-input"
-                name="search"
-                onChange={[Function]}
-                placeholder="Search here..."
-                type="text"
-                value=""
-              />
-              <div
-                className="mc-search-icon"
-              />
-            </div>
-            <select
-              className="mc-location-dropdown"
-              name="localeSelected"
-              onChange={[Function]}
-              value=""
-            >
-              <option
-                value=""
-              >
-                --Select locale--
-              </option>
-              <option
-                value="Denver"
-              >
-                Denver
-              </option>
-              <option
-                value="Remote"
-              >
-                Remote
-              </option>
-              <option />
-            </select>
-          </div>
-          <div
-            className="mc-filter-btn-container"
-          >
-            <button
-              className="mc-filter-btn"
-              name="preferencesClicked"
-              onClick={[Function]}
-            >
-              Filter by Preferences
-            </button>
-            <button
-              className="mc-filter-btn"
-              name="allMentorsClicked"
-              onClick={[Function]}
-            >
-              All Mentors
-            </button>
-            <img
-              alt="favorite button"
-              className="mc-favorite-btn"
-              name="favClicked"
-              onClick={[Function]}
-              src="heart.svg"
-            />
-          </div>
-        </div>,
+        <Connect(Search) />,
       ],
     },
     "ref": null,
@@ -179,7 +111,9 @@ ShallowWrapper {
             <div
               className="mc-title"
             >
-              <h1>
+              <h1
+                className="mc-title-text"
+              >
                 Mentor Profiles
               </h1>
               <div
@@ -313,7 +247,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h1>
+                <h1
+                  className="mc-title-text"
+                >
                   Mentor Profiles
                 </h1>,
                 <div
@@ -335,6 +271,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Mentor Profiles",
+                  "className": "mc-title-text",
                 },
                 "ref": null,
                 "rendered": "Mentor Profiles",
@@ -372,343 +309,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="mc-search-inputs-container"
-            >
-              <div
-                className="mc-search-bar"
-              >
-                <input
-                  className="mc-search-input"
-                  name="search"
-                  onChange={[Function]}
-                  placeholder="Search here..."
-                  type="text"
-                  value=""
-                />
-                <div
-                  className="mc-search-icon"
-                />
-              </div>
-              <select
-                className="mc-location-dropdown"
-                name="localeSelected"
-                onChange={[Function]}
-                value=""
-              >
-                <option
-                  value=""
-                >
-                  --Select locale--
-                </option>
-                <option
-                  value="Denver"
-                >
-                  Denver
-                </option>
-                <option
-                  value="Remote"
-                >
-                  Remote
-                </option>
-                <option />
-              </select>
-            </div>,
-            <div
-              className="mc-filter-btn-container"
-            >
-              <button
-                className="mc-filter-btn"
-                name="preferencesClicked"
-                onClick={[Function]}
-              >
-                Filter by Preferences
-              </button>
-              <button
-                className="mc-filter-btn"
-                name="allMentorsClicked"
-                onClick={[Function]}
-              >
-                All Mentors
-              </button>
-              <img
-                alt="favorite button"
-                className="mc-favorite-btn"
-                name="favClicked"
-                onClick={[Function]}
-                src="heart.svg"
-              />
-            </div>,
-          ],
-          "className": "mc-search-container",
-        },
+        "nodeType": "class",
+        "props": Object {},
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div
-                  className="mc-search-bar"
-                >
-                  <input
-                    className="mc-search-input"
-                    name="search"
-                    onChange={[Function]}
-                    placeholder="Search here..."
-                    type="text"
-                    value=""
-                  />
-                  <div
-                    className="mc-search-icon"
-                  />
-                </div>,
-                <select
-                  className="mc-location-dropdown"
-                  name="localeSelected"
-                  onChange={[Function]}
-                  value=""
-                >
-                  <option
-                    value=""
-                  >
-                    --Select locale--
-                  </option>
-                  <option
-                    value="Denver"
-                  >
-                    Denver
-                  </option>
-                  <option
-                    value="Remote"
-                  >
-                    Remote
-                  </option>
-                  <option />
-                </select>,
-              ],
-              "className": "mc-search-inputs-container",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <input
-                      className="mc-search-input"
-                      name="search"
-                      onChange={[Function]}
-                      placeholder="Search here..."
-                      type="text"
-                      value=""
-                    />,
-                    <div
-                      className="mc-search-icon"
-                    />,
-                  ],
-                  "className": "mc-search-bar",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "mc-search-input",
-                      "name": "search",
-                      "onChange": [Function],
-                      "placeholder": "Search here...",
-                      "type": "text",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "input",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "mc-search-icon",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <option
-                      value=""
-                    >
-                      --Select locale--
-                    </option>,
-                    <option
-                      value="Denver"
-                    >
-                      Denver
-                    </option>,
-                    <option
-                      value="Remote"
-                    >
-                      Remote
-                    </option>,
-                    <option />,
-                  ],
-                  "className": "mc-location-dropdown",
-                  "name": "localeSelected",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "--Select locale--",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": "--Select locale--",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Denver",
-                      "value": "Denver",
-                    },
-                    "ref": null,
-                    "rendered": "Denver",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Remote",
-                      "value": "Remote",
-                    },
-                    "ref": null,
-                    "rendered": "Remote",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": "option",
-                  },
-                ],
-                "type": "select",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <button
-                  className="mc-filter-btn"
-                  name="preferencesClicked"
-                  onClick={[Function]}
-                >
-                  Filter by Preferences
-                </button>,
-                <button
-                  className="mc-filter-btn"
-                  name="allMentorsClicked"
-                  onClick={[Function]}
-                >
-                  All Mentors
-                </button>,
-                <img
-                  alt="favorite button"
-                  className="mc-favorite-btn"
-                  name="favClicked"
-                  onClick={[Function]}
-                  src="heart.svg"
-                />,
-              ],
-              "className": "mc-filter-btn-container",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Filter by Preferences",
-                  "className": "mc-filter-btn",
-                  "name": "preferencesClicked",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "Filter by Preferences",
-                "type": "button",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "All Mentors",
-                  "className": "mc-filter-btn",
-                  "name": "allMentorsClicked",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "All Mentors",
-                "type": "button",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "favorite button",
-                  "className": "mc-favorite-btn",
-                  "name": "favClicked",
-                  "onClick": [Function],
-                  "src": "heart.svg",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -755,7 +360,9 @@ ShallowWrapper {
             <div
               className="mc-title"
             >
-              <h1>
+              <h1
+                className="mc-title-text"
+              >
                 Mentor Profiles
               </h1>
               <div
@@ -768,77 +375,7 @@ ShallowWrapper {
               </p>
             </div>
           </header>,
-          <div
-            className="mc-search-container"
-          >
-            <div
-              className="mc-search-inputs-container"
-            >
-              <div
-                className="mc-search-bar"
-              >
-                <input
-                  className="mc-search-input"
-                  name="search"
-                  onChange={[Function]}
-                  placeholder="Search here..."
-                  type="text"
-                  value=""
-                />
-                <div
-                  className="mc-search-icon"
-                />
-              </div>
-              <select
-                className="mc-location-dropdown"
-                name="localeSelected"
-                onChange={[Function]}
-                value=""
-              >
-                <option
-                  value=""
-                >
-                  --Select locale--
-                </option>
-                <option
-                  value="Denver"
-                >
-                  Denver
-                </option>
-                <option
-                  value="Remote"
-                >
-                  Remote
-                </option>
-                <option />
-              </select>
-            </div>
-            <div
-              className="mc-filter-btn-container"
-            >
-              <button
-                className="mc-filter-btn"
-                name="preferencesClicked"
-                onClick={[Function]}
-              >
-                Filter by Preferences
-              </button>
-              <button
-                className="mc-filter-btn"
-                name="allMentorsClicked"
-                onClick={[Function]}
-              >
-                All Mentors
-              </button>
-              <img
-                alt="favorite button"
-                className="mc-favorite-btn"
-                name="favClicked"
-                onClick={[Function]}
-                src="heart.svg"
-              />
-            </div>
-          </div>,
+          <Connect(Search) />,
         ],
       },
       "ref": null,
@@ -881,7 +418,9 @@ ShallowWrapper {
               <div
                 className="mc-title"
               >
-                <h1>
+                <h1
+                  className="mc-title-text"
+                >
                   Mentor Profiles
                 </h1>
                 <div
@@ -1015,7 +554,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h1>
+                  <h1
+                    className="mc-title-text"
+                  >
                     Mentor Profiles
                   </h1>,
                   <div
@@ -1037,6 +578,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Mentor Profiles",
+                    "className": "mc-title-text",
                   },
                   "ref": null,
                   "rendered": "Mentor Profiles",
@@ -1074,343 +616,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="mc-search-inputs-container"
-              >
-                <div
-                  className="mc-search-bar"
-                >
-                  <input
-                    className="mc-search-input"
-                    name="search"
-                    onChange={[Function]}
-                    placeholder="Search here..."
-                    type="text"
-                    value=""
-                  />
-                  <div
-                    className="mc-search-icon"
-                  />
-                </div>
-                <select
-                  className="mc-location-dropdown"
-                  name="localeSelected"
-                  onChange={[Function]}
-                  value=""
-                >
-                  <option
-                    value=""
-                  >
-                    --Select locale--
-                  </option>
-                  <option
-                    value="Denver"
-                  >
-                    Denver
-                  </option>
-                  <option
-                    value="Remote"
-                  >
-                    Remote
-                  </option>
-                  <option />
-                </select>
-              </div>,
-              <div
-                className="mc-filter-btn-container"
-              >
-                <button
-                  className="mc-filter-btn"
-                  name="preferencesClicked"
-                  onClick={[Function]}
-                >
-                  Filter by Preferences
-                </button>
-                <button
-                  className="mc-filter-btn"
-                  name="allMentorsClicked"
-                  onClick={[Function]}
-                >
-                  All Mentors
-                </button>
-                <img
-                  alt="favorite button"
-                  className="mc-favorite-btn"
-                  name="favClicked"
-                  onClick={[Function]}
-                  src="heart.svg"
-                />
-              </div>,
-            ],
-            "className": "mc-search-container",
-          },
+          "nodeType": "class",
+          "props": Object {},
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <div
-                    className="mc-search-bar"
-                  >
-                    <input
-                      className="mc-search-input"
-                      name="search"
-                      onChange={[Function]}
-                      placeholder="Search here..."
-                      type="text"
-                      value=""
-                    />
-                    <div
-                      className="mc-search-icon"
-                    />
-                  </div>,
-                  <select
-                    className="mc-location-dropdown"
-                    name="localeSelected"
-                    onChange={[Function]}
-                    value=""
-                  >
-                    <option
-                      value=""
-                    >
-                      --Select locale--
-                    </option>
-                    <option
-                      value="Denver"
-                    >
-                      Denver
-                    </option>
-                    <option
-                      value="Remote"
-                    >
-                      Remote
-                    </option>
-                    <option />
-                  </select>,
-                ],
-                "className": "mc-search-inputs-container",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <input
-                        className="mc-search-input"
-                        name="search"
-                        onChange={[Function]}
-                        placeholder="Search here..."
-                        type="text"
-                        value=""
-                      />,
-                      <div
-                        className="mc-search-icon"
-                      />,
-                    ],
-                    "className": "mc-search-bar",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "mc-search-input",
-                        "name": "search",
-                        "onChange": [Function],
-                        "placeholder": "Search here...",
-                        "type": "text",
-                        "value": "",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "input",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "mc-search-icon",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <option
-                        value=""
-                      >
-                        --Select locale--
-                      </option>,
-                      <option
-                        value="Denver"
-                      >
-                        Denver
-                      </option>,
-                      <option
-                        value="Remote"
-                      >
-                        Remote
-                      </option>,
-                      <option />,
-                    ],
-                    "className": "mc-location-dropdown",
-                    "name": "localeSelected",
-                    "onChange": [Function],
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "--Select locale--",
-                        "value": "",
-                      },
-                      "ref": null,
-                      "rendered": "--Select locale--",
-                      "type": "option",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Denver",
-                        "value": "Denver",
-                      },
-                      "ref": null,
-                      "rendered": "Denver",
-                      "type": "option",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Remote",
-                        "value": "Remote",
-                      },
-                      "ref": null,
-                      "rendered": "Remote",
-                      "type": "option",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {},
-                      "ref": null,
-                      "rendered": null,
-                      "type": "option",
-                    },
-                  ],
-                  "type": "select",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <button
-                    className="mc-filter-btn"
-                    name="preferencesClicked"
-                    onClick={[Function]}
-                  >
-                    Filter by Preferences
-                  </button>,
-                  <button
-                    className="mc-filter-btn"
-                    name="allMentorsClicked"
-                    onClick={[Function]}
-                  >
-                    All Mentors
-                  </button>,
-                  <img
-                    alt="favorite button"
-                    className="mc-favorite-btn"
-                    name="favClicked"
-                    onClick={[Function]}
-                    src="heart.svg"
-                  />,
-                ],
-                "className": "mc-filter-btn-container",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Filter by Preferences",
-                    "className": "mc-filter-btn",
-                    "name": "preferencesClicked",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Filter by Preferences",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "All Mentors",
-                    "className": "mc-filter-btn",
-                    "name": "allMentorsClicked",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "All Mentors",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "favorite button",
-                    "className": "mc-favorite-btn",
-                    "name": "favClicked",
-                    "onClick": [Function],
-                    "src": "heart.svg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

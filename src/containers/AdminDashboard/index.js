@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './AdminDashboard.css';
 import AdminMentorSearch from '../../containers/AdminMentorSearch';
 
-class AdminDashboard extends Component {
+export class AdminDashboard extends Component {
   constructor() {
     super();
   }

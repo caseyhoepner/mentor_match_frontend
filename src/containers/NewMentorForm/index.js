@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './NewMentorForm.css';
 
-class NewMentorForm extends Component {
+export class NewMentorForm extends Component {
   constructor() {
     super()
   }
