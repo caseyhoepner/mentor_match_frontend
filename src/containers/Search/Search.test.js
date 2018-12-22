@@ -38,6 +38,27 @@ describe('Search', () => {
       wrapper.instance().handleChange(mockSearchEvent)
       expect(wrapper.state().search).toEqual('skwijb')
     });
+
+    it('should toggle state if the Favorite button is clicked', () => {
+      let mockToggleEvent = { target: { name: 'favClicked' } }
+
+      wrapper.instance().toggleClicked(mockToggleEvent)
+      expect(wrapper.state().favClicked).toEqual(true)
+    });
+
+    it('should toggle state if the All Mentors button is clicked', () => {
+      let mockToggleEvent = { target: { name: 'allMentorsClicked' } }
+
+      wrapper.instance().toggleClicked(mockToggleEvent)
+      expect(wrapper.state().allMentorsClicked).toEqual(true)
+    });
+
+    it('should toggle state if the Preferences button is clicked', () => {
+      let mockToggleEvent = { target: { name: 'preferencesClicked' } }
+
+      wrapper.instance().toggleClicked(mockToggleEvent)
+      expect(wrapper.state().preferencesClicked).toEqual(true)
+    });
   });
 
   describe('mapStateToProps function', () => {

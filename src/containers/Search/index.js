@@ -35,11 +35,11 @@ export class Search extends Component {
   toggleClicked = (event) => {
     const { name } = event.target;
 
-    if (name === 'preferencesClicked') {
-      this.setState({
-        showPreferences: !this.state.showPreferences
-      }) 
-    } 
+    // if (name === 'preferencesClicked') {
+    //   this.setState({
+    //     showPreferences: !this.state.showPreferences
+    //   }) 
+    // } 
 
     this.setState({ [name]: !this.state[name] })
   }
