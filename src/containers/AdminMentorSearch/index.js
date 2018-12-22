@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { setLocale, setSearch } from '../../actions/search-actions';
 import './AdminMentorSearch.css';
 
-export class Search extends Component {
+export class AdminMentorSearch extends Component {
   constructor() {
     super();
 
@@ -107,4 +107,4 @@ export const mapDispatchToProps = (dispatch) => ({
     setSearch: searchTerm => dispatch(setSearch(searchTerm))
 })
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(Search);
+export default connect(mapDispatchToProps, mapDispatchToProps)(AdminMentorSearch);

@@ -17,10 +17,305 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "AdminDashboard",
+      "children": Array [
+        <header
+          className="ad-header"
+        >
+          <div
+            className="ad-nav-btns"
+          >
+            <img
+              alt="Turing Logo"
+              className="ad-turing-logo"
+              src="turing-logo.png"
+            />
+            <div
+              className="ad-github-btn"
+            >
+              <p
+                className="ad-gh-tagline"
+              >
+                Sign in with GitHub
+              </p>
+              <img
+                alt="GitHub Logo"
+                className="ad-github-logo"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "github-logo.svg",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            className="ad-title"
+          >
+            <h1
+              className="ad-title-text"
+            >
+              Admin Dashboard
+            </h1>
+            <div
+              className="ad-line-break"
+            />
+            <p
+              className="ad-tagline"
+            >
+              Filter mentors and students to find a match!
+            </p>
+          </div>
+        </header>,
+        <Connect(AdminMentorSearch) />,
+      ],
     },
     "ref": null,
-    "rendered": "AdminDashboard",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="ad-nav-btns"
+            >
+              <img
+                alt="Turing Logo"
+                className="ad-turing-logo"
+                src="turing-logo.png"
+              />
+              <div
+                className="ad-github-btn"
+              >
+                <p
+                  className="ad-gh-tagline"
+                >
+                  Sign in with GitHub
+                </p>
+                <img
+                  alt="GitHub Logo"
+                  className="ad-github-logo"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "github-logo.svg",
+                    }
+                  }
+                />
+              </div>
+            </div>,
+            <div
+              className="ad-title"
+            >
+              <h1
+                className="ad-title-text"
+              >
+                Admin Dashboard
+              </h1>
+              <div
+                className="ad-line-break"
+              />
+              <p
+                className="ad-tagline"
+              >
+                Filter mentors and students to find a match!
+              </p>
+            </div>,
+          ],
+          "className": "ad-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Turing Logo"
+                  className="ad-turing-logo"
+                  src="turing-logo.png"
+                />,
+                <div
+                  className="ad-github-btn"
+                >
+                  <p
+                    className="ad-gh-tagline"
+                  >
+                    Sign in with GitHub
+                  </p>
+                  <img
+                    alt="GitHub Logo"
+                    className="ad-github-logo"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "github-logo.svg",
+                      }
+                    }
+                  />
+                </div>,
+              ],
+              "className": "ad-nav-btns",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Turing Logo",
+                  "className": "ad-turing-logo",
+                  "src": "turing-logo.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="ad-gh-tagline"
+                    >
+                      Sign in with GitHub
+                    </p>,
+                    <img
+                      alt="GitHub Logo"
+                      className="ad-github-logo"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "github-logo.svg",
+                        }
+                      }
+                    />,
+                  ],
+                  "className": "ad-github-btn",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Sign in with GitHub",
+                      "className": "ad-gh-tagline",
+                    },
+                    "ref": null,
+                    "rendered": "Sign in with GitHub",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "GitHub Logo",
+                      "className": "ad-github-logo",
+                      "src": Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "github-logo.svg",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="ad-title-text"
+                >
+                  Admin Dashboard
+                </h1>,
+                <div
+                  className="ad-line-break"
+                />,
+                <p
+                  className="ad-tagline"
+                >
+                  Filter mentors and students to find a match!
+                </p>,
+              ],
+              "className": "ad-title",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Admin Dashboard",
+                  "className": "ad-title-text",
+                },
+                "ref": null,
+                "rendered": "Admin Dashboard",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "ad-line-break",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Filter mentors and students to find a match!",
+                  "className": "ad-tagline",
+                },
+                "ref": null,
+                "rendered": "Filter mentors and students to find a match!",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +324,305 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "AdminDashboard",
+        "children": Array [
+          <header
+            className="ad-header"
+          >
+            <div
+              className="ad-nav-btns"
+            >
+              <img
+                alt="Turing Logo"
+                className="ad-turing-logo"
+                src="turing-logo.png"
+              />
+              <div
+                className="ad-github-btn"
+              >
+                <p
+                  className="ad-gh-tagline"
+                >
+                  Sign in with GitHub
+                </p>
+                <img
+                  alt="GitHub Logo"
+                  className="ad-github-logo"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "github-logo.svg",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="ad-title"
+            >
+              <h1
+                className="ad-title-text"
+              >
+                Admin Dashboard
+              </h1>
+              <div
+                className="ad-line-break"
+              />
+              <p
+                className="ad-tagline"
+              >
+                Filter mentors and students to find a match!
+              </p>
+            </div>
+          </header>,
+          <Connect(AdminMentorSearch) />,
+        ],
       },
       "ref": null,
-      "rendered": "AdminDashboard",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="ad-nav-btns"
+              >
+                <img
+                  alt="Turing Logo"
+                  className="ad-turing-logo"
+                  src="turing-logo.png"
+                />
+                <div
+                  className="ad-github-btn"
+                >
+                  <p
+                    className="ad-gh-tagline"
+                  >
+                    Sign in with GitHub
+                  </p>
+                  <img
+                    alt="GitHub Logo"
+                    className="ad-github-logo"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "github-logo.svg",
+                      }
+                    }
+                  />
+                </div>
+              </div>,
+              <div
+                className="ad-title"
+              >
+                <h1
+                  className="ad-title-text"
+                >
+                  Admin Dashboard
+                </h1>
+                <div
+                  className="ad-line-break"
+                />
+                <p
+                  className="ad-tagline"
+                >
+                  Filter mentors and students to find a match!
+                </p>
+              </div>,
+            ],
+            "className": "ad-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="Turing Logo"
+                    className="ad-turing-logo"
+                    src="turing-logo.png"
+                  />,
+                  <div
+                    className="ad-github-btn"
+                  >
+                    <p
+                      className="ad-gh-tagline"
+                    >
+                      Sign in with GitHub
+                    </p>
+                    <img
+                      alt="GitHub Logo"
+                      className="ad-github-logo"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "github-logo.svg",
+                        }
+                      }
+                    />
+                  </div>,
+                ],
+                "className": "ad-nav-btns",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Turing Logo",
+                    "className": "ad-turing-logo",
+                    "src": "turing-logo.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="ad-gh-tagline"
+                      >
+                        Sign in with GitHub
+                      </p>,
+                      <img
+                        alt="GitHub Logo"
+                        className="ad-github-logo"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "github-logo.svg",
+                          }
+                        }
+                      />,
+                    ],
+                    "className": "ad-github-btn",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Sign in with GitHub",
+                        "className": "ad-gh-tagline",
+                      },
+                      "ref": null,
+                      "rendered": "Sign in with GitHub",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "GitHub Logo",
+                        "className": "ad-github-logo",
+                        "src": Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "github-logo.svg",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h1
+                    className="ad-title-text"
+                  >
+                    Admin Dashboard
+                  </h1>,
+                  <div
+                    className="ad-line-break"
+                  />,
+                  <p
+                    className="ad-tagline"
+                  >
+                    Filter mentors and students to find a match!
+                  </p>,
+                ],
+                "className": "ad-title",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Admin Dashboard",
+                    "className": "ad-title-text",
+                  },
+                  "ref": null,
+                  "rendered": "Admin Dashboard",
+                  "type": "h1",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "ad-line-break",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Filter mentors and students to find a match!",
+                    "className": "ad-tagline",
+                  },
+                  "ref": null,
+                  "rendered": "Filter mentors and students to find a match!",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],

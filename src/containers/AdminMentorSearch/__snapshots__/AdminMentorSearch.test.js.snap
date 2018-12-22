@@ -1,0 +1,841 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminMentorSearch matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AdminMentorSearch />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="ams-search-container"
+        >
+          <div
+            className="ams-search-inputs-container"
+          >
+            <div
+              className="ams-search-bar"
+            >
+              <input
+                className="ams-search-input"
+                name="search"
+                onChange={[Function]}
+                placeholder="Search here..."
+                type="text"
+                value=""
+              />
+              <div
+                className="ams-search-icon"
+              />
+            </div>
+            <select
+              className="ams-location-dropdown"
+              name="localeSelected"
+              onChange={[Function]}
+              value=""
+            >
+              <option
+                value=""
+              >
+                --Select locale--
+              </option>
+              <option
+                value="Denver"
+              >
+                Denver
+              </option>
+              <option
+                value="Remote"
+              >
+                Remote
+              </option>
+              <option />
+            </select>
+          </div>
+          <div
+            className="ams-filter-btn-container"
+          >
+            <button
+              className="ams-filter-btn"
+              name="preferencesClicked"
+              onClick={[Function]}
+            >
+              Filter by Preferences
+            </button>
+            <button
+              className="ams-filter-btn"
+              name="allMentorsClicked"
+              onClick={[Function]}
+            >
+              All Mentors
+            </button>
+          </div>
+        </div>,
+        <Preferences
+          preferencesClicked={false}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="ams-search-inputs-container"
+            >
+              <div
+                className="ams-search-bar"
+              >
+                <input
+                  className="ams-search-input"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Search here..."
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="ams-search-icon"
+                />
+              </div>
+              <select
+                className="ams-location-dropdown"
+                name="localeSelected"
+                onChange={[Function]}
+                value=""
+              >
+                <option
+                  value=""
+                >
+                  --Select locale--
+                </option>
+                <option
+                  value="Denver"
+                >
+                  Denver
+                </option>
+                <option
+                  value="Remote"
+                >
+                  Remote
+                </option>
+                <option />
+              </select>
+            </div>,
+            <div
+              className="ams-filter-btn-container"
+            >
+              <button
+                className="ams-filter-btn"
+                name="preferencesClicked"
+                onClick={[Function]}
+              >
+                Filter by Preferences
+              </button>
+              <button
+                className="ams-filter-btn"
+                name="allMentorsClicked"
+                onClick={[Function]}
+              >
+                All Mentors
+              </button>
+            </div>,
+          ],
+          "className": "ams-search-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="ams-search-bar"
+                >
+                  <input
+                    className="ams-search-input"
+                    name="search"
+                    onChange={[Function]}
+                    placeholder="Search here..."
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="ams-search-icon"
+                  />
+                </div>,
+                <select
+                  className="ams-location-dropdown"
+                  name="localeSelected"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    --Select locale--
+                  </option>
+                  <option
+                    value="Denver"
+                  >
+                    Denver
+                  </option>
+                  <option
+                    value="Remote"
+                  >
+                    Remote
+                  </option>
+                  <option />
+                </select>,
+              ],
+              "className": "ams-search-inputs-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <input
+                      className="ams-search-input"
+                      name="search"
+                      onChange={[Function]}
+                      placeholder="Search here..."
+                      type="text"
+                      value=""
+                    />,
+                    <div
+                      className="ams-search-icon"
+                    />,
+                  ],
+                  "className": "ams-search-bar",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "ams-search-input",
+                      "name": "search",
+                      "onChange": [Function],
+                      "placeholder": "Search here...",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "ams-search-icon",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value=""
+                    >
+                      --Select locale--
+                    </option>,
+                    <option
+                      value="Denver"
+                    >
+                      Denver
+                    </option>,
+                    <option
+                      value="Remote"
+                    >
+                      Remote
+                    </option>,
+                    <option />,
+                  ],
+                  "className": "ams-location-dropdown",
+                  "name": "localeSelected",
+                  "onChange": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "--Select locale--",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": "--Select locale--",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Denver",
+                      "value": "Denver",
+                    },
+                    "ref": null,
+                    "rendered": "Denver",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Remote",
+                      "value": "Remote",
+                    },
+                    "ref": null,
+                    "rendered": "Remote",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "option",
+                  },
+                ],
+                "type": "select",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className="ams-filter-btn"
+                  name="preferencesClicked"
+                  onClick={[Function]}
+                >
+                  Filter by Preferences
+                </button>,
+                <button
+                  className="ams-filter-btn"
+                  name="allMentorsClicked"
+                  onClick={[Function]}
+                >
+                  All Mentors
+                </button>,
+              ],
+              "className": "ams-filter-btn-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Filter by Preferences",
+                  "className": "ams-filter-btn",
+                  "name": "preferencesClicked",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Filter by Preferences",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "All Mentors",
+                  "className": "ams-filter-btn",
+                  "name": "allMentorsClicked",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "All Mentors",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "preferencesClicked": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="ams-search-container"
+          >
+            <div
+              className="ams-search-inputs-container"
+            >
+              <div
+                className="ams-search-bar"
+              >
+                <input
+                  className="ams-search-input"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Search here..."
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="ams-search-icon"
+                />
+              </div>
+              <select
+                className="ams-location-dropdown"
+                name="localeSelected"
+                onChange={[Function]}
+                value=""
+              >
+                <option
+                  value=""
+                >
+                  --Select locale--
+                </option>
+                <option
+                  value="Denver"
+                >
+                  Denver
+                </option>
+                <option
+                  value="Remote"
+                >
+                  Remote
+                </option>
+                <option />
+              </select>
+            </div>
+            <div
+              className="ams-filter-btn-container"
+            >
+              <button
+                className="ams-filter-btn"
+                name="preferencesClicked"
+                onClick={[Function]}
+              >
+                Filter by Preferences
+              </button>
+              <button
+                className="ams-filter-btn"
+                name="allMentorsClicked"
+                onClick={[Function]}
+              >
+                All Mentors
+              </button>
+            </div>
+          </div>,
+          <Preferences
+            preferencesClicked={false}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="ams-search-inputs-container"
+              >
+                <div
+                  className="ams-search-bar"
+                >
+                  <input
+                    className="ams-search-input"
+                    name="search"
+                    onChange={[Function]}
+                    placeholder="Search here..."
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="ams-search-icon"
+                  />
+                </div>
+                <select
+                  className="ams-location-dropdown"
+                  name="localeSelected"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    --Select locale--
+                  </option>
+                  <option
+                    value="Denver"
+                  >
+                    Denver
+                  </option>
+                  <option
+                    value="Remote"
+                  >
+                    Remote
+                  </option>
+                  <option />
+                </select>
+              </div>,
+              <div
+                className="ams-filter-btn-container"
+              >
+                <button
+                  className="ams-filter-btn"
+                  name="preferencesClicked"
+                  onClick={[Function]}
+                >
+                  Filter by Preferences
+                </button>
+                <button
+                  className="ams-filter-btn"
+                  name="allMentorsClicked"
+                  onClick={[Function]}
+                >
+                  All Mentors
+                </button>
+              </div>,
+            ],
+            "className": "ams-search-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="ams-search-bar"
+                  >
+                    <input
+                      className="ams-search-input"
+                      name="search"
+                      onChange={[Function]}
+                      placeholder="Search here..."
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      className="ams-search-icon"
+                    />
+                  </div>,
+                  <select
+                    className="ams-location-dropdown"
+                    name="localeSelected"
+                    onChange={[Function]}
+                    value=""
+                  >
+                    <option
+                      value=""
+                    >
+                      --Select locale--
+                    </option>
+                    <option
+                      value="Denver"
+                    >
+                      Denver
+                    </option>
+                    <option
+                      value="Remote"
+                    >
+                      Remote
+                    </option>
+                    <option />
+                  </select>,
+                ],
+                "className": "ams-search-inputs-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <input
+                        className="ams-search-input"
+                        name="search"
+                        onChange={[Function]}
+                        placeholder="Search here..."
+                        type="text"
+                        value=""
+                      />,
+                      <div
+                        className="ams-search-icon"
+                      />,
+                    ],
+                    "className": "ams-search-bar",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "ams-search-input",
+                        "name": "search",
+                        "onChange": [Function],
+                        "placeholder": "Search here...",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "ams-search-icon",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <option
+                        value=""
+                      >
+                        --Select locale--
+                      </option>,
+                      <option
+                        value="Denver"
+                      >
+                        Denver
+                      </option>,
+                      <option
+                        value="Remote"
+                      >
+                        Remote
+                      </option>,
+                      <option />,
+                    ],
+                    "className": "ams-location-dropdown",
+                    "name": "localeSelected",
+                    "onChange": [Function],
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "--Select locale--",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": "--Select locale--",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Denver",
+                        "value": "Denver",
+                      },
+                      "ref": null,
+                      "rendered": "Denver",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Remote",
+                        "value": "Remote",
+                      },
+                      "ref": null,
+                      "rendered": "Remote",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": "option",
+                    },
+                  ],
+                  "type": "select",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <button
+                    className="ams-filter-btn"
+                    name="preferencesClicked"
+                    onClick={[Function]}
+                  >
+                    Filter by Preferences
+                  </button>,
+                  <button
+                    className="ams-filter-btn"
+                    name="allMentorsClicked"
+                    onClick={[Function]}
+                  >
+                    All Mentors
+                  </button>,
+                ],
+                "className": "ams-filter-btn-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Filter by Preferences",
+                    "className": "ams-filter-btn",
+                    "name": "preferencesClicked",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Filter by Preferences",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "All Mentors",
+                    "className": "ams-filter-btn",
+                    "name": "allMentorsClicked",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "All Mentors",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "preferencesClicked": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
