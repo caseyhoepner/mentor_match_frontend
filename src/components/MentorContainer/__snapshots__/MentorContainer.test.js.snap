@@ -53,7 +53,9 @@ ShallowWrapper {
           <div
             className="mc-title"
           >
-            <h1>
+            <h1
+              className="mc-title-text"
+            >
               Mentor Profiles
             </h1>
             <div
@@ -115,7 +117,7 @@ ShallowWrapper {
             className="mc-filter-btn-container"
           >
             <button
-              className="mc-filter-btn"
+              className="mc-filter-btn active"
               name="preferencesClicked"
               onClick={[Function]}
             >
@@ -134,6 +136,97 @@ ShallowWrapper {
               name="favClicked"
               onClick={[Function]}
               src="heart.svg"
+            />
+          </div>
+        </div>,
+        <div
+          className="mc-preferences-container"
+        >
+          <div
+            className="mc-toggle-option"
+          >
+            <p>
+              Veteran
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="veteranSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>
+          <div
+            className="mc-toggle-option"
+          >
+            <p>
+              Parent
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="parentSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>
+          <div
+            className="mc-toggle-option"
+          >
+            <p>
+              LGBTQIA+
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="lgbtqiaSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>
+          <div
+            className="mc-toggle-option"
+          >
+            <p>
+              Male-Identifying
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="maleSwitched"
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>
+          <div
+            className="mc-toggle-option"
+          >
+            <p>
+              Female-Identifying
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="femaleSwitched"
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>
+          <div
+            className="mc-toggle-option"
+          >
+            <p>
+              Non-Binary
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="nonBinarySwitched"
+              onClick={[Function]}
+              onDisabledClick={[Function]}
             />
           </div>
         </div>,
@@ -179,7 +272,9 @@ ShallowWrapper {
             <div
               className="mc-title"
             >
-              <h1>
+              <h1
+                className="mc-title-text"
+              >
                 Mentor Profiles
               </h1>
               <div
@@ -313,7 +408,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h1>
+                <h1
+                  className="mc-title-text"
+                >
                   Mentor Profiles
                 </h1>,
                 <div
@@ -335,6 +432,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Mentor Profiles",
+                  "className": "mc-title-text",
                 },
                 "ref": null,
                 "rendered": "Mentor Profiles",
@@ -421,7 +519,7 @@ ShallowWrapper {
               className="mc-filter-btn-container"
             >
               <button
-                className="mc-filter-btn"
+                className="mc-filter-btn active"
                 name="preferencesClicked"
                 onClick={[Function]}
               >
@@ -636,7 +734,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <button
-                  className="mc-filter-btn"
+                  className="mc-filter-btn active"
                   name="preferencesClicked"
                   onClick={[Function]}
                 >
@@ -667,7 +765,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Filter by Preferences",
-                  "className": "mc-filter-btn",
+                  "className": "mc-filter-btn active",
                   "name": "preferencesClicked",
                   "onClick": [Function],
                 },
@@ -703,6 +801,416 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Veteran
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="veteranSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>,
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Parent
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="parentSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>,
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                LGBTQIA+
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="lgbtqiaSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>,
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Male-Identifying
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="maleSwitched"
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>,
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Female-Identifying
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="femaleSwitched"
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>,
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Non-Binary
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="nonBinarySwitched"
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>,
+          ],
+          "className": "mc-preferences-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Veteran
+                </p>,
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="veteranSwitched"
+                  on={false}
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />,
+              ],
+              "className": "mc-toggle-option",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Veteran",
+                },
+                "ref": null,
+                "rendered": "Veteran",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "enabled": true,
+                  "name": "veteranSwitched",
+                  "on": false,
+                  "onClick": [Function],
+                  "onDisabledClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Parent
+                </p>,
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="parentSwitched"
+                  on={false}
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />,
+              ],
+              "className": "mc-toggle-option",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Parent",
+                },
+                "ref": null,
+                "rendered": "Parent",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "enabled": true,
+                  "name": "parentSwitched",
+                  "on": false,
+                  "onClick": [Function],
+                  "onDisabledClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  LGBTQIA+
+                </p>,
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="lgbtqiaSwitched"
+                  on={false}
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />,
+              ],
+              "className": "mc-toggle-option",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "LGBTQIA+",
+                },
+                "ref": null,
+                "rendered": "LGBTQIA+",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "enabled": true,
+                  "name": "lgbtqiaSwitched",
+                  "on": false,
+                  "onClick": [Function],
+                  "onDisabledClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Male-Identifying
+                </p>,
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="maleSwitched"
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />,
+              ],
+              "className": "mc-toggle-option",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Male-Identifying",
+                },
+                "ref": null,
+                "rendered": "Male-Identifying",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "enabled": true,
+                  "name": "maleSwitched",
+                  "on": undefined,
+                  "onClick": [Function],
+                  "onDisabledClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Female-Identifying
+                </p>,
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="femaleSwitched"
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />,
+              ],
+              "className": "mc-toggle-option",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Female-Identifying",
+                },
+                "ref": null,
+                "rendered": "Female-Identifying",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "enabled": true,
+                  "name": "femaleSwitched",
+                  "on": undefined,
+                  "onClick": [Function],
+                  "onDisabledClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Non-Binary
+                </p>,
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="nonBinarySwitched"
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />,
+              ],
+              "className": "mc-toggle-option",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Non-Binary",
+                },
+                "ref": null,
+                "rendered": "Non-Binary",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "enabled": true,
+                  "name": "nonBinarySwitched",
+                  "on": undefined,
+                  "onClick": [Function],
+                  "onDisabledClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
             ],
             "type": "div",
@@ -755,7 +1263,9 @@ ShallowWrapper {
             <div
               className="mc-title"
             >
-              <h1>
+              <h1
+                className="mc-title-text"
+              >
                 Mentor Profiles
               </h1>
               <div
@@ -817,7 +1327,7 @@ ShallowWrapper {
               className="mc-filter-btn-container"
             >
               <button
-                className="mc-filter-btn"
+                className="mc-filter-btn active"
                 name="preferencesClicked"
                 onClick={[Function]}
               >
@@ -836,6 +1346,97 @@ ShallowWrapper {
                 name="favClicked"
                 onClick={[Function]}
                 src="heart.svg"
+              />
+            </div>
+          </div>,
+          <div
+            className="mc-preferences-container"
+          >
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Veteran
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="veteranSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Parent
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="parentSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                LGBTQIA+
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="lgbtqiaSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Male-Identifying
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="maleSwitched"
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Female-Identifying
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="femaleSwitched"
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />
+            </div>
+            <div
+              className="mc-toggle-option"
+            >
+              <p>
+                Non-Binary
+              </p>
+              <Switch
+                className=""
+                enabled={true}
+                name="nonBinarySwitched"
+                onClick={[Function]}
+                onDisabledClick={[Function]}
               />
             </div>
           </div>,
@@ -881,7 +1482,9 @@ ShallowWrapper {
               <div
                 className="mc-title"
               >
-                <h1>
+                <h1
+                  className="mc-title-text"
+                >
                   Mentor Profiles
                 </h1>
                 <div
@@ -1015,7 +1618,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h1>
+                  <h1
+                    className="mc-title-text"
+                  >
                     Mentor Profiles
                   </h1>,
                   <div
@@ -1037,6 +1642,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Mentor Profiles",
+                    "className": "mc-title-text",
                   },
                   "ref": null,
                   "rendered": "Mentor Profiles",
@@ -1123,7 +1729,7 @@ ShallowWrapper {
                 className="mc-filter-btn-container"
               >
                 <button
-                  className="mc-filter-btn"
+                  className="mc-filter-btn active"
                   name="preferencesClicked"
                   onClick={[Function]}
                 >
@@ -1338,7 +1944,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <button
-                    className="mc-filter-btn"
+                    className="mc-filter-btn active"
                     name="preferencesClicked"
                     onClick={[Function]}
                   >
@@ -1369,7 +1975,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Filter by Preferences",
-                    "className": "mc-filter-btn",
+                    "className": "mc-filter-btn active",
                     "name": "preferencesClicked",
                     "onClick": [Function],
                   },
@@ -1405,6 +2011,416 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="mc-toggle-option"
+              >
+                <p>
+                  Veteran
+                </p>
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="veteranSwitched"
+                  on={false}
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />
+              </div>,
+              <div
+                className="mc-toggle-option"
+              >
+                <p>
+                  Parent
+                </p>
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="parentSwitched"
+                  on={false}
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />
+              </div>,
+              <div
+                className="mc-toggle-option"
+              >
+                <p>
+                  LGBTQIA+
+                </p>
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="lgbtqiaSwitched"
+                  on={false}
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />
+              </div>,
+              <div
+                className="mc-toggle-option"
+              >
+                <p>
+                  Male-Identifying
+                </p>
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="maleSwitched"
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />
+              </div>,
+              <div
+                className="mc-toggle-option"
+              >
+                <p>
+                  Female-Identifying
+                </p>
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="femaleSwitched"
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />
+              </div>,
+              <div
+                className="mc-toggle-option"
+              >
+                <p>
+                  Non-Binary
+                </p>
+                <Switch
+                  className=""
+                  enabled={true}
+                  name="nonBinarySwitched"
+                  onClick={[Function]}
+                  onDisabledClick={[Function]}
+                />
+              </div>,
+            ],
+            "className": "mc-preferences-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Veteran
+                  </p>,
+                  <Switch
+                    className=""
+                    enabled={true}
+                    name="veteranSwitched"
+                    on={false}
+                    onClick={[Function]}
+                    onDisabledClick={[Function]}
+                  />,
+                ],
+                "className": "mc-toggle-option",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Veteran",
+                  },
+                  "ref": null,
+                  "rendered": "Veteran",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "enabled": true,
+                    "name": "veteranSwitched",
+                    "on": false,
+                    "onClick": [Function],
+                    "onDisabledClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Parent
+                  </p>,
+                  <Switch
+                    className=""
+                    enabled={true}
+                    name="parentSwitched"
+                    on={false}
+                    onClick={[Function]}
+                    onDisabledClick={[Function]}
+                  />,
+                ],
+                "className": "mc-toggle-option",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Parent",
+                  },
+                  "ref": null,
+                  "rendered": "Parent",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "enabled": true,
+                    "name": "parentSwitched",
+                    "on": false,
+                    "onClick": [Function],
+                    "onDisabledClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    LGBTQIA+
+                  </p>,
+                  <Switch
+                    className=""
+                    enabled={true}
+                    name="lgbtqiaSwitched"
+                    on={false}
+                    onClick={[Function]}
+                    onDisabledClick={[Function]}
+                  />,
+                ],
+                "className": "mc-toggle-option",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "LGBTQIA+",
+                  },
+                  "ref": null,
+                  "rendered": "LGBTQIA+",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "enabled": true,
+                    "name": "lgbtqiaSwitched",
+                    "on": false,
+                    "onClick": [Function],
+                    "onDisabledClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Male-Identifying
+                  </p>,
+                  <Switch
+                    className=""
+                    enabled={true}
+                    name="maleSwitched"
+                    onClick={[Function]}
+                    onDisabledClick={[Function]}
+                  />,
+                ],
+                "className": "mc-toggle-option",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Male-Identifying",
+                  },
+                  "ref": null,
+                  "rendered": "Male-Identifying",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "enabled": true,
+                    "name": "maleSwitched",
+                    "on": undefined,
+                    "onClick": [Function],
+                    "onDisabledClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Female-Identifying
+                  </p>,
+                  <Switch
+                    className=""
+                    enabled={true}
+                    name="femaleSwitched"
+                    onClick={[Function]}
+                    onDisabledClick={[Function]}
+                  />,
+                ],
+                "className": "mc-toggle-option",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Female-Identifying",
+                  },
+                  "ref": null,
+                  "rendered": "Female-Identifying",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "enabled": true,
+                    "name": "femaleSwitched",
+                    "on": undefined,
+                    "onClick": [Function],
+                    "onDisabledClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Non-Binary
+                  </p>,
+                  <Switch
+                    className=""
+                    enabled={true}
+                    name="nonBinarySwitched"
+                    onClick={[Function]}
+                    onDisabledClick={[Function]}
+                  />,
+                ],
+                "className": "mc-toggle-option",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Non-Binary",
+                  },
+                  "ref": null,
+                  "rendered": "Non-Binary",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "enabled": true,
+                    "name": "nonBinarySwitched",
+                    "on": undefined,
+                    "onClick": [Function],
+                    "onDisabledClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
                 },
               ],
               "type": "div",
