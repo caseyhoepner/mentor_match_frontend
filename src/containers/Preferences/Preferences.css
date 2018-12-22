@@ -1,0 +1,49 @@
+.p-preferences-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.switch{
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.switch-toggle {
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+  width: 25px;
+  height: 24px;
+  left: 0;
+  border-radius: 12px;
+  background: #fff;
+  position: relative;
+  transition: left .2s ease-in-out;
+}
+
+.switch.on{
+  background: #03c1d1;
+}
+
+.switch.on .switch-toggle {
+  left: 23px;
+}
+
+.switch.disabled {
+  cursor: not-allowed;
+}
+
+.p-toggle-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
