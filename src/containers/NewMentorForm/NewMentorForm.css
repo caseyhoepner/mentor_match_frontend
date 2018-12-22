@@ -113,8 +113,11 @@
   user-select: none;
 }
 
+
+
+
 /* Hide the browser's default radio button */
-.nmf-radio-container input {
+.nmf-radio-container .nmf-FE-BE {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -132,12 +135,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-radio-container:hover input ~ .nmf-radio-checkmark {
+.nmf-radio-container:hover .nmf-FE-BE ~ .nmf-radio-checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.nmf-radio-container input:checked ~ .nmf-radio-checkmark {
+.nmf-radio-container .nmf-FE-BE:checked ~ .nmf-radio-checkmark {
   background-color: #2196F3;
 }
 
@@ -149,7 +152,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.nmf-radio-container input:checked ~ .nmf-radio-checkmark:after {
+.nmf-radio-container .nmf-FE-BE:checked ~ .nmf-radio-checkmark:after {
   display: block;
 }
 
@@ -164,3 +167,67 @@
 }
 
 
+
+/* The container */
+.nmf-radio-container-1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.nmf-radio-container-1 .nmf-1to1 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.nmf-radio-checkmark-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.nmf-radio-container-1:hover .nmf-1to1 ~ .nmf-radio-checkmark-1 {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.nmf-radio-container-1 .nmf-1to1:checked ~ .nmf-radio-checkmark-1 {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.nmf-radio-checkmark-1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.nmf-radio-container-1 .nmf-1to1:checked ~ .nmf-radio-checkmark-1:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.nmf-radio-container-1 .nmf-radio-checkmark-1:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
