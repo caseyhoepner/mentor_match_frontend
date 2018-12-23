@@ -11,8 +11,6 @@ export class Search extends Component {
     super();
 
     this.state = {
-      localeSelected: '',
-      search: '',
       favClicked: false,
       allMentorsClicked: false,
       preferencesClicked: false
@@ -22,8 +20,6 @@ export class Search extends Component {
   handleChange = (event) => {
     const { value, name } = event.target;
     const { setLocale, setSearch } = this.props; 
-    
-    this.setState({ [name]: value })
 
     if(name === 'localeSelected') {
       setLocale(value)
@@ -35,17 +31,12 @@ export class Search extends Component {
   toggleClicked = (event) => {
     const { name } = event.target;
 
-    // if (name === 'preferencesClicked') {
-    //   this.setState({
-    //     showPreferences: !this.state.showPreferences
-    //   }) 
-    // } 
-
     this.setState({ [name]: !this.state[name] })
   }
 
   render() {
     const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
+    const { locale } = this.props
 
     return (
       <div>
@@ -64,7 +55,7 @@ export class Search extends Component {
               </div>
             </div>
             <select
-              value={localeSelected}
+              value={locale}
               onChange={this.handleChange}
               name='localeSelected'
               className='s-location-dropdown'
