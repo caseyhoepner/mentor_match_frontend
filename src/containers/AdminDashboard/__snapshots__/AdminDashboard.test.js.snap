@@ -69,6 +69,18 @@ ShallowWrapper {
           </div>
         </header>,
         <Connect(AdminMentorSearch) />,
+        <div
+          className="ad-mentor-headings"
+        >
+          <h1>
+            Name
+          </h1>
+          <h1>
+            Stack Preference
+          </h1>
+          <h1 />
+        </div>,
+        <AdminMentorCard />,
       ],
     },
     "ref": null,
@@ -315,6 +327,67 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Name
+            </h1>,
+            <h1>
+              Stack Preference
+            </h1>,
+            <h1 />,
+          ],
+          "className": "ad-mentor-headings",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Name",
+            },
+            "ref": null,
+            "rendered": "Name",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Stack Preference",
+            },
+            "ref": null,
+            "rendered": "Stack Preference",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "h1",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -376,6 +449,18 @@ ShallowWrapper {
             </div>
           </header>,
           <Connect(AdminMentorSearch) />,
+          <div
+            className="ad-mentor-headings"
+          >
+            <h1>
+              Name
+            </h1>
+            <h1>
+              Stack Preference
+            </h1>
+            <h1 />
+          </div>,
+          <AdminMentorCard />,
         ],
       },
       "ref": null,
@@ -612,6 +697,67 @@ ShallowWrapper {
             },
           ],
           "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Name
+              </h1>,
+              <h1>
+                Stack Preference
+              </h1>,
+              <h1 />,
+            ],
+            "className": "ad-mentor-headings",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Name",
+              },
+              "ref": null,
+              "rendered": "Name",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Stack Preference",
+              },
+              "ref": null,
+              "rendered": "Stack Preference",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "h1",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,

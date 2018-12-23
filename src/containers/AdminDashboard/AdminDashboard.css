@@ -54,3 +54,15 @@
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
+
+.ad-mentor-headings {
+  border: solid 1px #000;
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+  margin: 0 40px 0 40px;
+}
+
+.ad-mentor-heading {
+  width: 20%;
+}

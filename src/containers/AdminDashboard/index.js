@@ -27,9 +27,11 @@ export class AdminDashboard extends Component {
         </header>
         <AdminMentorSearch />
         <div className="ad-mentor-headings">
-          <h1>Name</h1>
-          <h1>Stack Preference</h1>
-          <h1></h1>
+          <h1 className='ad-mentor-heading'>Profile Picture</h1>
+          <h1 className='ad-mentor-heading'>Name</h1>
+          <h1 className='ad-mentor-heading'>Stack Preference</h1>
+          <h1 className='ad-mentor-heading'>Other Preferences</h1>
+          <h1 className='ad-mentor-heading'>View/Edit</h1>
         </div>
         <AdminMentorCard />
       </div>

@@ -1,0 +1,24 @@
+.amc-card {
+  align-items: center;
+  display: flex;
+  margin: 0 40px 0 40px;
+}
+
+.amc-record-item {
+  width: 20%;
+}
+
+.amc-pref-icon {
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.amc-view-edit {
+  align-items: center;
+  display: flex;
+}
+
+.amc-slash {
+  margin-right: 10px;
+}

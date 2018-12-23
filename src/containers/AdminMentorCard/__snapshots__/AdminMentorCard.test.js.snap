@@ -17,10 +17,54 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "AdminMentorCard",
+      "children": Array [
+        <h1>
+          Name: Muthafucka
+        </h1>,
+        <h1>
+          Stack Preference: Front-End
+        </h1>,
+        <h1>
+          poop
+        </h1>,
+      ],
     },
     "ref": null,
-    "rendered": "AdminMentorCard",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Name: Muthafucka",
+        },
+        "ref": null,
+        "rendered": "Name: Muthafucka",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Stack Preference: Front-End",
+        },
+        "ref": null,
+        "rendered": "Stack Preference: Front-End",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "poop",
+        },
+        "ref": null,
+        "rendered": "poop",
+        "type": "h1",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +73,54 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "AdminMentorCard",
+        "children": Array [
+          <h1>
+            Name: Muthafucka
+          </h1>,
+          <h1>
+            Stack Preference: Front-End
+          </h1>,
+          <h1>
+            poop
+          </h1>,
+        ],
       },
       "ref": null,
-      "rendered": "AdminMentorCard",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Name: Muthafucka",
+          },
+          "ref": null,
+          "rendered": "Name: Muthafucka",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Stack Preference: Front-End",
+          },
+          "ref": null,
+          "rendered": "Stack Preference: Front-End",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "poop",
+          },
+          "ref": null,
+          "rendered": "poop",
+          "type": "h1",
+        },
+      ],
       "type": "div",
     },
   ],
