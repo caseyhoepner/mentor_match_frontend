@@ -8,7 +8,11 @@ export class AdminMentorCard extends Component {
 
   render() {
     return (
-      <div>AdminMentorCard</div>
+      <div>
+        <h1>Name: Muthafucka</h1>
+        <h1>Stack Preference: Front-End</h1>
+        <h1>poop</h1>
+      </div>
       )
   }
 }
