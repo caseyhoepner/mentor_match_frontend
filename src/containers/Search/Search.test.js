@@ -11,6 +11,8 @@ describe('Search', () => {
     allMentorsClicked: false,
     preferencesClicked: false
   }
+  let mockSetLocale = jest.fn()
+  let mockSetSearch = jest.fn()
   
   beforeEach(() => {
     wrapper = shallow(<Search />)
@@ -22,20 +24,19 @@ describe('Search', () => {
     });
 
     it('should update redux state with locale', () => {
-      const spy = spyOn()
-      wrapper = shallow(<Search setLocale={jest.fn()} />)
+      wrapper = shallow(<Search setLocale={mockSetLocale} />)
       let mockLocaleEvent = { target: { name: 'localeSelected', value: 'Denver' } }
       
       wrapper.instance().handleChange(mockLocaleEvent)
-      expect(wrapper.props.setLocale).toHaveBeenCalled()
+      expect(mockSetLocale).toHaveBeenCalled()
     });
 
     it('should update redux state with search terms', () => {
       let mockSearchEvent = { target: { name: 'search', value: 'skwijb' } }
-      wrapper = shallow(<Search setSearch={jest.fn()} />)
+      wrapper = shallow(<Search setSearch={mockSetSearch} />)
 
       wrapper.instance().handleChange(mockSearchEvent)
-      expect(wrapper.props.setSearch).toHaveBeenCalled()
+      expect(mockSetSearch).toHaveBeenCalled()
     });
 
     it('should toggle state if the Favorite button is clicked', () => {
