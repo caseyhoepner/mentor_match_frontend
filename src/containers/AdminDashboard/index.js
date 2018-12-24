@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import './AdminDashboard.css';
 import AdminMentorSearch from '../../containers/AdminMentorSearch';
 import AdminMentorCard from '../AdminMentorCard';
+import { connect } from 'react-redux';
 
 export class AdminDashboard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
+    const mentorCards = this.props.mentors.map(mentor => {
+      return <AdminMentorCard mentor={mentor}/>
+    })
     return (
       <div>
         <header className='ad-header'>
@@ -33,10 +37,20 @@ export class AdminDashboard extends Component {
           <h1 className='ad-mentor-heading'>Other Preferences</h1>
           <h1 className='ad-mentor-heading'>View/Edit</h1>
         </div>
-        <AdminMentorCard />
+        { mentorCards }
       </div>
     )
   }
 }
 
-export default AdminDashboard;
+export const mapStateToProps = (state) => ({
+  mentors: state.mentors
+})
+
+export default connect(mapStateToProps)(AdminDashboard);
+
+
+
+
+
+

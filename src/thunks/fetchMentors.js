@@ -5,7 +5,6 @@ import { fetchMentors } from '../utils/api';
 export const retrieveMentors = () => {
   return async (dispatch) => {
     try {
-
       dispatch(isLoading(true));
       const mentors = await fetchMentors();
       if (mentors) {
