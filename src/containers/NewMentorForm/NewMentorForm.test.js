@@ -168,7 +168,7 @@ describe('NewMentorForm', () => {
       expect(wrapper.state().industries).toEqual(['Coding', 'Running'])
     });
 
-    it('should remove an existing element from instrustries array when clicked again', () => {
+    it('should remove an existing element from industries array when clicked again', () => {
       let mockClickEvent = { 
         target: { 
           parentNode: {
@@ -193,6 +193,266 @@ describe('NewMentorForm', () => {
       expect(wrapper.state().industries).toEqual(['Coding', 'Running'])
       wrapper.instance().handleClick(mockClickEvent)
       expect(wrapper.state().industries).toEqual(['Running'])
+    });
+
+    it('should add multiple items to the ways_to_mentor array in state', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'Mock Interviews',
+            getAttribute: jest.fn(() => { return 'ways_to_mentor' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'Pairing',
+            getAttribute: jest.fn(() => { return 'ways_to_mentor' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().ways_to_mentor).toEqual(['Mock Interviews'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().ways_to_mentor).toEqual(['Mock Interviews', 'Pairing'])
+    });
+
+    it('should remove an existing element from ways_to_mentor array when clicked again', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'Mock Interviews',
+            getAttribute: jest.fn(() => { return 'ways_to_mentor' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'Pairing',
+            getAttribute: jest.fn(() => { return 'ways_to_mentor' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().ways_to_mentor).toEqual(['Mock Interviews'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().ways_to_mentor).toEqual(['Mock Interviews', 'Pairing'])
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().ways_to_mentor).toEqual(['Pairing'])
+    });
+
+    it('should add multiple items to the expertise_tech array in state', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'Ruby',
+            getAttribute: jest.fn(() => { return 'expertise_tech' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'JavaScript',
+            getAttribute: jest.fn(() => { return 'expertise_tech' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().expertise_tech).toEqual(['Ruby'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().expertise_tech).toEqual(['Ruby', 'JavaScript'])
+    });
+
+    it('should remove an existing element from expertise_tech array when clicked again', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'Ruby',
+            getAttribute: jest.fn(() => { return 'expertise_tech' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'JavaScript',
+            getAttribute: jest.fn(() => { return 'expertise_tech' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().expertise_tech).toEqual(['Ruby'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().expertise_tech).toEqual(['Ruby', 'JavaScript'])
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().expertise_tech).toEqual(['JavaScript'])
+    });
+
+    it('should add multiple items to the expertise_non_tech array in state', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'parenting',
+            getAttribute: jest.fn(() => { return 'expertise_non_tech' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'veteraning',
+            getAttribute: jest.fn(() => { return 'expertise_non_tech' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().expertise_non_tech).toEqual(['parenting'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().expertise_non_tech).toEqual(['parenting', 'veteraning'])
+    });
+
+    it('should remove an existing element from expertise_non_tech array when clicked again', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'parenting',
+            getAttribute: jest.fn(() => { return 'expertise_non_tech' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'veteraning',
+            getAttribute: jest.fn(() => { return 'expertise_non_tech' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().expertise_non_tech).toEqual(['parenting'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().expertise_non_tech).toEqual(['parenting', 'veteraning'])
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().expertise_non_tech).toEqual(['veteraning'])
+    });
+
+    it('should add multiple items to the preferences array in state', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'cool',
+            getAttribute: jest.fn(() => { return 'preferences' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'chill',
+            getAttribute: jest.fn(() => { return 'preferences' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().preferences).toEqual(['cool'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().preferences).toEqual(['cool', 'chill'])
+    });
+
+    it('should remove an existing element from preferences array when clicked again', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'cool',
+            getAttribute: jest.fn(() => { return 'preferences' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'chill',
+            getAttribute: jest.fn(() => { return 'preferences' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().preferences).toEqual(['cool'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().preferences).toEqual(['cool', 'chill'])
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().preferences).toEqual(['chill'])
+    });
+
+    it('should add multiple items to the meeting_location array in state', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'Turing',
+            getAttribute: jest.fn(() => { return 'meeting_location' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'not Turing',
+            getAttribute: jest.fn(() => { return 'meeting_location' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().meeting_location).toEqual(['Turing'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().meeting_location).toEqual(['Turing', 'not Turing'])
+    });
+
+    it('should remove an existing element from meeting_location array when clicked again', () => {
+      let mockClickEvent = { 
+        target: { 
+          parentNode: {
+            innerText: 'Turing',
+            getAttribute: jest.fn(() => { return 'meeting_location' })
+          }
+        } 
+      }
+      let mockClickEvent2 = { 
+        target: { 
+          parentNode: {
+            innerText: 'not Turing',
+            getAttribute: jest.fn(() => { return 'meeting_location' })
+          }
+        } 
+      }
+
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().meeting_location).toEqual(['Turing'])
+      wrapper.instance().handleClick(mockClickEvent2)
+      expect(wrapper.state().meeting_location).toEqual(['Turing', 'not Turing'])
+      wrapper.instance().handleClick(mockClickEvent)
+      expect(wrapper.state().meeting_location).toEqual(['not Turing'])
     });
   });
 });

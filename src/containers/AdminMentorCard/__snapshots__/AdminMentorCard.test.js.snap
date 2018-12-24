@@ -18,16 +18,113 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Name: Muthafucka
+        <h1
+          className="amc-record-item"
+        >
+          PICTURE!!
         </h1>,
-        <h1>
-          Stack Preference: Front-End
+        <h1
+          className="amc-record-item"
+        >
+          GodCaseyJesus
         </h1>,
-        <h1>
-          poop
+        <h1
+          className="amc-record-item"
+        >
+          Front-End
         </h1>,
+        <div
+          className="amc-record-item"
+        >
+          <img
+            alt="veteran preference indicator"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "veteran.svg",
+              }
+            }
+          />
+          <img
+            alt="parent preference indicator"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "parent.svg",
+              }
+            }
+          />
+          <img
+            alt="lgbtq preference indicator"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "lgbtq.svg",
+              }
+            }
+          />
+          <img
+            alt="female preference indicator"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "female.svg",
+              }
+            }
+          />
+          <img
+            alt="male preference indicator"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "male.svg",
+              }
+            }
+          />
+        </div>,
+        <div
+          className="amc-record-item amc-view-edit"
+        >
+          <img
+            alt="Click to View or Edit Mentor"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "eye.svg",
+              }
+            }
+          />
+          <h1
+            className="amc-slash"
+          >
+            /
+          </h1>
+          <img
+            alt="Click to View or Edit Mentor"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "pencil.svg",
+              }
+            }
+          />
+        </div>,
       ],
+      "className": "amc-card",
     },
     "ref": null,
     "rendered": Array [
@@ -36,10 +133,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Name: Muthafucka",
+          "children": "PICTURE!!",
+          "className": "amc-record-item",
         },
         "ref": null,
-        "rendered": "Name: Muthafucka",
+        "rendered": "PICTURE!!",
         "type": "h1",
       },
       Object {
@@ -47,10 +145,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Stack Preference: Front-End",
+          "children": "GodCaseyJesus",
+          "className": "amc-record-item",
         },
         "ref": null,
-        "rendered": "Stack Preference: Front-End",
+        "rendered": "GodCaseyJesus",
         "type": "h1",
       },
       Object {
@@ -58,11 +157,253 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "poop",
+          "children": "Front-End",
+          "className": "amc-record-item",
         },
         "ref": null,
-        "rendered": "poop",
+        "rendered": "Front-End",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="veteran preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "veteran.svg",
+                }
+              }
+            />,
+            <img
+              alt="parent preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "parent.svg",
+                }
+              }
+            />,
+            <img
+              alt="lgbtq preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "lgbtq.svg",
+                }
+              }
+            />,
+            <img
+              alt="female preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "female.svg",
+                }
+              }
+            />,
+            <img
+              alt="male preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "male.svg",
+                }
+              }
+            />,
+          ],
+          "className": "amc-record-item",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "veteran preference indicator",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "veteran.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "parent preference indicator",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "parent.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "lgbtq preference indicator",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "lgbtq.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "female preference indicator",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "female.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "male preference indicator",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "male.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "eye.svg",
+                }
+              }
+            />,
+            <h1
+              className="amc-slash"
+            >
+              /
+            </h1>,
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "pencil.svg",
+                }
+              }
+            />,
+          ],
+          "className": "amc-record-item amc-view-edit",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Click to View or Edit Mentor",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "eye.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "/",
+              "className": "amc-slash",
+            },
+            "ref": null,
+            "rendered": "/",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Click to View or Edit Mentor",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "pencil.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -74,16 +415,113 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Name: Muthafucka
+          <h1
+            className="amc-record-item"
+          >
+            PICTURE!!
           </h1>,
-          <h1>
-            Stack Preference: Front-End
+          <h1
+            className="amc-record-item"
+          >
+            GodCaseyJesus
           </h1>,
-          <h1>
-            poop
+          <h1
+            className="amc-record-item"
+          >
+            Front-End
           </h1>,
+          <div
+            className="amc-record-item"
+          >
+            <img
+              alt="veteran preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "veteran.svg",
+                }
+              }
+            />
+            <img
+              alt="parent preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "parent.svg",
+                }
+              }
+            />
+            <img
+              alt="lgbtq preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "lgbtq.svg",
+                }
+              }
+            />
+            <img
+              alt="female preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "female.svg",
+                }
+              }
+            />
+            <img
+              alt="male preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "male.svg",
+                }
+              }
+            />
+          </div>,
+          <div
+            className="amc-record-item amc-view-edit"
+          >
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "eye.svg",
+                }
+              }
+            />
+            <h1
+              className="amc-slash"
+            >
+              /
+            </h1>
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "pencil.svg",
+                }
+              }
+            />
+          </div>,
         ],
+        "className": "amc-card",
       },
       "ref": null,
       "rendered": Array [
@@ -92,10 +530,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Name: Muthafucka",
+            "children": "PICTURE!!",
+            "className": "amc-record-item",
           },
           "ref": null,
-          "rendered": "Name: Muthafucka",
+          "rendered": "PICTURE!!",
           "type": "h1",
         },
         Object {
@@ -103,10 +542,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Stack Preference: Front-End",
+            "children": "GodCaseyJesus",
+            "className": "amc-record-item",
           },
           "ref": null,
-          "rendered": "Stack Preference: Front-End",
+          "rendered": "GodCaseyJesus",
           "type": "h1",
         },
         Object {
@@ -114,11 +554,253 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "poop",
+            "children": "Front-End",
+            "className": "amc-record-item",
           },
           "ref": null,
-          "rendered": "poop",
+          "rendered": "Front-End",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="veteran preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "veteran.svg",
+                  }
+                }
+              />,
+              <img
+                alt="parent preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "parent.svg",
+                  }
+                }
+              />,
+              <img
+                alt="lgbtq preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "lgbtq.svg",
+                  }
+                }
+              />,
+              <img
+                alt="female preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "female.svg",
+                  }
+                }
+              />,
+              <img
+                alt="male preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "male.svg",
+                  }
+                }
+              />,
+            ],
+            "className": "amc-record-item",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "veteran preference indicator",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "veteran.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "parent preference indicator",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "parent.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "lgbtq preference indicator",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "lgbtq.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "female preference indicator",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "female.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "male preference indicator",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "male.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Click to View or Edit Mentor"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "eye.svg",
+                  }
+                }
+              />,
+              <h1
+                className="amc-slash"
+              >
+                /
+              </h1>,
+              <img
+                alt="Click to View or Edit Mentor"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "pencil.svg",
+                  }
+                }
+              />,
+            ],
+            "className": "amc-record-item amc-view-edit",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Click to View or Edit Mentor",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "eye.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "/",
+                "className": "amc-slash",
+              },
+              "ref": null,
+              "rendered": "/",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Click to View or Edit Mentor",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "pencil.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

@@ -72,13 +72,31 @@ ShallowWrapper {
         <div
           className="ad-mentor-headings"
         >
-          <h1>
+          <h1
+            className="ad-mentor-heading"
+          >
+            Profile Picture
+          </h1>
+          <h1
+            className="ad-mentor-heading"
+          >
             Name
           </h1>
-          <h1>
+          <h1
+            className="ad-mentor-heading"
+          >
             Stack Preference
           </h1>
-          <h1 />
+          <h1
+            className="ad-mentor-heading"
+          >
+            Other Preferences
+          </h1>
+          <h1
+            className="ad-mentor-heading"
+          >
+            View/Edit
+          </h1>
         </div>,
         <AdminMentorCard />,
       ],
@@ -333,13 +351,31 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h1>
+            <h1
+              className="ad-mentor-heading"
+            >
+              Profile Picture
+            </h1>,
+            <h1
+              className="ad-mentor-heading"
+            >
               Name
             </h1>,
-            <h1>
+            <h1
+              className="ad-mentor-heading"
+            >
               Stack Preference
             </h1>,
-            <h1 />,
+            <h1
+              className="ad-mentor-heading"
+            >
+              Other Preferences
+            </h1>,
+            <h1
+              className="ad-mentor-heading"
+            >
+              View/Edit
+            </h1>,
           ],
           "className": "ad-mentor-headings",
         },
@@ -350,7 +386,20 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "children": "Profile Picture",
+              "className": "ad-mentor-heading",
+            },
+            "ref": null,
+            "rendered": "Profile Picture",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
               "children": "Name",
+              "className": "ad-mentor-heading",
             },
             "ref": null,
             "rendered": "Name",
@@ -362,6 +411,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Stack Preference",
+              "className": "ad-mentor-heading",
             },
             "ref": null,
             "rendered": "Stack Preference",
@@ -371,9 +421,24 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "children": "Other Preferences",
+              "className": "ad-mentor-heading",
+            },
             "ref": null,
-            "rendered": null,
+            "rendered": "Other Preferences",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "View/Edit",
+              "className": "ad-mentor-heading",
+            },
+            "ref": null,
+            "rendered": "View/Edit",
             "type": "h1",
           },
         ],
@@ -452,13 +517,31 @@ ShallowWrapper {
           <div
             className="ad-mentor-headings"
           >
-            <h1>
+            <h1
+              className="ad-mentor-heading"
+            >
+              Profile Picture
+            </h1>
+            <h1
+              className="ad-mentor-heading"
+            >
               Name
             </h1>
-            <h1>
+            <h1
+              className="ad-mentor-heading"
+            >
               Stack Preference
             </h1>
-            <h1 />
+            <h1
+              className="ad-mentor-heading"
+            >
+              Other Preferences
+            </h1>
+            <h1
+              className="ad-mentor-heading"
+            >
+              View/Edit
+            </h1>
           </div>,
           <AdminMentorCard />,
         ],
@@ -713,13 +796,31 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h1>
+              <h1
+                className="ad-mentor-heading"
+              >
+                Profile Picture
+              </h1>,
+              <h1
+                className="ad-mentor-heading"
+              >
                 Name
               </h1>,
-              <h1>
+              <h1
+                className="ad-mentor-heading"
+              >
                 Stack Preference
               </h1>,
-              <h1 />,
+              <h1
+                className="ad-mentor-heading"
+              >
+                Other Preferences
+              </h1>,
+              <h1
+                className="ad-mentor-heading"
+              >
+                View/Edit
+              </h1>,
             ],
             "className": "ad-mentor-headings",
           },
@@ -730,7 +831,20 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "children": "Profile Picture",
+                "className": "ad-mentor-heading",
+              },
+              "ref": null,
+              "rendered": "Profile Picture",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
                 "children": "Name",
+                "className": "ad-mentor-heading",
               },
               "ref": null,
               "rendered": "Name",
@@ -742,6 +856,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Stack Preference",
+                "className": "ad-mentor-heading",
               },
               "ref": null,
               "rendered": "Stack Preference",
@@ -751,9 +866,24 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "children": "Other Preferences",
+                "className": "ad-mentor-heading",
+              },
               "ref": null,
-              "rendered": null,
+              "rendered": "Other Preferences",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View/Edit",
+                "className": "ad-mentor-heading",
+              },
+              "ref": null,
+              "rendered": "View/Edit",
               "type": "h1",
             },
           ],
