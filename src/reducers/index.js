@@ -1,13 +1,14 @@
 import { combineReducers } from 'redux';
 import { setLocale, setSearch } from './search-reducers';
-import { setMentors, hasErrored, isLoading } from './mentors-reducers';
+import { setMentors, setMentorModal, hasErrored, isLoading } from './mentors-reducers';
 
 const rootReducer = combineReducers({
   hasErrored,
   isLoading,
   locale: setLocale,
   searchTerm: setSearch,
-  mentors: setMentors
+  mentors: setMentors,
+  modalInfo: setMentorModal
 });
 
 export default rootReducer;

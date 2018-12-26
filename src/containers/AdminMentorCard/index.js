@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './AdminMentorCard.css';
+import { connect } from 'react-redux';
+import { setMentorModal } from '../../actions/mentor-actions';
 
 export class AdminMentorCard extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 }
 
+  handleClick = () => {
+    let { setMentorModal, mentor } = this.props;
+
+    setMentorModal(mentor)
+  }
+
   render() {
-    const { name, preferences, active } = this.props.mentor;
+    const { name, preferences } = this.props.mentor;
     // const preferencesIcons = preferences.map(preference => {
     //   <img className='amc-pref-icon' src={require(`../../utils/assets/${preference}.svg`)} alt=`${preference} preference indicator` />
     // })
@@ -19,7 +27,7 @@ export class AdminMentorCard extends Component {
         <div className='amc-record-item'>
         { /* preferencesIcons */ }
         </div>
-        <div className='amc-record-item amc-view-edit'>
+        <div className='amc-record-item amc-view-edit' onClick={this.handleClick}>
           <img className='amc-pref-icon' src={require('../../utils/assets/eye.svg')} alt='Click to View or Edit Mentor' />
           <h1 className='amc-slash'>/</h1>
           <img className='amc-pref-icon' src={require('../../utils/assets/pencil.svg')} alt='Click to View or Edit Mentor' />
@@ -29,4 +37,8 @@ export class AdminMentorCard extends Component {
   }
 }
 
-export default AdminMentorCard;
+export const mapDispatchToProps = (dispatch) => ({
+  setMentorModal: mentor => dispatch(setMentorModal(mentor))
+})
+
+export default connect(null, mapDispatchToProps)(AdminMentorCard);

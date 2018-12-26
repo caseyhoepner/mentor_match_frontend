@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import './AdminDashboard.css';
 import AdminMentorSearch from '../../containers/AdminMentorSearch';
 import AdminMentorCard from '../AdminMentorCard';
+import AdminMentorModal from '../AdminMentorModal';
 import { connect } from 'react-redux';
 import uuid from 'uuid';
 
 export class AdminDashboard extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      showModal: false
+    }
   }
 
   render() {
@@ -31,6 +36,7 @@ export class AdminDashboard extends Component {
             <p className='ad-tagline'>Filter mentors and students to find a match!</p>
           </div>
         </header>
+        <AdminMentorModal />
         <AdminMentorSearch />
         <div className="ad-mentor-headings">
           <h1 className='ad-mentor-heading'>Profile Picture</h1>

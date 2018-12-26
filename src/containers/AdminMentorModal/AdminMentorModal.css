@@ -1,0 +1,13 @@
+.amm-modal-show {
+  background-color: #fff;
+  border: solid 1px #000;
+  position: fixed;
+  height: 80%;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+}
+
+.amm-modal-hide {
+  display: none;
+}

@@ -9,6 +9,17 @@ export const setMentors = (state = [], action) => {
   }
 }
 
+export const setMentorModal = (state = null, action) => {
+  switch(action.type) {
+
+    case 'SET_MENTOR_MODAL':
+      return action.modalInfo
+
+    default:
+      return state;
+  }
+}
+
 export const isLoading = (state = false, action) => {
   switch(action.type) {
 
