@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1545793642891" clover="3.2.0">
-  <project timestamp="1545793642891" name="All files">
-    <metrics statements="194" coveredstatements="94" conditionals="79" coveredconditionals="25" methods="80" coveredmethods="42" elements="353" coveredelements="161" complexity="0" loc="194" ncloc="194" packages="16" files="23" classes="23">
+<coverage generated="1545797303195" clover="3.2.0">
+  <project timestamp="1545797303195" name="All files">
+    <metrics statements="194" coveredstatements="106" conditionals="79" coveredconditionals="28" methods="80" coveredmethods="50" elements="353" coveredelements="184" complexity="0" loc="194" ncloc="194" packages="16" files="23" classes="23">
       <package name="src">
         <metrics statements="53" coveredstatements="1" conditionals="32" coveredconditionals="0" methods="15" coveredmethods="0"/>
         <file name="index.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/index.js">
@@ -85,14 +85,14 @@
         </file>
       </package>
       <package name="src.components.App">
-        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <file name="index.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/components/App/index.js">
-          <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+          <line num="14" count="3" type="stmt"/>
+          <line num="18" count="3" type="stmt"/>
           <line num="31" count="1" type="stmt"/>
           <line num="35" count="1" type="stmt"/>
-          <line num="36" count="0" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.components.MentorContainer">
@@ -245,7 +245,7 @@
         </file>
       </package>
       <package name="src.reducers">
-        <metrics statements="24" coveredstatements="8" conditionals="15" coveredconditionals="4" methods="5" coveredmethods="2"/>
+        <metrics statements="24" coveredstatements="17" conditionals="15" coveredconditionals="7" methods="5" coveredmethods="5"/>
         <file name="index.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/reducers/index.js">
           <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
@@ -254,18 +254,18 @@
           <line num="5" count="0" type="stmt"/>
         </file>
         <file name="mentors-reducers.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/reducers/mentors-reducers.js">
-          <metrics statements="12" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-          <line num="2" count="0" type="stmt"/>
-          <line num="5" count="0" type="stmt"/>
+          <metrics statements="12" coveredstatements="9" conditionals="9" coveredconditionals="3" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="cond" truecount="0" falsecount="1"/>
+          <line num="2" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="5" count="1" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
-          <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
+          <line num="12" count="1" type="cond" truecount="0" falsecount="1"/>
+          <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="1" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
-          <line num="23" count="0" type="cond" truecount="0" falsecount="1"/>
-          <line num="24" count="0" type="stmt"/>
-          <line num="27" count="0" type="stmt"/>
+          <line num="23" count="1" type="cond" truecount="0" falsecount="1"/>
+          <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="27" count="1" type="stmt"/>
           <line num="30" count="0" type="stmt"/>
         </file>
         <file name="search-reducers.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/reducers/search-reducers.js">
@@ -285,7 +285,7 @@
         <file name="fetchMentors.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/thunks/fetchMentors.js">
           <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
           <line num="5" count="2" type="stmt"/>
-          <line num="6" count="5" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="7" count="5" type="stmt"/>
           <line num="8" count="5" type="stmt"/>
           <line num="9" count="5" type="stmt"/>

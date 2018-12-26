@@ -8,7 +8,7 @@ import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
 
   componentDidMount = () => {
     this.props.retrieveMentors();
