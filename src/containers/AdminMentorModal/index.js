@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './AdminMentorModal.css';
 import { connect } from 'react-redux';
+import { setMentorModal } from '../../actions/mentor-actions';
 
 export class AdminMentorModal extends Component {
   constructor() {
     super();
+  }
+
+  handleClick = () => {
+    this.props.setMentorModal(null)
   }
 
   render() {
@@ -52,7 +57,7 @@ export class AdminMentorModal extends Component {
           <p>{meeting_location}</p>
           <p>{preferences}</p>*/}
           <button>Edit</button>
-          <button>X</button>
+          <button onClick={this.handleClick}>X</button>
         </div>
       )
     } else {
@@ -68,7 +73,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  
+  setMentorModal: mentor => dispatch(setMentorModal(mentor))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal);
