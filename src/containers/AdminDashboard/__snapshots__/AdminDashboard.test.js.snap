@@ -3,7 +3,24 @@
 exports[`AdminDashboard matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AdminDashboard />,
+  Symbol(enzyme.__unrendered__): <AdminDashboard
+    mentors={
+      Array [
+        Object {
+          "name": "Casey",
+          "preferences": Object {
+            "title": "Awesome Coders",
+          },
+        },
+        Object {
+          "name": "Alex",
+          "preferences": Object {
+            "title": "Other Coders",
+          },
+        },
+      ]
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -98,7 +115,28 @@ ShallowWrapper {
             View/Edit
           </h1>
         </div>,
-        <AdminMentorCard />,
+        Array [
+          <AdminMentorCard
+            mentor={
+              Object {
+                "name": "Casey",
+                "preferences": Object {
+                  "title": "Awesome Coders",
+                },
+              }
+            }
+          />,
+          <AdminMentorCard
+            mentor={
+              Object {
+                "name": "Alex",
+                "preferences": Object {
+                  "title": "Other Coders",
+                },
+              }
+            }
+          />,
+        ],
       ],
     },
     "ref": null,
@@ -446,9 +484,32 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "1",
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "mentor": Object {
+            "name": "Casey",
+            "preferences": Object {
+              "title": "Awesome Coders",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "mentor": Object {
+            "name": "Alex",
+            "preferences": Object {
+              "title": "Other Coders",
+            },
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -543,7 +604,28 @@ ShallowWrapper {
               View/Edit
             </h1>
           </div>,
-          <AdminMentorCard />,
+          Array [
+            <AdminMentorCard
+              mentor={
+                Object {
+                  "name": "Casey",
+                  "preferences": Object {
+                    "title": "Awesome Coders",
+                  },
+                }
+              }
+            />,
+            <AdminMentorCard
+              mentor={
+                Object {
+                  "name": "Alex",
+                  "preferences": Object {
+                    "title": "Other Coders",
+                  },
+                }
+              }
+            />,
+          ],
         ],
       },
       "ref": null,
@@ -891,9 +973,32 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "1",
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "mentor": Object {
+              "name": "Casey",
+              "preferences": Object {
+                "title": "Awesome Coders",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "mentor": Object {
+              "name": "Alex",
+              "preferences": Object {
+                "title": "Other Coders",
+              },
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

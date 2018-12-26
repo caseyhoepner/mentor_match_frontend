@@ -3,6 +3,7 @@ import './AdminDashboard.css';
 import AdminMentorSearch from '../../containers/AdminMentorSearch';
 import AdminMentorCard from '../AdminMentorCard';
 import { connect } from 'react-redux';
+import uuid from 'uuid';
 
 export class AdminDashboard extends Component {
   constructor(props) {
@@ -10,8 +11,9 @@ export class AdminDashboard extends Component {
   }
 
   render() {
+
     const mentorCards = this.props.mentors.map(mentor => {
-      return <AdminMentorCard mentor={mentor}/>
+      return <AdminMentorCard key={uuid()} mentor={mentor}/>
     })
     return (
       <div>

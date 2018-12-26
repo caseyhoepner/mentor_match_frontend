@@ -1,5 +1,5 @@
 import * as SearchActions from '../actions/search-actions';
-import { setLocale, setSearch } from './searchReducers';
+import { setLocale, setSearch } from './search-reducers';
 
 describe('setLocale reducer', () => {
   it('should update state with the locale passed in', () => {

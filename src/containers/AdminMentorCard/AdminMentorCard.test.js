@@ -4,9 +4,15 @@ import { AdminMentorCard } from './';
 
 describe('AdminMentorCard', () => {
   let wrapper;
+  let mockMentor = {
+      name: 'Casey',
+      preferences: {
+        title: 'Awesome Coders'
+      }
+    }
   
   beforeEach(() => {
-    wrapper = shallow(<AdminMentorCard />)
+    wrapper = shallow(<AdminMentorCard mentor={mockMentor} />)
   });
 
   it('matches the snapshot', () => {
