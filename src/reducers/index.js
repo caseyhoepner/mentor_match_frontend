@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { setLocale, setSearch } from './search-reducers';
+import { setLocale, setSearch, toggleShowingMentors } from './search-reducers';
 import { setMentors, setMentorModal, hasErrored, isLoading } from './mentors-reducers';
 
 const rootReducer = combineReducers({
@@ -8,7 +8,8 @@ const rootReducer = combineReducers({
   locale: setLocale,
   searchTerm: setSearch,
   mentors: setMentors,
-  modalInfo: setMentorModal
+  modalInfo: setMentorModal,
+  showingAllMentors: toggleShowingMentors
 });
 
 export default rootReducer;

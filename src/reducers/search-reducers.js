@@ -20,3 +20,13 @@ export const setSearch = (state = '', action) => {
   }
 }
 
+export const toggleShowingMentors = (state = false, action) => {
+  switch(action.type) {
+
+    case 'TOGGLE_SHOWING_MENTORS':
+      return action.showingAllMentors;
+
+    default:
+      return state;
+  }
+}
