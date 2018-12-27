@@ -1,19 +1,42 @@
 import React, { Component } from 'react';
 import './AdminMentorModal.css';
 import { connect } from 'react-redux';
-import { setMentorModal } from '../../actions/mentor-actions';
+import { setMentorModal, changeMentorModal } from '../../actions/mentor-actions';
 
 export class AdminMentorModal extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isEditable: false,
+      currentMentor: {}
+    }
   }
 
-  handleClick = () => {
-    this.props.setMentorModal(null)
+  handleClick = (event) => {
+    let { name } = event.target
+    
+    if (name === 'Edit') {
+      this.setState({ isEditable: true })
+    } else if (name === 'Exit' || name === 'Submit Changes') {
+      this.props.setMentorModal(null)
+      this.setState({ isEditable: false })
+    }
+  }
+
+  handleChange = (event) => {
+    let mentorObj = this.props.modalInfo
+    let { name, value } = event.target
+
+    mentorObj[name] = value
+    console.log(mentorObj)
+    this.setState({ currentMentor: mentorObj })
   }
 
   render() {
-    if(this.props.modalInfo) {
+    let { isEditable } = this.state
+
+    if(this.props.modalInfo && !isEditable) {
       let { 
         name,
         email,
@@ -56,10 +79,58 @@ export class AdminMentorModal extends Component {
           <p>{mentee_capacity}</p>
           <p>{meeting_location}</p>
           <p>{preferences}</p>*/}
-          <button>Edit</button>
-          <button onClick={this.handleClick}>X</button>
+          <button name='Edit' onClick={this.handleClick}>Edit</button>
+          <button name='Exit' onClick={this.handleClick}>X</button>
         </div>
       )
+    } else if (this.props.modalInfo && isEditable) {
+        let { currentMentor } = this.props
+        let { 
+            name,
+            email,
+            city,
+            state,
+            country,
+            slack_username,
+            matched,
+            active,
+            pronouns,
+            current_title,
+            current_employer,
+            background,
+            industries,
+            ways_to_mentor,
+            expertise_tech,
+            expertise_non_tech,
+            mentee_capacity,
+            meeting_location,
+            preferences
+          } = this.props.modalInfo;
+          return (
+            <div className='amm-modal-show'>
+              <input name='name' value={currentMentor.name} onChange={this.handleChange} />
+              <input name='email' value={currentMentor.email} onChange={this.handleChange} />
+              <input name='city' value={currentMentor.city} onChange={this.handleChange} />
+              <input name='state' value={currentMentor.state} onChange={this.handleChange} />
+              <input name='country' value={currentMentor.country} onChange={this.handleChange} />
+              <input name='slack_username' value={currentMentor.slack_username} onChange={this.handleChange} />
+              <input name='matched' value={currentMentor.matched} onChange={this.handleChange} />
+              <input name='active' value={currentMentor.active} onChange={this.handleChange} />
+              <input name='pronouns' value={currentMentor.pronouns} onChange={this.handleChange} />
+              <input name='current_title' value={currentMentor.current_title} onChange={this.handleChange} />
+              <input name='current_employer' value={currentMentor.current_employer} onChange={this.handleChange} />
+              <input name='background' value={currentMentor.background} onChange={this.handleChange} />
+    { /*      <p>{industries}</p>
+              <p>{ways_to_mentor}</p>
+              <p>{expertise_tech}</p>
+              <p>{expertise_non_tech}</p>
+              <p>{mentee_capacity}</p>
+              <p>{meeting_location}</p>
+              <p>{preferences}</p>*/}
+              <button name='Submit Changes' onClick={this.handleClick}>Submit Changes</button>
+              <button name='Exit' onClick={this.handleClick}>X</button>
+            </div>
+          )
     } else {
       return (
         <div className='amm-modal-hide'></div>

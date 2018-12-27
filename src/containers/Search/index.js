@@ -35,8 +35,8 @@ export class Search extends Component {
   }
 
   render() {
-    const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
-    const { locale } = this.props
+    const { preferencesClicked, allMentorsClicked, favClicked } = this.state;
+    const { locale, searchTerm } = this.props
 
     return (
       <div>
@@ -46,7 +46,7 @@ export class Search extends Component {
               <input 
                 name='search' 
                 type='text' 
-                value={search} 
+                value={searchTerm} 
                 onChange={this.handleChange} 
                 placeholder='Search here...'
                 className='s-search-input'
@@ -97,7 +97,8 @@ export class Search extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  locale: state.locale
+  locale: state.locale,
+  searchTerm: state.searchTerm
 })
 
 export const mapDispatchToProps = (dispatch) => ({
