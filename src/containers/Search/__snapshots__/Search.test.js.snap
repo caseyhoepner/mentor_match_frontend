@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search matches the snapshot 1`] = `
+exports[`Search Search container matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Search />,
@@ -33,7 +33,6 @@ ShallowWrapper {
                 onChange={[Function]}
                 placeholder="Search here..."
                 type="text"
-                value=""
               />
               <div
                 className="s-search-icon"
@@ -43,7 +42,6 @@ ShallowWrapper {
               className="s-location-dropdown"
               name="localeSelected"
               onChange={[Function]}
-              value=""
             >
               <option
                 value=""
@@ -114,7 +112,6 @@ ShallowWrapper {
                   onChange={[Function]}
                   placeholder="Search here..."
                   type="text"
-                  value=""
                 />
                 <div
                   className="s-search-icon"
@@ -124,7 +121,6 @@ ShallowWrapper {
                 className="s-location-dropdown"
                 name="localeSelected"
                 onChange={[Function]}
-                value=""
               >
                 <option
                   value=""
@@ -189,7 +185,6 @@ ShallowWrapper {
                     onChange={[Function]}
                     placeholder="Search here..."
                     type="text"
-                    value=""
                   />
                   <div
                     className="s-search-icon"
@@ -199,7 +194,6 @@ ShallowWrapper {
                   className="s-location-dropdown"
                   name="localeSelected"
                   onChange={[Function]}
-                  value=""
                 >
                   <option
                     value=""
@@ -235,7 +229,6 @@ ShallowWrapper {
                       onChange={[Function]}
                       placeholder="Search here..."
                       type="text"
-                      value=""
                     />,
                     <div
                       className="s-search-icon"
@@ -255,7 +248,7 @@ ShallowWrapper {
                       "onChange": [Function],
                       "placeholder": "Search here...",
                       "type": "text",
-                      "value": "",
+                      "value": undefined,
                     },
                     "ref": null,
                     "rendered": null,
@@ -301,7 +294,7 @@ ShallowWrapper {
                   "className": "s-location-dropdown",
                   "name": "localeSelected",
                   "onChange": [Function],
-                  "value": "",
+                  "value": undefined,
                 },
                 "ref": null,
                 "rendered": Array [
@@ -473,7 +466,6 @@ ShallowWrapper {
                   onChange={[Function]}
                   placeholder="Search here..."
                   type="text"
-                  value=""
                 />
                 <div
                   className="s-search-icon"
@@ -483,7 +475,6 @@ ShallowWrapper {
                 className="s-location-dropdown"
                 name="localeSelected"
                 onChange={[Function]}
-                value=""
               >
                 <option
                   value=""
@@ -554,7 +545,6 @@ ShallowWrapper {
                     onChange={[Function]}
                     placeholder="Search here..."
                     type="text"
-                    value=""
                   />
                   <div
                     className="s-search-icon"
@@ -564,7 +554,6 @@ ShallowWrapper {
                   className="s-location-dropdown"
                   name="localeSelected"
                   onChange={[Function]}
-                  value=""
                 >
                   <option
                     value=""
@@ -629,7 +618,6 @@ ShallowWrapper {
                       onChange={[Function]}
                       placeholder="Search here..."
                       type="text"
-                      value=""
                     />
                     <div
                       className="s-search-icon"
@@ -639,7 +627,6 @@ ShallowWrapper {
                     className="s-location-dropdown"
                     name="localeSelected"
                     onChange={[Function]}
-                    value=""
                   >
                     <option
                       value=""
@@ -675,7 +662,6 @@ ShallowWrapper {
                         onChange={[Function]}
                         placeholder="Search here..."
                         type="text"
-                        value=""
                       />,
                       <div
                         className="s-search-icon"
@@ -695,7 +681,7 @@ ShallowWrapper {
                         "onChange": [Function],
                         "placeholder": "Search here...",
                         "type": "text",
-                        "value": "",
+                        "value": undefined,
                       },
                       "ref": null,
                       "rendered": null,
@@ -741,7 +727,7 @@ ShallowWrapper {
                     "className": "s-location-dropdown",
                     "name": "localeSelected",
                     "onChange": [Function],
-                    "value": "",
+                    "value": undefined,
                   },
                   "ref": null,
                   "rendered": Array [

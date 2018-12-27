@@ -117,7 +117,7 @@
 
 
 /* Hide the browser's default radio button */
-.nmf-radio-container .nmf-FE-BE {
+.nmf-radio-container .selectedFEBE {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -135,12 +135,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-radio-container:hover .nmf-FE-BE ~ .nmf-radio-checkmark {
+.nmf-radio-container:hover .selectedFEBE ~ .nmf-radio-checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.nmf-radio-container .nmf-FE-BE:checked ~ .nmf-radio-checkmark {
+.nmf-radio-container .selectedFEBE:checked ~ .nmf-radio-checkmark {
   background-color: #2196F3;
 }
 
@@ -152,7 +152,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.nmf-radio-container .nmf-FE-BE:checked ~ .nmf-radio-checkmark:after {
+.nmf-radio-container .selectedFEBE:checked ~ .nmf-radio-checkmark:after {
   display: block;
 }
 
@@ -183,7 +183,7 @@
 }
 
 /* Hide the browser's default radio button */
-.nmf-radio-container-1 .nmf-1to1 {
+.nmf-radio-container-1 .selected1to1 {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -201,12 +201,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-radio-container-1:hover .nmf-1to1 ~ .nmf-radio-checkmark-1 {
+.nmf-radio-container-1:hover .selected1to1 ~ .nmf-radio-checkmark-1 {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.nmf-radio-container-1 .nmf-1to1:checked ~ .nmf-radio-checkmark-1 {
+.nmf-radio-container-1 .selected1to1:checked ~ .nmf-radio-checkmark-1 {
   background-color: #2196F3;
 }
 
@@ -218,7 +218,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.nmf-radio-container-1 .nmf-1to1:checked ~ .nmf-radio-checkmark-1:after {
+.nmf-radio-container-1 .selected1to1:checked ~ .nmf-radio-checkmark-1:after {
   display: block;
 }
 

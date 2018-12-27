@@ -40,7 +40,6 @@ export class NewMentorForm extends Component {
   }
 
   handleClick = (event) => {
-    const { value, className } = event.target;
     const checkedItem = event.target.parentNode.innerText;
     const stateKey = event.target.parentNode.getAttribute('data-name');
 
@@ -399,11 +398,25 @@ export class NewMentorForm extends Component {
 
         <h2 className='nmf-question'>Would you like to be a 1-to-1 mentor?</h2>
             <label className="nmf-radio-container-1">No
-              <input className='nmf-1to1' type="radio" name="nmf-1to1"/>
+              <input 
+                value='No'
+                className='selected1to1' 
+                type="radio" 
+                name="nmf-1to1"
+                checked={selected1to1 === 'No'}
+                onChange={this.handleChangeRadio}
+              />
               <span className="nmf-radio-checkmark-1"></span>
             </label>
             <label className="nmf-radio-container-1">Yes
-              <input className='nmf-1to1' type="radio" name="nmf-1to1"/>
+              <input 
+                value='Yes'
+                className='selected1to1' 
+                type="radio" 
+                name="nmf-1to1"
+                checked={selected1to1 === 'Yes'}
+                onChange={this.handleChangeRadio}
+              />
               <span className="nmf-radio-checkmark-1"></span>
             </label>
 
@@ -449,7 +462,7 @@ export class NewMentorForm extends Component {
           <label className="nmf-radio-container">No Preference
             <input 
               value='No Preference'
-              className='nmf-FE-BE'
+              className='selectedFEBE'
               type="radio" 
               name="nmf-FE-BE" 
               checked={selectedFEBE === 'No Preference'}
@@ -460,7 +473,7 @@ export class NewMentorForm extends Component {
           <label className="nmf-radio-container">Front-End
             <input 
               value='Front-End'
-              className='nmf-FE-BE'
+              className='selectedFEBE'
               type="radio" 
               name="nmf-FE-BE" 
               checked={selectedFEBE === 'Front-End'}
@@ -471,7 +484,7 @@ export class NewMentorForm extends Component {
           <label className="nmf-radio-container">Back-End
             <input 
               value='Back-End'
-              className='nmf-FE-BE'
+              className='selectedFEBE'
               type="radio" 
               name="nmf-FE-BE" 
               checked={selectedFEBE === 'Back-End'}

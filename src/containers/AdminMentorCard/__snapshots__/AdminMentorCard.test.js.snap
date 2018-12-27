@@ -3,7 +3,16 @@
 exports[`AdminMentorCard matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AdminMentorCard />,
+  Symbol(enzyme.__unrendered__): <AdminMentorCard
+    mentor={
+      Object {
+        "name": "Casey",
+        "preferences": Object {
+          "title": "Awesome Coders",
+        },
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,10 +26,196 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "AdminMentorCard",
+      "children": Array [
+        <h1
+          className="amc-record-item"
+        >
+          PICTURE!!
+        </h1>,
+        <h1
+          className="amc-record-item"
+        >
+          Casey
+        </h1>,
+        <h1
+          className="amc-record-item"
+        >
+          Awesome Coders
+        </h1>,
+        <div
+          className="amc-record-item"
+        />,
+        <div
+          className="amc-record-item amc-view-edit"
+        >
+          <img
+            alt="Click to View or Edit Mentor"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "eye.svg",
+              }
+            }
+          />
+          <h1
+            className="amc-slash"
+          >
+            /
+          </h1>
+          <img
+            alt="Click to View or Edit Mentor"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "pencil.svg",
+              }
+            }
+          />
+        </div>,
+      ],
+      "className": "amc-card",
     },
     "ref": null,
-    "rendered": "AdminMentorCard",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "PICTURE!!",
+          "className": "amc-record-item",
+        },
+        "ref": null,
+        "rendered": "PICTURE!!",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Casey",
+          "className": "amc-record-item",
+        },
+        "ref": null,
+        "rendered": "Casey",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Awesome Coders",
+          "className": "amc-record-item",
+        },
+        "ref": null,
+        "rendered": "Awesome Coders",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "amc-record-item",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "eye.svg",
+                }
+              }
+            />,
+            <h1
+              className="amc-slash"
+            >
+              /
+            </h1>,
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "pencil.svg",
+                }
+              }
+            />,
+          ],
+          "className": "amc-record-item amc-view-edit",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Click to View or Edit Mentor",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "eye.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "/",
+              "className": "amc-slash",
+            },
+            "ref": null,
+            "rendered": "/",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Click to View or Edit Mentor",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "pencil.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +224,196 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "AdminMentorCard",
+        "children": Array [
+          <h1
+            className="amc-record-item"
+          >
+            PICTURE!!
+          </h1>,
+          <h1
+            className="amc-record-item"
+          >
+            Casey
+          </h1>,
+          <h1
+            className="amc-record-item"
+          >
+            Awesome Coders
+          </h1>,
+          <div
+            className="amc-record-item"
+          />,
+          <div
+            className="amc-record-item amc-view-edit"
+          >
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "eye.svg",
+                }
+              }
+            />
+            <h1
+              className="amc-slash"
+            >
+              /
+            </h1>
+            <img
+              alt="Click to View or Edit Mentor"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "pencil.svg",
+                }
+              }
+            />
+          </div>,
+        ],
+        "className": "amc-card",
       },
       "ref": null,
-      "rendered": "AdminMentorCard",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "PICTURE!!",
+            "className": "amc-record-item",
+          },
+          "ref": null,
+          "rendered": "PICTURE!!",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Casey",
+            "className": "amc-record-item",
+          },
+          "ref": null,
+          "rendered": "Casey",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Awesome Coders",
+            "className": "amc-record-item",
+          },
+          "ref": null,
+          "rendered": "Awesome Coders",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "amc-record-item",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Click to View or Edit Mentor"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "eye.svg",
+                  }
+                }
+              />,
+              <h1
+                className="amc-slash"
+              >
+                /
+              </h1>,
+              <img
+                alt="Click to View or Edit Mentor"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "pencil.svg",
+                  }
+                }
+              />,
+            ],
+            "className": "amc-record-item amc-view-edit",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Click to View or Edit Mentor",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "eye.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "/",
+                "className": "amc-slash",
+              },
+              "ref": null,
+              "rendered": "/",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Click to View or Edit Mentor",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "pencil.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],

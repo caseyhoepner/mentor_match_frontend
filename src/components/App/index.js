@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Login from '../../containers/Login'
 import AdminDashboard from '../../containers/AdminDashboard';
 import MentorContainer from '../MentorContainer'
 import NewMentorForm from '../../containers/NewMentorForm'
-import { Route, withRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom';
+import { retrieveMentors } from '../../thunks/fetchMentors';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
+
+  componentDidMount = () => {
+    this.props.retrieveMentors();
+  }
+
   render() {
     return (
       <div className="App">
@@ -22,4 +28,17 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+export const mapStateToProps = (state) => ({
+  mentors: state.mentors
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  retrieveMentors: () => dispatch(retrieveMentors())
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+
+
+
+
+

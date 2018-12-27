@@ -18,6 +18,11 @@ export class Login extends Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log('works!')
+  }
+
   render() {
     return (
       <div className='l-container'>
@@ -25,7 +30,7 @@ export class Login extends Component {
           <form className='l-form'>
             <input className='l-input l-form-item' onChange={this.handleChange} name='email' type='text' value={this.state.email} placeholder='Enter your email address, mthfkr.'/>
             <input className='l-input l-form-item' onChange={this.handleChange} name='password' type='password' value={this.state.password} placeholder='Enter your password, mthfkr.'/>
-            <button className='l-login-btn l-form-item'>Login</button>
+            <button className='l-login-btn l-form-item' onClick={this.handleSubmit}>Login</button>
           </form>
       </div>
       )

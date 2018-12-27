@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/containers/AdminMentorSearch/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/containers/AdminMentorSearch</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.58% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import Preferences from '../../containers/Preferences';
+import hollowHeart from '../../utils/assets/heart.svg';
+import solidHeart from '../../utils/assets/solid-heart.svg';
+import { connect } from 'react-redux';
+import { setLocale, setSearch } from '../../actions/search-actions';
+import './AdminMentorSearch.css';
+&nbsp;
+export class AdminMentorSearch extends Component {
+  constructor() {
+    super();
+&nbsp;
+    this.state = {
+      localeSelected: '',
+      search: '',
+      favClicked: false,
+      allMentorsClicked: false,
+      preferencesClicked: false
+    }
+  }
+&nbsp;
+  handleChange = <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
+    const { value, name } = <span class="cstat-no" title="statement not covered" >event.target;</span>
+    const { setLocale, setSearch } = <span class="cstat-no" title="statement not covered" >this.props; </span>
+    
+<span class="cstat-no" title="statement not covered" >    this.setState({ [name]: value })</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(name === 'localeSelected') {</span>
+<span class="cstat-no" title="statement not covered" >      setLocale(value)</span>
+    } else <span class="cstat-no" title="statement not covered" >if (name === 'search') {</span>
+<span class="cstat-no" title="statement not covered" >      setSearch(value)</span>
+    }
+  }
+&nbsp;
+  toggleClicked = <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
+    const { name } = <span class="cstat-no" title="statement not covered" >event.target;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (name === 'preferencesClicked') {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        showPreferences: !this.state.showPreferences
+      }) 
+    } 
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.setState({ [name]: !this.state[name] })</span>
+  }
+&nbsp;
+  render() {
+    const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
+&nbsp;
+    return (
+      &lt;div&gt;
+        &lt;div className='ams-search-container'&gt;
+          &lt;div className='ams-search-inputs-container'&gt;
+            &lt;div className='ams-search-bar'&gt;
+              &lt;input 
+                name='search' 
+                type='text' 
+                value={search} 
+                onChange={this.handleChange} 
+                placeholder='Search here...'
+                className='ams-search-input'
+              /&gt;
+              &lt;div className='ams-search-icon'&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;select
+              value={localeSelected}
+              onChange={this.handleChange}
+              name='localeSelected'
+              className='ams-location-dropdown'
+            &gt;
+              &lt;option value=''&gt;--Select locale--&lt;/option&gt;
+              &lt;option value='Denver'&gt;Denver&lt;/option&gt;
+              &lt;option value='Remote'&gt;Remote&lt;/option&gt;
+              &lt;option&gt;&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;/div&gt;
+          &lt;div className='ams-filter-btn-container'&gt;
+            &lt;button 
+              className={!preferencesClicked ? 'ams-filter-btn' : <span class="branch-1 cbranch-no" title="branch not covered" >'ams-filter-btn active'}</span>
+              onClick={this.toggleClicked}
+              name='preferencesClicked'
+            &gt;
+              Filter by Preferences
+            &lt;/button&gt;
+            &lt;button 
+              className={!allMentorsClicked ? 'ams-filter-btn' : <span class="branch-1 cbranch-no" title="branch not covered" >'ams-filter-btn active'}</span>
+              onClick={this.toggleClicked}
+              name='allMentorsClicked'
+            &gt;
+              All Mentors
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;Preferences preferencesClicked={preferencesClicked}/&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export const mapStateToProps = <span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+  locale: state.locale
+})
+&nbsp;
+export const mapDispatchToProps = <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+    setLocale: <span class="fstat-no" title="function not covered" >lo</span>cale =&gt; <span class="cstat-no" title="statement not covered" >dispatch(setLocale(locale)),</span>
+    setSearch: <span class="fstat-no" title="function not covered" >se</span>archTerm =&gt; <span class="cstat-no" title="statement not covered" >dispatch(setSearch(searchTerm))</span>
+})
+&nbsp;
+export default connect(mapDispatchToProps, mapDispatchToProps)(AdminMentorSearch);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 26 2018 07:01:51 GMT-0700 (MST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

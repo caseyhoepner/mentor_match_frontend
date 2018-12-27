@@ -1,5 +1,32 @@
 import * as SearchActions from '../actions/search-actions';
-import { setLocale, setSearch } from './searchReducers';
+import { setLocale, setSearch } from './search-reducers';
+import { setMentors, isLoading, hasErrored } from './mentors-reducers';
+
+describe('isLoading', () => {
+  it('should update state with the isLoading boolean', () => {
+    const mockAction = { 
+      type: "IS_LOADING",
+      isLoading: true 
+    }
+    const expected = true
+
+    const result = isLoading(false, mockAction)
+    expect(result).toEqual(expected)
+  });
+});
+
+describe('hasErrored', () => {
+  it('should update state with the hasErrored boolean', () => {
+    const mockAction = {
+      type: "HAS_ERRORED",
+      hasErrored: true
+    }
+    const expected = true
+
+    const result = hasErrored(false, mockAction)
+    expect(result).toEqual(expected)
+  });
+});
 
 describe('setLocale reducer', () => {
   it('should update state with the locale passed in', () => {
@@ -38,5 +65,18 @@ describe('setSearch', () => {
 
     const result = setSearch('', mockSearchTerm)
     expect(result).toEqual('')
+  });
+});
+
+describe('setMentors', () => {
+  it('should update state with the array of mentors', () => {
+    const mockAction = {
+      type: "SET_MENTORS",
+      mentors: [ { name: 'Stannis', preferences: { title: 'Doin\' stuff' } } ]
+    }
+    const expected = [ { name: 'Stannis', preferences: { title: 'Doin\' stuff' } } ]
+
+    const result = setMentors([], mockAction)
+    expect(result).toEqual(expected)
   });
 });
