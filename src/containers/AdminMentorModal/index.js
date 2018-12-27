@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AdminMentorModal.css';
 import { connect } from 'react-redux';
-import { setMentorModal, changeMentorModal } from '../../actions/mentor-actions';
+import { setMentorModal, updateChangedMentor } from '../../actions/mentor-actions';
 
 export class AdminMentorModal extends Component {
   constructor(props) {
@@ -15,22 +15,28 @@ export class AdminMentorModal extends Component {
 
   handleClick = (event) => {
     let { name } = event.target
+    let { currentMentor } = this.state;
     
     if (name === 'Edit') {
-      this.setState({ isEditable: true })
-    } else if (name === 'Exit' || name === 'Submit Changes') {
+      let mentorObj = Object.assign({}, this.props.modalInfo)
+
+      this.setState({ isEditable: true, currentMentor: mentorObj })
+    } else if (name === 'Submit Changes') {
       this.props.setMentorModal(null)
-      this.setState({ isEditable: false })
+      this.props.updateChangedMentor(currentMentor);
+      this.setState({ isEditable: false, currentMentor: {} })
+    } else if (name === 'Exit') {
+      this.props.setMentorModal(null)
+      this.setState({ isEditable: false, currentMentor: {} })
     }
   }
 
   handleChange = (event) => {
-    let mentorObj = this.props.modalInfo
-    let { name, value } = event.target
-
-    mentorObj[name] = value
-    console.log(mentorObj)
-    this.setState({ currentMentor: mentorObj })
+    let { name, value } = event.target;
+    let mentorObj = Object.assign({}, this.state.currentMentor);
+    
+    mentorObj[name] = value;
+    this.setState({ currentMentor: mentorObj });
   }
 
   render() {
@@ -84,7 +90,7 @@ export class AdminMentorModal extends Component {
         </div>
       )
     } else if (this.props.modalInfo && isEditable) {
-        let { currentMentor } = this.props
+        let { currentMentor } = this.state;
         let { 
             name,
             email,
@@ -140,11 +146,13 @@ export class AdminMentorModal extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  modalInfo: state.modalInfo
+  modalInfo: state.modalInfo,
+  mentors: state.mentors
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  setMentorModal: mentor => dispatch(setMentorModal(mentor))
+  setMentorModal: mentor => dispatch(setMentorModal(mentor)),
+  updateChangedMentor: mentor => dispatch(updateChangedMentor(mentor))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal);

@@ -4,6 +4,17 @@ export const setMentors = (state = [], action) => {
     case 'SET_MENTORS':
       return action.mentors;
 
+    case 'UPDATE_CHANGED_MENTOR':
+    console.log('state' + JSON.stringify(state))
+    console.log('action' + JSON.stringify(action))
+      return state.map(mentor => {
+        if (mentor.id === action.mentor.id) {
+          return action.mentor;
+        } else {
+          return mentor
+        }
+      })
+
     default:
       return state;
   }

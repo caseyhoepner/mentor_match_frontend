@@ -3,12 +3,12 @@ export const setMentors = (mentorInfo) => ({
   mentors: mentorInfo
 });
 
+export const updateChangedMentor = (mentorInfo) => ({
+  type: "UPDATE_CHANGED_MENTOR",
+  mentor: mentorInfo,
+});
+
 export const setMentorModal = (mentorInfo) => ({
   type: "SET_MENTOR_MODAL",
   modalInfo: mentorInfo
-})
-
-export const changeMentorModal = (changedItem) => ({
-  type: "CHANGE_MENTOR_MODAL",
-  
 })
