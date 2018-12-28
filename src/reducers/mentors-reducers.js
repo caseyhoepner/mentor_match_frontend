@@ -5,8 +5,7 @@ export const setMentors = (state = [], action) => {
       return action.mentors;
 
     case 'UPDATE_CHANGED_MENTOR':
-    console.log('state' + JSON.stringify(state))
-    console.log('action' + JSON.stringify(action))
+
       return state.map(mentor => {
         if (mentor.id === action.mentor.id) {
           return action.mentor;

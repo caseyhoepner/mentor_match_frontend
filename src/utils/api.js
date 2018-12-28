@@ -19,12 +19,11 @@ export const postMentor = async (mentor) => {
   console.log(status);
 };
 
-// export const putMentor = async (mentor) => {
-//   const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors/:id';
+// export const patchMentor = async (mentor) => {
+//   const url = `https://mentor-match-api.herokuapp.com/api/v1/mentors/${mentor.id}`;
 //   const response = await fetch(url, {
-//     method: "PUT",
-//     headers: { "Content-Type": "application/json" }, 
-//     accept: "application/json",
+//     method: "PATCH",
+//     headers: { "Content-Type": "application/json", "Accept": "application/json" },
 //     body: JSON.stringify(mentor)
 //   });
 //   const status = await response.json();
