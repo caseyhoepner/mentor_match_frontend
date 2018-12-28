@@ -29,6 +29,10 @@ export class NewMentorForm extends Component {
     }
   }
 
+  postNewMentor = () => {
+    postMentor(this.state)
+  }
+
   handleChangeRadio = (event) => {
     const { value, className } = event.target;
     this.setState({ [className]: value })
@@ -509,7 +513,7 @@ export class NewMentorForm extends Component {
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
           </div>
-          <button onClick={() => postMentor(this.state)}>Submit</button>
+          <button onClick={this.postNewMentor}>Submit</button>
       </div>
     )
   }
