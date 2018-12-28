@@ -21,10 +21,13 @@ export class AdminMentorModal extends Component {
       let mentorObj = Object.assign({}, this.props.modalInfo)
 
       this.setState({ isEditable: true, currentMentor: mentorObj })
+
     } else if (name === 'Submit Changes') {
       this.props.setMentorModal(null)
       this.props.updateChangedMentor(currentMentor);
+      
       this.setState({ isEditable: false, currentMentor: {} })
+
     } else if (name === 'Exit') {
       this.props.setMentorModal(null)
       this.setState({ isEditable: false, currentMentor: {} })

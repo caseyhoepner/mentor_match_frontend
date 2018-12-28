@@ -11,14 +11,26 @@ export class AdminDashboard extends Component {
     super(props);
 
     this.state = {
-      showModal: false
+      showModal: false,
     }
   }
 
   render() {
-    const mentorCards = this.props.mentors.map(mentor => {
-      return <AdminMentorCard key={uuid()} mentor={mentor}/>
-    })
+    let mentorCards;
+
+    if (!this.props.showingAllMentors) {
+      const filteredMentors = this.props.mentors.filter(mentor => {
+        return mentor.matched === false;
+      })
+        mentorCards = filteredMentors.map(mentor => {
+        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+      })
+    } else {
+        mentorCards = this.props.mentors.map(mentor => {
+        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+      })
+    }
+
     if (this.props.modalInfo) {
       return (
         <div>
@@ -82,7 +94,8 @@ export class AdminDashboard extends Component {
 
 export const mapStateToProps = (state) => ({
   mentors: state.mentors,
-  modalInfo: state.modalInfo
+  modalInfo: state.modalInfo,
+  showingAllMentors: state.showingAllMentors
 })
 
 export default connect(mapStateToProps)(AdminDashboard);

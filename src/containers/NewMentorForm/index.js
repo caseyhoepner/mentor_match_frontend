@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './NewMentorForm.css';
+import { postMentor } from '../../utils/api';
 
 export class NewMentorForm extends Component {
   constructor() {
@@ -26,6 +27,10 @@ export class NewMentorForm extends Component {
       selected1to1: 'No',
       selectedFEBE: 'No Preference'
     }
+  }
+
+  postNewMentor = () => {
+    postMentor(this.state)
   }
 
   handleChangeRadio = (event) => {
@@ -508,6 +513,7 @@ export class NewMentorForm extends Component {
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
           </div>
+          <button onClick={this.postNewMentor}>Submit</button>
       </div>
     )
   }

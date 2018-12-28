@@ -3,7 +3,7 @@ import Preferences from '../../containers/Preferences';
 import hollowHeart from '../../utils/assets/heart.svg';
 import solidHeart from '../../utils/assets/solid-heart.svg';
 import { connect } from 'react-redux';
-import { setLocale, setSearch } from '../../actions/search-actions';
+import { setLocale, setSearch, toggleShowingMentors } from '../../actions/search-actions';
 import './AdminMentorSearch.css';
 
 export class AdminMentorSearch extends Component {
@@ -39,7 +39,9 @@ export class AdminMentorSearch extends Component {
       this.setState({
         showPreferences: !this.state.showPreferences
       }) 
-    } 
+    } else if (name === 'allMentorsClicked') {
+      this.props.showingAllMentors(true)
+    }
 
     this.setState({ [name]: !this.state[name] })
   }
@@ -103,8 +105,9 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-    setLocale: locale => dispatch(setLocale(locale)),
-    setSearch: searchTerm => dispatch(setSearch(searchTerm))
+  setLocale: locale => dispatch(setLocale(locale)),
+  setSearch: searchTerm => dispatch(setSearch(searchTerm)),
+  showingAllMentors: (bool) => dispatch(toggleShowingMentors(bool))
 })
 
 export default connect(mapDispatchToProps, mapDispatchToProps)(AdminMentorSearch);

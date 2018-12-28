@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">28.57% </span>
-        <span class="quiet">Statements</span>
-        <span class='fraction'>6/21</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>2/10</span>
-      </div>
-      <div class='fl pad1y space-right2'>
         <span class="strong">25% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>2/8</span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/24</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.58% </span>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.22% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.27% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/19</span>
+        <span class='fraction'>6/22</span>
       </div>
     </div>
   </div>
@@ -152,7 +152,10 @@
 107
 108
 109
-110</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,6 +196,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -257,6 +262,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -266,7 +272,7 @@ import Preferences from '../../containers/Preferences';
 import hollowHeart from '../../utils/assets/heart.svg';
 import solidHeart from '../../utils/assets/solid-heart.svg';
 import { connect } from 'react-redux';
-import { setLocale, setSearch } from '../../actions/search-actions';
+import { setLocale, setSearch, toggleShowingMentors } from '../../actions/search-actions';
 import './AdminMentorSearch.css';
 &nbsp;
 export class AdminMentorSearch extends Component {
@@ -302,7 +308,9 @@ export class AdminMentorSearch extends Component {
 <span class="cstat-no" title="statement not covered" >      this.setState({</span>
         showPreferences: !this.state.showPreferences
       }) 
-    } 
+    } else <span class="cstat-no" title="statement not covered" >if (name === 'allMentorsClicked') {</span>
+<span class="cstat-no" title="statement not covered" >      this.props.showingAllMentors(true)</span>
+    }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    this.setState({ [name]: !this.state[name] })</span>
   }
@@ -366,8 +374,9 @@ export const mapStateToProps = <span class="fstat-no" title="function not covere
 })
 &nbsp;
 export const mapDispatchToProps = <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-    setLocale: <span class="fstat-no" title="function not covered" >lo</span>cale =&gt; <span class="cstat-no" title="statement not covered" >dispatch(setLocale(locale)),</span>
-    setSearch: <span class="fstat-no" title="function not covered" >se</span>archTerm =&gt; <span class="cstat-no" title="statement not covered" >dispatch(setSearch(searchTerm))</span>
+  setLocale: <span class="fstat-no" title="function not covered" >lo</span>cale =&gt; <span class="cstat-no" title="statement not covered" >dispatch(setLocale(locale)),</span>
+  setSearch: <span class="fstat-no" title="function not covered" >se</span>archTerm =&gt; <span class="cstat-no" title="statement not covered" >dispatch(setSearch(searchTerm)),</span>
+  showingAllMentors: <span class="fstat-no" title="function not covered" >(b</span>ool) =&gt; <span class="cstat-no" title="statement not covered" >dispatch(toggleShowingMentors(bool))</span>
 })
 &nbsp;
 export default connect(mapDispatchToProps, mapDispatchToProps)(AdminMentorSearch);</pre></td></tr>
@@ -376,7 +385,7 @@ export default connect(mapDispatchToProps, mapDispatchToProps)(AdminMentorSearch
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 26 2018 07:01:51 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Dec 27 2018 21:25:06 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

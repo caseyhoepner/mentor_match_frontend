@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { NewMentorForm } from './';
+import * as API from '../../utils/api';
 
 describe('NewMentorForm', () => {
   let wrapper;
@@ -32,6 +33,15 @@ describe('NewMentorForm', () => {
 
   it('matches the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  describe('postNewMentor function', () => {
+    it('should fire the postMentor API function upon the Submit button clicked', () => {
+      API.postMentor = jest.fn()
+  
+      wrapper.instance().postNewMentor()
+      expect(API.postMentor).toHaveBeenCalled()
+    });
   });
   
   describe('handleChangeRadio function', () => {
