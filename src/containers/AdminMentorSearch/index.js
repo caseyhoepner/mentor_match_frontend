@@ -40,7 +40,6 @@ export class AdminMentorSearch extends Component {
         showPreferences: !this.state.showPreferences
       }) 
     } else if (name === 'allMentorsClicked') {
-      console.log(this.props.showingAllMentors)
       this.props.toggleShowingMentors(!this.props.showingAllMentors)
     }
 
