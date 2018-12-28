@@ -47,6 +47,7 @@ ShallowWrapper {
         />,
         <div
           className="amc-record-item amc-view-edit"
+          onClick={[Function]}
         >
           <img
             alt="Click to View or Edit Mentor"
@@ -163,6 +164,7 @@ ShallowWrapper {
             />,
           ],
           "className": "amc-record-item amc-view-edit",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -245,6 +247,7 @@ ShallowWrapper {
           />,
           <div
             className="amc-record-item amc-view-edit"
+            onClick={[Function]}
           >
             <img
               alt="Click to View or Edit Mentor"
@@ -361,6 +364,7 @@ ShallowWrapper {
               />,
             ],
             "className": "amc-record-item amc-view-edit",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": Array [

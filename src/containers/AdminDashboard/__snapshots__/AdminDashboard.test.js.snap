@@ -115,28 +115,7 @@ ShallowWrapper {
             View/Edit
           </h1>
         </div>,
-        Array [
-          <AdminMentorCard
-            mentor={
-              Object {
-                "name": "Casey",
-                "preferences": Object {
-                  "title": "Awesome Coders",
-                },
-              }
-            }
-          />,
-          <AdminMentorCard
-            mentor={
-              Object {
-                "name": "Alex",
-                "preferences": Object {
-                  "title": "Other Coders",
-                },
-              }
-            }
-          />,
-        ],
+        Array [],
       ],
     },
     "ref": null,
@@ -482,38 +461,6 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "class",
-        "props": Object {
-          "mentor": Object {
-            "name": "Casey",
-            "preferences": Object {
-              "title": "Awesome Coders",
-            },
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "class",
-        "props": Object {
-          "mentor": Object {
-            "name": "Alex",
-            "preferences": Object {
-              "title": "Other Coders",
-            },
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -604,28 +551,7 @@ ShallowWrapper {
               View/Edit
             </h1>
           </div>,
-          Array [
-            <AdminMentorCard
-              mentor={
-                Object {
-                  "name": "Casey",
-                  "preferences": Object {
-                    "title": "Awesome Coders",
-                  },
-                }
-              }
-            />,
-            <AdminMentorCard
-              mentor={
-                Object {
-                  "name": "Alex",
-                  "preferences": Object {
-                    "title": "Other Coders",
-                  },
-                }
-              }
-            />,
-          ],
+          Array [],
         ],
       },
       "ref": null,
@@ -970,38 +896,6 @@ ShallowWrapper {
             },
           ],
           "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "class",
-          "props": Object {
-            "mentor": Object {
-              "name": "Casey",
-              "preferences": Object {
-                "title": "Awesome Coders",
-              },
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "class",
-          "props": Object {
-            "mentor": Object {
-              "name": "Alex",
-              "preferences": Object {
-                "title": "Other Coders",
-              },
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
         },
       ],
       "type": "div",

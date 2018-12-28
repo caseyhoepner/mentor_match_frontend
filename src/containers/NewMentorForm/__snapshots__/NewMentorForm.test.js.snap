@@ -832,6 +832,11 @@ ShallowWrapper {
             />
           </label>
         </div>,
+        <button
+          onClick={[Function]}
+        >
+          Submit
+        </button>,
       ],
       "className": "nmf-container",
     },
@@ -4111,6 +4116,18 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
     ],
     "type": "div",
   },
@@ -4935,6 +4952,11 @@ ShallowWrapper {
               />
             </label>
           </div>,
+          <button
+            onClick={[Function]}
+          >
+            Submit
+          </button>,
         ],
         "className": "nmf-container",
       },
@@ -8213,6 +8235,18 @@ ShallowWrapper {
             },
           ],
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
         },
       ],
       "type": "div",
