@@ -31,7 +31,7 @@ export class NewMentorForm extends Component {
 
   postNewMentor = () => {
     console.log(this.state)
-    // postMentor(this.state)
+    postMentor(this.state)
   }
 
   handleChangeRadio = (event) => {
