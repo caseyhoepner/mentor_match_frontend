@@ -1,17 +1,35 @@
 .amc-card {
   align-items: center;
   display: flex;
-  margin: 0 40px 0 40px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(95, 95, 95, .1);
+  padding: 10px 0;
+}
+
+.amc-card:hover {
+  background-color: rgba(95, 95, 95, .1);
+  cursor: pointer;
 }
 
 .amc-record-item {
-  width: 20%;
+  margin-right: 15px;
+}
+
+.amc-pic-name-container {
+  display: flex;
+  width: 50%;
+}
+
+.amc-mentor-pic {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
 }
 
 .amc-pref-icon {
-  height: 40px;
+  height: 25px;
   margin-right: 10px;
-  width: 40px;
+  width: 25px;
 }
 
 .amc-view-edit {
