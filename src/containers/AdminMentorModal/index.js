@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './AdminMentorModal.css';
 import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor } from '../../actions/mentor-actions';
-import { patchMentor } from '../../utils/api';
+// import { patchMentor } from '../../utils/api';
 
 export class AdminMentorModal extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ export class AdminMentorModal extends Component {
     } else if (name === 'Submit Changes') {
       this.props.setMentorModal(null)
       this.props.updateChangedMentor(currentMentor);
-      patchMentor(currentMentor)
+      // patchMentor(currentMentor)
       
       this.setState({ isEditable: false, currentMentor: {} })
 
