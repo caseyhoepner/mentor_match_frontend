@@ -35,6 +35,7 @@ export class AdminDashboard extends Component {
   }
 
   render() {
+    let { mentors, showingAllMentors, searchTerm } = this.props
     let mentorCards;
     let studentCards = <p className='ad-student-card'>No students to display.</p>
     let modal;
