@@ -22,7 +22,7 @@ export class EditableMentor extends Component {
       ways_to_mentor: [],
       expertise_tech: [],
       expertise_non_tech: [],
-      preferences: [],
+      identity_preference: [],
       mentee_capacity: '0',
       meeting_location: [],
       selected1to1: '',
@@ -46,7 +46,7 @@ export class EditableMentor extends Component {
       ways_to_mentor, 
       expertise_tech, 
       expertise_non_tech, 
-      preferences, 
+      identity_preference, 
       mentee_capacity, 
       meeting_location, 
       selected1to1, 
@@ -68,7 +68,7 @@ export class EditableMentor extends Component {
       ways_to_mentor, 
       expertise_tech, 
       expertise_non_tech, 
-      preferences, 
+      identity_preference, 
       mentee_capacity, 
       meeting_location, 
       selected1to1, 
@@ -117,14 +117,13 @@ export class EditableMentor extends Component {
   }
 
   checkIfChecked = (stateKey, val) => {
-    console.log('firing')
-    if(this.state[stateKey].includes(val)) {
-      console.log('true')
-      return true
-    } else {
-      console.log('false')
-      return false;
-    }
+    if(this.state[stateKey]) {
+      if(this.state[stateKey].includes(val)) {
+        return true
+      } else {
+        return false;
+      }
+    } 
   }
 
   render() {
@@ -331,98 +330,126 @@ export class EditableMentor extends Component {
         <h2 className='nmf-question'>Areas of Technical Expertise:</h2>
           <div className='nmf-options-container'>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Ruby/Rails
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Ruby/Rails')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">DevOps
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'DevOps')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Go
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Go')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Data Science
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Data Science')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Machine Learning
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Machine Learning')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Functional Programming
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Functional Programming')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">CS Fundamentals
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'CS Fundamentals')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Node.js
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Node.js')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">React.js
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'React.js')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Angular.js
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Angular.js')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Ember.js
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Ember.js')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">Vue.js
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'Vue.js')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">UX/UI Development
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'UI/UI Development')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">CSS/SCSS/Sass
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_tech', 'CSS/SCSS/Sass')}
+                type="checkbox" />
               <span 
                 onClick={this.handleClick} 
                 className="nmf-checkmark nmf-tech-expert">
@@ -432,32 +459,46 @@ export class EditableMentor extends Component {
 
         <h2 className='nmf-question'>Areas of Non-Technical Expertise:</h2>
           <div className='nmf-options-container'>
-            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Public Speaking, Speaking proposals
-              <input type="checkbox" />
+            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Public Speaking
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Public Speaking')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Wellness & Stress Management
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Wellness & Stress Management')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Project Management
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Project Management')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Culture/Behavioral Interview Prep
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Culture/Behavioral Interview Prep')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Parenting
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Parenting')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Functional Programming
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Functional Programming')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Social Issues in the Tech Industry
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('expertise_non_tech', 'Social Issues in the Tech Industry')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
           </div>
@@ -465,15 +506,21 @@ export class EditableMentor extends Component {
         <h2 className='nmf-question'>In what ways would you like to support Turing mentees?</h2>
           <div className='nmf-options-container'>
             <label data-name='ways_to_mentor' className="nmf-checkbox-container">Mock Interviews
-              <input type="checkbox" />
+              <input
+                checked={this.checkIfChecked('ways_to_mentor', 'Mock Interviews')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='ways_to_mentor' className="nmf-checkbox-container">Resume & Cover Letters
-              <input type="checkbox" />
+              <input
+                checked={this.checkIfChecked('ways_to_mentor', 'Resume & Cover Letters')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='ways_to_mentor' className="nmf-checkbox-container">Coffee Meetings
-              <input type="checkbox" />
+              <input
+                checked={this.checkIfChecked('ways_to_mentor', 'Coffee Meetings')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
           </div>
@@ -518,24 +565,34 @@ export class EditableMentor extends Component {
 
         <h2 className='nmf-question'>Are there any identity markers you'd particularly like to work with (only shared with staff)?</h2>
           <div className='nmf-options-container'>
-            <label data-name='preferences' className="nmf-checkbox-container">Veteran
-              <input type="checkbox" />
+            <label data-name='identity_preference' className="nmf-checkbox-container">Veteran
+              <input 
+                checked={this.checkIfChecked('identity_preference', 'Veteran')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Parent
-              <input type="checkbox" />
+            <label data-name='identity_preference' className="nmf-checkbox-container">Parent
+              <input 
+                checked={this.checkIfChecked('identity_preference', 'Parent')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">LGBTQ+
-              <input type="checkbox" />
+            <label data-name='identity_preference' className="nmf-checkbox-container">LGBTQ+
+              <input 
+                checked={this.checkIfChecked('identity_preference', 'LGBTQ+')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Female-Identifying
-              <input type="checkbox" />
+            <label data-name='identity_preference' className="nmf-checkbox-container">Female-Identifying
+              <input 
+                checked={this.checkIfChecked('identity_preference', 'LGBTQ+')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Male-Identifying
-              <input type="checkbox" />
+            <label data-name='identity_preference' className="nmf-checkbox-container">Male-Identifying
+              <input 
+                checked={this.checkIfChecked('identity_preference', 'LGBTQ+')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
           </div>
@@ -578,15 +635,21 @@ export class EditableMentor extends Component {
         <h2 className='nmf-question'>Where would you prefer to meet with mentees?</h2>
           <div className='nmf-options-container'>
             <label data-name='meeting_location' className="nmf-checkbox-container">In Person at Turing
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('meeting_location', 'In Person at Turing')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='meeting_location' className="nmf-checkbox-container">In Person Not at Turing
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('meeting_location', 'In Person Not at Turing')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
             <label data-name='meeting_location' className="nmf-checkbox-container">Remote
-              <input type="checkbox" />
+              <input 
+                checked={this.checkIfChecked('meeting_location', 'Remote')}
+                type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
           </div>

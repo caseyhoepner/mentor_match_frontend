@@ -21,7 +21,7 @@ export class NewMentorForm extends Component {
       ways_to_mentor: [],
       expertise_tech: [],
       expertise_non_tech: [],
-      preferences: [],
+      identity_preference: [],
       mentee_capacity: '0',
       meeting_location: [],
       selected1to1: 'No',
@@ -85,7 +85,7 @@ export class NewMentorForm extends Component {
       ways_to_mentor,
       expertise_tech,
       expertise_non_tech,
-      preferences,
+      identity_preference,
       mentee_capacity,
       meeting_location,
       selected1to1,
@@ -442,23 +442,23 @@ export class NewMentorForm extends Component {
 
         <h2 className='nmf-question'>Are there any identity markers you'd particularly like to work with (only shared with staff)?</h2>
           <div className='nmf-options-container'>
-            <label data-name='preferences' className="nmf-checkbox-container">Veteran
+            <label data-name='identity_preference' className="nmf-checkbox-container">Veteran
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Parent
+            <label data-name='identity_preference' className="nmf-checkbox-container">Parent
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">LGBTQ+
+            <label data-name='identity_preference' className="nmf-checkbox-container">LGBTQ+
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Female-Identifying
+            <label data-name='identity_preference' className="nmf-checkbox-container">Female-Identifying
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Male-Identifying
+            <label data-name='identity_preference' className="nmf-checkbox-container">Male-Identifying
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
@@ -509,7 +509,7 @@ export class NewMentorForm extends Component {
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='meeting_location' className="nmf-checkbox-container">Remote (Slack call, Google Hangout, Zoom, etc.)
+            <label data-name='meeting_location' className="nmf-checkbox-container">Remote
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>

@@ -79,13 +79,17 @@ export class AdminMentorModal extends Component {
   getPreferencesIcons = (preferences) => {
     return preferences.map(preference => {
       if (preference !== 'no preference') {
+        let newPreference = preference.toLowerCase();
+          if (newPreference === 'lgbtq+') {
+            newPreference = newPreference.slice(0, -1)
+          }
         return (
           <img 
             className='amc-pref-icon' 
-            src={require(`../../utils/assets/${preference}.svg`)} 
-            alt={`${preference} preference indicator`} 
-            key={`${preference}`}
-            title={`${preference}`}
+            src={require(`../../utils/assets/${newPreference}.svg`)} 
+            alt={`${newPreference} preference indicator`} 
+            key={`${newPreference}`}
+            title={`${newPreference}`}
           />
         )
       }
