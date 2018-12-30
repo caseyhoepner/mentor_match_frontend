@@ -16,7 +16,14 @@ describe('AdminMentorModal', () => {
     pronouns: 'she/her/hers',
     current_title: 'Head Mentor',
     current_employer: 'Department of Mentors',
-    background: 'I am a mentor!'
+    background: 'I am a mentor!',
+    industries: ['Civic Tech'],
+    ways_to_mentor: ['Coffee Meetings'],
+    expertise_tech: ['React.js'],
+    expertise_non_tech: ['Parenting'],
+    mentee_capacity: '2',
+    identity_preference: ['female-identifying'],
+    meeting_location: 'Turing'
   }
 
   beforeEach(() => {
@@ -121,7 +128,14 @@ describe('AdminMentorModal', () => {
         pronouns: 'she/her/hers',
         current_title: 'Head Mentor',
         current_employer: 'Department of Mentors',
-        background: 'I am a mentor!'
+        background: 'I am a mentor!',
+        industries: ['Civic Tech'],
+        ways_to_mentor: ['Coffee Meetings'],
+        expertise_tech: ['React.js'],
+        expertise_non_tech: ['Parenting'],
+        mentee_capacity: '2',
+        identity_preference: ['female-identifying'],
+        meeting_location: 'Turing'
       }
       let mockEvent = { target: { name: 'name', value: 'Halle Berry' } }
 
