@@ -1,13 +1,167 @@
 .amm-modal-show {
   background-color: #fff;
-  border: solid 1px #000;
   position: fixed;
-  height: 80%;
-  left: 10%;
-  right: 10%;
+  left: 20%;
+  right: 20%;
   top: 10%;
+  box-shadow: 4px 4px 10px rgba(95, 95, 95, .2);
+}
+
+.amm-basic-info {
+  background-color: rgba(95, 95, 95, .2);
+  padding: 30px 30px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.amm-header-info {
+  margin: 0 0 0 20px;
+  width: 100%;
+}
+
+.amm-top-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.amm-pic {
+  width: 150px;
+  height: 150px;
+}
+
+.amm-name {
+  margin: 0 10px 0 0;
+  font-size: 2.5rem;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+}
+
+.amm-pronoun {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+}
+
+.amm-x {
+  height: 25px;
+  width: 25px;
+}
+
+.amm-x:hover {
+  cursor: pointer;
+}
+
+.amm-matched {
+  width: 20px;
+  height: 20px;
+}
+
+.amm-job {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px 0 0;
+  font-size: 1.5rem;
+}
+
+.amm-bottom-line {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.amm-location-container {
+  display: flex;
+  align-items: center;
+}
+
+.amm-location {
+  font-style: italic;
+  margin: 0 10px;
+}
+
+.amm-bio {
+  height: 100%;
+  padding: 20px 40px 0;
+}
+
+.amm-capacity-icon {
+  margin-right: -5px;
+  width: 25px;
+}
+
+.amm-list-item-container {
+  display: flex;
+  align-items: center;
+}
+
+.amm-list-item {
+  margin: 0 0 5px;
+}
+
+.amm-dash-icon {
+  width: 15px;
+  height: 15px;
+  margin: 0 7px 0 0;
+}
+
+.amm-contact-title {
+  margin-bottom: 16px;
+}
+
+.amm-email {
+  margin: 0;
+}
+
+.amm-slack {
+  margin: 0;
+}
+
+.amm-flex {
+  display: flex;
+  align-items: center;
+}
+
+.amm-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  font-size: .75rem;
+  padding: 20px;
+}
+
+.amm-card {
+  margin: 10px 10px 0;
+  padding: 10px 10px 0;
+}
+
+.amm-edit-btn {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(3, 193, 209, .8);
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.amm-edit-btn:hover {
+  cursor: pointer;
+  background-color: rgba(3, 193, 209, 1);
 }
 
 .amm-modal-hide {
   display: none;
 }
+
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h4 {
+  padding-right: 5px;
+  margin: 0;
+}
+

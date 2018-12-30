@@ -17,18 +17,14 @@ export class AdminMentorCard extends Component {
   render() {
     const { name, identity_preference, matched } = this.props.mentor;
     const preferencesIcons = identity_preference.map(preference => {
-      if (preference === 'female' ||
-          preference === 'lgbtq' || 
-          preference === 'male' || 
-          preference === 'parent' || 
-          preference === 'veteran') {
+      if (preference !== 'no preference') {
       return <img 
               className='amc-pref-icon' 
               src={require(`../../utils/assets/${preference}.svg`)} 
               alt={`${preference} preference indicator`} 
               key={`${preference}`}
               title={`${preference}`}/>
-      } else return;
+      }
     })
 
     return (
