@@ -3,6 +3,7 @@ import './AdminMentorModal.css';
 import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor } from '../../actions/mentor-actions';
 // import { patchMentor } from '../../utils/api';
+import { EditableMentor } from '../EditableMentor'
 
 export class AdminMentorModal extends Component {
   constructor(props) {
@@ -63,7 +64,7 @@ export class AdminMentorModal extends Component {
   getList = (items) => {
     return items.map(item => {
       return (
-        <div className='amm-list-item-container'>
+        <div className='amm-list-item-container' key={item}>
           <img 
             className='amm-dash-icon' 
             src={require('../../utils/assets/right-arrow.svg')}
@@ -169,26 +170,26 @@ export class AdminMentorModal extends Component {
 
             <div className='amm-card'>
               <h3>Industry Knowlegde</h3>
-              <p>{this.getList(industries)}</p>
+              {this.getList(industries)}
             </div>
 
             <div className='amm-card'>
               <h3>How I Can Help</h3>
-              <p>{this.getList(ways_to_mentor)}</p>
+              {this.getList(ways_to_mentor)}
             </div>
             
             <div className='amm-card'>
               <h3>Tech Expertise</h3>
-              <p>{this.getList(expertise_tech)}</p>
+              {this.getList(expertise_tech)}
             </div>
 
             <div className='amm-card'>
               <h3>Non-Tech Expertise</h3>
-              <p>{this.getList(expertise_non_tech)}</p>
+              {this.getList(expertise_non_tech)}
             </div>
             <div className='amm-card'>
               <h3>Capacity</h3>
-              <p>{this.getMenteeIcons(mentee_capacity)}</p>
+              {this.getMenteeIcons(mentee_capacity)}
             </div>
 
             <div className='amm-card'>
@@ -198,7 +199,7 @@ export class AdminMentorModal extends Component {
 
             <div className='amm-card'>
               <h3>Mentee Preferences</h3>
-              <p>{this.getPreferencesIcons(identity_preference)}</p>
+              {this.getPreferencesIcons(identity_preference)}
             </div>
           </div>
           
@@ -211,53 +212,56 @@ export class AdminMentorModal extends Component {
         </div>
       )
     } else if (this.props.modalInfo && isEditable) {
-        let { currentMentor } = this.state;
-        let { 
-            name,
-            email,
-            city,
-            state,
-            country,
-            slack_username,
-            matched,
-            active,
-            pronouns,
-            current_title,
-            current_employer,
-            background,
-            industries,
-            ways_to_mentor,
-            expertise_tech,
-            expertise_non_tech,
-            mentee_capacity,
-            meeting_location,
-            identity_preference
-          } = this.props.modalInfo;
-          return (
-            <div className='amm-modal-show'>
-              <input name='name' value={currentMentor.name} onChange={this.handleChange} />
-              <input name='email' value={currentMentor.email} onChange={this.handleChange} />
-              <input name='city' value={currentMentor.city} onChange={this.handleChange} />
-              <input name='state' value={currentMentor.state} onChange={this.handleChange} />
-              <input name='country' value={currentMentor.country} onChange={this.handleChange} />
-              <input name='slack_username' value={currentMentor.slack_username} onChange={this.handleChange} />
-              <input name='matched' value={currentMentor.matched} onChange={this.handleChange} />
-              <input name='active' value={currentMentor.active} onChange={this.handleChange} />
-              <input name='pronouns' value={currentMentor.pronouns} onChange={this.handleChange} />
-              <input name='current_title' value={currentMentor.current_title} onChange={this.handleChange} />
-              <input name='current_employer' value={currentMentor.current_employer} onChange={this.handleChange} />
-              <input name='background' value={currentMentor.background} onChange={this.handleChange} />
-              <p>{industries}</p>
-              <p>{ways_to_mentor}</p>
-              <p>{expertise_tech}</p>
-              <p>{expertise_non_tech}</p>
-              <p>{mentee_capacity}</p>
-              <p>{meeting_location}</p>
-              <p>{identity_preference}</p>
-              <button name='Submit Changes' onClick={this.handleClick}>Submit Changes</button>
-              <button name='Exit' onClick={this.handleClick}>X</button>
-            </div>
-          )
+      return (
+        <EditableMentor currentMentor={this.state.currentMentor}/>
+        )
+        // let { currentMentor } = this.state;
+        // let { 
+        //     name,
+        //     email,
+        //     city,
+        //     state,
+        //     country,
+        //     slack_username,
+        //     matched,
+        //     active,
+        //     pronouns,
+        //     current_title,
+        //     current_employer,
+        //     background,
+        //     industries,
+        //     ways_to_mentor,
+        //     expertise_tech,
+        //     expertise_non_tech,
+        //     mentee_capacity,
+        //     meeting_location,
+        //     identity_preference
+        //   } = this.props.modalInfo;
+        //   return (
+        //     <div className='amm-modal-show'>
+        //       <input name='name' value={currentMentor.name} onChange={this.handleChange} />
+        //       <input name='email' value={currentMentor.email} onChange={this.handleChange} />
+        //       <input name='city' value={currentMentor.city} onChange={this.handleChange} />
+        //       <input name='state' value={currentMentor.state} onChange={this.handleChange} />
+        //       <input name='country' value={currentMentor.country} onChange={this.handleChange} />
+        //       <input name='slack_username' value={currentMentor.slack_username} onChange={this.handleChange} />
+        //       <input name='matched' value={currentMentor.matched} onChange={this.handleChange} />
+        //       <input name='active' value={currentMentor.active} onChange={this.handleChange} />
+        //       <input name='pronouns' value={currentMentor.pronouns} onChange={this.handleChange} />
+        //       <input name='current_title' value={currentMentor.current_title} onChange={this.handleChange} />
+        //       <input name='current_employer' value={currentMentor.current_employer} onChange={this.handleChange} />
+        //       <input name='background' value={currentMentor.background} onChange={this.handleChange} />
+        //       <p>{industries}</p>
+        //       <p>{ways_to_mentor}</p>
+        //       <p>{expertise_tech}</p>
+        //       <p>{expertise_non_tech}</p>
+        //       <p>{mentee_capacity}</p>
+        //       <p>{meeting_location}</p>
+        //       <p>{identity_preference}</p>
+        //       <button name='Submit Changes' onClick={this.handleClick}>Submit Changes</button>
+        //       <button name='Exit' onClick={this.handleClick}>X</button>
+        //     </div>
+          // )
     } else {
       return (
         <div className='amm-modal-hide'></div>

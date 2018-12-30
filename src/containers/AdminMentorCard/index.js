@@ -23,7 +23,7 @@ export class AdminMentorCard extends Component {
               src={require(`../../utils/assets/${preference}.svg`)} 
               alt={`${preference} preference indicator`} 
               key={`${preference}`}
-              title={`${preference}`}/>
+              title={`${preference}`} />
       }
     })
 
