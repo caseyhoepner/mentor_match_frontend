@@ -21,21 +21,31 @@ export class NewMentorForm extends Component {
       ways_to_mentor: [],
       expertise_tech: [],
       expertise_non_tech: [],
-      preferences: [],
+      identity_preference: [],
       mentee_capacity: '0',
       meeting_location: [],
       selected1to1: 'No',
-      selectedFEBE: 'No Preference'
+      stack_preference: 'No Preference'
     }
   }
 
-  postNewMentor = () => {
-    console.log(this.state)
+  postNewMentor = async () => {
+    const { selected1to1 } = this.state
+
+    if (selected1to1 === 'No') {
+      await this.setState({
+        identity_preference: [],
+        mentee_capacity: '0',
+        meeting_location: [],
+        stack_preference: ''
+      })
+    }
     postMentor(this.state)
   }
 
   handleChangeRadio = (event) => {
     const { value, className } = event.target;
+
     this.setState({ [className]: value })
   }
 
@@ -85,11 +95,11 @@ export class NewMentorForm extends Component {
       ways_to_mentor,
       expertise_tech,
       expertise_non_tech,
-      preferences,
+      identity_preference,
       mentee_capacity,
       meeting_location,
       selected1to1,
-      selectedFEBE
+      stack_preference
     } = this.state;
     
     return (
@@ -426,93 +436,95 @@ export class NewMentorForm extends Component {
               <span className="nmf-radio-checkmark-1"></span>
             </label>
 
-        <h2 className='nmf-question'>How many students would you like to mentor?</h2>
-          <div>
-            <select 
-              name='mentee_capacity' 
-              value={mentee_capacity} 
-              onChange={this.handleChange}
-            >
-              <option value="0">Select number:</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </div>
+        <div className={selected1to1 === 'No' ? 'nmf-hide' : 'nmf-show'}>
+          <h2 className='nmf-question'>How many students would you like to mentor?</h2>
+            <div>
+              <select 
+                name='mentee_capacity' 
+                value={mentee_capacity} 
+                onChange={this.handleChange}
+              >
+                <option value="0">Select number:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
 
-        <h2 className='nmf-question'>Are there any identity markers you'd particularly like to work with (only shared with staff)?</h2>
-          <div className='nmf-options-container'>
-            <label data-name='preferences' className="nmf-checkbox-container">Veteran
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Parent
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='preferences' className="nmf-checkbox-container">LGBTQ+
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Female-Identifying
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='preferences' className="nmf-checkbox-container">Male-Identifying
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-          </div>
+          <h2 className='nmf-question'>Are there any identity markers you'd particularly like to work with (only shared with staff)?</h2>
+            <div className='nmf-options-container'>
+              <label data-name='identity_preference' className="nmf-checkbox-container">Veteran
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+              <label data-name='identity_preference' className="nmf-checkbox-container">Parent
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+              <label data-name='identity_preference' className="nmf-checkbox-container">LGBTQ+
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+              <label data-name='identity_preference' className="nmf-checkbox-container">Female-Identifying
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+              <label data-name='identity_preference' className="nmf-checkbox-container">Male-Identifying
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+            </div>
 
-        <h2 className='nmf-question'>Would you prefer Front-End or Back-End students?</h2>
-          <label className="nmf-radio-container">No Preference
-            <input 
-              value='No Preference'
-              className='selectedFEBE'
-              type="radio" 
-              name="nmf-FE-BE" 
-              checked={selectedFEBE === 'No Preference'}
-              onChange={this.handleChangeRadio}
-            />
-            <span className="nmf-radio-checkmark"></span>
-          </label>
-          <label className="nmf-radio-container">Front-End
-            <input 
-              value='Front-End'
-              className='selectedFEBE'
-              type="radio" 
-              name="nmf-FE-BE" 
-              checked={selectedFEBE === 'Front-End'}
-              onChange={this.handleChangeRadio}
-            />
-            <span className="nmf-radio-checkmark"></span>
-          </label>
-          <label className="nmf-radio-container">Back-End
-            <input 
-              value='Back-End'
-              className='selectedFEBE'
-              type="radio" 
-              name="nmf-FE-BE" 
-              checked={selectedFEBE === 'Back-End'}
-              onChange={this.handleChangeRadio}
-            />
-            <span className="nmf-radio-checkmark"></span>
-          </label>
+          <h2 className='nmf-question'>Would you prefer Front-End or Back-End students?</h2>
+            <label className="nmf-radio-container">No Preference
+              <input 
+                value='No Preference'
+                className='stack_preference'
+                type="radio" 
+                name="nmf-FE-BE" 
+                checked={stack_preference === 'No Preference'}
+                onChange={this.handleChangeRadio}
+              />
+              <span className="nmf-radio-checkmark"></span>
+            </label>
+            <label className="nmf-radio-container">Front-End
+              <input 
+                value='Front-End'
+                className='stack_preference'
+                type="radio" 
+                name="nmf-FE-BE" 
+                checked={stack_preference === 'Front-End'}
+                onChange={this.handleChangeRadio}
+              />
+              <span className="nmf-radio-checkmark"></span>
+            </label>
+            <label className="nmf-radio-container">Back-End
+              <input 
+                value='Back-End'
+                className='stack_preference'
+                type="radio" 
+                name="nmf-FE-BE" 
+                checked={stack_preference === 'Back-End'}
+                onChange={this.handleChangeRadio}
+              />
+              <span className="nmf-radio-checkmark"></span>
+            </label>
 
-        <h2 className='nmf-question'>Where would you prefer to meet with mentees?</h2>
-          <div className='nmf-options-container'>
-            <label data-name='meeting_location' className="nmf-checkbox-container">In Person at Turing
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='meeting_location' className="nmf-checkbox-container">In Person Not at Turing
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='meeting_location' className="nmf-checkbox-container">Remote (Slack call, Google Hangout, Zoom, etc.)
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
+          <h2 className='nmf-question'>Where would you prefer to meet with mentees?</h2>
+            <div className='nmf-options-container'>
+              <label data-name='meeting_location' className="nmf-checkbox-container">In Person at Turing
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+              <label data-name='meeting_location' className="nmf-checkbox-container">In Person Not at Turing
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+              <label data-name='meeting_location' className="nmf-checkbox-container">Remote
+                <input type="checkbox" />
+                <span onClick={this.handleClick} className="nmf-checkmark"></span>
+              </label>
+            </div>
           </div>
           <button onClick={this.postNewMentor}>Submit</button>
       </div>

@@ -4,6 +4,7 @@ import AdminMentorSearch from '../../containers/AdminMentorSearch';
 import AdminMentorCard from '../AdminMentorCard';
 import AdminMentorModal from '../AdminMentorModal';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import uuid from 'uuid';
 
 export class AdminDashboard extends Component {
@@ -11,7 +12,6 @@ export class AdminDashboard extends Component {
     super(props);
 
     this.state = {
-      showModal: false,
     }
   }
 
@@ -72,6 +72,11 @@ export class AdminDashboard extends Component {
               src={require('../../utils/assets/turing-full-grey.png')} 
               alt='Turing Logo' 
               className='ad-turing-logo' />
+            <NavLink
+              to='/new-mentor-form'
+              target='_blank'
+              rel='noopener noreferrer'
+            >New Mentor Form</NavLink>
             <div className='ad-github-btn'>
               <div className='ad-gh-tagline-container'>
                 <p className='ad-gh-tagline'>Sign in</p>
@@ -91,31 +96,33 @@ export class AdminDashboard extends Component {
           </div>
         </header>
         { modal }
-        <AdminMentorSearch />
-        <section className='ad-cards-container'>
-          <div className='ad-mentor-cards-container'>
-            <div className='ad-cards-header'>
-              <h2 className='ad-cards-title'>Mentors</h2>
-              <div className='ad-heading-container'>
-                <p className='ad-heading-item ad-name-title'>Name</p>
-                <p className='ad-heading-item ad-pref-title'>Mentee Preferences</p>
-                <p className='ad-heading-item ad-matched-title'>Availability</p>
+        <div className={this.props.isEditable ? 'ad-hide' : ''}>
+          <AdminMentorSearch />
+          <section className='ad-cards-container'>
+            <div className='ad-mentor-cards-container'>
+              <div className='ad-cards-header'>
+                <h2 className='ad-cards-title'>Mentors</h2>
+                <div className='ad-heading-container'>
+                  <p className='ad-heading-item ad-name-title'>Name</p>
+                  <p className='ad-heading-item ad-pref-title'>Mentee Preferences</p>
+                  <p className='ad-heading-item ad-matched-title'>Availability</p>
+                </div>
               </div>
+              { mentorCards }
             </div>
-            { mentorCards }
-          </div>
-          <div className='ad-student-cards-container'>
-            <div className='ad-cards-header'>
-              <h2 className='ad-cards-title'>Students</h2>
-              <div className='ad-heading-container'>
-                <p className='ad-heading-item ad-name-title'>Name</p>
-                <p className='ad-heading-item ad-pref-title'>Mentor Preferences</p>
-                <p className='ad-heading-item ad-matched-title'>Availability</p>
+            <div className='ad-student-cards-container'>
+              <div className='ad-cards-header'>
+                <h2 className='ad-cards-title'>Students</h2>
+                <div className='ad-heading-container'>
+                  <p className='ad-heading-item ad-name-title'>Name</p>
+                  <p className='ad-heading-item ad-pref-title'>Mentor Preferences</p>
+                  <p className='ad-heading-item ad-matched-title'>Availability</p>
+                </div>
               </div>
+              { studentCards }
             </div>
-            { studentCards }
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     )
   }
@@ -125,7 +132,8 @@ export const mapStateToProps = (state) => ({
   mentors: state.mentors,
   modalInfo: state.modalInfo,
   showingAllMentors: state.showingAllMentors,
-  searchTerm: state.searchTerm
+  searchTerm: state.searchTerm,
+  isEditable: state.isEditable
 })
 
 export default connect(mapStateToProps)(AdminDashboard);

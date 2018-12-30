@@ -12,3 +12,8 @@ export const setMentorModal = (mentorInfo) => ({
   type: "SET_MENTOR_MODAL",
   modalInfo: mentorInfo
 })
+
+export const isEditable = (bool) => ({
+  type: "IS_EDITABLE",
+  isEditable: bool
+})

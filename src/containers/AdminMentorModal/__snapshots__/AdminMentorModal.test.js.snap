@@ -13,11 +13,28 @@ ShallowWrapper {
         "current_employer": "Department of Mentors",
         "current_title": "Head Mentor",
         "email": "menty@mentor.com",
+        "expertise_non_tech": Array [
+          "Parenting",
+        ],
+        "expertise_tech": Array [
+          "React.js",
+        ],
+        "identity_preference": Array [
+          "female-identifying",
+        ],
+        "industries": Array [
+          "Civic Tech",
+        ],
         "matched": true,
+        "meeting_location": "Turing",
+        "mentee_capacity": "2",
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
         "slack_username": "@Menty",
         "state": "CO",
+        "ways_to_mentor": Array [
+          "Coffee Meetings",
+        ],
       }
     }
   />,
@@ -86,11 +103,28 @@ ShallowWrapper {
         "current_employer": "Department of Mentors",
         "current_title": "Head Mentor",
         "email": "menty@mentor.com",
+        "expertise_non_tech": Array [
+          "Parenting",
+        ],
+        "expertise_tech": Array [
+          "React.js",
+        ],
+        "identity_preference": Array [
+          "female-identifying",
+        ],
+        "industries": Array [
+          "Civic Tech",
+        ],
         "matched": true,
+        "meeting_location": "Turing",
+        "mentee_capacity": "2",
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
         "slack_username": "@Menty",
         "state": "CO",
+        "ways_to_mentor": Array [
+          "Coffee Meetings",
+        ],
       }
     }
   />,

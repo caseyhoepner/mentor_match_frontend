@@ -1,24 +1,24 @@
-.nmf-options-container {
+.em-options-container {
 /*  display: flex;
   flex-wrap: wrap;*/
 }
 
-.nmf-container {
+.em-container {
   width: 50%;
   margin: 60px auto;
   border: 2px solid #eee;
   padding: 3%;
 }
 
-.nmf-title {
+.em-title {
   text-align: center;
 }
 
-.nmf-question {
+.em-question {
   padding-top: 30px;
 }
 
-.nmf-input {
+.em-input {
   width: 100%;
   height: 50px;
   margin-bottom: 15px;
@@ -26,13 +26,13 @@
   padding-left: 10px;
 }
 
-.nmf-textarea {
+.em-textarea {
   width: 100%;
   height: 175px;
 }
 
 /* Customize the label (the container) */
-.nmf-checkbox-container {
+.em-checkbox-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -46,7 +46,7 @@
 }
 
 /* Hide the browser's default checkbox */
-.nmf-checkbox-container input {
+.em-checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -55,7 +55,7 @@
 }
 
 /* Create a custom checkbox */
-.nmf-checkmark {
+.em-checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,29 +65,29 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-checkbox-container:hover input ~ .nmf-checkmark {
+.em-checkbox-container:hover input ~ .em-checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.nmf-checkbox-container input:checked ~ .nmf-checkmark {
+.em-checkbox-container input:checked ~ .em-checkmark {
   background-color: #2196F3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.nmf-checkmark:after {
+.em-checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the checkmark when checked */
-.nmf-checkbox-container input:checked ~ .nmf-checkmark:after {
+.em-checkbox-container input:checked ~ .em-checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.nmf-checkbox-container .nmf-checkmark:after {
+.em-checkbox-container .em-checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -100,7 +100,7 @@
 }
 
 /* The container */
-.nmf-radio-container {
+.em-radio-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -114,15 +114,17 @@
 }
 
 
+
+
 /* Hide the browser's default radio button */
-.nmf-radio-container .stack_preference {
+.em-radio-container .stack_preference {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
 /* Create a custom radio button */
-.nmf-radio-checkmark {
+.em-radio-checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -133,29 +135,29 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-radio-container:hover .stack_preference ~ .nmf-radio-checkmark {
+.em-radio-container:hover .stack_preference ~ .em-radio-checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.nmf-radio-container .stack_preference:checked ~ .nmf-radio-checkmark {
+.em-radio-container .stack_preference:checked ~ .em-radio-checkmark {
   background-color: #2196F3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.nmf-radio-checkmark:after {
+.em-radio-checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.nmf-radio-container .stack_preference:checked ~ .nmf-radio-checkmark:after {
+.em-radio-container .stack_preference:checked ~ .em-radio-checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.nmf-radio-container .nmf-radio-checkmark:after {
+.em-radio-container .em-radio-checkmark:after {
   top: 9px;
   left: 9px;
   width: 8px;
@@ -163,11 +165,9 @@
   border-radius: 50%;
   background: white;
 }
-
-
 
 /* The container */
-.nmf-radio-container-1 {
+.em-radio-container-1 {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -180,15 +180,18 @@
   user-select: none;
 }
 
+
+
+
 /* Hide the browser's default radio button */
-.nmf-radio-container-1 .selected1to1 {
+.em-radio-container-1 .active {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
 /* Create a custom radio button */
-.nmf-radio-checkmark-1 {
+.em-radio-checkmark-1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -199,29 +202,29 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-radio-container-1:hover .selected1to1 ~ .nmf-radio-checkmark-1 {
+.em-radio-container-1:hover .active ~ .em-radio-checkmark-1 {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.nmf-radio-container-1 .selected1to1:checked ~ .nmf-radio-checkmark-1 {
+.em-radio-container-1 .active:checked ~ .em-radio-checkmark-1 {
   background-color: #2196F3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.nmf-radio-checkmark-1:after {
+.em-radio-checkmark-1:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.nmf-radio-container-1 .selected1to1:checked ~ .nmf-radio-checkmark-1:after {
+.em-radio-container-1 .active:checked ~ .em-radio-checkmark-1:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.nmf-radio-container-1 .nmf-radio-checkmark-1:after {
+.em-radio-container-1 .em-radio-checkmark-1:after {
   top: 9px;
   left: 9px;
   width: 8px;
@@ -230,6 +233,3 @@
   background: white;
 }
 
-.nmf-hide {
-  display: none;
-}
