@@ -1,6 +1,5 @@
 import React, { Component }from 'react';
-import { postMentor } from '../../utils/api';
-
+import { patchMentor } from '../../utils/api';
 import './EditableMentor.css';
 
 export class EditableMentor extends Component {
@@ -8,6 +7,7 @@ export class EditableMentor extends Component {
     super(props)
 
     this.state = {
+      id: 0,
       name: '',
       pronouns: '',
       email: '',
@@ -32,6 +32,7 @@ export class EditableMentor extends Component {
 
   componentDidMount = async () => {
     const {
+      id,
       name,
       pronouns, 
       email, 
@@ -54,6 +55,7 @@ export class EditableMentor extends Component {
       } = this.props.currentMentor;
 
     await this.setState({
+      id,
       name,
       pronouns, 
       email, 
@@ -76,9 +78,9 @@ export class EditableMentor extends Component {
     })
   }
 
-  postNewMentor = () => {
+  patchMentor = () => {
     console.log(this.state)
-    postMentor(this.state)
+    patchMentor(this.state)
   }
 
   handleChangeRadio = (event) => {
@@ -655,7 +657,7 @@ export class EditableMentor extends Component {
               <span onClick={this.handleClick} className="em-checkmark"></span>
             </label>
           </div>
-          <button onClick={this.postNewMentor}>Submit</button>
+          <button onClick={this.patchMentor}>Submit</button>
       </div>
     )
   }
