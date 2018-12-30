@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import Login from '../../containers/Login'
 import AdminDashboard from '../../containers/AdminDashboard';
 import MentorContainer from '../MentorContainer'
+import PathError from '../PathError';
 import NewMentorForm from '../../containers/NewMentorForm'
-import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import './App.css';
 
@@ -17,12 +18,15 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route path='/login' component={Login} />
-        <Route exact path='/' component={MentorContainer} />
-        <Route exact path='/new-mentor-form' component={NewMentorForm} />
-        {/* <Route path='/edit-mentor' component={MentorCard} /> */}
-        {/* <Route path='/mentor-profile' component={MentorProfile} /> */}
-        <Route path='/admin-dashboard' component={AdminDashboard} />
+        <Switch>
+          <Route path='/login' component={Login} />
+          <Route exact path='/' component={MentorContainer} />
+          <Route exact path='/new-mentor-form' component={NewMentorForm} />
+          {/* <Route path='/edit-mentor' component={MentorCard} /> */}
+          {/* <Route path='/mentor-profile' component={MentorProfile} /> */}
+          <Route path='/admin-dashboard' component={AdminDashboard} />
+          <Route component={PathError} />
+        </Switch>
       </div>
     );
   }
