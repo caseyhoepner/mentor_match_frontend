@@ -6,9 +6,8 @@ describe('AdminMentorCard', () => {
   let wrapper;
   let mockMentor = {
       name: 'Casey',
-      preferences: {
-        title: 'Awesome Coders'
-      }
+      identity_preference: ['female'],
+      matched: true
     }
   let mockFunc = jest.fn()
   

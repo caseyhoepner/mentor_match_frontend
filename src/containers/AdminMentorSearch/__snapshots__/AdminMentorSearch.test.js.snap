@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="ams-search-container"
+          className="ams-search-and-buttons"
         >
           <div
             className="ams-search-inputs-container"
@@ -86,6 +86,7 @@ ShallowWrapper {
           preferencesClicked={false}
         />,
       ],
+      "className": "ams-search-container",
     },
     "ref": null,
     "rendered": Array [
@@ -156,7 +157,7 @@ ShallowWrapper {
               </button>
             </div>,
           ],
-          "className": "ams-search-container",
+          "className": "ams-search-and-buttons",
         },
         "ref": null,
         "rendered": Array [
@@ -423,7 +424,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="ams-search-container"
+            className="ams-search-and-buttons"
           >
             <div
               className="ams-search-inputs-container"
@@ -490,6 +491,7 @@ ShallowWrapper {
             preferencesClicked={false}
           />,
         ],
+        "className": "ams-search-container",
       },
       "ref": null,
       "rendered": Array [
@@ -560,7 +562,7 @@ ShallowWrapper {
                 </button>
               </div>,
             ],
-            "className": "ams-search-container",
+            "className": "ams-search-and-buttons",
           },
           "ref": null,
           "rendered": Array [

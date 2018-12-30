@@ -52,6 +52,51 @@ ShallowWrapper {
           className="p-toggle-option"
         >
           <p>
+            LGBTQIA+
+          </p>
+          <Switch
+            className=""
+            enabled={true}
+            name="lgbtqSwitched"
+            on={false}
+            onClick={[Function]}
+            onDisabledClick={[Function]}
+          />
+        </div>,
+        <div
+          className="p-toggle-option"
+        >
+          <p>
+            Female-Identifying
+          </p>
+          <Switch
+            className=""
+            enabled={true}
+            name="femaleSwitched"
+            on={false}
+            onClick={[Function]}
+            onDisabledClick={[Function]}
+          />
+        </div>,
+        <div
+          className="p-toggle-option"
+        >
+          <p>
+            Male-Identifying
+          </p>
+          <Switch
+            className=""
+            enabled={true}
+            name="maleSwitched"
+            on={false}
+            onClick={[Function]}
+            onDisabledClick={[Function]}
+          />
+        </div>,
+        <div
+          className="p-toggle-option"
+        >
+          <p>
             Front-End
           </p>
           <Switch
@@ -176,6 +221,162 @@ ShallowWrapper {
               "className": "",
               "enabled": true,
               "name": "parentSwitched",
+              "on": false,
+              "onClick": [Function],
+              "onDisabledClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              LGBTQIA+
+            </p>,
+            <Switch
+              className=""
+              enabled={true}
+              name="lgbtqSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />,
+          ],
+          "className": "p-toggle-option",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "LGBTQIA+",
+            },
+            "ref": null,
+            "rendered": "LGBTQIA+",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "",
+              "enabled": true,
+              "name": "lgbtqSwitched",
+              "on": false,
+              "onClick": [Function],
+              "onDisabledClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Female-Identifying
+            </p>,
+            <Switch
+              className=""
+              enabled={true}
+              name="femaleSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />,
+          ],
+          "className": "p-toggle-option",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Female-Identifying",
+            },
+            "ref": null,
+            "rendered": "Female-Identifying",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "",
+              "enabled": true,
+              "name": "femaleSwitched",
+              "on": false,
+              "onClick": [Function],
+              "onDisabledClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Male-Identifying
+            </p>,
+            <Switch
+              className=""
+              enabled={true}
+              name="maleSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />,
+          ],
+          "className": "p-toggle-option",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Male-Identifying",
+            },
+            "ref": null,
+            "rendered": "Male-Identifying",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "",
+              "enabled": true,
+              "name": "maleSwitched",
               "on": false,
               "onClick": [Function],
               "onDisabledClick": [Function],
@@ -335,6 +536,51 @@ ShallowWrapper {
             className="p-toggle-option"
           >
             <p>
+              LGBTQIA+
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="lgbtqSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>,
+          <div
+            className="p-toggle-option"
+          >
+            <p>
+              Female-Identifying
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="femaleSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>,
+          <div
+            className="p-toggle-option"
+          >
+            <p>
+              Male-Identifying
+            </p>
+            <Switch
+              className=""
+              enabled={true}
+              name="maleSwitched"
+              on={false}
+              onClick={[Function]}
+              onDisabledClick={[Function]}
+            />
+          </div>,
+          <div
+            className="p-toggle-option"
+          >
+            <p>
               Front-End
             </p>
             <Switch
@@ -459,6 +705,162 @@ ShallowWrapper {
                 "className": "",
                 "enabled": true,
                 "name": "parentSwitched",
+                "on": false,
+                "onClick": [Function],
+                "onDisabledClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                LGBTQIA+
+              </p>,
+              <Switch
+                className=""
+                enabled={true}
+                name="lgbtqSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />,
+            ],
+            "className": "p-toggle-option",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "LGBTQIA+",
+              },
+              "ref": null,
+              "rendered": "LGBTQIA+",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "",
+                "enabled": true,
+                "name": "lgbtqSwitched",
+                "on": false,
+                "onClick": [Function],
+                "onDisabledClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Female-Identifying
+              </p>,
+              <Switch
+                className=""
+                enabled={true}
+                name="femaleSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />,
+            ],
+            "className": "p-toggle-option",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Female-Identifying",
+              },
+              "ref": null,
+              "rendered": "Female-Identifying",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "",
+                "enabled": true,
+                "name": "femaleSwitched",
+                "on": false,
+                "onClick": [Function],
+                "onDisabledClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Male-Identifying
+              </p>,
+              <Switch
+                className=""
+                enabled={true}
+                name="maleSwitched"
+                on={false}
+                onClick={[Function]}
+                onDisabledClick={[Function]}
+              />,
+            ],
+            "className": "p-toggle-option",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Male-Identifying",
+              },
+              "ref": null,
+              "rendered": "Male-Identifying",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "",
+                "enabled": true,
+                "name": "maleSwitched",
                 "on": false,
                 "onClick": [Function],
                 "onDisabledClick": [Function],

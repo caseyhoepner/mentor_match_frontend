@@ -6,10 +6,11 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <AdminMentorCard
     mentor={
       Object {
+        "identity_preference": Array [
+          "female",
+        ],
+        "matched": true,
         "name": "Casey",
-        "preferences": Object {
-          "title": "Awesome Coders",
-        },
       }
     }
   />,
@@ -27,58 +28,58 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
-          className="amc-record-item"
-        >
-          PICTURE!!
-        </h1>,
-        <h1
-          className="amc-record-item"
-        >
-          Casey
-        </h1>,
-        <h1
-          className="amc-record-item"
-        >
-          Awesome Coders
-        </h1>,
         <div
-          className="amc-record-item"
-        />,
-        <div
-          className="amc-record-item amc-view-edit"
-          onClick={[Function]}
+          className="amc-pic-name-container amc-record-item"
         >
           <img
-            alt="Click to View or Edit Mentor"
-            className="amc-pref-icon"
+            className="amc-mentor-pic"
             src={
               Object {
                 "ReactComponent": [Function],
                 "__esModule": true,
-                "default": "eye.svg",
+                "default": "mentor-pic-default.svg",
               }
             }
           />
-          <h1
-            className="amc-slash"
+          <p
+            className="amc-record-item"
           >
-            /
-          </h1>
+            Casey
+          </p>
+        </div>,
+        <div
+          className="amc-record-item amc-pref"
+        >
           <img
-            alt="Click to View or Edit Mentor"
+            alt="female preference indicator"
             className="amc-pref-icon"
             src={
               Object {
                 "ReactComponent": [Function],
                 "__esModule": true,
-                "default": "pencil.svg",
+                "default": "female.svg",
+              }
+            }
+            title="female"
+          />
+        </div>,
+        <div
+          className="amc-record-item amc-matched"
+        >
+          <img
+            className="amc-matched-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "matched-true.svg",
               }
             }
           />
         </div>,
       ],
       "className": "amc-card",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -87,46 +88,56 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "PICTURE!!",
-          "className": "amc-record-item",
+          "children": Array [
+            <img
+              className="amc-mentor-pic"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "mentor-pic-default.svg",
+                }
+              }
+            />,
+            <p
+              className="amc-record-item"
+            >
+              Casey
+            </p>,
+          ],
+          "className": "amc-pic-name-container amc-record-item",
         },
         "ref": null,
-        "rendered": "PICTURE!!",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Casey",
-          "className": "amc-record-item",
-        },
-        "ref": null,
-        "rendered": "Casey",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Awesome Coders",
-          "className": "amc-record-item",
-        },
-        "ref": null,
-        "rendered": "Awesome Coders",
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "amc-record-item",
-        },
-        "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "amc-mentor-pic",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "mentor-pic-default.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Casey",
+              "className": "amc-record-item",
+            },
+            "ref": null,
+            "rendered": "Casey",
+            "type": "p",
+          },
+        ],
         "type": "div",
       },
       Object {
@@ -136,85 +147,77 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <img
-              alt="Click to View or Edit Mentor"
+              alt="female preference indicator"
               className="amc-pref-icon"
               src={
                 Object {
                   "ReactComponent": [Function],
                   "__esModule": true,
-                  "default": "eye.svg",
+                  "default": "female.svg",
                 }
               }
-            />,
-            <h1
-              className="amc-slash"
-            >
-              /
-            </h1>,
-            <img
-              alt="Click to View or Edit Mentor"
-              className="amc-pref-icon"
-              src={
-                Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "pencil.svg",
-                }
-              }
+              title="female"
             />,
           ],
-          "className": "amc-record-item amc-view-edit",
-          "onClick": [Function],
+          "className": "amc-record-item amc-pref",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "female",
             "nodeType": "host",
             "props": Object {
-              "alt": "Click to View or Edit Mentor",
+              "alt": "female preference indicator",
               "className": "amc-pref-icon",
               "src": Object {
                 "ReactComponent": [Function],
                 "__esModule": true,
-                "default": "eye.svg",
+                "default": "female.svg",
               },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "/",
-              "className": "amc-slash",
-            },
-            "ref": null,
-            "rendered": "/",
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "Click to View or Edit Mentor",
-              "className": "amc-pref-icon",
-              "src": Object {
-                "ReactComponent": [Function],
-                "__esModule": true,
-                "default": "pencil.svg",
-              },
+              "title": "female",
             },
             "ref": null,
             "rendered": null,
             "type": "img",
           },
         ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            className="amc-matched-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "matched-true.svg",
+              }
+            }
+          />,
+          "className": "amc-record-item amc-matched",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "amc-matched-icon",
+            "src": Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "matched-true.svg",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         "type": "div",
       },
     ],
@@ -227,58 +230,58 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
-            className="amc-record-item"
-          >
-            PICTURE!!
-          </h1>,
-          <h1
-            className="amc-record-item"
-          >
-            Casey
-          </h1>,
-          <h1
-            className="amc-record-item"
-          >
-            Awesome Coders
-          </h1>,
           <div
-            className="amc-record-item"
-          />,
-          <div
-            className="amc-record-item amc-view-edit"
-            onClick={[Function]}
+            className="amc-pic-name-container amc-record-item"
           >
             <img
-              alt="Click to View or Edit Mentor"
-              className="amc-pref-icon"
+              className="amc-mentor-pic"
               src={
                 Object {
                   "ReactComponent": [Function],
                   "__esModule": true,
-                  "default": "eye.svg",
+                  "default": "mentor-pic-default.svg",
                 }
               }
             />
-            <h1
-              className="amc-slash"
+            <p
+              className="amc-record-item"
             >
-              /
-            </h1>
+              Casey
+            </p>
+          </div>,
+          <div
+            className="amc-record-item amc-pref"
+          >
             <img
-              alt="Click to View or Edit Mentor"
+              alt="female preference indicator"
               className="amc-pref-icon"
               src={
                 Object {
                   "ReactComponent": [Function],
                   "__esModule": true,
-                  "default": "pencil.svg",
+                  "default": "female.svg",
+                }
+              }
+              title="female"
+            />
+          </div>,
+          <div
+            className="amc-record-item amc-matched"
+          >
+            <img
+              className="amc-matched-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "matched-true.svg",
                 }
               }
             />
           </div>,
         ],
         "className": "amc-card",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -287,46 +290,56 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "PICTURE!!",
-            "className": "amc-record-item",
+            "children": Array [
+              <img
+                className="amc-mentor-pic"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "mentor-pic-default.svg",
+                  }
+                }
+              />,
+              <p
+                className="amc-record-item"
+              >
+                Casey
+              </p>,
+            ],
+            "className": "amc-pic-name-container amc-record-item",
           },
           "ref": null,
-          "rendered": "PICTURE!!",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Casey",
-            "className": "amc-record-item",
-          },
-          "ref": null,
-          "rendered": "Casey",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Awesome Coders",
-            "className": "amc-record-item",
-          },
-          "ref": null,
-          "rendered": "Awesome Coders",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "amc-record-item",
-          },
-          "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "amc-mentor-pic",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "mentor-pic-default.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Casey",
+                "className": "amc-record-item",
+              },
+              "ref": null,
+              "rendered": "Casey",
+              "type": "p",
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -336,85 +349,77 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <img
-                alt="Click to View or Edit Mentor"
+                alt="female preference indicator"
                 className="amc-pref-icon"
                 src={
                   Object {
                     "ReactComponent": [Function],
                     "__esModule": true,
-                    "default": "eye.svg",
+                    "default": "female.svg",
                   }
                 }
-              />,
-              <h1
-                className="amc-slash"
-              >
-                /
-              </h1>,
-              <img
-                alt="Click to View or Edit Mentor"
-                className="amc-pref-icon"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "pencil.svg",
-                  }
-                }
+                title="female"
               />,
             ],
-            "className": "amc-record-item amc-view-edit",
-            "onClick": [Function],
+            "className": "amc-record-item amc-pref",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "female",
               "nodeType": "host",
               "props": Object {
-                "alt": "Click to View or Edit Mentor",
+                "alt": "female preference indicator",
                 "className": "amc-pref-icon",
                 "src": Object {
                   "ReactComponent": [Function],
                   "__esModule": true,
-                  "default": "eye.svg",
+                  "default": "female.svg",
                 },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "/",
-                "className": "amc-slash",
-              },
-              "ref": null,
-              "rendered": "/",
-              "type": "h1",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Click to View or Edit Mentor",
-                "className": "amc-pref-icon",
-                "src": Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "pencil.svg",
-                },
+                "title": "female",
               },
               "ref": null,
               "rendered": null,
               "type": "img",
             },
           ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              className="amc-matched-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "matched-true.svg",
+                }
+              }
+            />,
+            "className": "amc-record-item amc-matched",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "amc-matched-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "matched-true.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
           "type": "div",
         },
       ],
