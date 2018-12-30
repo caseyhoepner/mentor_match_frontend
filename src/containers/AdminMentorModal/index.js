@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor, isEditable } from '../../actions/mentor-actions';
 // import { patchMentor } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor'
+import { withRouter } from 'react-router-dom';
 
 export class AdminMentorModal extends Component {
   constructor(props) {
@@ -22,11 +23,11 @@ export class AdminMentorModal extends Component {
       let mentorObj = Object.assign({}, this.props.modalInfo)
       this.props.openEditMentor(true)
       this.setState({ currentMentor: mentorObj })
+      this.props.history.push('/edit-mentor')
 
     } else if (name === 'Submit Changes') {
       this.props.setMentorModal(null)
       this.props.updateChangedMentor(currentMentor);
-      // patchMentor(currentMentor)
       this.props.openEditMentor(false)
       this.setState({ currentMentor: {} })
 
@@ -239,4 +240,4 @@ export const mapDispatchToProps = (dispatch) => ({
   openEditMentor: bool => dispatch(isEditable(bool))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal));

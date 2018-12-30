@@ -1,6 +1,9 @@
 import React, { Component }from 'react';
 import { patchMentor } from '../../utils/api';
 import './EditableMentor.css';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { isEditable, setMentorModal, updateChangedMentor } from '../../actions/mentor-actions';
 
 export class EditableMentor extends Component {
   constructor(props) {
@@ -26,7 +29,8 @@ export class EditableMentor extends Component {
       mentee_capacity: '0',
       meeting_location: [],
       stack_preference: '',
-      active: true
+      active: true,
+      matched: false
     }
   }
 
@@ -51,7 +55,8 @@ export class EditableMentor extends Component {
       mentee_capacity, 
       meeting_location, 
       stack_preference,
-      active
+      active,
+      matched
       } = this.props.currentMentor;
 
     await this.setState({
@@ -74,13 +79,17 @@ export class EditableMentor extends Component {
       mentee_capacity, 
       meeting_location, 
       stack_preference,
-      active
+      active,
+      matched
     })
   }
 
-  patchMentor = () => {
-    console.log(this.state)
-    patchMentor(this.state)
+  patchMentor = async () => {
+    await patchMentor(this.state)
+    await this.props.setMentorModal(this.state)
+    await this.props.updateChangedMentor(this.state);
+    await this.props.openEditMentor(false)
+    this.props.history.push('/admin-dashboard')
   }
 
   handleChangeRadio = (event) => {
@@ -467,7 +476,7 @@ export class EditableMentor extends Component {
             </label>
             <label data-name='expertise_tech' className="em-checkbox-container">UX/UI Development
               <input 
-                checked={this.checkIfChecked('expertise_tech', 'UI/UI Development')}
+                checked={this.checkIfChecked('expertise_tech', 'UX/UI Development')}
                 type="checkbox" />
               <span 
                 onClick={this.handleClick} 
@@ -663,4 +672,10 @@ export class EditableMentor extends Component {
   }
 }
 
-export default EditableMentor;
+export const mapDispatchToProps = (dispatch) => ({
+  openEditMentor: bool => dispatch(isEditable(bool)),
+  setMentorModal: mentor => dispatch(setMentorModal(mentor)),
+  updateChangedMentor: mentor => dispatch(updateChangedMentor(mentor))
+});
+
+export default withRouter(connect(null, mapDispatchToProps)(EditableMentor));
