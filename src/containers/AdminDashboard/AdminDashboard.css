@@ -150,3 +150,7 @@
   padding-top: 30px;
   text-transform: uppercase;
 }
+
+.ad-hide {
+  display: none;
+}

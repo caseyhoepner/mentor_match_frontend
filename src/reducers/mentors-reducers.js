@@ -30,6 +30,16 @@ export const setMentorModal = (state = null, action) => {
   }
 }
 
+export const isEditable = (state = false, action) => {
+  switch(action.type) {
+    case 'IS_EDITABLE':
+      return action.isEditable
+
+    default:
+      return state;
+  }
+}
+
 export const isLoading = (state = false, action) => {
   switch(action.type) {
 

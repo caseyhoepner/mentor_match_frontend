@@ -96,31 +96,33 @@ export class AdminDashboard extends Component {
           </div>
         </header>
         { modal }
-        <AdminMentorSearch />
-        <section className='ad-cards-container'>
-          <div className='ad-mentor-cards-container'>
-            <div className='ad-cards-header'>
-              <h2 className='ad-cards-title'>Mentors</h2>
-              <div className='ad-heading-container'>
-                <p className='ad-heading-item ad-name-title'>Name</p>
-                <p className='ad-heading-item ad-pref-title'>Mentee Preferences</p>
-                <p className='ad-heading-item ad-matched-title'>Availability</p>
+        <div className={this.props.isEditable ? 'ad-hide' : ''}>
+          <AdminMentorSearch />
+          <section className='ad-cards-container'>
+            <div className='ad-mentor-cards-container'>
+              <div className='ad-cards-header'>
+                <h2 className='ad-cards-title'>Mentors</h2>
+                <div className='ad-heading-container'>
+                  <p className='ad-heading-item ad-name-title'>Name</p>
+                  <p className='ad-heading-item ad-pref-title'>Mentee Preferences</p>
+                  <p className='ad-heading-item ad-matched-title'>Availability</p>
+                </div>
               </div>
+              { mentorCards }
             </div>
-            { mentorCards }
-          </div>
-          <div className='ad-student-cards-container'>
-            <div className='ad-cards-header'>
-              <h2 className='ad-cards-title'>Students</h2>
-              <div className='ad-heading-container'>
-                <p className='ad-heading-item ad-name-title'>Name</p>
-                <p className='ad-heading-item ad-pref-title'>Mentor Preferences</p>
-                <p className='ad-heading-item ad-matched-title'>Availability</p>
+            <div className='ad-student-cards-container'>
+              <div className='ad-cards-header'>
+                <h2 className='ad-cards-title'>Students</h2>
+                <div className='ad-heading-container'>
+                  <p className='ad-heading-item ad-name-title'>Name</p>
+                  <p className='ad-heading-item ad-pref-title'>Mentor Preferences</p>
+                  <p className='ad-heading-item ad-matched-title'>Availability</p>
+                </div>
               </div>
+              { studentCards }
             </div>
-            { studentCards }
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     )
   }
@@ -130,7 +132,8 @@ export const mapStateToProps = (state) => ({
   mentors: state.mentors,
   modalInfo: state.modalInfo,
   showingAllMentors: state.showingAllMentors,
-  searchTerm: state.searchTerm
+  searchTerm: state.searchTerm,
+  isEditable: state.isEditable
 })
 
 export default connect(mapStateToProps)(AdminDashboard);
