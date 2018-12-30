@@ -99,6 +99,10 @@
   background-color: #fff;
 }
 
+.ad-add-height {
+  height: 1500px;
+}
+
 .ad-heading-container {
   display: flex;
   align-items: flex-end;

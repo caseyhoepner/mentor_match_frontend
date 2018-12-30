@@ -4,7 +4,9 @@
   left: 20%;
   right: 20%;
   top: 10%;
+  bottom: 10%;
   box-shadow: 4px 4px 10px rgba(95, 95, 95, .2);
+  overflow: scroll;
 }
 
 .amm-basic-info {
@@ -82,7 +84,6 @@
 }
 
 .amm-bio {
-  height: 100%;
   padding: 20px 40px 0;
 }
 
