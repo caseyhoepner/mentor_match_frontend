@@ -1,9 +1,5 @@
 .ad-header {
-  background-color: grey;
-}
-
-.ad-title-text {
-  margin-bottom: 20px;
+  background-color: #eee;
 }
 
 .ad-nav-btns {
@@ -11,27 +7,45 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
+  background-color: white;
 }
 
 .ad-github-btn {
   align-items: center;
   color: #fff;
   display: flex;
-  font-weight: 300;
+  align-items: flex-end;
+  border-bottom: 3px solid #fff;
+  padding: 12px 0;
+  align-items: center;
+}
+
+.ad-github-btn:hover {
+  border-bottom: 3px solid rgba(3,193,209);
+  cursor: pointer;
+}
+
+.ad-gh-tagline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .ad-gh-tagline {
   letter-spacing: 1px;
+  color: #5f5f5f;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .ad-github-logo {
   height: 40px;
-  margin-left: 20px;
+  margin-left: 10px;
   width: 40px;
 }
 
 .ad-turing-logo {
-  height: 100px;
+  height: 85px;
 }
 
 .ad-title {
@@ -42,17 +56,32 @@
   font-size: 1.75rem;
   font-weight: 300;
   padding: 10px 0 70px;
+    background: 
+    linear-gradient(
+      rgba(126, 73, 0, .6),
+      rgba(126, 73, 0, .6)),
+    url(../../utils/assets/from-above.jpeg);
+  background-position: 45% 20%;
+  background-size: cover;
+  border-bottom: 10px solid rgba(249, 174, 4);
 }
 
-.ad-line-break {
-  background-color: #03c1d1; 
-  height: 1px;
-  width: 300px;
+.ad-tools-svg {
+  height: 50px;
+  width: 50px;
+  margin-top: 80px;
 }
+
+.ad-title-text {
+  margin: 5px auto 20px;
+  font-size: 4.1rem;
+}
+
 
 .ad-tagline {
   letter-spacing: 1px;
   font-size: 1.5rem;
+  margin-bottom: 150px;
 }
 
 .ad-mentor-headings {
@@ -63,6 +92,57 @@
   margin: 0 40px 0 40px;
 }
 
-.ad-mentor-heading {
-  width: 20%;
+.ad-cards-container {
+  display: flex;
+  margin: 50px 3% 0;
+  padding: 0 3% 30px;
+  background-color: #fff;
+}
+
+.ad-heading-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(95, 95, 95, .1);
+}
+
+.ad-name-title {
+  width: 50%;
+  padding-left: 65px;
+}
+
+.ad-pref-title {
+  width: 90px;
+  text-align: center;
+}
+
+.ad-matched-title {
+  width: 77px;
+}
+
+.ad-mentor-cards-container {
+  width: 50%;
+  padding: 0 20px 0 0;
+  border-right: 1px solid rgba(95, 95, 95, .1);
+  height: 100%;
+}
+
+.ad-student-cards-container {
+  width: 50%;
+  padding: 0 0 0 20px;
+}
+
+.ad-student-card {
+  height: 76px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 65px;
+}
+
+.ad-cards-title {
+  font-family: 'Roboto Slab', serif;
+  margin-top: 0;
+  padding-top: 30px;
+  text-transform: uppercase;
 }

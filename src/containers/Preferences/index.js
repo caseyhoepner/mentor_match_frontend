@@ -10,6 +10,9 @@ export class Preferences extends Component {
     this.state = {
       veteranSwitched: false,
       parentSwitched: false,
+      lgbtqSwitched: false,
+      femaleSwitched: false,
+      maleSwitched: false,
       frontEndSwitched: false,
       backEndSwitched: false,
     }
@@ -21,10 +24,28 @@ export class Preferences extends Component {
     this.setState({ veteranSwitched: !veteranSwitched })
   }
 
+  toggleLgbtq = () => {
+    const { lgbtqSwitched } = this.state;
+
+    this.setState({ lgbtqSwitched: !lgbtqSwitched })
+  }
+
   toggleParent = () => {
     const { parentSwitched } = this.state;
 
     this.setState({ parentSwitched: !parentSwitched })
+  }
+
+  toggleFemale = () => {
+    const { femaleSwitched } = this.state;
+
+    this.setState({ femaleSwitched: !femaleSwitched })
+  }  
+
+  toggleMale = () => {
+    const { maleSwitched } = this.state;
+
+    this.setState({ maleSwitched: !maleSwitched })
   }
 
   toggleFE = () => {
@@ -39,7 +60,7 @@ export class Preferences extends Component {
   }
 
   render() {
-    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched } = this.state;
+    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched, lgbtqSwitched, femaleSwitched, maleSwitched } = this.state;
 
     return (
       <div className={this.props.preferencesClicked ? 'p-preferences-container' : 'hide'}>
@@ -57,6 +78,30 @@ export class Preferences extends Component {
               onClick={this.toggleParent} 
               on={parentSwitched}
               name='parentSwitched'
+            />
+        </div>
+        <div className='p-toggle-option'>
+          <p>LGBTQIA+</p>
+            <Switch 
+              onClick={this.toggleLgbtq} 
+              on={lgbtqSwitched}
+              name='lgbtqSwitched'
+            />
+        </div>
+        <div className='p-toggle-option'>
+          <p>Female-Identifying</p>
+            <Switch 
+              onClick={this.toggleFemale} 
+              on={femaleSwitched}
+              name='femaleSwitched'
+            />
+        </div>
+        <div className='p-toggle-option'>
+          <p>Male-Identifying</p>
+            <Switch 
+              onClick={this.toggleMale} 
+              on={maleSwitched}
+              name='maleSwitched'
             />
         </div>
         <div className='p-toggle-option'>

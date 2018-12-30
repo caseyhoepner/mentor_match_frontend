@@ -2,8 +2,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  /* color: #5f5f5f; */
+  font-family: 'Roboto', sans-serif;
 }
 
 *:focus {
@@ -11,5 +10,6 @@
 }
 
 body {
+  color: #5f5f5f;
   margin: 0;
 }

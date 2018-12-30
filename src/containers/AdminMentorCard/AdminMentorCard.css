@@ -1,24 +1,44 @@
 .amc-card {
   align-items: center;
   display: flex;
-  margin: 0 40px 0 40px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(95, 95, 95, .1);
+  padding: 10px 0;
 }
 
-.amc-record-item {
-  width: 20%;
+.amc-card:hover {
+  background-color: rgba(95, 95, 95, .1);
+  cursor: pointer;
+}
+
+.amc-matched {
+  width: 77px;
+  text-align: center;
+}
+
+.amc-pic-name-container {
+  display: flex;
+  width: 50%;
+}
+
+.amc-mentor-pic {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.amc-pref {
+  width: 158px;
+  text-align: center;
 }
 
 .amc-pref-icon {
-  height: 40px;
-  margin-right: 10px;
-  width: 40px;
+  height: 20px;
+  margin: 0 3px;
+  width: 20px;
 }
 
-.amc-view-edit {
-  align-items: center;
-  display: flex;
-}
-
-.amc-slash {
-  margin-right: 10px;
+.amc-matched-icon {
+  height: 15px;
+  width: 15px;
 }

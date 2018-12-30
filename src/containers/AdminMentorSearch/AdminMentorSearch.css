@@ -1,10 +1,13 @@
 .ams-search-container {
   align-items: center;
-  background-color: #03c1d1;
-  display: flex;
   height: 70px;
+  margin: -180px 3% 20px;
+  padding: 40px 3%;
+}
+
+.ams-search-and-buttons {
+  display: flex;
   justify-content: space-between;
-  padding: 0 10%;
 }
 
 .ams-search-inputs-container {
@@ -54,12 +57,12 @@
   font-size: 1.2rem;
   width: 200px;
   border-radius: 3px;
-  color: #7c8c8e;
+  color: #5f5f5f;
   padding: 10px;
 }
 
 .ams-filter-btn-container {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   width: 500px;
   justify-content: flex-end;
@@ -88,7 +91,7 @@
 
 .active {
   background-color: #fff;
-  color: #7c8c8e;
+  color: #5f5f5f;
 }
 
 .selected {

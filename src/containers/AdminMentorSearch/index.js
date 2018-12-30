@@ -50,8 +50,8 @@ export class AdminMentorSearch extends Component {
     const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
 
     return (
-      <div>
-        <div className='ams-search-container'>
+      <div className='ams-search-container'>
+        <div className='ams-search-and-buttons'>
           <div className='ams-search-inputs-container'>
             <div className='ams-search-bar'>
               <input 
@@ -76,7 +76,7 @@ export class AdminMentorSearch extends Component {
               <option value='Remote'>Remote</option>
               <option></option>
             </select>
-            </div>
+          </div>
           <div className='ams-filter-btn-container'>
             <button 
               className={!preferencesClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
