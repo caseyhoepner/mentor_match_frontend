@@ -11,8 +11,9 @@
   cursor: pointer;
 }
 
-.amc-record-item {
-  margin-right: 15px;
+.amc-matched {
+  width: 77px;
+  text-align: center;
 }
 
 .amc-pic-name-container {
@@ -26,17 +27,18 @@
   margin-right: 15px;
 }
 
+.amc-pref {
+  width: 158px;
+  text-align: center;
+}
+
 .amc-pref-icon {
-  height: 25px;
-  margin-right: 10px;
-  width: 25px;
+  height: 20px;
+  margin: 0 3px;
+  width: 20px;
 }
 
-.amc-view-edit {
-  align-items: center;
-  display: flex;
-}
-
-.amc-slash {
-  margin-right: 10px;
+.amc-matched-icon {
+  height: 15px;
+  width: 15px;
 }

@@ -17,7 +17,7 @@ export class AdminDashboard extends Component {
 
   render() {
     let mentorCards;
-    let studentCards = <p>No students to display.</p>
+    let studentCards = <p className='ad-student-card'>No students to display.</p>
     let modal;
 
     if (this.props.modalInfo) {
@@ -46,7 +46,10 @@ export class AdminDashboard extends Component {
               alt='Turing Logo' 
               className='ad-turing-logo' />
             <div className='ad-github-btn'>
-              <p className='ad-gh-tagline'>Sign in with GitHub</p>
+              <div className='ad-gh-tagline-container'>
+                <p className='ad-gh-tagline'>Sign in</p>
+                <p className='ad-gh-tagline'>with github</p>
+              </div>
               <img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-github-logo' />
             </div>
           </div>
@@ -64,20 +67,25 @@ export class AdminDashboard extends Component {
         <AdminMentorSearch />
         <section className='ad-cards-container'>
           <div className='ad-mentor-cards-container'>
-            <div className='ad-mentors-header'>
-              <h2 className='ad-mentors-title'>Mentors</h2>
+            <div className='ad-cards-header'>
+              <h2 className='ad-cards-title'>Mentors</h2>
               <div className='ad-heading-container'>
-                <p className='ad-heading-item ad-pref-name'>Name</p>
+                <p className='ad-heading-item ad-name-title'>Name</p>
                 <p className='ad-heading-item ad-pref-title'>Mentee Preferences</p>
-                <p className='ad-heading-item'>View/Edit</p>
+                <p className='ad-heading-item ad-matched-title'>Availability</p>
               </div>
             </div>
-
             { mentorCards }
           </div>
-
           <div className='ad-student-cards-container'>
-            <h2 className='ad-students-title'>Students</h2>
+            <div className='ad-cards-header'>
+              <h2 className='ad-cards-title'>Students</h2>
+              <div className='ad-heading-container'>
+                <p className='ad-heading-item ad-name-title'>Name</p>
+                <p className='ad-heading-item ad-pref-title'>Mentor Preferences</p>
+                <p className='ad-heading-item ad-matched-title'>Availability</p>
+              </div>
+            </div>
             { studentCards }
           </div>
         </section>

@@ -57,7 +57,7 @@
   font-size: 1.2rem;
   width: 200px;
   border-radius: 3px;
-  color: #7c8c8e;
+  color: #5f5f5f;
   padding: 10px;
 }
 
@@ -91,7 +91,7 @@
 
 .active {
   background-color: #fff;
-  color: #7c8c8e;
+  color: #5f5f5f;
 }
 
 .selected {
