@@ -114,10 +114,8 @@
 }
 
 
-
-
 /* Hide the browser's default radio button */
-.nmf-radio-container .selectedFEBE {
+.nmf-radio-container .stack_preference {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -135,12 +133,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.nmf-radio-container:hover .selectedFEBE ~ .nmf-radio-checkmark {
+.nmf-radio-container:hover .stack_preference ~ .nmf-radio-checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.nmf-radio-container .selectedFEBE:checked ~ .nmf-radio-checkmark {
+.nmf-radio-container .stack_preference:checked ~ .nmf-radio-checkmark {
   background-color: #2196F3;
 }
 
@@ -152,7 +150,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.nmf-radio-container .selectedFEBE:checked ~ .nmf-radio-checkmark:after {
+.nmf-radio-container .stack_preference:checked ~ .nmf-radio-checkmark:after {
   display: block;
 }
 
@@ -230,4 +228,8 @@
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.nmf-hide {
+  display: none;
 }

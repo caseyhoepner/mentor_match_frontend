@@ -4,6 +4,7 @@ import AdminMentorSearch from '../../containers/AdminMentorSearch';
 import AdminMentorCard from '../AdminMentorCard';
 import AdminMentorModal from '../AdminMentorModal';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import uuid from 'uuid';
 
 export class AdminDashboard extends Component {
@@ -71,6 +72,11 @@ export class AdminDashboard extends Component {
               src={require('../../utils/assets/turing-full-grey.png')} 
               alt='Turing Logo' 
               className='ad-turing-logo' />
+            <NavLink
+              to='/new-mentor-form'
+              target='_blank'
+              rel='noopener noreferrer'
+            >New Mentor Form</NavLink>
             <div className='ad-github-btn'>
               <div className='ad-gh-tagline-container'>
                 <p className='ad-gh-tagline'>Sign in</p>
