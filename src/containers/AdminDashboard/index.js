@@ -42,7 +42,7 @@ export class AdminDashboard extends Component {
         <header className='ad-header'>
           <div className='ad-nav-btns'>
             <img 
-              src={require('../../utils/assets/turing-grey.png')} 
+              src={require('../../utils/assets/turing-full-grey.png')} 
               alt='Turing Logo' 
               className='ad-turing-logo' />
             <div className='ad-github-btn'>

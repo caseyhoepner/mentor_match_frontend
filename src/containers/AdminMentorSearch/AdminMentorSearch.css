@@ -61,6 +61,10 @@
   padding: 10px;
 }
 
+.ams-location-dropdown:hover {
+  cursor: pointer;
+}
+
 .ams-filter-btn-container {
   align-items: flex-end;
   display: flex;
@@ -73,10 +77,14 @@
   border: solid 1px #fff;
   border-radius: 3px;
   color: #fff;
-  font-size: 1.2rem;
-  height: 30px;
+  font-size: 1rem;
   margin-left: 10px;
-  padding: 0 15px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+}
+
+.ams-filter-btn:hover {
+  cursor: pointer;
 }
 
 .ams-favorite-btn {
