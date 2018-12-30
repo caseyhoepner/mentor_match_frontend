@@ -32,11 +32,12 @@ ShallowWrapper {
             <div
               className="mc-github-btn"
             >
-              <p
+              <a
                 className="mc-gh-tagline"
+                href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
               >
                 Sign in with GitHub
-              </p>
+              </a>
               <img
                 alt="GitHub Logo"
                 className="mc-github-logo"
@@ -90,11 +91,12 @@ ShallowWrapper {
               <div
                 className="mc-github-btn"
               >
-                <p
+                <a
                   className="mc-gh-tagline"
+                  href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                 >
                   Sign in with GitHub
-                </p>
+                </a>
                 <img
                   alt="GitHub Logo"
                   className="mc-github-logo"
@@ -144,11 +146,12 @@ ShallowWrapper {
                 <div
                   className="mc-github-btn"
                 >
-                  <p
+                  <a
                     className="mc-gh-tagline"
+                    href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                   >
                     Sign in with GitHub
-                  </p>
+                  </a>
                   <img
                     alt="GitHub Logo"
                     className="mc-github-logo"
@@ -185,11 +188,12 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <p
+                    <a
                       className="mc-gh-tagline"
+                      href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                     >
                       Sign in with GitHub
-                    </p>,
+                    </a>,
                     <img
                       alt="GitHub Logo"
                       className="mc-github-logo"
@@ -213,10 +217,11 @@ ShallowWrapper {
                     "props": Object {
                       "children": "Sign in with GitHub",
                       "className": "mc-gh-tagline",
+                      "href": "https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo",
                     },
                     "ref": null,
                     "rendered": "Sign in with GitHub",
-                    "type": "p",
+                    "type": "a",
                   },
                   Object {
                     "instance": null,
@@ -339,11 +344,12 @@ ShallowWrapper {
               <div
                 className="mc-github-btn"
               >
-                <p
+                <a
                   className="mc-gh-tagline"
+                  href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                 >
                   Sign in with GitHub
-                </p>
+                </a>
                 <img
                   alt="GitHub Logo"
                   className="mc-github-logo"
@@ -397,11 +403,12 @@ ShallowWrapper {
                 <div
                   className="mc-github-btn"
                 >
-                  <p
+                  <a
                     className="mc-gh-tagline"
+                    href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                   >
                     Sign in with GitHub
-                  </p>
+                  </a>
                   <img
                     alt="GitHub Logo"
                     className="mc-github-logo"
@@ -451,11 +458,12 @@ ShallowWrapper {
                   <div
                     className="mc-github-btn"
                   >
-                    <p
+                    <a
                       className="mc-gh-tagline"
+                      href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                     >
                       Sign in with GitHub
-                    </p>
+                    </a>
                     <img
                       alt="GitHub Logo"
                       className="mc-github-logo"
@@ -492,11 +500,12 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <p
+                      <a
                         className="mc-gh-tagline"
+                        href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
                       >
                         Sign in with GitHub
-                      </p>,
+                      </a>,
                       <img
                         alt="GitHub Logo"
                         className="mc-github-logo"
@@ -520,10 +529,11 @@ ShallowWrapper {
                       "props": Object {
                         "children": "Sign in with GitHub",
                         "className": "mc-gh-tagline",
+                        "href": "https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo",
                       },
                       "ref": null,
                       "rendered": "Sign in with GitHub",
-                      "type": "p",
+                      "type": "a",
                     },
                     Object {
                       "instance": null,

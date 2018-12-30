@@ -40,7 +40,7 @@ export class AdminMentorSearch extends Component {
         showPreferences: !this.state.showPreferences
       }) 
     } else if (name === 'allMentorsClicked') {
-      this.props.showingAllMentors(true)
+      this.props.toggleShowingMentors(!this.props.showingAllMentors)
     }
 
     this.setState({ [name]: !this.state[name] })
@@ -101,13 +101,14 @@ export class AdminMentorSearch extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  locale: state.locale
+  locale: state.locale,
+  showingAllMentors: state.showingAllMentors
 })
 
 export const mapDispatchToProps = (dispatch) => ({
   setLocale: locale => dispatch(setLocale(locale)),
   setSearch: searchTerm => dispatch(setSearch(searchTerm)),
-  showingAllMentors: (bool) => dispatch(toggleShowingMentors(bool))
+  toggleShowingMentors: (bool) => dispatch(toggleShowingMentors(bool))
 })
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(AdminMentorSearch);
+export default connect(mapStateToProps, mapDispatchToProps)(AdminMentorSearch);

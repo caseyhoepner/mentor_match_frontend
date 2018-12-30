@@ -15,6 +15,25 @@ export class AdminDashboard extends Component {
     }
   }
 
+  filterBySearchTerm = () => {
+    let { searchTerm, mentors } = this.props
+
+    const searchedMentors = mentors.reduce((acc, mentor) => {
+      const mentorKeys = Object.keys(mentor)
+      const foundMentor = mentorKeys.find((key) => {
+        if (typeof mentor[key] === 'string') {
+          return (mentor[key].toLowerCase()).includes(searchTerm.toLowerCase())
+        }
+      })
+      if (foundMentor) {
+        acc.push(mentor)
+      }
+      return acc
+    },[])
+
+    return searchedMentors
+  }
+
   render() {
     let mentorCards;
     let studentCards = <p className='ad-student-card'>No students to display.</p>
@@ -24,15 +43,22 @@ export class AdminDashboard extends Component {
       modal = <AdminMentorModal currentMentor={this.props.modalInfo} />
     }
 
-    if (!this.props.showingAllMentors) {
-      const filteredMentors = this.props.mentors.filter(mentor => {
+    if (!showingAllMentors) {
+      const filteredMentors = mentors.filter(mentor => {
         return mentor.matched === false;
       })
         mentorCards = filteredMentors.map(mentor => {
         return <AdminMentorCard key={uuid()} mentor={mentor}/>
       })
     } else {
-        mentorCards = this.props.mentors.map(mentor => {
+        mentorCards = mentors.map(mentor => {
+        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+      })
+    }
+
+    if (searchTerm) {
+      const searchedMentors = this.filterBySearchTerm()
+      mentorCards = searchedMentors.map(mentor => {
         return <AdminMentorCard key={uuid()} mentor={mentor}/>
       })
     }
@@ -97,7 +123,8 @@ export class AdminDashboard extends Component {
 export const mapStateToProps = (state) => ({
   mentors: state.mentors,
   modalInfo: state.modalInfo,
-  showingAllMentors: state.showingAllMentors
+  showingAllMentors: state.showingAllMentors,
+  searchTerm: state.searchTerm
 })
 
 export default connect(mapStateToProps)(AdminDashboard);

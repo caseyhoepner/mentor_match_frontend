@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/10</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/10</span>
+        <span class='fraction'>10/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -73,27 +73,25 @@
 28
 29
 30
-31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+31</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,28 +108,27 @@
 export const fetchMentors = async () =&gt; {
   const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
   const response = await fetch(url);
-  const mentors = <span class="cstat-no" title="statement not covered" >await response.json();</span>
-<span class="cstat-no" title="statement not covered" >  return cleanMentors(mentors);</span>
+  const mentors = await response.json();
+  return cleanMentors(mentors);
 };
 &nbsp;
-export const postMentor = <span class="fstat-no" title="function not covered" >as</span>ync (mentor) =&gt; {
-  const url = <span class="cstat-no" title="statement not covered" >'https://mentor-match-api.herokuapp.com/api/v1/mentors';</span>
-  const response = <span class="cstat-no" title="statement not covered" >await fetch(url, {</span>
+export const postMentor = async (mentor) =&gt; {
+  const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
+  const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" }, 
     accept: "application/json",
     body: JSON.stringify(mentor)
   });
-  const status = <span class="cstat-no" title="statement not covered" >await response.json();</span>
-<span class="cstat-no" title="statement not covered" >  console.log(status);</span>
+  const status = await response.json();
+  console.log(status);
 };
 &nbsp;
-// export const putMentor = async (mentor) =&gt; {
-//   const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors/:id';
+// export const patchMentor = async (mentor) =&gt; {
+//   const url = `https://mentor-match-api.herokuapp.com/api/v1/mentors/${mentor.id}`;
 //   const response = await fetch(url, {
-//     method: "PUT",
-//     headers: { "Content-Type": "application/json" }, 
-//     accept: "application/json",
+//     method: "PATCH",
+//     headers: { "Content-Type": "application/json", "Accept": "application/json" },
 //     body: JSON.stringify(mentor)
 //   });
 //   const status = await response.json();
@@ -142,7 +139,7 @@ export const postMentor = <span class="fstat-no" title="function not covered" >a
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Dec 27 2018 21:25:06 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 29 2018 12:48:07 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../prettify.js"></script>
