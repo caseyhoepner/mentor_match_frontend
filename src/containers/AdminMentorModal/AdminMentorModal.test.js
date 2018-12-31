@@ -4,6 +4,8 @@ import { AdminMentorModal, mapStateToProps, mapDispatchToProps } from './';
 
 describe('AdminMentorModal', () => {
   let wrapper;
+  let mockFunction = jest.fn()
+  let mockHistory = []
   let mockMentor = {
     name: 'Menty the Mentor',
     email: 'menty@mentor.com',
@@ -46,11 +48,11 @@ describe('AdminMentorModal', () => {
 
   describe('handleClick function', () => {
     it('should update state to be editable and add the mentor from props in state', () => {
-      wrapper = shallow(<AdminMentorModal modalInfo={mockMentor} />)
+      wrapper = shallow(<AdminMentorModal modalInfo={mockMentor} openEditMentor={mockFunction} history={mockHistory} />)
       let mockEvent = { target: { name: 'Edit' } }
 
       wrapper.instance().handleClick(mockEvent)
-      expect(wrapper.state().isEditable).toEqual(true)
+      expect(mockFunction).toHaveBeenCalledWith(true)
       expect(wrapper.state().currentMentor).toEqual(mockMentor)
     });
 
@@ -58,7 +60,12 @@ describe('AdminMentorModal', () => {
       let mockFunc1 = jest.fn()
       let mockFunc2 = jest.fn()
       let mockEvent = { target: { name: 'Submit Changes' } }
-      wrapper = shallow(<AdminMentorModal setMentorModal={mockFunc1} updateChangedMentor={mockFunc2} />)
+      wrapper = shallow(<AdminMentorModal 
+        setMentorModal={mockFunc1} 
+        updateChangedMentor={mockFunc2} 
+        openEditMentor={mockFunction} 
+        history={mockHistory} 
+      />)
       
       wrapper.instance().handleClick(mockEvent)
       expect(mockFunc1).toHaveBeenCalled()
@@ -72,7 +79,9 @@ describe('AdminMentorModal', () => {
       wrapper = shallow(<AdminMentorModal 
         modalInfo={mockMentor}
         setMentorModal={mockFunc1} 
-        updateChangedMentor={mockFunc2} 
+        updateChangedMentor={mockFunc2}
+        openEditMentor={mockFunction} 
+        history={mockHistory} 
       />)
       
       wrapper.instance().handleClick(mockEvent1)
@@ -89,11 +98,13 @@ describe('AdminMentorModal', () => {
         modalInfo={mockMentor}
         setMentorModal={mockFunc1} 
         updateChangedMentor={mockFunc2} 
+        openEditMentor={mockFunction}
+        history={mockHistory} 
       />)
         
       wrapper.instance().handleClick(mockEvent1)
       wrapper.instance().handleClick(mockEvent2)
-      expect(wrapper.state().isEditable).toEqual(false)
+      expect(mockFunction).toHaveBeenCalledWith(false)
       expect(wrapper.state().currentMentor).toEqual({})
     });
 
@@ -104,13 +115,16 @@ describe('AdminMentorModal', () => {
       wrapper = shallow(<AdminMentorModal 
         modalInfo={mockMentor}
         setMentorModal={mockFunc1}
+        openEditMentor={mockFunction}
+        history={mockHistory} 
       />)
 
       wrapper.instance().handleClick(mockEvent1)
-      expect(wrapper.state()).toEqual({ isEditable: true, currentMentor: mockMentor })
+      expect(wrapper.state()).toEqual({ currentMentor: mockMentor })
       wrapper.instance().handleClick(mockEvent2)
       expect(mockFunc1).toHaveBeenCalled()
-      expect(wrapper.state()).toEqual({ isEditable: false, currentMentor: {} })
+      expect(mockFunction).toHaveBeenCalledWith(false)
+      expect(wrapper.state()).toEqual({ currentMentor: {} })
     });
   });
 
@@ -146,15 +160,17 @@ describe('AdminMentorModal', () => {
   });
 
   describe('mapStateToProps function', () => {
-    it('should return an object with a mentor object and a mentors array', () => {
+    it('should return an object with a mentor object, isEditable boolean and a mentors array', () => {
       const mockState = {
-        modalInfo: { name: 'Leslie Knope', preferences: { title: 'waffles' } },
-        mentors: [ { name: 'Ron Swanson', preferences: { title: 'steak' } } ],
+        modalInfo: { name: 'Leslie Knope', identity_preference: 'female-identifying' },
+        mentors: [ { name: 'Ron Swanson', identity_preference: 'male-identifying' } ],
+        isEditable: false,
         somethingElse: 'W00t!'
       }
       const expected = {
-        modalInfo: { name: 'Leslie Knope', preferences: { title: 'waffles' } },
-        mentors: [ { name: 'Ron Swanson', preferences: { title: 'steak' } } ]  
+        modalInfo: { name: 'Leslie Knope', identity_preference: 'female-identifying' },
+        mentors: [ { name: 'Ron Swanson', identity_preference: 'male-identifying' } ],
+        isEditable: false 
       }
       const mappedProps = mapStateToProps(mockState)
       expect(mappedProps).toEqual(expected)
@@ -176,6 +192,11 @@ describe('AdminMentorModal', () => {
 
     it('should call dispatch when updateChangedMentor is called', () => {
       mappedProps.updateChangedMentor(mockMentor)
+      expect(mockDispatch).toHaveBeenCalled()
+    });
+
+    it('should call dispatch when openEditMentor is called', () => {
+      mappedProps.openEditMentor(true)
       expect(mockDispatch).toHaveBeenCalled()
     });
   });

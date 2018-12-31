@@ -76,19 +76,21 @@ describe('AdminDashboard', () => {
 });
 
 describe('mapStateToProps function', () => {
-  it('should return an object with mentors, modalInfo, showingAllMentors filter and searchTerm filter', () => {
+  it('should return an object with mentors, modalInfo, showingAllMentors filter, isEditable boolean, and searchTerm filter', () => {
     const mockState = {
       modalInfo: { name: 'Leslie Knope', preferences: { title: 'waffles' } },
       mentors: [ { name: 'Ron Swanson', preferences: { title: 'steak' } } ],
       showingAllMentors: true,
       searchTerm: 'Les',
+      isEditable: false,
       somethingElse: 'B-B-B-BOOYAH!'
     }
     const expected = {
       modalInfo: { name: 'Leslie Knope', preferences: { title: 'waffles' } },
       mentors: [ { name: 'Ron Swanson', preferences: { title: 'steak' } } ],
       showingAllMentors: true,
-      searchTerm: 'Les'
+      searchTerm: 'Les',
+      isEditable: false
     }
     const mappedProps = mapStateToProps(mockState)
     expect(mappedProps).toEqual(expected)
