@@ -37,34 +37,71 @@ export class AdminDashboard extends Component {
   }
 
   filterByPreference = (mentorCards) => {
-    let filteredMentorCards = [];
-    let filteredCards;
-    let moreFilteredCards;
-    const filterKeys = Object.keys(this.props.mentorFilters);
+    const finalMentorCards = [];
 
-    filterKeys.forEach(key => {
-      filteredCards = mentorCards.filter(card => 
-        {
-        // console.log(card)
-        // console.log(key)
-        card.props.mentor.identity_preference.includes(key)})
-    })
-
-    filterKeys.forEach(key => {
-      moreFilteredCards = mentorCards.filter(card => {
-        console.log(card.props.mentor.identity_preference)
-        return (card.props.mentor.identity_preference === '[]')
+    if (this.props.mentorFilters.lgbtqSwitched) {
+      const cards = mentorCards.filter(card => {
+        return card.props.mentor.identity_preference.includes('LGBTQ+')
       })
-      console.log(moreFilteredCards)
-    })
+      finalMentorCards.push(...cards)
+    }
 
-    filteredMentorCards.push(...filteredCards)
-    filteredMentorCards.push(...moreFilteredCards)
+    if (this.props.mentorFilters.veteranSwitched) {
+      const cards = mentorCards.filter(card => {
+        return card.props.mentor.identity_preference.includes('Veteran')
+      })
+      finalMentorCards.push(...cards)
+    }
 
-    console.log(moreFilteredCards)
-    console.log(filteredCards)
-    console.log(filteredMentorCards)
-    return filteredMentorCards;
+    if (this.props.mentorFilters.parentSwitched) {
+      const cards = mentorCards.filter(card => {
+        return card.props.mentor.identity_preference.includes('Parent')
+      })
+      finalMentorCards.push(...cards)
+    }
+
+    if (this.props.mentorFilters.femaleSwitched) {
+      const cards = mentorCards.filter(card => {
+        return card.props.mentor.identity_preference.includes('Female-Identifying')
+      })
+      finalMentorCards.push(...cards)
+    }
+
+    if (this.props.mentorFilters.maleSwitched) {
+      const cards = mentorCards.filter(card => {
+        return card.props.mentor.identity_preference.includes('Male-Identifying')
+      })
+      finalMentorCards.push(...cards)
+    }
+
+    // let filteredMentorCards = [];
+    // let filteredCards;
+    // let moreFilteredCards;
+    // const filterKeys = Object.keys(this.props.mentorFilters);
+
+    // filterKeys.forEach(key => {
+    //   filteredCards = mentorCards.filter(card => {
+    //     // console.log(card)
+    //     // console.log(key)
+    //     return card.props.mentor.identity_preference.includes(key)})
+    // })
+
+    // filterKeys.forEach(key => {
+    //   moreFilteredCards = mentorCards.filter(card => {
+    //     console.log(card.props.mentor.identity_preference)
+    //     return (card.props.mentor.identity_preference === '[]')
+    //   })
+    //   console.log(moreFilteredCards)
+    // })
+
+    // filteredMentorCards.push(...filteredCards)
+    // filteredMentorCards.push(...moreFilteredCards)
+
+    // console.log(moreFilteredCards)
+    // console.log(filteredCards)
+    // console.log(filteredMentorCards)
+    // return filteredMentorCards;
+    console.log(finalMentorCards)
   }
 
   render() {

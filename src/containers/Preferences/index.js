@@ -33,7 +33,13 @@ export class Preferences extends Component {
     const { changeMentorFilters } = this.props;
 
     await this.setState({ lgbtqSwitched: !lgbtqSwitched })
-    changeMentorFilters(this.state)
+    changeMentorFilters({veteran: this.state.veteranSwitched,
+      parentSwitched: false,
+      lgbtqSwitched: false,
+      femaleSwitched: false,
+      maleSwitched: false,
+      frontEndSwitched: false,
+      backEndSwitched: false})
   }
 
   toggleParent = async () => {
