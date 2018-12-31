@@ -2,6 +2,10 @@
   background-color: #eee;
 }
 
+.ad-nav-btn-container {
+  display: flex;
+}
+
 .ad-nav-btns {
   align-items: center;
   display: flex;
@@ -10,35 +14,36 @@
   background-color: white;
 }
 
-.ad-github-btn {
+.ad-nav-btn {
   align-items: center;
   color: #fff;
+  margin-left: 20px;
   display: flex;
   align-items: flex-end;
   border-bottom: 3px solid #fff;
   padding: 12px 0;
-  align-items: center;
 }
 
-.ad-github-btn:hover {
+.ad-nav-btn:hover {
   border-bottom: 3px solid rgba(3,193,209);
   cursor: pointer;
 }
 
-.ad-gh-tagline-container {
+.ad-nav-tagline-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.ad-gh-tagline {
+.ad-nav-tagline {
   letter-spacing: 1px;
   color: #5f5f5f;
   text-transform: uppercase;
   margin: 0;
+  text-decoration: none;
 }
 
-.ad-github-logo {
+.ad-nav-logo {
   height: 40px;
   margin-left: 10px;
   width: 40px;
@@ -58,9 +63,9 @@
   padding: 10px 0 70px;
     background: 
     linear-gradient(
-      rgba(126, 73, 0, .6),
-      rgba(126, 73, 0, .6)),
-    url(../../utils/assets/from-above.jpeg);
+      rgba(224,153,8, .4),
+      rgba(224,153,8, .4)),
+    url(../../utils/assets/banner.jpg);
   background-position: 45% 20%;
   background-size: cover;
   border-bottom: 10px solid rgba(249, 174, 4);

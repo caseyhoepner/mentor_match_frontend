@@ -72,17 +72,33 @@ export class AdminDashboard extends Component {
               src={require('../../utils/assets/turing-full-grey.png')} 
               alt='Turing Logo' 
               className='ad-turing-logo' />
-            <NavLink
-              to='/new-mentor-form'
-              target='_blank'
-              rel='noopener noreferrer'
-            >New Mentor Form</NavLink>
-            <div className='ad-github-btn'>
-              <div className='ad-gh-tagline-container'>
-                <p className='ad-gh-tagline'>Sign in</p>
-                <p className='ad-gh-tagline'>with github</p>
+            <div className='ad-nav-btn-container'>
+              <div className='ad-new-mentor-btn ad-nav-btn'>
+                <div className='ad-nav-tagline-container'>
+                  <NavLink
+                    className='ad-nav-tagline'
+                    to='/new-mentor-form'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >New
+                  </NavLink>
+                  <NavLink
+                    className='ad-nav-tagline'
+                    to='/new-mentor-form'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >Mentor Form
+                  </NavLink>
+                </div>
+                <img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' />
               </div>
-              <img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-github-logo' />
+              <div className='ad-nav-btn'>
+                <div className='ad-nav-tagline-container'>
+                  <p className='ad-nav-tagline'>Sign in</p>
+                  <p className='ad-nav-tagline'>with github</p>
+                </div>
+                <img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-nav-logo' />
+              </div>
             </div>
           </div>
           <div className='ad-title'>
