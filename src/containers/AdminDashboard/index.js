@@ -37,71 +37,111 @@ export class AdminDashboard extends Component {
   }
 
   filterByPreference = (mentorCards) => {
-    const finalMentorCards = [];
+    let { mentorFilters } = this.props
+    let filterKeys = Object.keys(mentorFilters)
+    let finalCards = []
 
-    if (this.props.mentorFilters.lgbtqSwitched) {
-      const cards = mentorCards.filter(card => {
-        return card.props.mentor.identity_preference.includes('LGBTQ+')
-      })
-      finalMentorCards.push(...cards)
+    let trueVals = filterKeys.filter((key) => {
+      let foundKey;
+      if (mentorFilters[key] === true) {
+        foundKey = key
+      }
+      return foundKey
+    });
+
+    mentorCards.forEach((card) => {   
+      let checkedCard = this.checkPrefs(card, trueVals)
+      if (checkedCard) {
+        finalCards.push(checkedCard)
+      }
+    })    
+    return finalCards
+  }
+
+  cleanPrefs = (str) => {
+    if (str === 'LGBTQ+') {
+      return 'lgbtq'
+    } else if (str === 'Female-Identifying') {
+      return 'female'
+    } else if (str === 'Male-Identifying') {
+      return 'male'
+    } else if (str === 'Front-End') {
+      return 'frontEnd'
+    } else if (str === 'Back-End') {
+      return 'backEnd'
+    } else {
+      return str.toLowerCase()
     }
+  }
 
-    if (this.props.mentorFilters.veteranSwitched) {
-      const cards = mentorCards.filter(card => {
-        return card.props.mentor.identity_preference.includes('Veteran')
-      })
-      finalMentorCards.push(...cards)
+  checkPrefs(card, valArr) {
+    let { identity_preference, stack_preference } = card.props.mentor
+    let totalPrefs = [...identity_preference, stack_preference]
+    totalPrefs = totalPrefs.map((pref) => {
+      return this.cleanPrefs(pref)
+    })
+    let finalCard;
+
+    if (valArr.includes('frontEnd') && valArr.includes('backEnd')) {
+      return
+    } else if (valArr.length === 6) {
+
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+        && totalPrefs.includes(valArr[3])
+        && totalPrefs.includes(valArr[4])
+        && totalPrefs.includes(valArr[5])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 5) {
+
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+        && totalPrefs.includes(valArr[3])
+        && totalPrefs.includes(valArr[4])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 4) {
+   
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+        && totalPrefs.includes(valArr[3])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 3) {
+   
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 2) {
+   
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 1) {
+
+      if (totalPrefs.includes(valArr[0])) {
+        finalCard = card
+      }
+
     }
-
-    if (this.props.mentorFilters.parentSwitched) {
-      const cards = mentorCards.filter(card => {
-        return card.props.mentor.identity_preference.includes('Parent')
-      })
-      finalMentorCards.push(...cards)
-    }
-
-    if (this.props.mentorFilters.femaleSwitched) {
-      const cards = mentorCards.filter(card => {
-        return card.props.mentor.identity_preference.includes('Female-Identifying')
-      })
-      finalMentorCards.push(...cards)
-    }
-
-    if (this.props.mentorFilters.maleSwitched) {
-      const cards = mentorCards.filter(card => {
-        return card.props.mentor.identity_preference.includes('Male-Identifying')
-      })
-      finalMentorCards.push(...cards)
-    }
-
-    // let filteredMentorCards = [];
-    // let filteredCards;
-    // let moreFilteredCards;
-    // const filterKeys = Object.keys(this.props.mentorFilters);
-
-    // filterKeys.forEach(key => {
-    //   filteredCards = mentorCards.filter(card => {
-    //     // console.log(card)
-    //     // console.log(key)
-    //     return card.props.mentor.identity_preference.includes(key)})
-    // })
-
-    // filterKeys.forEach(key => {
-    //   moreFilteredCards = mentorCards.filter(card => {
-    //     console.log(card.props.mentor.identity_preference)
-    //     return (card.props.mentor.identity_preference === '[]')
-    //   })
-    //   console.log(moreFilteredCards)
-    // })
-
-    // filteredMentorCards.push(...filteredCards)
-    // filteredMentorCards.push(...moreFilteredCards)
-
-    // console.log(moreFilteredCards)
-    // console.log(filteredCards)
-    // console.log(filteredMentorCards)
-    // return filteredMentorCards;
-    console.log(finalMentorCards)
+    return finalCard
   }
 
   render() {

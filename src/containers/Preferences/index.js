@@ -10,79 +10,73 @@ export class Preferences extends Component {
     super(props);
 
     this.state = {
-      veteranSwitched: false,
-      parentSwitched: false,
-      lgbtqSwitched: false,
-      femaleSwitched: false,
-      maleSwitched: false,
-      frontEndSwitched: false,
-      backEndSwitched: false
+      veteran: false,
+      parent: false,
+      lgbtq: false,
+      female: false,
+      male: false,
+      frontEnd: false,
+      backEnd: false
     }
   }
 
   toggleVeteran = async () => {
-    const { veteranSwitched } = this.state;
+    const { veteran } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ veteranSwitched: !veteranSwitched })
+    await this.setState({ veteran: !veteran })
     changeMentorFilters(this.state)
   }
 
   toggleLgbtq = async () => {
-    const { lgbtqSwitched } = this.state;
+    const { lgbtq } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ lgbtqSwitched: !lgbtqSwitched })
-    changeMentorFilters({veteran: this.state.veteranSwitched,
-      parentSwitched: false,
-      lgbtqSwitched: false,
-      femaleSwitched: false,
-      maleSwitched: false,
-      frontEndSwitched: false,
-      backEndSwitched: false})
+    await this.setState({ lgbtq: !lgbtq })
+    changeMentorFilters(this.state)
   }
 
   toggleParent = async () => {
-    const { parentSwitched } = this.state;
+    const { parent } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ parentSwitched: !parentSwitched })
+    await this.setState({ parent: !parent })
     changeMentorFilters(this.state)
   }
 
   toggleFemale = async () => {
-    const { femaleSwitched } = this.state;
+    const { female } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ femaleSwitched: !femaleSwitched })
+    await this.setState({ female: !female })
     changeMentorFilters(this.state)
   }  
 
   toggleMale = async () => {
-    const { maleSwitched } = this.state;
+    const { male } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ maleSwitched: !maleSwitched })
+    await this.setState({ male: !male })
     changeMentorFilters(this.state)
   }
 
   toggleFE = async () => {
-    const { frontEndSwitched } = this.state;
+    const { frontEnd } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ frontEndSwitched: !frontEndSwitched })
+    await this.setState({ frontEnd: !frontEnd })
     changeMentorFilters(this.state)
   }
   toggleBE = async () => {
-    const { backEndSwitched } = this.state;
+    const { backEnd } = this.state;
     const { changeMentorFilters } = this.props;
 
-    await this.setState({ backEndSwitched: !backEndSwitched })
+    await this.setState({ backEnd: !backEnd })
     changeMentorFilters(this.state)
   }
 
   render() {
-    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched, lgbtqSwitched, femaleSwitched, maleSwitched } = this.state;
+    const { veteran, parent, frontEnd, backEnd, lgbtq, female, male } = this.state;
 
     return (
       <div className={this.props.preferencesClicked ? 'p-preferences-container' : 'hide'}>
@@ -90,56 +84,56 @@ export class Preferences extends Component {
           <p>Veteran</p>
             <Switch 
               onClick={this.toggleVeteran} 
-              on={veteranSwitched}
-              name='veteranSwitched'
+              on={veteran}
+              name='veteran'
             />
         </div>
         <div className='p-toggle-option'>
           <p>Parent</p>
             <Switch 
               onClick={this.toggleParent} 
-              on={parentSwitched}
-              name='parentSwitched'
+              on={parent}
+              name='parent'
             />
         </div>
         <div className='p-toggle-option'>
           <p>LGBTQIA+</p>
             <Switch 
               onClick={this.toggleLgbtq} 
-              on={lgbtqSwitched}
-              name='lgbtqSwitched'
+              on={lgbtq}
+              name='lgbtq'
             />
         </div>
         <div className='p-toggle-option'>
           <p>Female-Identifying</p>
             <Switch 
               onClick={this.toggleFemale} 
-              on={femaleSwitched}
-              name='femaleSwitched'
+              on={female}
+              name='female'
             />
         </div>
         <div className='p-toggle-option'>
           <p>Male-Identifying</p>
             <Switch 
               onClick={this.toggleMale} 
-              on={maleSwitched}
-              name='maleSwitched'
+              on={male}
+              name='male'
             />
         </div>
         <div className='p-toggle-option'>
           <p>Front-End</p>
             <Switch 
               onClick={this.toggleFE} 
-              on={frontEndSwitched} 
-              name='frontEndSwitched'
+              on={frontEnd} 
+              name='frontEnd'
             />
         </div>          
         <div className='p-toggle-option'>
           <p>Back-End</p>
             <Switch 
               onClick={this.toggleBE} 
-              on={backEndSwitched} 
-              name='backEndSwitched'
+              on={backEnd} 
+              name='backEnd'
             />
         </div>          
       </div>
