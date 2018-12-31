@@ -30,6 +30,7 @@ ShallowWrapper {
         </h2>,
         <input
           className="nmf-input"
+          maxLength="50"
           name="name"
           onChange={[Function]}
           placeholder="Full Name"
@@ -42,6 +43,7 @@ ShallowWrapper {
         </h2>,
         <input
           className="nmf-input"
+          maxLength="20"
           name="pronouns"
           onChange={[Function]}
           placeholder="Example: she/her/hers"
@@ -54,6 +56,7 @@ ShallowWrapper {
         </h2>,
         <input
           className="nmf-input"
+          maxLength="50"
           name="email"
           onChange={[Function]}
           placeholder="Email"
@@ -61,6 +64,7 @@ ShallowWrapper {
         />,
         <input
           className="nmf-input"
+          maxLength="30"
           name="slack_username"
           onChange={[Function]}
           placeholder="Slack"
@@ -73,6 +77,7 @@ ShallowWrapper {
         </h2>,
         <input
           className="nmf-input"
+          maxLength="30"
           name="city"
           onChange={[Function]}
           placeholder="City"
@@ -80,6 +85,7 @@ ShallowWrapper {
         />,
         <input
           className="nmf-input"
+          maxLength="30"
           name="state"
           onChange={[Function]}
           placeholder="State"
@@ -87,6 +93,7 @@ ShallowWrapper {
         />,
         <input
           className="nmf-input"
+          maxLength="30"
           name="country"
           onChange={[Function]}
           placeholder="Country"
@@ -99,6 +106,7 @@ ShallowWrapper {
         </h2>,
         <input
           className="nmf-input"
+          maxLength="30"
           name="current_employer"
           onChange={[Function]}
           placeholder="Current Employer"
@@ -106,6 +114,7 @@ ShallowWrapper {
         />,
         <input
           className="nmf-input"
+          maxLength="40"
           name="current_title"
           onChange={[Function]}
           placeholder="Job Title"
@@ -244,6 +253,7 @@ ShallowWrapper {
         </h2>,
         <textarea
           className="nmf-textarea"
+          maxLength="250"
           name="background"
           onChange={[Function]}
           value=""
@@ -451,7 +461,7 @@ ShallowWrapper {
             className="nmf-checkbox-container"
             data-name="expertise_non_tech"
           >
-            Public Speaking, Speaking proposals
+            Public Speaking
             <input
               type="checkbox"
             />
@@ -876,6 +886,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "50",
           "name": "name",
           "onChange": [Function],
           "placeholder": "Full Name",
@@ -903,6 +914,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "20",
           "name": "pronouns",
           "onChange": [Function],
           "placeholder": "Example: she/her/hers",
@@ -930,6 +942,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "50",
           "name": "email",
           "onChange": [Function],
           "placeholder": "Email",
@@ -945,6 +958,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "30",
           "name": "slack_username",
           "onChange": [Function],
           "placeholder": "Slack",
@@ -972,6 +986,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "30",
           "name": "city",
           "onChange": [Function],
           "placeholder": "City",
@@ -987,6 +1002,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "30",
           "name": "state",
           "onChange": [Function],
           "placeholder": "State",
@@ -1002,6 +1018,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "30",
           "name": "country",
           "onChange": [Function],
           "placeholder": "Country",
@@ -1029,6 +1046,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "30",
           "name": "current_employer",
           "onChange": [Function],
           "placeholder": "Current Employer",
@@ -1044,6 +1062,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-input",
+          "maxLength": "40",
           "name": "current_title",
           "onChange": [Function],
           "placeholder": "Job Title",
@@ -1637,6 +1656,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "nmf-textarea",
+          "maxLength": "250",
           "name": "background",
           "onChange": [Function],
           "value": "",
@@ -2533,7 +2553,7 @@ ShallowWrapper {
               className="nmf-checkbox-container"
               data-name="expertise_non_tech"
             >
-              Public Speaking, Speaking proposals
+              Public Speaking
               <input
                 type="checkbox"
               />
@@ -2631,7 +2651,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Public Speaking, Speaking proposals",
+                "Public Speaking",
                 <input
                   type="checkbox"
                 />,
@@ -2645,7 +2665,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              "Public Speaking, Speaking proposals",
+              "Public Speaking",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -4376,6 +4396,7 @@ ShallowWrapper {
           </h2>,
           <input
             className="nmf-input"
+            maxLength="50"
             name="name"
             onChange={[Function]}
             placeholder="Full Name"
@@ -4388,6 +4409,7 @@ ShallowWrapper {
           </h2>,
           <input
             className="nmf-input"
+            maxLength="20"
             name="pronouns"
             onChange={[Function]}
             placeholder="Example: she/her/hers"
@@ -4400,6 +4422,7 @@ ShallowWrapper {
           </h2>,
           <input
             className="nmf-input"
+            maxLength="50"
             name="email"
             onChange={[Function]}
             placeholder="Email"
@@ -4407,6 +4430,7 @@ ShallowWrapper {
           />,
           <input
             className="nmf-input"
+            maxLength="30"
             name="slack_username"
             onChange={[Function]}
             placeholder="Slack"
@@ -4419,6 +4443,7 @@ ShallowWrapper {
           </h2>,
           <input
             className="nmf-input"
+            maxLength="30"
             name="city"
             onChange={[Function]}
             placeholder="City"
@@ -4426,6 +4451,7 @@ ShallowWrapper {
           />,
           <input
             className="nmf-input"
+            maxLength="30"
             name="state"
             onChange={[Function]}
             placeholder="State"
@@ -4433,6 +4459,7 @@ ShallowWrapper {
           />,
           <input
             className="nmf-input"
+            maxLength="30"
             name="country"
             onChange={[Function]}
             placeholder="Country"
@@ -4445,6 +4472,7 @@ ShallowWrapper {
           </h2>,
           <input
             className="nmf-input"
+            maxLength="30"
             name="current_employer"
             onChange={[Function]}
             placeholder="Current Employer"
@@ -4452,6 +4480,7 @@ ShallowWrapper {
           />,
           <input
             className="nmf-input"
+            maxLength="40"
             name="current_title"
             onChange={[Function]}
             placeholder="Job Title"
@@ -4590,6 +4619,7 @@ ShallowWrapper {
           </h2>,
           <textarea
             className="nmf-textarea"
+            maxLength="250"
             name="background"
             onChange={[Function]}
             value=""
@@ -4797,7 +4827,7 @@ ShallowWrapper {
               className="nmf-checkbox-container"
               data-name="expertise_non_tech"
             >
-              Public Speaking, Speaking proposals
+              Public Speaking
               <input
                 type="checkbox"
               />
@@ -5222,6 +5252,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "50",
             "name": "name",
             "onChange": [Function],
             "placeholder": "Full Name",
@@ -5249,6 +5280,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "20",
             "name": "pronouns",
             "onChange": [Function],
             "placeholder": "Example: she/her/hers",
@@ -5276,6 +5308,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "50",
             "name": "email",
             "onChange": [Function],
             "placeholder": "Email",
@@ -5291,6 +5324,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "30",
             "name": "slack_username",
             "onChange": [Function],
             "placeholder": "Slack",
@@ -5318,6 +5352,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "30",
             "name": "city",
             "onChange": [Function],
             "placeholder": "City",
@@ -5333,6 +5368,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "30",
             "name": "state",
             "onChange": [Function],
             "placeholder": "State",
@@ -5348,6 +5384,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "30",
             "name": "country",
             "onChange": [Function],
             "placeholder": "Country",
@@ -5375,6 +5412,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "30",
             "name": "current_employer",
             "onChange": [Function],
             "placeholder": "Current Employer",
@@ -5390,6 +5428,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-input",
+            "maxLength": "40",
             "name": "current_title",
             "onChange": [Function],
             "placeholder": "Job Title",
@@ -5983,6 +6022,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "nmf-textarea",
+            "maxLength": "250",
             "name": "background",
             "onChange": [Function],
             "value": "",
@@ -6879,7 +6919,7 @@ ShallowWrapper {
                 className="nmf-checkbox-container"
                 data-name="expertise_non_tech"
               >
-                Public Speaking, Speaking proposals
+                Public Speaking
                 <input
                   type="checkbox"
                 />
@@ -6977,7 +7017,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Public Speaking, Speaking proposals",
+                  "Public Speaking",
                   <input
                     type="checkbox"
                   />,
@@ -6991,7 +7031,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                "Public Speaking, Speaking proposals",
+                "Public Speaking",
                 Object {
                   "instance": null,
                   "key": undefined,

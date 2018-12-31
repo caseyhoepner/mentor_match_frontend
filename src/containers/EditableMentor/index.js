@@ -120,9 +120,11 @@ export class EditableMentor extends Component {
 
     } else if (state.includes(checkedItem)) {
       const newState = state.filter(item => {
+        let neededMentor;
         if (item !== checkedItem) {
-          return item;
+          neededMentor =  item;
         }
+        return neededMentor
       })
       this.setState({ [stateKey]: newState });
     }
@@ -149,14 +151,14 @@ export class EditableMentor extends Component {
       country,
       current_employer,
       current_title,
-      industries,
+      // industries,
       background,
-      ways_to_mentor,
-      expertise_tech,
-      expertise_non_tech,
-      preferences,
+      // ways_to_mentor,
+      // expertise_tech,
+      // expertise_non_tech,
+      // preferences,
       mentee_capacity,
-      meeting_location,
+      // meeting_location,
       stack_preference,
       active
     } = this.state;

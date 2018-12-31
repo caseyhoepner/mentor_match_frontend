@@ -78,23 +78,26 @@ export class AdminMentorModal extends Component {
   }
 
   getPreferencesIcons = (preferences) => {
-    return preferences.map(preference => {
+    let prefIconArr = preferences.map(preference => {
+      let newPreference;
+      let prefIcon;
       if (preference !== 'no preference') {
-        let newPreference = preference.toLowerCase();
-          if (newPreference === 'lgbtq+') {
-            newPreference = newPreference.slice(0, -1)
-          }
-        return (
-          <img 
+        newPreference = preference.toLowerCase();
+        if (newPreference === 'lgbtq+') {
+          newPreference = newPreference.slice(0, -1)
+        }
+      
+      prefIcon = <img 
             className='amc-pref-icon' 
             src={require(`../../utils/assets/${newPreference}.svg`)} 
             alt={`${newPreference} preference indicator`} 
             key={`${newPreference}`}
             title={`${newPreference}`}
           />
-        )
-      }
+        }
+        return prefIcon
     })
+    return prefIconArr
   }
 
   render() {
@@ -109,7 +112,7 @@ export class AdminMentorModal extends Component {
         country,
         slack_username,
         matched,
-        active,
+        // active,
         pronouns,
         current_title,
         current_employer,
@@ -129,13 +132,14 @@ export class AdminMentorModal extends Component {
             <img
               className='amm-pic'
               src={require('../../utils/assets/amm-pic.svg')}
-              alt='Mentor picture'
+              alt='Mentor profile'
             />
             <div className='amm-header-info'>
               <div className='amm-top-line'>
                 <h1 className='amm-name'>{name}</h1>
                 <img 
                   className='amm-x'
+                  alt='Click here to exit'
                   name='Exit' 
                   onClick={this.handleClick} 
                   src={require('../../utils/assets/x.svg')}/>

@@ -32,6 +32,7 @@ ShallowWrapper {
           className="amc-pic-name-container amc-record-item"
         >
           <img
+            alt="default profile"
             className="amc-mentor-pic"
             src={
               Object {
@@ -67,6 +68,7 @@ ShallowWrapper {
           className="amc-record-item amc-matched"
         >
           <img
+            alt="matched indicator"
             className="amc-matched-icon"
             src={
               Object {
@@ -90,6 +92,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <img
+              alt="default profile"
               className="amc-mentor-pic"
               src={
                 Object {
@@ -114,6 +117,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "default profile",
               "className": "amc-mentor-pic",
               "src": Object {
                 "ReactComponent": [Function],
@@ -190,6 +194,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <img
+            alt="matched indicator"
             className="amc-matched-icon"
             src={
               Object {
@@ -207,6 +212,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "matched indicator",
             "className": "amc-matched-icon",
             "src": Object {
               "ReactComponent": [Function],
@@ -234,6 +240,7 @@ ShallowWrapper {
             className="amc-pic-name-container amc-record-item"
           >
             <img
+              alt="default profile"
               className="amc-mentor-pic"
               src={
                 Object {
@@ -269,6 +276,7 @@ ShallowWrapper {
             className="amc-record-item amc-matched"
           >
             <img
+              alt="matched indicator"
               className="amc-matched-icon"
               src={
                 Object {
@@ -292,6 +300,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <img
+                alt="default profile"
                 className="amc-mentor-pic"
                 src={
                   Object {
@@ -316,6 +325,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "alt": "default profile",
                 "className": "amc-mentor-pic",
                 "src": Object {
                   "ReactComponent": [Function],
@@ -392,6 +402,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <img
+              alt="matched indicator"
               className="amc-matched-icon"
               src={
                 Object {
@@ -409,6 +420,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "matched indicator",
               "className": "amc-matched-icon",
               "src": Object {
                 "ReactComponent": [Function],

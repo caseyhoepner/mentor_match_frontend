@@ -71,9 +71,11 @@ export class NewMentorForm extends Component {
 
     } else if (state.includes(checkedItem)) {
       const newState = state.filter(item => {
+        let correctItem;
         if (item !== checkedItem) {
-          return item;
+          correctItem = item;
         }
+        return correctItem
       })
       this.setState({ [stateKey]: newState });
     }
@@ -90,14 +92,14 @@ export class NewMentorForm extends Component {
       country,
       current_employer,
       current_title,
-      industries,
+      // industries,
       background,
-      ways_to_mentor,
-      expertise_tech,
-      expertise_non_tech,
-      identity_preference,
+      // ways_to_mentor,
+      // expertise_tech,
+      // expertise_non_tech,
+      // identity_preference,
       mentee_capacity,
-      meeting_location,
+      // meeting_location,
       selected1to1,
       stack_preference
     } = this.state;
