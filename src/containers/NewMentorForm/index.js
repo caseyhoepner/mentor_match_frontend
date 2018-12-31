@@ -112,6 +112,7 @@ export class NewMentorForm extends Component {
             onChange={this.handleChange} 
             className='nmf-input' 
             placeholder='Full Name'
+            maxLength='50'
           />
 
         <h2 className='nmf-question'>What are your preferred pronouns?</h2>
@@ -121,6 +122,7 @@ export class NewMentorForm extends Component {
             onChange={this.handleChange} 
             className='nmf-input' 
             placeholder='Example: she/her/hers'
+            maxLength='20'
           />
 
         <h2 className='nmf-question'>What is your contact info for students to be able to reach you?</h2>
@@ -130,6 +132,7 @@ export class NewMentorForm extends Component {
               onChange={this.handleChange}  
               className='nmf-input' 
               placeholder='Email'
+              maxLength='50'
             />
             <input 
               name='slack_username' 
@@ -137,6 +140,7 @@ export class NewMentorForm extends Component {
               onChange={this.handleChange}  
               className='nmf-input' 
               placeholder='Slack'
+              maxLength='30'
             />
 
         <h2 className='nmf-question'>Where are you located?</h2>
@@ -146,6 +150,7 @@ export class NewMentorForm extends Component {
               onChange={this.handleChange}  
               className='nmf-input' 
               placeholder='City'
+              maxLength='30'
             />
             <input 
               name='state' 
@@ -153,6 +158,7 @@ export class NewMentorForm extends Component {
               onChange={this.handleChange}  
               className='nmf-input' 
               placeholder='State'
+              maxLength='30'
             />
             <input 
               name='country' 
@@ -160,6 +166,7 @@ export class NewMentorForm extends Component {
               onChange={this.handleChange}  
               className='nmf-input' 
               placeholder='Country'
+              maxLength='30'
             />
 
         <h2 className='nmf-question'>Current Employment:</h2>
@@ -169,6 +176,7 @@ export class NewMentorForm extends Component {
             onChange={this.handleChange}  
             className='nmf-input' 
             placeholder='Current Employer'
+            maxLength='30'
           />
           <input 
             name='current_title' 
@@ -176,6 +184,7 @@ export class NewMentorForm extends Component {
             onChange={this.handleChange}  
             className='nmf-input' 
             placeholder='Job Title'
+            maxLength='40'
           />
 
         <h2 className='nmf-question'>What industries have you had tech experience in?</h2>
@@ -260,6 +269,7 @@ export class NewMentorForm extends Component {
             value={background} 
             onChange={this.handleChange} 
             className='nmf-textarea'
+            maxLength='250'
           />
 
         <h2 className='nmf-question'>Areas of Technical Expertise:</h2>
@@ -366,7 +376,7 @@ export class NewMentorForm extends Component {
 
         <h2 className='nmf-question'>Areas of Non-Technical Expertise:</h2>
           <div className='nmf-options-container'>
-            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Public Speaking, Speaking proposals
+            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Public Speaking
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>

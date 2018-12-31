@@ -60,7 +60,7 @@
     linear-gradient(
       rgba(126, 73, 0, .6),
       rgba(126, 73, 0, .6)),
-    url(../../utils/assets/from-above.jpeg);
+    url(../../utils/assets/banner.jpg);
   background-position: 45% 20%;
   background-size: cover;
   border-bottom: 10px solid rgba(249, 174, 4);
