@@ -36,8 +36,39 @@ export class AdminDashboard extends Component {
     return searchedMentors
   }
 
+  filterByPreference = (mentorCards) => {
+    let filteredMentorCards = [];
+    let filteredCards;
+    let moreFilteredCards;
+    const filterKeys = Object.keys(this.props.mentorFilters);
+
+    filterKeys.forEach(key => {
+      filteredCards = mentorCards.filter(card => 
+        {
+        // console.log(card)
+        // console.log(key)
+        card.props.mentor.identity_preference.includes(key)})
+    })
+
+    filterKeys.forEach(key => {
+      moreFilteredCards = mentorCards.filter(card => {
+        console.log(card.props.mentor.identity_preference)
+        return (card.props.mentor.identity_preference === '[]')
+      })
+      console.log(moreFilteredCards)
+    })
+
+    filteredMentorCards.push(...filteredCards)
+    filteredMentorCards.push(...moreFilteredCards)
+
+    console.log(moreFilteredCards)
+    console.log(filteredCards)
+    console.log(filteredMentorCards)
+    return filteredMentorCards;
+  }
+
   render() {
-    let { mentors, showingAllMentors, searchTerm } = this.props
+    let { mentors, showingAllMentors, searchTerm, mentorFilters } = this.props
     let mentorCards;
     let studentCards = <p className='ad-student-card'>No students to display.</p>
     let modal;
@@ -64,6 +95,10 @@ export class AdminDashboard extends Component {
       mentorCards = searchedMentors.map(mentor => {
         return <AdminMentorCard key={uuid()} mentor={mentor}/>
       })
+    }
+
+    if (Object.values(mentorFilters).includes(true)) {
+      mentorCards = this.filterByPreference(mentorCards);
     }
 
     return (
@@ -114,7 +149,6 @@ export class AdminDashboard extends Component {
           </div>
         </header>
         { modal }
-        <div className={this.props.isEditable ? 'ad-hide' : ''}>
           <AdminMentorSearch />
           <section className='ad-cards-container'>
             <div className='ad-mentor-cards-container'>
@@ -140,7 +174,6 @@ export class AdminDashboard extends Component {
               { studentCards }
             </div>
           </section>
-        </div>
       </div>
     )
   }
@@ -148,6 +181,7 @@ export class AdminDashboard extends Component {
 
 export const mapStateToProps = (state) => ({
   mentors: state.mentors,
+  mentorFilters: state.mentorFilters,
   modalInfo: state.modalInfo,
   showingAllMentors: state.showingAllMentors,
   searchTerm: state.searchTerm,

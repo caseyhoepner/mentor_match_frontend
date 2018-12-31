@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Preferences.css';
 import Switch from 'react-toggle-switch';
+import { changeMentorFilters }  from '../../actions/preferences-actions';
 
 
 export class Preferences extends Component {
@@ -14,49 +16,63 @@ export class Preferences extends Component {
       femaleSwitched: false,
       maleSwitched: false,
       frontEndSwitched: false,
-      backEndSwitched: false,
+      backEndSwitched: false
     }
   }
 
-  toggleVeteran = () => {
+  toggleVeteran = async () => {
     const { veteranSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ veteranSwitched: !veteranSwitched })
+    await this.setState({ veteranSwitched: !veteranSwitched })
+    changeMentorFilters(this.state)
   }
 
-  toggleLgbtq = () => {
+  toggleLgbtq = async () => {
     const { lgbtqSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ lgbtqSwitched: !lgbtqSwitched })
+    await this.setState({ lgbtqSwitched: !lgbtqSwitched })
+    changeMentorFilters(this.state)
   }
 
-  toggleParent = () => {
+  toggleParent = async () => {
     const { parentSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ parentSwitched: !parentSwitched })
+    await this.setState({ parentSwitched: !parentSwitched })
+    changeMentorFilters(this.state)
   }
 
-  toggleFemale = () => {
+  toggleFemale = async () => {
     const { femaleSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ femaleSwitched: !femaleSwitched })
+    await this.setState({ femaleSwitched: !femaleSwitched })
+    changeMentorFilters(this.state)
   }  
 
-  toggleMale = () => {
+  toggleMale = async () => {
     const { maleSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ maleSwitched: !maleSwitched })
+    await this.setState({ maleSwitched: !maleSwitched })
+    changeMentorFilters(this.state)
   }
 
-  toggleFE = () => {
+  toggleFE = async () => {
     const { frontEndSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ frontEndSwitched: !frontEndSwitched })
+    await this.setState({ frontEndSwitched: !frontEndSwitched })
+    changeMentorFilters(this.state)
   }
-  toggleBE = () => {
+  toggleBE = async () => {
     const { backEndSwitched } = this.state;
+    const { changeMentorFilters } = this.props;
 
-    this.setState({ backEndSwitched: !backEndSwitched })
+    await this.setState({ backEndSwitched: !backEndSwitched })
+    changeMentorFilters(this.state)
   }
 
   render() {
@@ -125,4 +141,8 @@ export class Preferences extends Component {
   }
 }
 
-export default Preferences;
+const mapDispatchToProps = (dispatch) => ({
+  changeMentorFilters: (filters) => dispatch(changeMentorFilters(filters))
+})
+
+export default connect(null, mapDispatchToProps)(Preferences);
