@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { setMentorModal } from '../../actions/mentor-actions';
 
 export class AdminMentorCard extends Component {
-  constructor(props) {
-    super(props);
-}
+//   constructor(props) {
+//     super(props);
+// }
 
   handleClick = () => {
     const { setMentorModal, mentor } = this.props;
@@ -18,17 +18,19 @@ export class AdminMentorCard extends Component {
     const { name, identity_preference, matched } = this.props.mentor;
     const preferencesIcons = identity_preference.map(preference => {
       let newPreference = preference.toLowerCase();
+      let prefImage;
       if (newPreference === 'lgbtq+') {
         newPreference = newPreference.slice(0, -1)
       }
       if (newPreference !== 'no preference') {
-      return <img 
+      prefImage = <img 
               className='amc-pref-icon' 
               src={require(`../../utils/assets/${newPreference}.svg`)} 
               alt={`${newPreference} preference indicator`} 
               key={`${newPreference}`}
               title={`${newPreference}`} />
       }
+      return prefImage
     })
 
     return (
@@ -36,6 +38,7 @@ export class AdminMentorCard extends Component {
         <div className='amc-pic-name-container amc-record-item'>
           <img 
             className='amc-mentor-pic'
+            alt='default profile'
             src={require('../../utils/assets/mentor-pic-default.svg')}
             />
           <p className='amc-record-item'>{name}</p>
@@ -46,6 +49,7 @@ export class AdminMentorCard extends Component {
         <div className='amc-record-item amc-matched'>
           <img 
             className='amc-matched-icon'
+            alt='matched indicator'
             src={require(`../../utils/assets/matched-${matched}.svg`)} />
         </div>
       </div>

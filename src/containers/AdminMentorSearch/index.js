@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Preferences from '../../containers/Preferences';
-import hollowHeart from '../../utils/assets/heart.svg';
-import solidHeart from '../../utils/assets/solid-heart.svg';
+// import hollowHeart from '../../utils/assets/heart.svg';
+// import solidHeart from '../../utils/assets/solid-heart.svg';
 import { connect } from 'react-redux';
 import { setLocale, setSearch, toggleShowingMentors } from '../../actions/search-actions';
 import './AdminMentorSearch.css';
@@ -47,7 +47,7 @@ export class AdminMentorSearch extends Component {
   }
 
   render() {
-    const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
+    const {search, localeSelected, preferencesClicked, allMentorsClicked } = this.state;
 
     return (
       <div className='ams-search-container'>

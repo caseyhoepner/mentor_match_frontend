@@ -3,9 +3,9 @@ import './MentorContainer.css';
 import Search from '../../containers/Search';
 
 class MentorContainer extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   render() {
     return (

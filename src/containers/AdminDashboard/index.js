@@ -21,9 +21,11 @@ export class AdminDashboard extends Component {
     const searchedMentors = mentors.reduce((acc, mentor) => {
       const mentorKeys = Object.keys(mentor)
       const foundMentor = mentorKeys.find((key) => {
+        let newMentor;
         if (typeof mentor[key] === 'string') {
-          return (mentor[key].toLowerCase()).includes(searchTerm.toLowerCase())
+          newMentor = (mentor[key].toLowerCase()).includes(searchTerm.toLowerCase())
         }
+        return newMentor
       })
       if (foundMentor) {
         acc.push(mentor)
