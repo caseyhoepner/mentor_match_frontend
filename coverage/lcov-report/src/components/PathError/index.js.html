@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/containers/MentorProfile/index.js</title>
+    <title>Code coverage report for src/components/PathError/index.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/containers/MentorProfile</a> index.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/PathError</a> index.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -32,7 +32,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -58,37 +58,49 @@
 13
 14
 15
-16</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+16
+17
+18
+19
+20</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
-import './MentorProfile.css';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { Link } from 'react-router-dom';
 &nbsp;
-export class MentorProfile extends Component {
-  constructor() {
-    super()
-  }
+import './PathError.css';
 &nbsp;
-  render() {
-    return (
-      &lt;div&gt;MentorProfile&lt;/div&gt;
-      )
-  }
+const PathError = () =&gt; {
+&nbsp;
+  return (
+    &lt;div className='pe-container'&gt;
+      &lt;h1&gt;Oops! This page does not exist.&lt;/h1&gt;
+      &lt;Link 
+        className='pe-back-btn' 
+        to="/"&gt;
+        &amp;#8592; Reroute to homepage
+      &lt;/Link&gt;
+    &lt;/div&gt;
+  )
 }
 &nbsp;
-export default MentorProfile;</pre></td></tr>
+export default PathError;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.55% </span>
+        <span class="strong">96.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>28/29</span>
+        <span class='fraction'>29/30</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">91.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>11/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">90% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>9/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.43% </span>
+        <span class="strong">96.55% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>27/28</span>
+        <span class='fraction'>28/29</span>
       </div>
     </div>
   </div>
@@ -178,7 +178,11 @@
 133
 134
 135
-136</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+136
+137
+138
+139</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -191,7 +195,6 @@
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,8 +218,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">10x</span>
@@ -239,7 +248,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -268,7 +276,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -307,18 +319,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
 import './AdminDashboard.css';
 import AdminMentorSearch from '../../containers/AdminMentorSearch';
 import AdminMentorCard from '../AdminMentorCard';
 import AdminMentorModal from '../AdminMentorModal';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import uuid from 'uuid';
 &nbsp;
 export class AdminDashboard extends Component {
@@ -326,7 +333,6 @@ export class AdminDashboard extends Component {
     super(props);
 &nbsp;
     this.state = {
-      showModal: false,
     }
   }
 &nbsp;
@@ -350,8 +356,14 @@ export class AdminDashboard extends Component {
   }
 &nbsp;
   render() {
+    let { mentors, showingAllMentors, searchTerm } = this.props
     let mentorCards;
-    let { showingAllMentors, mentors, searchTerm } = this.props
+    let studentCards = &lt;p className='ad-student-card'&gt;No students to display.&lt;/p&gt;
+    let modal;
+&nbsp;
+    if (this.props.modalInfo) {
+      modal = &lt;AdminMentorModal currentMentor={this.props.modalInfo} /&gt;
+    }
 &nbsp;
     if (!showingAllMentors) {
       const filteredMentors = mentors.filter(mentor =&gt; {
@@ -373,64 +385,67 @@ export class AdminDashboard extends Component {
       })
     }
 &nbsp;
-    if (this.props.modalInfo) {
-      return (
-        &lt;div&gt;
-          &lt;header className='ad-header'&gt;
-            &lt;div className='ad-nav-btns'&gt;
-              &lt;img src={require('../../utils/assets/turing-logo.png')} alt='Turing Logo' className='ad-turing-logo' /&gt;
-              &lt;div className='ad-github-btn'&gt;
-                &lt;p className='ad-gh-tagline'&gt;Sign in with GitHub&lt;/p&gt;
-                &lt;img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-github-logo' /&gt;
+    return (
+      &lt;div&gt;
+        &lt;header className='ad-header'&gt;
+          &lt;div className='ad-nav-btns'&gt;
+            &lt;img 
+              src={require('../../utils/assets/turing-full-grey.png')} 
+              alt='Turing Logo' 
+              className='ad-turing-logo' /&gt;
+            &lt;NavLink
+              to='/new-mentor-form'
+              target='_blank'
+              rel='noopener noreferrer'
+            &gt;New Mentor Form&lt;/NavLink&gt;
+            &lt;div className='ad-github-btn'&gt;
+              &lt;div className='ad-gh-tagline-container'&gt;
+                &lt;p className='ad-gh-tagline'&gt;Sign in&lt;/p&gt;
+                &lt;p className='ad-gh-tagline'&gt;with github&lt;/p&gt;
               &lt;/div&gt;
+              &lt;img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-github-logo' /&gt;
             &lt;/div&gt;
-            &lt;div className='ad-title'&gt;
-              &lt;h1 className='ad-title-text'&gt;Admin Dashboard&lt;/h1&gt;
-              &lt;div className='ad-line-break'&gt;&lt;/div&gt;
-              &lt;p className='ad-tagline'&gt;Filter mentors and students to find a match!&lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/header&gt;
-          &lt;AdminMentorModal currentMentor={this.props.modalInfo} /&gt;
-          &lt;AdminMentorSearch /&gt;
-          &lt;div className="ad-mentor-headings"&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Profile Picture&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Name&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Stack Preference&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Other Preferences&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;View/Edit&lt;/h1&gt;
           &lt;/div&gt;
-          { mentorCards }
-        &lt;/div&gt;
-      )
-    } else {
-      return (
-        &lt;div&gt;
-          &lt;header className='ad-header'&gt;
-            &lt;div className='ad-nav-btns'&gt;
-              &lt;img src={require('../../utils/assets/turing-logo.png')} alt='Turing Logo' className='ad-turing-logo' /&gt;
-              &lt;div className='ad-github-btn'&gt;
-                &lt;p className='ad-gh-tagline'&gt;Sign in with GitHub&lt;/p&gt;
-                &lt;img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-github-logo' /&gt;
+          &lt;div className='ad-title'&gt;
+            &lt;img 
+              className='ad-tools-svg'
+              src={require('../../utils/assets/tools.svg')}
+              alt='Icon of some tools'
+            /&gt;
+            &lt;h1 className='ad-title-text'&gt;Admin Dashboard&lt;/h1&gt;
+            &lt;p className='ad-tagline'&gt;Filter mentors and students to find a match!&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+        { modal }
+        &lt;div className={this.props.isEditable ? <span class="branch-0 cbranch-no" title="branch not covered" >'ad-hide' </span>: ''}&gt;
+          &lt;AdminMentorSearch /&gt;
+          &lt;section className='ad-cards-container'&gt;
+            &lt;div className='ad-mentor-cards-container'&gt;
+              &lt;div className='ad-cards-header'&gt;
+                &lt;h2 className='ad-cards-title'&gt;Mentors&lt;/h2&gt;
+                &lt;div className='ad-heading-container'&gt;
+                  &lt;p className='ad-heading-item ad-name-title'&gt;Name&lt;/p&gt;
+                  &lt;p className='ad-heading-item ad-pref-title'&gt;Mentee Preferences&lt;/p&gt;
+                  &lt;p className='ad-heading-item ad-matched-title'&gt;Availability&lt;/p&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
+              { mentorCards }
             &lt;/div&gt;
-            &lt;div className='ad-title'&gt;
-              &lt;h1 className='ad-title-text'&gt;Admin Dashboard&lt;/h1&gt;
-              &lt;div className='ad-line-break'&gt;&lt;/div&gt;
-              &lt;p className='ad-tagline'&gt;Filter mentors and students to find a match!&lt;/p&gt;
+            &lt;div className='ad-student-cards-container'&gt;
+              &lt;div className='ad-cards-header'&gt;
+                &lt;h2 className='ad-cards-title'&gt;Students&lt;/h2&gt;
+                &lt;div className='ad-heading-container'&gt;
+                  &lt;p className='ad-heading-item ad-name-title'&gt;Name&lt;/p&gt;
+                  &lt;p className='ad-heading-item ad-pref-title'&gt;Mentor Preferences&lt;/p&gt;
+                  &lt;p className='ad-heading-item ad-matched-title'&gt;Availability&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              { studentCards }
             &lt;/div&gt;
-          &lt;/header&gt;
-          &lt;AdminMentorSearch /&gt;
-          &lt;div className="ad-mentor-headings"&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Profile Picture&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Name&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Stack Preference&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;Other Preferences&lt;/h1&gt;
-            &lt;h1 className='ad-mentor-heading'&gt;View/Edit&lt;/h1&gt;
-          &lt;/div&gt;
-          { mentorCards }
+          &lt;/section&gt;
         &lt;/div&gt;
-      )
-    }
+      &lt;/div&gt;
+    )
   }
 }
 &nbsp;
@@ -438,23 +453,17 @@ export const mapStateToProps = (state) =&gt; ({
   mentors: state.mentors,
   modalInfo: state.modalInfo,
   showingAllMentors: state.showingAllMentors,
-  searchTerm: state.searchTerm
+  searchTerm: state.searchTerm,
+  isEditable: state.isEditable
 })
 &nbsp;
-export default connect(mapStateToProps)(AdminDashboard);
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;</pre></td></tr>
+export default connect(mapStateToProps)(AdminDashboard);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 29 2018 12:48:07 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 30 2018 21:43:58 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

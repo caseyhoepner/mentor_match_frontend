@@ -20,11 +20,11 @@ describe('NewMentorForm', () => {
     ways_to_mentor: [],
     expertise_tech: [],
     expertise_non_tech: [],
-    preferences: [],
+    identity_preference: [],
     mentee_capacity: '0',
     meeting_location: [],
     selected1to1: 'No',
-    selectedFEBE: 'No Preference'
+    stack_preference: 'No Preference'
   }
   
   beforeEach(() => {
@@ -36,10 +36,10 @@ describe('NewMentorForm', () => {
   });
 
   describe('postNewMentor function', () => {
-    it('should fire the postMentor API function upon the Submit button clicked', () => {
+    it('should fire the postMentor API function upon the Submit button clicked', async () => {
       API.postMentor = jest.fn()
   
-      wrapper.instance().postNewMentor()
+      await wrapper.instance().postNewMentor()
       expect(API.postMentor).toHaveBeenCalled()
     });
   });
@@ -53,12 +53,12 @@ describe('NewMentorForm', () => {
       expect(wrapper.state().selected1to1).toEqual("Yes")
     });
     
-    it('should update the selectedFEBE state', () => {
-      let mockRadioEvent = { target: { value: 'Front-End', className: 'selectedFEBE' } }
+    it('should update the stack_preference state', () => {
+      let mockRadioEvent = { target: { value: 'Front-End', className: 'stack_preference' } }
       
       expect(wrapper.state()).toEqual(mockState)
       wrapper.instance().handleChangeRadio(mockRadioEvent)
-      expect(wrapper.state().selectedFEBE).toEqual("Front-End")
+      expect(wrapper.state().stack_preference).toEqual("Front-End")
     });
   });
 
@@ -361,12 +361,12 @@ describe('NewMentorForm', () => {
       expect(wrapper.state().expertise_non_tech).toEqual(['veteraning'])
     });
 
-    it('should add multiple items to the preferences array in state', () => {
+    it('should add multiple items to the identity_preference array in state', () => {
       let mockClickEvent = { 
         target: { 
           parentNode: {
             innerText: 'cool',
-            getAttribute: jest.fn(() => { return 'preferences' })
+            getAttribute: jest.fn(() => { return 'identity_preference' })
           }
         } 
       }
@@ -374,24 +374,24 @@ describe('NewMentorForm', () => {
         target: { 
           parentNode: {
             innerText: 'chill',
-            getAttribute: jest.fn(() => { return 'preferences' })
+            getAttribute: jest.fn(() => { return 'identity_preference' })
           }
         } 
       }
 
       expect(wrapper.state()).toEqual(mockState)
       wrapper.instance().handleClick(mockClickEvent)
-      expect(wrapper.state().preferences).toEqual(['cool'])
+      expect(wrapper.state().identity_preference).toEqual(['cool'])
       wrapper.instance().handleClick(mockClickEvent2)
-      expect(wrapper.state().preferences).toEqual(['cool', 'chill'])
+      expect(wrapper.state().identity_preference).toEqual(['cool', 'chill'])
     });
 
-    it('should remove an existing element from preferences array when clicked again', () => {
+    it('should remove an existing element from identity_preference array when clicked again', () => {
       let mockClickEvent = { 
         target: { 
           parentNode: {
             innerText: 'cool',
-            getAttribute: jest.fn(() => { return 'preferences' })
+            getAttribute: jest.fn(() => { return 'identity_preference' })
           }
         } 
       }
@@ -399,18 +399,18 @@ describe('NewMentorForm', () => {
         target: { 
           parentNode: {
             innerText: 'chill',
-            getAttribute: jest.fn(() => { return 'preferences' })
+            getAttribute: jest.fn(() => { return 'identity_preference' })
           }
         } 
       }
 
       expect(wrapper.state()).toEqual(mockState)
       wrapper.instance().handleClick(mockClickEvent)
-      expect(wrapper.state().preferences).toEqual(['cool'])
+      expect(wrapper.state().identity_preference).toEqual(['cool'])
       wrapper.instance().handleClick(mockClickEvent2)
-      expect(wrapper.state().preferences).toEqual(['cool', 'chill'])
+      expect(wrapper.state().identity_preference).toEqual(['cool', 'chill'])
       wrapper.instance().handleClick(mockClickEvent)
-      expect(wrapper.state().preferences).toEqual(['chill'])
+      expect(wrapper.state().identity_preference).toEqual(['chill'])
     });
 
     it('should add multiple items to the meeting_location array in state', () => {

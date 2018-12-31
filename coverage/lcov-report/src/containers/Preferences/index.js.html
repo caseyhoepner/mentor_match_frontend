@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">22.22% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/12</span>
+        <span class='fraction'>4/18</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">22.22% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/6</span>
+        <span class='fraction'>2/9</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">22.22% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/12</span>
+        <span class='fraction'>4/18</span>
       </div>
     </div>
   </div>
@@ -125,7 +125,52 @@
 80
 81
 82
-83</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,6 +188,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -169,6 +235,30 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -219,6 +309,9 @@ export class Preferences extends Component {
     this.state = {
       veteranSwitched: false,
       parentSwitched: false,
+      lgbtqSwitched: false,
+      femaleSwitched: false,
+      maleSwitched: false,
       frontEndSwitched: false,
       backEndSwitched: false,
     }
@@ -230,10 +323,28 @@ export class Preferences extends Component {
 <span class="cstat-no" title="statement not covered" >    this.setState({ veteranSwitched: !veteranSwitched })</span>
   }
 &nbsp;
+  toggleLgbtq = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const { lgbtqSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.setState({ lgbtqSwitched: !lgbtqSwitched })</span>
+  }
+&nbsp;
   toggleParent = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
     const { parentSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    this.setState({ parentSwitched: !parentSwitched })</span>
+  }
+&nbsp;
+  toggleFemale = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const { femaleSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.setState({ femaleSwitched: !femaleSwitched })</span>
+  }  
+&nbsp;
+  toggleMale = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const { maleSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.setState({ maleSwitched: !maleSwitched })</span>
   }
 &nbsp;
   toggleFE = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
@@ -248,7 +359,7 @@ export class Preferences extends Component {
   }
 &nbsp;
   render() {
-    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched } = this.state;
+    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched, lgbtqSwitched, femaleSwitched, maleSwitched } = this.state;
 &nbsp;
     return (
       &lt;div className={this.props.preferencesClicked ? <span class="branch-0 cbranch-no" title="branch not covered" >'p-preferences-container' </span>: 'hide'}&gt;
@@ -266,6 +377,30 @@ export class Preferences extends Component {
               onClick={this.toggleParent} 
               on={parentSwitched}
               name='parentSwitched'
+            /&gt;
+        &lt;/div&gt;
+        &lt;div className='p-toggle-option'&gt;
+          &lt;p&gt;LGBTQIA+&lt;/p&gt;
+            &lt;Switch 
+              onClick={this.toggleLgbtq} 
+              on={lgbtqSwitched}
+              name='lgbtqSwitched'
+            /&gt;
+        &lt;/div&gt;
+        &lt;div className='p-toggle-option'&gt;
+          &lt;p&gt;Female-Identifying&lt;/p&gt;
+            &lt;Switch 
+              onClick={this.toggleFemale} 
+              on={femaleSwitched}
+              name='femaleSwitched'
+            /&gt;
+        &lt;/div&gt;
+        &lt;div className='p-toggle-option'&gt;
+          &lt;p&gt;Male-Identifying&lt;/p&gt;
+            &lt;Switch 
+              onClick={this.toggleMale} 
+              on={maleSwitched}
+              name='maleSwitched'
             /&gt;
         &lt;/div&gt;
         &lt;div className='p-toggle-option'&gt;
@@ -295,7 +430,7 @@ export default Preferences;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 29 2018 12:48:07 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 30 2018 21:43:58 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

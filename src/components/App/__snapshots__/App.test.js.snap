@@ -47,6 +47,10 @@ ShallowWrapper {
           path="/new-mentor-form"
         />
         <Route
+          path="/edit-mentor"
+          render={[Function]}
+        />
+        <Route
           component={[Function]}
           path="/admin-dashboard"
         />
@@ -76,6 +80,10 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/new-mentor-form"
+          />,
+          <Route
+            path="/edit-mentor"
+            render={[Function]}
           />,
           <Route
             component={[Function]}
@@ -131,6 +139,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "path": "/edit-mentor",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
             "component": [Function],
             "path": "/admin-dashboard",
           },
@@ -176,6 +196,10 @@ ShallowWrapper {
             path="/new-mentor-form"
           />
           <Route
+            path="/edit-mentor"
+            render={[Function]}
+          />
+          <Route
             component={[Function]}
             path="/admin-dashboard"
           />
@@ -205,6 +229,10 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/new-mentor-form"
+            />,
+            <Route
+              path="/edit-mentor"
+              render={[Function]}
             />,
             <Route
               component={[Function]}
@@ -250,6 +278,18 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/new-mentor-form",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "path": "/edit-mentor",
+              "render": [Function],
             },
             "ref": null,
             "rendered": null,
