@@ -47,12 +47,21 @@ ShallowWrapper {
           path="/new-mentor-form"
         />
         <Route
+          component={[Function]}
+          exact={true}
+          path="/new-student-form"
+        />
+        <Route
           path="/edit-mentor"
           render={[Function]}
         />
         <Route
           component={[Function]}
           path="/admin-dashboard"
+        />
+        <Route
+          component={[Function]}
+          path="/success"
         />
         <Route
           component={[Function]}
@@ -82,12 +91,21 @@ ShallowWrapper {
             path="/new-mentor-form"
           />,
           <Route
+            component={[Function]}
+            exact={true}
+            path="/new-student-form"
+          />,
+          <Route
             path="/edit-mentor"
             render={[Function]}
           />,
           <Route
             component={[Function]}
             path="/admin-dashboard"
+          />,
+          <Route
+            component={[Function]}
+            path="/success"
           />,
           <Route
             component={[Function]}
@@ -139,6 +157,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/new-student-form",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
             "path": "/edit-mentor",
             "render": [Function],
           },
@@ -153,6 +184,18 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "path": "/admin-dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/success",
           },
           "ref": null,
           "rendered": null,
@@ -196,12 +239,21 @@ ShallowWrapper {
             path="/new-mentor-form"
           />
           <Route
+            component={[Function]}
+            exact={true}
+            path="/new-student-form"
+          />
+          <Route
             path="/edit-mentor"
             render={[Function]}
           />
           <Route
             component={[Function]}
             path="/admin-dashboard"
+          />
+          <Route
+            component={[Function]}
+            path="/success"
           />
           <Route
             component={[Function]}
@@ -231,12 +283,21 @@ ShallowWrapper {
               path="/new-mentor-form"
             />,
             <Route
+              component={[Function]}
+              exact={true}
+              path="/new-student-form"
+            />,
+            <Route
               path="/edit-mentor"
               render={[Function]}
             />,
             <Route
               component={[Function]}
               path="/admin-dashboard"
+            />,
+            <Route
+              component={[Function]}
+              path="/success"
             />,
             <Route
               component={[Function]}
@@ -288,6 +349,19 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/new-student-form",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
               "path": "/edit-mentor",
               "render": [Function],
             },
@@ -302,6 +376,18 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "path": "/admin-dashboard",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/success",
             },
             "ref": null,
             "rendered": null,

@@ -26,7 +26,12 @@ ShallowWrapper {
         <h2
           className="nmf-question"
         >
-          What is your name?
+          What is your name? 
+          <span
+            className="nmf-required-star"
+          >
+             *
+          </span>
         </h2>,
         <input
           className="nmf-input"
@@ -52,7 +57,12 @@ ShallowWrapper {
         <h2
           className="nmf-question"
         >
-          What is your contact info for students to be able to reach you?
+          What is your contact info for students to be able to reach you? 
+          <span
+            className="nmf-required-star"
+          >
+             *
+          </span>
         </h2>,
         <input
           className="nmf-input"
@@ -73,7 +83,12 @@ ShallowWrapper {
         <h2
           className="nmf-question"
         >
-          Where are you located?
+          Where are you located? 
+          <span
+            className="nmf-required-star"
+          >
+             *
+          </span>
         </h2>,
         <input
           className="nmf-input"
@@ -250,6 +265,11 @@ ShallowWrapper {
           className="nmf-question"
         >
           Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? 
+          <span
+            className="nmf-required-star"
+          >
+             *
+          </span>
         </h2>,
         <textarea
           className="nmf-textarea"
@@ -600,7 +620,12 @@ ShallowWrapper {
         <h2
           className="nmf-question"
         >
-          Would you like to be a 1-to-1 mentor?
+          Would you like to be a 1-to-1 mentor? 
+          <span
+            className="nmf-required-star"
+          >
+             *
+          </span>
         </h2>,
         <label
           className="nmf-radio-container-1"
@@ -648,11 +673,6 @@ ShallowWrapper {
               onChange={[Function]}
               value="0"
             >
-              <option
-                value="0"
-              >
-                Select number:
-              </option>
               <option
                 value="1"
               >
@@ -851,6 +871,11 @@ ShallowWrapper {
         >
           Submit
         </button>,
+        <p
+          className="hide"
+        >
+          Make sure all required fields ("*") have been filled in.
+        </p>,
       ],
       "className": "nmf-container",
     },
@@ -873,11 +898,32 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "What is your name?",
+          "children": Array [
+            "What is your name? ",
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>,
+          ],
           "className": "nmf-question",
         },
         "ref": null,
-        "rendered": "What is your name?",
+        "rendered": Array [
+          "What is your name? ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " *",
+              "className": "nmf-required-star",
+            },
+            "ref": null,
+            "rendered": " *",
+            "type": "span",
+          },
+        ],
         "type": "h2",
       },
       Object {
@@ -929,11 +975,32 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "What is your contact info for students to be able to reach you?",
+          "children": Array [
+            "What is your contact info for students to be able to reach you? ",
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>,
+          ],
           "className": "nmf-question",
         },
         "ref": null,
-        "rendered": "What is your contact info for students to be able to reach you?",
+        "rendered": Array [
+          "What is your contact info for students to be able to reach you? ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " *",
+              "className": "nmf-required-star",
+            },
+            "ref": null,
+            "rendered": " *",
+            "type": "span",
+          },
+        ],
         "type": "h2",
       },
       Object {
@@ -973,11 +1040,32 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Where are you located?",
+          "children": Array [
+            "Where are you located? ",
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>,
+          ],
           "className": "nmf-question",
         },
         "ref": null,
-        "rendered": "Where are you located?",
+        "rendered": Array [
+          "Where are you located? ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " *",
+              "className": "nmf-required-star",
+            },
+            "ref": null,
+            "rendered": " *",
+            "type": "span",
+          },
+        ],
         "type": "h2",
       },
       Object {
@@ -1643,11 +1731,32 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+          "children": Array [
+            "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>,
+          ],
           "className": "nmf-question",
         },
         "ref": null,
-        "rendered": "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+        "rendered": Array [
+          "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " *",
+              "className": "nmf-required-star",
+            },
+            "ref": null,
+            "rendered": " *",
+            "type": "span",
+          },
+        ],
         "type": "h2",
       },
       Object {
@@ -3188,11 +3297,32 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Would you like to be a 1-to-1 mentor?",
+          "children": Array [
+            "Would you like to be a 1-to-1 mentor? ",
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>,
+          ],
           "className": "nmf-question",
         },
         "ref": null,
-        "rendered": "Would you like to be a 1-to-1 mentor?",
+        "rendered": Array [
+          "Would you like to be a 1-to-1 mentor? ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " *",
+              "className": "nmf-required-star",
+            },
+            "ref": null,
+            "rendered": " *",
+            "type": "span",
+          },
+        ],
         "type": "h2",
       },
       Object {
@@ -3320,11 +3450,6 @@ ShallowWrapper {
                 onChange={[Function]}
                 value="0"
               >
-                <option
-                  value="0"
-                >
-                  Select number:
-                </option>
                 <option
                   value="1"
                 >
@@ -3545,11 +3670,6 @@ ShallowWrapper {
                 value="0"
               >
                 <option
-                  value="0"
-                >
-                  Select number:
-                </option>
-                <option
                   value="1"
                 >
                   1
@@ -3574,11 +3694,6 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <option
-                    value="0"
-                  >
-                    Select number:
-                  </option>,
-                  <option
                     value="1"
                   >
                     1
@@ -3600,18 +3715,6 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Select number:",
-                    "value": "0",
-                  },
-                  "ref": null,
-                  "rendered": "Select number:",
-                  "type": "option",
-                },
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -4374,6 +4477,18 @@ ShallowWrapper {
         "rendered": "Submit",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Make sure all required fields (\\"*\\") have been filled in.",
+          "className": "hide",
+        },
+        "ref": null,
+        "rendered": "Make sure all required fields (\\"*\\") have been filled in.",
+        "type": "p",
+      },
     ],
     "type": "div",
   },
@@ -4392,7 +4507,12 @@ ShallowWrapper {
           <h2
             className="nmf-question"
           >
-            What is your name?
+            What is your name? 
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>
           </h2>,
           <input
             className="nmf-input"
@@ -4418,7 +4538,12 @@ ShallowWrapper {
           <h2
             className="nmf-question"
           >
-            What is your contact info for students to be able to reach you?
+            What is your contact info for students to be able to reach you? 
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>
           </h2>,
           <input
             className="nmf-input"
@@ -4439,7 +4564,12 @@ ShallowWrapper {
           <h2
             className="nmf-question"
           >
-            Where are you located?
+            Where are you located? 
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>
           </h2>,
           <input
             className="nmf-input"
@@ -4616,6 +4746,11 @@ ShallowWrapper {
             className="nmf-question"
           >
             Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? 
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>
           </h2>,
           <textarea
             className="nmf-textarea"
@@ -4966,7 +5101,12 @@ ShallowWrapper {
           <h2
             className="nmf-question"
           >
-            Would you like to be a 1-to-1 mentor?
+            Would you like to be a 1-to-1 mentor? 
+            <span
+              className="nmf-required-star"
+            >
+               *
+            </span>
           </h2>,
           <label
             className="nmf-radio-container-1"
@@ -5014,11 +5154,6 @@ ShallowWrapper {
                 onChange={[Function]}
                 value="0"
               >
-                <option
-                  value="0"
-                >
-                  Select number:
-                </option>
                 <option
                   value="1"
                 >
@@ -5217,6 +5352,11 @@ ShallowWrapper {
           >
             Submit
           </button>,
+          <p
+            className="hide"
+          >
+            Make sure all required fields ("*") have been filled in.
+          </p>,
         ],
         "className": "nmf-container",
       },
@@ -5239,11 +5379,32 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "What is your name?",
+            "children": Array [
+              "What is your name? ",
+              <span
+                className="nmf-required-star"
+              >
+                 *
+              </span>,
+            ],
             "className": "nmf-question",
           },
           "ref": null,
-          "rendered": "What is your name?",
+          "rendered": Array [
+            "What is your name? ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " *",
+                "className": "nmf-required-star",
+              },
+              "ref": null,
+              "rendered": " *",
+              "type": "span",
+            },
+          ],
           "type": "h2",
         },
         Object {
@@ -5295,11 +5456,32 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "What is your contact info for students to be able to reach you?",
+            "children": Array [
+              "What is your contact info for students to be able to reach you? ",
+              <span
+                className="nmf-required-star"
+              >
+                 *
+              </span>,
+            ],
             "className": "nmf-question",
           },
           "ref": null,
-          "rendered": "What is your contact info for students to be able to reach you?",
+          "rendered": Array [
+            "What is your contact info for students to be able to reach you? ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " *",
+                "className": "nmf-required-star",
+              },
+              "ref": null,
+              "rendered": " *",
+              "type": "span",
+            },
+          ],
           "type": "h2",
         },
         Object {
@@ -5339,11 +5521,32 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Where are you located?",
+            "children": Array [
+              "Where are you located? ",
+              <span
+                className="nmf-required-star"
+              >
+                 *
+              </span>,
+            ],
             "className": "nmf-question",
           },
           "ref": null,
-          "rendered": "Where are you located?",
+          "rendered": Array [
+            "Where are you located? ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " *",
+                "className": "nmf-required-star",
+              },
+              "ref": null,
+              "rendered": " *",
+              "type": "span",
+            },
+          ],
           "type": "h2",
         },
         Object {
@@ -6009,11 +6212,32 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+            "children": Array [
+              "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+              <span
+                className="nmf-required-star"
+              >
+                 *
+              </span>,
+            ],
             "className": "nmf-question",
           },
           "ref": null,
-          "rendered": "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+          "rendered": Array [
+            "Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " *",
+                "className": "nmf-required-star",
+              },
+              "ref": null,
+              "rendered": " *",
+              "type": "span",
+            },
+          ],
           "type": "h2",
         },
         Object {
@@ -7554,11 +7778,32 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Would you like to be a 1-to-1 mentor?",
+            "children": Array [
+              "Would you like to be a 1-to-1 mentor? ",
+              <span
+                className="nmf-required-star"
+              >
+                 *
+              </span>,
+            ],
             "className": "nmf-question",
           },
           "ref": null,
-          "rendered": "Would you like to be a 1-to-1 mentor?",
+          "rendered": Array [
+            "Would you like to be a 1-to-1 mentor? ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " *",
+                "className": "nmf-required-star",
+              },
+              "ref": null,
+              "rendered": " *",
+              "type": "span",
+            },
+          ],
           "type": "h2",
         },
         Object {
@@ -7686,11 +7931,6 @@ ShallowWrapper {
                   onChange={[Function]}
                   value="0"
                 >
-                  <option
-                    value="0"
-                  >
-                    Select number:
-                  </option>
                   <option
                     value="1"
                   >
@@ -7911,11 +8151,6 @@ ShallowWrapper {
                   value="0"
                 >
                   <option
-                    value="0"
-                  >
-                    Select number:
-                  </option>
-                  <option
                     value="1"
                   >
                     1
@@ -7940,11 +8175,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <option
-                      value="0"
-                    >
-                      Select number:
-                    </option>,
-                    <option
                       value="1"
                     >
                       1
@@ -7966,18 +8196,6 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Select number:",
-                      "value": "0",
-                    },
-                    "ref": null,
-                    "rendered": "Select number:",
-                    "type": "option",
-                  },
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -8739,6 +8957,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Submit",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Make sure all required fields (\\"*\\") have been filled in.",
+            "className": "hide",
+          },
+          "ref": null,
+          "rendered": "Make sure all required fields (\\"*\\") have been filled in.",
+          "type": "p",
         },
       ],
       "type": "div",
