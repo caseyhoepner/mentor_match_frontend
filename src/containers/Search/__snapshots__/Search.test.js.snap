@@ -87,7 +87,7 @@ ShallowWrapper {
             />
           </div>
         </div>,
-        <Preferences
+        <Connect(Preferences)
           preferencesClicked={false}
         />,
       ],
@@ -520,7 +520,7 @@ ShallowWrapper {
               />
             </div>
           </div>,
-          <Preferences
+          <Connect(Preferences)
             preferencesClicked={false}
           />,
         ],

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { setLocale, setSearch, toggleShowingMentors } from './search-reducers';
 import { setMentors, setMentorModal, isEditable, hasErrored, isLoading } from './mentors-reducers';
+import { changeMentorFilters } from './preferences-reducers';
 
 const rootReducer = combineReducers({
   hasErrored,
@@ -10,7 +11,8 @@ const rootReducer = combineReducers({
   searchTerm: setSearch,
   mentors: setMentors,
   modalInfo: setMentorModal,
-  showingAllMentors: toggleShowingMentors
+  showingAllMentors: toggleShowingMentors,
+  mentorFilters: changeMentorFilters
 });
 
 export default rootReducer;

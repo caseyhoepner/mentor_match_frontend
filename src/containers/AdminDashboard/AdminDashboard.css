@@ -12,12 +12,13 @@
   justify-content: space-between;
   padding: 20px 40px;
   background-color: white;
+  align-items: flex-end;
 }
 
 .ad-nav-btn {
   align-items: center;
   color: #fff;
-  margin-left: 20px;
+  margin-left: 30px;
   display: flex;
   align-items: flex-end;
   border-bottom: 3px solid #fff;
@@ -41,12 +42,13 @@
   text-transform: uppercase;
   margin: 0;
   text-decoration: none;
+  font-size: .7rem;
 }
 
 .ad-nav-logo {
-  height: 40px;
+  height: 26px;
   margin-left: 10px;
-  width: 40px;
+  width: 26px;
 }
 
 .ad-turing-logo {

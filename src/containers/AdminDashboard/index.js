@@ -36,8 +36,128 @@ export class AdminDashboard extends Component {
     return searchedMentors
   }
 
+  filterByLocale = (cards) => {
+    let { locale } = this.props
+    let filteredCards;
+    
+    if (locale === 'Denver') {
+      filteredCards = cards.filter((card) => !card.props.mentor.meeting_location.includes('Remote'))
+    } else if (locale === 'Remote') {
+      filteredCards = cards.filter((card) => card.props.mentor.meeting_location.includes('Remote'))
+    }
+    return filteredCards
+  }
+
+  filterByPreference = (mentorCards) => {
+    let { mentorFilters } = this.props
+    let filterKeys = Object.keys(mentorFilters)
+    let finalCards = []
+
+    let trueVals = filterKeys.filter((key) => {
+      let foundKey;
+      if (mentorFilters[key] === true) {
+        foundKey = key
+      }
+      return foundKey
+    });
+
+    mentorCards.forEach((card) => {   
+      let checkedCard = this.checkPrefs(card, trueVals)
+      if (checkedCard) {
+        finalCards.push(checkedCard)
+      }
+    })    
+    return finalCards
+  }
+
+  cleanPrefs = (str) => {
+    if (str === 'LGBTQ+') {
+      return 'lgbtq'
+    } else if (str === 'Female-Identifying') {
+      return 'female'
+    } else if (str === 'Male-Identifying') {
+      return 'male'
+    } else if (str === 'Front-End') {
+      return 'frontEnd'
+    } else if (str === 'Back-End') {
+      return 'backEnd'
+    } else {
+      return str.toLowerCase()
+    }
+  }
+
+  checkPrefs(card, valArr) {
+    let { identity_preference, stack_preference } = card.props.mentor
+    let totalPrefs = [...identity_preference, stack_preference]
+    totalPrefs = totalPrefs.map((pref) => {
+      return this.cleanPrefs(pref)
+    })
+    let finalCard;
+
+    if (valArr.includes('frontEnd') && valArr.includes('backEnd')) {
+      return
+    } else if (valArr.length === 6) {
+
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+        && totalPrefs.includes(valArr[3])
+        && totalPrefs.includes(valArr[4])
+        && totalPrefs.includes(valArr[5])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 5) {
+
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+        && totalPrefs.includes(valArr[3])
+        && totalPrefs.includes(valArr[4])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 4) {
+   
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+        && totalPrefs.includes(valArr[3])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 3) {
+   
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+        && totalPrefs.includes(valArr[2])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 2) {
+   
+      if (totalPrefs.includes(valArr[0]) 
+        && totalPrefs.includes(valArr[1])
+      ) {
+        finalCard = card
+      }
+
+    } else if (valArr.length === 1) {
+
+      if (totalPrefs.includes(valArr[0])) {
+        finalCard = card
+      }
+
+    }
+    return finalCard
+  }
+
   render() {
-    let { mentors, showingAllMentors, searchTerm } = this.props
+    let { mentors, showingAllMentors, searchTerm, mentorFilters, locale } = this.props
     let mentorCards;
     let studentCards = <p className='ad-student-card'>No students to display.</p>
     let modal;
@@ -64,6 +184,14 @@ export class AdminDashboard extends Component {
       mentorCards = searchedMentors.map(mentor => {
         return <AdminMentorCard key={uuid()} mentor={mentor}/>
       })
+    }
+
+    if (locale) {
+      mentorCards = this.filterByLocale(mentorCards)
+    }
+
+    if (Object.values(mentorFilters).includes(true)) {
+      mentorCards = this.filterByPreference(mentorCards);
     }
 
     return (
@@ -114,7 +242,6 @@ export class AdminDashboard extends Component {
           </div>
         </header>
         { modal }
-        <div className={this.props.isEditable ? 'ad-hide' : ''}>
           <AdminMentorSearch />
           <section className='ad-cards-container'>
             <div className='ad-mentor-cards-container'>
@@ -140,7 +267,6 @@ export class AdminDashboard extends Component {
               { studentCards }
             </div>
           </section>
-        </div>
       </div>
     )
   }
@@ -148,9 +274,11 @@ export class AdminDashboard extends Component {
 
 export const mapStateToProps = (state) => ({
   mentors: state.mentors,
+  mentorFilters: state.mentorFilters,
   modalInfo: state.modalInfo,
   showingAllMentors: state.showingAllMentors,
   searchTerm: state.searchTerm,
+  locale: state.locale,
   isEditable: state.isEditable
 })
 
