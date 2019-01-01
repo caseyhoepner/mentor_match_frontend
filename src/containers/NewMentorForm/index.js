@@ -47,6 +47,12 @@ export class NewMentorForm extends Component {
     const { value, className } = event.target;
 
     this.setState({ [className]: value })
+
+    if (value === 'Yes') {
+      this.setState({ mentee_capacity: '1' })
+    } else if (value === 'No') {
+      this.setState({ mentee_capacity: '0' })
+    }
   }
 
   handleChange = (event) => {
@@ -107,7 +113,7 @@ export class NewMentorForm extends Component {
     return (
       <div className='nmf-container'>
       <h1 className='nmf-title'>New Mentor Form</h1>
-        <h2 className='nmf-question'>What is your name?</h2>
+        <h2 className='nmf-question'>What is your name? <span className='nmf-required-star'> *</span></h2>
           <input 
             name='name' 
             value={name} 
@@ -127,7 +133,7 @@ export class NewMentorForm extends Component {
             maxLength='20'
           />
 
-        <h2 className='nmf-question'>What is your contact info for students to be able to reach you?</h2>
+        <h2 className='nmf-question'>What is your contact info for students to be able to reach you? <span className='nmf-required-star'> *</span></h2>
             <input 
               name='email' 
               value={email} 
@@ -145,7 +151,7 @@ export class NewMentorForm extends Component {
               maxLength='30'
             />
 
-        <h2 className='nmf-question'>Where are you located?</h2>
+        <h2 className='nmf-question'>Where are you located? <span className='nmf-required-star'> *</span></h2>
             <input 
               name='city' 
               value={city} 
@@ -265,7 +271,7 @@ export class NewMentorForm extends Component {
               </label>
           </div>
 
-        <h2 className='nmf-question'>Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? </h2>
+        <h2 className='nmf-question'>Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? <span className='nmf-required-star'> *</span></h2>
           <textarea 
             name='background' 
             value={background} 
@@ -424,7 +430,7 @@ export class NewMentorForm extends Component {
             </label>
           </div>
 
-        <h2 className='nmf-question'>Would you like to be a 1-to-1 mentor?</h2>
+        <h2 className='nmf-question'>Would you like to be a 1-to-1 mentor? <span className='nmf-required-star'> *</span></h2>
             <label className="nmf-radio-container-1">No
               <input 
                 value='No'
@@ -456,7 +462,6 @@ export class NewMentorForm extends Component {
                 value={mentee_capacity} 
                 onChange={this.handleChange}
               >
-                <option value="0">Select number:</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

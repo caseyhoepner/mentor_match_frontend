@@ -6,6 +6,7 @@ import MentorContainer from '../MentorContainer'
 import PathError from '../PathError';
 import EditableMentor from '../../containers/EditableMentor';
 import NewMentorForm from '../../containers/NewMentorForm';
+import NewStudentForm from '../NewStudentForm';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import './App.css';
@@ -26,6 +27,7 @@ export class App extends Component {
           <Route path='/login' component={Login} />
           <Route exact path='/' component={MentorContainer} />
           <Route exact path='/new-mentor-form' component={NewMentorForm} />
+          <Route exact path='/new-student-form' component={NewStudentForm} />
           <Route path='/edit-mentor' render={() => <EditableMentor currentMentor={this.props.modalInfo} />} />
           {/* <Route path='/mentor-profile' component={MentorProfile} /> */}
           <Route path='/admin-dashboard' component={AdminDashboard} />
