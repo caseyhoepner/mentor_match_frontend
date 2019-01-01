@@ -36,6 +36,18 @@ export class AdminDashboard extends Component {
     return searchedMentors
   }
 
+  filterByLocale = (cards) => {
+    let { locale } = this.props
+    let filteredCards;
+    
+    if (locale === 'Denver') {
+      filteredCards = cards.filter((card) => !card.props.mentor.meeting_location.includes('Remote'))
+    } else if (locale === 'Remote') {
+      filteredCards = cards.filter((card) => card.props.mentor.meeting_location.includes('Remote'))
+    }
+    return filteredCards
+  }
+
   filterByPreference = (mentorCards) => {
     let { mentorFilters } = this.props
     let filterKeys = Object.keys(mentorFilters)
@@ -145,7 +157,7 @@ export class AdminDashboard extends Component {
   }
 
   render() {
-    let { mentors, showingAllMentors, searchTerm, mentorFilters } = this.props
+    let { mentors, showingAllMentors, searchTerm, mentorFilters, locale } = this.props
     let mentorCards;
     let studentCards = <p className='ad-student-card'>No students to display.</p>
     let modal;
@@ -172,6 +184,10 @@ export class AdminDashboard extends Component {
       mentorCards = searchedMentors.map(mentor => {
         return <AdminMentorCard key={uuid()} mentor={mentor}/>
       })
+    }
+
+    if (locale) {
+      mentorCards = this.filterByLocale(mentorCards)
     }
 
     if (Object.values(mentorFilters).includes(true)) {
@@ -262,6 +278,7 @@ export const mapStateToProps = (state) => ({
   modalInfo: state.modalInfo,
   showingAllMentors: state.showingAllMentors,
   searchTerm: state.searchTerm,
+  locale: state.locale,
   isEditable: state.isEditable
 })
 
