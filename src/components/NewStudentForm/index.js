@@ -14,20 +14,38 @@ export class NewStudentForm extends Component {
       industries: [],
       background: '',
       identity_marker: [],
-      stack: ''
+      stack: '',
+      hasErrored: false
     }
   }
 
   postNewStudent = async () => {
-    console.log(this.state)
-    // postStudent(this.state)
+    const { location } = this.props.history;
+    const { history } = this.props;
+
+    if (this.validateForm()) {
+      // postMentor(this.state)
+      history.push('/success', {from: location.pathname});
+
+    } else {
+      this.setState({ hasErrored: true })
+    }
   }
 
-  // handleChangeRadio = (event) => {
-  //   const { value, className } = event.target;
+  validateForm = () => {
+    const { 
+      name,
+      email,
+      slack_username,
+      stack 
+    } = this.state;
 
-  //   this.setState({ [className]: value })
-  // }
+    if (name && email && slack_username && stack) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -70,13 +88,14 @@ export class NewStudentForm extends Component {
       // industries,
       background,
       // identity_marker,
-      stack
+      stack,
+      hasErrored
     } = this.state;
     
     return (
       <div className='nsf-container'>
       <h1 className='nsf-title'>New Student Form</h1>
-        <h2 className='nsf-question'>What is your name?</h2>
+        <h2 className='nsf-question'>What is your name?<span className='nsf-required-star'>*</span></h2>
           <input 
             name='name' 
             value={name} 
@@ -96,7 +115,7 @@ export class NewStudentForm extends Component {
             maxLength='20'
           />
 
-        <h2 className='nsf-question'>What is your contact info for Turing mentors to be able to reach you?</h2>
+        <h2 className='nsf-question'>What is your contact info for Turing mentors to be able to reach you?<span className='nsf-required-star'>*</span></h2>
             <input 
               name='email' 
               value={email} 
@@ -231,7 +250,7 @@ export class NewStudentForm extends Component {
               </label>
             </div>
 
-          <h2 className='nsf-question'>Which program is the student in?</h2>
+          <h2 className='nsf-question'>Which program is the student in?<span className='nsf-required-star'>*</span></h2>
           <div>
             <select 
               name='stack' 
@@ -244,6 +263,7 @@ export class NewStudentForm extends Component {
             </select>
           </div>
         <button onClick={this.postNewStudent}>Submit</button>
+        <p className={ hasErrored ? 'nsf-error' : 'hide' }>Make sure all required fields ("*") have been filled in.</p>
       </div>
     )
   }

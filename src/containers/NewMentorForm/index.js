@@ -25,22 +25,55 @@ export class NewMentorForm extends Component {
       mentee_capacity: '0',
       meeting_location: [],
       selected1to1: 'No',
-      stack_preference: 'No Preference'
+      stack_preference: 'No Preference',
+      hasErrored: false
     }
   }
 
   postNewMentor = async () => {
-    const { selected1to1 } = this.state
+    const { selected1to1 } = this.state;
+    const { location } = this.props.history;
+    const { history } = this.props;
 
-    if (selected1to1 === 'No') {
-      await this.setState({
-        identity_preference: [],
-        mentee_capacity: '0',
-        meeting_location: [],
-        stack_preference: ''
-      })
+    if (this.validateForm()) {
+      if (selected1to1 === 'No') {
+        await this.setState({
+          identity_preference: [],
+          mentee_capacity: '0',
+          meeting_location: [],
+          stack_preference: ''
+        })
+      }
+      postMentor(this.state)
+      history.push('/success', {from: location.pathname});
+    } else {
+      this.setState({ hasErrored: true })
     }
-    postMentor(this.state)
+  }
+
+  validateForm = () => {
+    const { name,
+    email,
+    slack_username,
+    city,
+    state,
+    country,
+    background,
+    selected1to1 
+    } = this.state;
+
+    if (name &&
+        email &&
+        slack_username &&
+        city &&
+        state &&
+        country &&
+        background &&
+        selected1to1 ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   handleChangeRadio = (event) => {
@@ -107,7 +140,8 @@ export class NewMentorForm extends Component {
       mentee_capacity,
       // meeting_location,
       selected1to1,
-      stack_preference
+      stack_preference,
+      hasErrored
     } = this.state;
     
     return (
@@ -544,6 +578,7 @@ export class NewMentorForm extends Component {
             </div>
           </div>
           <button onClick={this.postNewMentor}>Submit</button>
+          <p className={ hasErrored ? 'nmf-error' : 'hide' }>Make sure all required fields ("*") have been filled in.</p>
       </div>
     )
   }

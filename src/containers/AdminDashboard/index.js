@@ -207,6 +207,25 @@ export class AdminDashboard extends Component {
                 <div className='ad-nav-tagline-container'>
                   <NavLink
                     className='ad-nav-tagline'
+                    to='/new-student-form'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >New
+                  </NavLink>
+                  <NavLink
+                    className='ad-nav-tagline'
+                    to='/new-student-form'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >Student Form
+                  </NavLink>
+                </div>
+                <img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' />
+              </div>
+              <div className='ad-new-mentor-btn ad-nav-btn'>
+                <div className='ad-nav-tagline-container'>
+                  <NavLink
+                    className='ad-nav-tagline'
                     to='/new-mentor-form'
                     target='_blank'
                     rel='noopener noreferrer'
