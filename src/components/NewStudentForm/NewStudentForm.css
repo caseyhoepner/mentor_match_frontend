@@ -1,0 +1,235 @@
+.nsf-options-container {
+  /*  display: flex;
+    flex-wrap: wrap;*/
+  }
+  
+  .nsf-container {
+    width: 50%;
+    margin: 60px auto;
+    border: 2px solid #eee;
+    padding: 3%;
+  }
+  
+  .nsf-title {
+    text-align: center;
+  }
+  
+  .nsf-question {
+    padding-top: 30px;
+  }
+  
+  .nsf-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+  }
+  
+  .nsf-textarea {
+    width: 100%;
+    height: 175px;
+  }
+  
+  /* Customize the label (the container) */
+  .nsf-checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 0 30px 12px 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .nsf-checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .nsf-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .nsf-checkbox-container:hover input ~ .nsf-checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .nsf-checkbox-container input:checked ~ .nsf-checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .nsf-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .nsf-checkbox-container input:checked ~ .nsf-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .nsf-checkbox-container .nsf-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* The container
+  .nsf-radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  /* Hide the browser's default radio button */
+  /* .nsf-radio-container .stack_preference {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+   */
+  /* Create a custom radio button */
+  /* .nsf-radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+   */
+  /* On mouse-over, add a grey background color */
+  /* .nsf-radio-container:hover .stack_preference ~ .nsf-radio-checkmark {
+    background-color: #ccc;
+  }
+   */
+  /* When the radio button is checked, add a blue background */
+  /* .nsf-radio-container .stack_preference:checked ~ .nsf-radio-checkmark {
+    background-color: #2196F3;
+  }
+   */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* .nsf-radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+   */
+  /* Show the indicator (dot/circle) when checked */
+  /* .nsf-radio-container .stack_preference:checked ~ .nsf-radio-checkmark:after {
+    display: block;
+  } */
+  
+  /* Style the indicator (dot/circle) */
+  /* .nsf-radio-container .nsf-radio-checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+   */
+  
+  
+  /* The container */
+  /* .nsf-radio-container-1 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+   */
+  /* Hide the browser's default radio button */
+  /* .nsf-radio-container-1 .selected1to1 {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  } */
+  
+  /* Create a custom radio button */
+  /* .nsf-radio-checkmark-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+   */
+  /* On mouse-over, add a grey background color */
+  /* .nsf-radio-container-1:hover .selected1to1 ~ .nsf-radio-checkmark-1 {
+    background-color: #ccc;
+  } */
+  
+  /* When the radio button is checked, add a blue background */
+  /* .nsf-radio-container-1 .selected1to1:checked ~ .nsf-radio-checkmark-1 {
+    background-color: #2196F3;
+  }
+   */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* .nsf-radio-checkmark-1:after {
+    content: "";
+    position: absolute;
+    display: none;
+  } */
+  
+  /* Show the indicator (dot/circle) when checked */
+  /* .nsf-radio-container-1 .selected1to1:checked ~ .nsf-radio-checkmark-1:after {
+    display: block;
+  }
+   */
+  /* Style the indicator (dot/circle) */
+  /* .nsf-radio-container-1 .nsf-radio-checkmark-1:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  } */
+  
+  /* .nsf-hide {
+    display: none;
+  }  */
