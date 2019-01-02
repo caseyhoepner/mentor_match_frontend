@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">25% </span>
+        <span class="strong">7.69% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/4</span>
+        <span class='fraction'>1/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">8.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/3</span>
+        <span class='fraction'>1/12</span>
       </div>
     </div>
   </div>
@@ -74,7 +74,31 @@
 29
 30
 31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -86,8 +110,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,16 +163,40 @@ export class AdminStudentCard extends Component {
 //     super(props);
 // }
 &nbsp;
+  getPrefIcons = <span class="fstat-no" title="function not covered" >(i</span>dentities) =&gt; {
+    const identityIcons = <span class="cstat-no" title="statement not covered" >identities.map(<span class="fstat-no" title="function not covered" >id</span>entity =&gt; {</span>
+      let newIdentity = <span class="cstat-no" title="statement not covered" >identity.toLowerCase();</span>
+      // let identityIcon;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (newIdentity === 'lgbtq+') {</span>
+<span class="cstat-no" title="statement not covered" >        newIdentity = newIdentity.slice(0, -1)</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (newIdentity !== 'no preference') {</span>
+<span class="cstat-no" title="statement not covered" >      newIdentity = &lt;img </span>
+              className='asc-pref-icon' 
+              src={require(`../../utils/assets/${newIdentity}.svg`)} 
+              alt={`${newIdentity} preference indicator`} 
+              key={`${newIdentity}`}
+              title={`${newIdentity}`} /&gt;
+      }
+<span class="cstat-no" title="statement not covered" >      return newIdentity</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return identityIcons</span>
+  }
+&nbsp;
 <span class="fstat-no" title="function not covered" >  re</span>nder() {
-    const { name, matched, stack } = <span class="cstat-no" title="statement not covered" >this.props.student;</span>
+    const { name, identities, stack, matched } = <span class="cstat-no" title="statement not covered" >this.props.student;</span>
+    const identityIcons = <span class="cstat-no" title="statement not covered" >this.getPrefIcons(identities);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    return (</span>
-      &lt;div className='amc-card'&gt;
-        &lt;p className='amc-record-item'&gt;{name}&lt;/p&gt;
-        &lt;p className='amc-record-item'&gt;{stack}&lt;/p&gt;
-        &lt;div className='amc-record-item amc-matched'&gt;
+      &lt;div className='asc-card'&gt;
+        &lt;p className='asc-name'&gt;{name}&lt;/p&gt;
+        &lt;p className='asc-stack'&gt;{stack}&lt;/p&gt;
+        &lt;div className='asc-prefs'&gt;
+          { identityIcons }
+        &lt;/div&gt;        &lt;div className='asc-matched'&gt;
           &lt;img 
-            className='amc-matched-icon'
+            className='asc-matched-icon'
             alt='matched indicator'
             src={require(`../../utils/assets/matched-${matched}.svg`)} /&gt;
         &lt;/div&gt;
@@ -142,7 +214,7 @@ export default connect(null, mapDispatchToProps)(AdminStudentCard);</pre></td></
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 01 2019 21:19:15 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 02 2019 11:10:42 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

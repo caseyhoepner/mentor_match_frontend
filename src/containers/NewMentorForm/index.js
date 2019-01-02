@@ -41,7 +41,7 @@ export class NewMentorForm extends Component {
           identity_preference: [],
           mentee_capacity: '0',
           meeting_location: [],
-          stack_preference: ''
+          stack_preference: 'No Preference'
         })
       }
       postMentor(this.state)

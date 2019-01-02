@@ -629,7 +629,23 @@
 584
 585
 586
-587</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -776,6 +792,22 @@
 <span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1363,7 +1395,18 @@ export class NewMentorForm extends Component {
     
     return (
       &lt;div className='nmf-container'&gt;
-      &lt;h1 className='nmf-title'&gt;New Mentor Form&lt;/h1&gt;
+        &lt;div className='nmf-colors'&gt;
+          &lt;div className='nmf-color-yellow nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-red nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-blue nmf-color'&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className='nmf-title-container'&gt;
+          &lt;h1 className='nmf-title'&gt;New&lt;/h1&gt;
+          &lt;h1 className='nmf-title'&gt;Mentor&lt;/h1&gt;
+          &lt;h1 className='nmf-title'&gt;Form&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;div className='nmf-questions'&gt;
+      &lt;p className='nmf-instructions'&gt;("*" denotes required field)&lt;/p&gt;
         &lt;h2 className='nmf-question'&gt;What is your name? &lt;span className='nmf-required-star'&gt; *&lt;/span&gt;&lt;/h2&gt;
           &lt;input 
             name='name' 
@@ -1371,7 +1414,7 @@ export class NewMentorForm extends Component {
             onChange={this.handleChange} 
             className='nmf-input' 
             placeholder='Full Name'
-            maxLength='50'
+            maxLength='30'
           /&gt;
 &nbsp;
         &lt;h2 className='nmf-question'&gt;What are your preferred pronouns?&lt;/h2&gt;
@@ -1568,13 +1611,6 @@ export class NewMentorForm extends Component {
                 className="nmf-checkmark nmf-tech-expert"&gt;
               &lt;/span&gt;
             &lt;/label&gt;
-            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Functional Programming
-              &lt;input type="checkbox" /&gt;
-              &lt;span 
-                onClick={this.handleClick} 
-                className="nmf-checkmark nmf-tech-expert"&gt;
-              &lt;/span&gt;
-            &lt;/label&gt;
             &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;CS Fundamentals
               &lt;input type="checkbox" /&gt;
               &lt;span 
@@ -1631,6 +1667,13 @@ export class NewMentorForm extends Component {
                 className="nmf-checkmark nmf-tech-expert"&gt;
               &lt;/span&gt;
             &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Functional Programming
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
           &lt;/div&gt;
 &nbsp;
         &lt;h2 className='nmf-question'&gt;Areas of Non-Technical Expertise:&lt;/h2&gt;
@@ -1639,15 +1682,7 @@ export class NewMentorForm extends Component {
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
-            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Wellness &amp; Stress Management
-              &lt;input type="checkbox" /&gt;
-              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
-            &lt;/label&gt;
             &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Project Management
-              &lt;input type="checkbox" /&gt;
-              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
-            &lt;/label&gt;
-            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Culture/Behavioral Interview Prep
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
@@ -1655,11 +1690,15 @@ export class NewMentorForm extends Component {
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
-            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Functional Programming
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Social Issues in the Tech Industry
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
-            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Social Issues in the Tech Industry
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Wellness &amp; Stress Management
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Culture/Behavioral Interview Prep
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
@@ -1667,11 +1706,11 @@ export class NewMentorForm extends Component {
 &nbsp;
         &lt;h2 className='nmf-question'&gt;In what ways would you like to support Turing mentees?&lt;/h2&gt;
           &lt;div className='nmf-options-container'&gt;
-            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Mock Interviews
+            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Resume &amp; Cover Letters
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
-            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Resume &amp; Cover Letters
+            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Mock Interviews
               &lt;input type="checkbox" /&gt;
               &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
             &lt;/label&gt;
@@ -1681,7 +1720,7 @@ export class NewMentorForm extends Component {
             &lt;/label&gt;
           &lt;/div&gt;
 &nbsp;
-        &lt;h2 className='nmf-question'&gt;Would you like to be a 1-to-1 mentor? &lt;span className='nmf-required-star'&gt; *&lt;/span&gt;&lt;/h2&gt;
+        &lt;h2 className='nmf-question'&gt;Would you like to be a 1-to-1 mentor?&lt;/h2&gt;
             &lt;label className="nmf-radio-container-1"&gt;No
               &lt;input 
                 value='No'
@@ -1709,6 +1748,7 @@ export class NewMentorForm extends Component {
           &lt;h2 className='nmf-question'&gt;How many students would you like to mentor?&lt;/h2&gt;
             &lt;div&gt;
               &lt;select 
+                className='nmf-capacity-dropdown'
                 name='mentee_capacity' 
                 value={mentee_capacity} 
                 onChange={this.handleChange}
@@ -1794,8 +1834,16 @@ export class NewMentorForm extends Component {
               &lt;/label&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;button onClick={this.postNewMentor}&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
           &lt;p className={ hasErrored ? 'nmf-error' : 'hide' }&gt;Make sure all required fields ("*") have been filled in.&lt;/p&gt;
+          &lt;button 
+            className='nmf-submit-btn'
+            onClick={this.postNewMentor}&gt;Submit&lt;/button&gt;
+        &lt;div className='nmf-colors'&gt;
+          &lt;div className='nmf-color-yellow nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-red nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-blue nmf-color'&gt;&lt;/div&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     )
   }
@@ -1807,7 +1855,7 @@ export default NewMentorForm;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 01 2019 21:19:15 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jan 02 2019 11:10:42 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
