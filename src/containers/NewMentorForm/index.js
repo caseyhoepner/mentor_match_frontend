@@ -146,7 +146,18 @@ export class NewMentorForm extends Component {
     
     return (
       <div className='nmf-container'>
-      <h1 className='nmf-title'>New Mentor Form</h1>
+        <div className='nmf-colors'>
+          <div className='nmf-color-yellow nmf-color'></div>
+          <div className='nmf-color-red nmf-color'></div>
+          <div className='nmf-color-blue nmf-color'></div>
+        </div>
+        <div className='nmf-title-container'>
+          <h1 className='nmf-title'>New</h1>
+          <h1 className='nmf-title'>Mentor</h1>
+          <h1 className='nmf-title'>Form</h1>
+        </div>
+      <div className='nmf-questions'>
+      <p className='nmf-instructions'>("*" denotes required field)</p>
         <h2 className='nmf-question'>What is your name? <span className='nmf-required-star'> *</span></h2>
           <input 
             name='name' 
@@ -154,7 +165,7 @@ export class NewMentorForm extends Component {
             onChange={this.handleChange} 
             className='nmf-input' 
             placeholder='Full Name'
-            maxLength='50'
+            maxLength='30'
           />
 
         <h2 className='nmf-question'>What are your preferred pronouns?</h2>
@@ -351,13 +362,6 @@ export class NewMentorForm extends Component {
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
-            <label data-name='expertise_tech' className="nmf-checkbox-container">Functional Programming
-              <input type="checkbox" />
-              <span 
-                onClick={this.handleClick} 
-                className="nmf-checkmark nmf-tech-expert">
-              </span>
-            </label>
             <label data-name='expertise_tech' className="nmf-checkbox-container">CS Fundamentals
               <input type="checkbox" />
               <span 
@@ -414,6 +418,13 @@ export class NewMentorForm extends Component {
                 className="nmf-checkmark nmf-tech-expert">
               </span>
             </label>
+            <label data-name='expertise_tech' className="nmf-checkbox-container">Functional Programming
+              <input type="checkbox" />
+              <span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert">
+              </span>
+            </label>
           </div>
 
         <h2 className='nmf-question'>Areas of Non-Technical Expertise:</h2>
@@ -422,15 +433,7 @@ export class NewMentorForm extends Component {
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Wellness & Stress Management
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
             <label data-name='expertise_non_tech' className="nmf-checkbox-container">Project Management
-              <input type="checkbox" />
-              <span onClick={this.handleClick} className="nmf-checkmark"></span>
-            </label>
-            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Culture/Behavioral Interview Prep
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
@@ -438,11 +441,15 @@ export class NewMentorForm extends Component {
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Functional Programming
+            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Social Issues in the Tech Industry
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Social Issues in the Tech Industry
+            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Wellness & Stress Management
+              <input type="checkbox" />
+              <span onClick={this.handleClick} className="nmf-checkmark"></span>
+            </label>
+            <label data-name='expertise_non_tech' className="nmf-checkbox-container">Culture/Behavioral Interview Prep
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
@@ -450,11 +457,11 @@ export class NewMentorForm extends Component {
 
         <h2 className='nmf-question'>In what ways would you like to support Turing mentees?</h2>
           <div className='nmf-options-container'>
-            <label data-name='ways_to_mentor' className="nmf-checkbox-container">Mock Interviews
+            <label data-name='ways_to_mentor' className="nmf-checkbox-container">Resume & Cover Letters
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
-            <label data-name='ways_to_mentor' className="nmf-checkbox-container">Resume & Cover Letters
+            <label data-name='ways_to_mentor' className="nmf-checkbox-container">Mock Interviews
               <input type="checkbox" />
               <span onClick={this.handleClick} className="nmf-checkmark"></span>
             </label>
@@ -464,7 +471,7 @@ export class NewMentorForm extends Component {
             </label>
           </div>
 
-        <h2 className='nmf-question'>Would you like to be a 1-to-1 mentor? <span className='nmf-required-star'> *</span></h2>
+        <h2 className='nmf-question'>Would you like to be a 1-to-1 mentor?</h2>
             <label className="nmf-radio-container-1">No
               <input 
                 value='No'
@@ -492,6 +499,7 @@ export class NewMentorForm extends Component {
           <h2 className='nmf-question'>How many students would you like to mentor?</h2>
             <div>
               <select 
+                className='nmf-capacity-dropdown'
                 name='mentee_capacity' 
                 value={mentee_capacity} 
                 onChange={this.handleChange}
@@ -577,8 +585,16 @@ export class NewMentorForm extends Component {
               </label>
             </div>
           </div>
-          <button onClick={this.postNewMentor}>Submit</button>
+        </div>
           <p className={ hasErrored ? 'nmf-error' : 'hide' }>Make sure all required fields ("*") have been filled in.</p>
+          <button 
+            className='nmf-submit-btn'
+            onClick={this.postNewMentor}>Submit</button>
+        <div className='nmf-colors'>
+          <div className='nmf-color-yellow nmf-color'></div>
+          <div className='nmf-color-red nmf-color'></div>
+          <div className='nmf-color-blue nmf-color'></div>
+        </div>
       </div>
     )
   }

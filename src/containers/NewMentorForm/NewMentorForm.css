@@ -1,28 +1,80 @@
-.nmf-options-container {
-/*  display: flex;
-  flex-wrap: wrap;*/
+.nmf-container {
+  width: 60%;
+  margin: 30px auto 150px;
+  box-shadow: 1px 6px 10px #d3d3d3;
 }
 
-.nmf-container {
-  width: 50%;
-  margin: 60px auto;
-  border: 2px solid #eee;
-  padding: 3%;
+.nmf-title-container {
+  background-color: rgba(16, 241, 252, .5);
+  padding: 30px 5%;
+  background: 
+    linear-gradient(
+      rgba(0,0,0, .1),
+      rgba(0,0,0, .1)),
+    url(../../utils/assets/new-mentor-form.jpg);
+  background-position: 40%;
+  background-size: cover;
+}
+
+.nmf-colors {
+  display: flex;
+  height: 10px;
+}
+
+.nmf-color {
+  width: 33.33%;
+  height: 10px;
+}
+
+.nmf-color-red {
+  background-color: #ef3852;
+}
+
+.nmf-color-yellow {
+  background-color: #f9ae04;
+}
+
+.nmf-color-blue {
+  background-color: #10F1FC;
+}
+
+.nmf-instructions {
+  color: #ef3852;
+  margin-top: 20px;
+}
+
+.nmf-error {
+  color: #ef3852;
+  margin: 20px 5% 10px;
 }
 
 .nmf-title {
-  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: normal;
+  letter-spacing: -2px;
+  font-size: 4rem;
+  margin: 0;
+  color: white;
+}
+
+.nmf-questions {
+  padding: 0 5% 50px;
+  font-size: .8rem;
 }
 
 .nmf-question {
   padding-top: 30px;
 }
 
+.nmf-required-star {
+  color: #ef3852;
+}
+
 .nmf-input {
   width: 100%;
   height: 50px;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-left: 10px;
 }
 
@@ -31,18 +83,24 @@
   height: 175px;
 }
 
+.nmf-options-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Customize the label (the container) */
 .nmf-checkbox-container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin: 0 30px 12px 0;
+  padding-left: 30px;
+  margin: 0 20px 12px 0;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  width: 229px;
 }
 
 /* Hide the browser's default checkbox */
@@ -59,8 +117,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
 }
 
@@ -71,7 +129,7 @@
 
 /* When the checkbox is checked, add a blue background */
 .nmf-checkbox-container input:checked ~ .nmf-checkmark {
-  background-color: #2196F3;
+  background-color: #f9ae04;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -88,10 +146,10 @@
 
 /* Style the checkmark/indicator */
 .nmf-checkbox-container .nmf-checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -103,10 +161,10 @@
 .nmf-radio-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 30px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -126,8 +184,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -139,7 +197,7 @@
 
 /* When the radio button is checked, add a blue background */
 .nmf-radio-container .stack_preference:checked ~ .nmf-radio-checkmark {
-  background-color: #2196F3;
+  background-color: #f9ae04;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -156,8 +214,8 @@
 
 /* Style the indicator (dot/circle) */
 .nmf-radio-container .nmf-radio-checkmark:after {
-  top: 9px;
-  left: 9px;
+  top: 6px;
+  left: 6px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -170,10 +228,10 @@
 .nmf-radio-container-1 {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 30px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -192,8 +250,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -205,7 +263,7 @@
 
 /* When the radio button is checked, add a blue background */
 .nmf-radio-container-1 .selected1to1:checked ~ .nmf-radio-checkmark-1 {
-  background-color: #2196F3;
+  background-color: #f9ae04;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -222,12 +280,34 @@
 
 /* Style the indicator (dot/circle) */
 .nmf-radio-container-1 .nmf-radio-checkmark-1:after {
-  top: 9px;
-  left: 9px;
+  top: 6px;
+  left: 6px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.nmf-submit-btn {
+  width: 100%;
+  height: 75px;
+  font-size: 2rem;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d3d3d3;
+  border: none;
+}
+
+.nmf-submit-btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #c0c0c0;
+}
+
+.nmf-capacity-dropdown {
+  width: 100px;
+  font-size: 1rem;
 }
 
 .nmf-hide {
