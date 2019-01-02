@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './MentorContainer.css';
 import Search from '../../containers/Search';
+import { MentorCard } from '../../containers/MentorCard';
+import { connect } from 'react-redux';
+import uuid from 'uuid';
 
 class MentorContainer extends Component {
-  // constructor() {
-  //   super();
-  // }
+
+  makeMentorCards = () => {
+    return this.props.mentors.map(mentor => {
+      return <MentorCard key={uuid()} mentor={mentor} />
+    })
+  }
 
   render() {
+    let mentorCards = this.makeMentorCards();
+
     return (
       <div>
         <header className='mc-header'>
@@ -25,9 +33,16 @@ class MentorContainer extends Component {
           </div>
         </header>
         <Search />
+        <div className='mc-card-container'>
+          { mentorCards }
+        </div>
       </div>
     )
   }
 }
 
-export default MentorContainer;
+const mapStateToProps = (state) => ({
+  mentors: state.mentors
+})
+
+export default connect(mapStateToProps)(MentorContainer);

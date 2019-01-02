@@ -1,5 +1,5 @@
-export const cleanMentors = (mentors) => {
-  return mentors.data.map(mentor => {
-    return mentor.attributes;
+export const cleanData = (data) => {
+  return data.data.map(item => {
+    return item.attributes;
   })
 }

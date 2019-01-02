@@ -455,7 +455,7 @@ export class NewMentorForm extends Component {
             </label>
           </div>
 
-        <h2 className='nmf-question'>In what ways would you like to support Turing mentees?</h2>
+        <h2 className='nmf-question'>In what ways would you like to support Turing students?</h2>
           <div className='nmf-options-container'>
             <label data-name='ways_to_mentor' className="nmf-checkbox-container">Resume & Cover Letters
               <input type="checkbox" />
@@ -471,7 +471,7 @@ export class NewMentorForm extends Component {
             </label>
           </div>
 
-        <h2 className='nmf-question'>Would you like to be a 1-to-1 mentor?</h2>
+        <h2 className='nmf-question'>Would you also like to be a 1-to-1 mentor?</h2>
             <label className="nmf-radio-container-1">No
               <input 
                 value='No'

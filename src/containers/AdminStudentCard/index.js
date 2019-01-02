@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import './AdminStudentCard.css';
-import { connect } from 'react-redux';
-// import { setMentorModal } from '../../actions/mentor-actions';
 
 export class AdminStudentCard extends Component {
-//   constructor(props) {
-//     super(props);
-// }
 
   getPrefIcons = (identities) => {
     const identityIcons = identities.map(identity => {
       let newIdentity = identity.toLowerCase();
-      // let identityIcon;
 
       if (newIdentity === 'lgbtq+') {
         newIdentity = newIdentity.slice(0, -1)
@@ -24,14 +18,14 @@ export class AdminStudentCard extends Component {
               key={`${newIdentity}`}
               title={`${newIdentity}`} />
       }
-      return newIdentity
+      return newIdentity;
     })
-    return identityIcons
+    return identityIcons;
   }
 
   render() {
-    const { name, identities, stack, matched } = this.props.student;
-    const identityIcons = this.getPrefIcons(identities);
+    const { name, identity_marker, stack, matched } = this.props.student;
+    const identityIcons = this.getPrefIcons(identity_marker);
 
     return (
       <div className='asc-card'>
@@ -50,7 +44,4 @@ export class AdminStudentCard extends Component {
   }
 }
 
-export const mapDispatchToProps = (dispatch) => ({
-})
-
-export default connect(null, mapDispatchToProps)(AdminStudentCard);
+export default AdminStudentCard;
