@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/MentorContainer/index.js</title>
+    <title>Code coverage report for src/components/SuccessPage/index.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,32 +16,32 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/MentorContainer</a> index.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/SuccessPage</a> index.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">14.29% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">14.29% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/7</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -75,7 +75,24 @@
 30
 31
 32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+33
+34
+35
+36
+37
+38
+39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -85,7 +102,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -93,6 +111,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,46 +119,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
-import './MentorContainer.css';
-import Search from '../../containers/Search';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 &nbsp;
-class MentorContainer extends Component {
-  // constructor() {
-  //   super();
-  // }
+import './SuccessPage.css';
 &nbsp;
-  render() {
-    return (
+export const SuccessPage = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {
+  // const { history } = props;
+  const { state } = <span class="cstat-no" title="statement not covered" >props.history.location;</span>
+  let successMessage;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (state.from === "/new-student-form") {</span>
+<span class="cstat-no" title="statement not covered" >    successMessage = (</span>
       &lt;div&gt;
-        &lt;header className='mc-header'&gt;
-          &lt;div className='mc-nav-btns'&gt;
-            &lt;img src={require('../../utils/assets/turing-logo.png')} alt='Turing Logo' className='mc-turing-logo' /&gt;
-            &lt;div className='mc-github-btn'&gt;
-              &lt;a href='https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&amp;scope=repo' className='mc-gh-tagline'&gt;Sign in with GitHub&lt;/a&gt;
-              &lt;img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='mc-github-logo' /&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div className='mc-title'&gt;
-            &lt;h1 className='mc-title-text'&gt;Mentor Profiles&lt;/h1&gt;
-            &lt;div className='mc-line-break'&gt;&lt;/div&gt;
-            &lt;p className='mc-tagline'&gt;Browse current mentors to find your match!&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/header&gt;
-        &lt;Search /&gt;
+        &lt;p&gt;New student successfully added!&lt;/p&gt;
+        &lt;Link
+          className='sp-new-student-btn'
+          to='/new-student-form'
+        &gt;Add Another Student
+        &lt;/Link&gt;
+      &lt;/div&gt;
+      )
+  } else <span class="cstat-no" title="statement not covered" >if (state.from === "/new-mentor-form") {</span>
+<span class="cstat-no" title="statement not covered" >    successMessage = (</span>
+      &lt;div&gt;
+        &lt;p&gt;Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.&lt;/p&gt;
       &lt;/div&gt;
     )
   }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className='sp-container'&gt;
+      &lt;h1&gt;Success!&lt;/h1&gt;
+      { successMessage }
+    &lt;/div&gt;
+  )
 }
 &nbsp;
-export default MentorContainer;</pre></td></tr>
+export default withRouter(SuccessPage);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

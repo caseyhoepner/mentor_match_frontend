@@ -1,6 +1,7 @@
-import * as SearchActions from '../actions/search-actions';
+// import * as SearchActions from '../actions/search-actions';
 import { setLocale, setSearch, toggleShowingMentors } from './search-reducers';
-import { setMentors, setMentorModal, isLoading, hasErrored } from './mentors-reducers';
+import { setMentors, setMentorModal, isLoading, isEditable, hasErrored } from './mentors-reducers';
+import { changeMentorFilters } from './preferences-reducers';
 
 describe('isLoading', () => {
   it('should update state with the isLoading boolean', () => {
@@ -44,6 +45,29 @@ describe('hasErrored', () => {
     const expected = false
 
     const result = hasErrored(undefined, mockAction)
+    expect(result).toEqual(expected)
+  });
+});
+
+describe('isEditable reducer', () => {
+  it('should update state with the isEditable boolean', () => {
+    const mockAction = {
+      type: "IS_EDITABLE",
+      isEditable: true
+    }
+    const expected = true
+
+    const result = isEditable(undefined, mockAction)
+    expect(result).toEqual(expected)
+  });
+
+  it('should return default state if nothing is passed in', () => {
+    const mockAction = {
+      isEditable: true
+    }
+    const expected = false
+
+    const result = isEditable(undefined, mockAction)
     expect(result).toEqual(expected)
   });
 });
@@ -169,5 +193,51 @@ describe('setMentorModal', () => {
     
     const result = setMentorModal(undefined, mockAction)
     expect(result).toEqual(null)
+  });
+});
+
+describe('changeMentorFilters', () => {
+  it('should update state with new mentorFilters', () => {
+    const mockAction = {
+      type: "CHANGE_MENTOR_FILTERS",
+      mentorFilters: {
+        backEnd: false,
+        female: false,
+        frontEnd: false,
+        lgbtq: true,
+        male: false,
+        parent: false,
+        veteran: false
+      }
+    }
+    let mockFilters = {
+      backEnd: false,
+      female: false,
+      frontEnd: false,
+      lgbtq: true,
+      male: false,
+      parent: false,
+      veteran: false
+    }
+
+    const result = changeMentorFilters(undefined, mockAction)
+    expect(result).toEqual(mockFilters)
+  });
+
+  it('should return state of an empty object as a default', () => {
+    const mockAction = {
+      mentorFilters: {
+        backEnd: false,
+        female: false,
+        frontEnd: false,
+        lgbtq: true,
+        male: false,
+        parent: false,
+        veteran: false
+      }
+    }
+
+    const result = changeMentorFilters(undefined, mockAction)
+    expect(result).toEqual({})
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
 import './SuccessPage.css';
 
 export const SuccessPage = (props) => {

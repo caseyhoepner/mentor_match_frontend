@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/MentorContainer/index.js</title>
+    <title>Code coverage report for src/containers/AdminStudentCard/index.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/MentorContainer</a> index.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/containers/AdminStudentCard</a> index.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">25% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/3</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -74,8 +74,7 @@
 29
 30
 31
-32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -85,15 +84,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,41 +99,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
-import './MentorContainer.css';
-import Search from '../../containers/Search';
+import './AdminStudentCard.css';
+import { connect } from 'react-redux';
+// import { setMentorModal } from '../../actions/mentor-actions';
 &nbsp;
-class MentorContainer extends Component {
-  // constructor() {
-  //   super();
-  // }
+export class AdminStudentCard extends Component {
+//   constructor(props) {
+//     super(props);
+// }
 &nbsp;
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;header className='mc-header'&gt;
-          &lt;div className='mc-nav-btns'&gt;
-            &lt;img src={require('../../utils/assets/turing-logo.png')} alt='Turing Logo' className='mc-turing-logo' /&gt;
-            &lt;div className='mc-github-btn'&gt;
-              &lt;a href='https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&amp;scope=repo' className='mc-gh-tagline'&gt;Sign in with GitHub&lt;/a&gt;
-              &lt;img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='mc-github-logo' /&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div className='mc-title'&gt;
-            &lt;h1 className='mc-title-text'&gt;Mentor Profiles&lt;/h1&gt;
-            &lt;div className='mc-line-break'&gt;&lt;/div&gt;
-            &lt;p className='mc-tagline'&gt;Browse current mentors to find your match!&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/header&gt;
-        &lt;Search /&gt;
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+    const { name, matched, stack } = <span class="cstat-no" title="statement not covered" >this.props.student;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;div className='amc-card'&gt;
+        &lt;p className='amc-record-item'&gt;{name}&lt;/p&gt;
+        &lt;p className='amc-record-item'&gt;{stack}&lt;/p&gt;
+        &lt;div className='amc-record-item amc-matched'&gt;
+          &lt;img 
+            className='amc-matched-icon'
+            alt='matched indicator'
+            src={require(`../../utils/assets/matched-${matched}.svg`)} /&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     )
   }
 }
 &nbsp;
-export default MentorContainer;</pre></td></tr>
+export const mapDispatchToProps = <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+})
+&nbsp;
+export default connect(null, mapDispatchToProps)(AdminStudentCard);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
