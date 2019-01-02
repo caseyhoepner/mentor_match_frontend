@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
+        <span class="strong">14.29% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/18</span>
+        <span class='fraction'>5/35</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
+        <span class="strong">18.18% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/9</span>
+        <span class='fraction'>2/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
+        <span class="strong">14.71% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/18</span>
+        <span class='fraction'>5/34</span>
       </div>
     </div>
   </div>
@@ -170,7 +170,29 @@
 125
 126
 127
-128</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,42 +214,56 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -295,11 +331,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Preferences.css';
 import Switch from 'react-toggle-switch';
+import { changeMentorFilters }  from '../../actions/preferences-actions';
 &nbsp;
 &nbsp;
 export class Preferences extends Component {
@@ -307,59 +349,73 @@ export class Preferences extends Component {
     super(props);
 &nbsp;
     this.state = {
-      veteranSwitched: false,
-      parentSwitched: false,
-      lgbtqSwitched: false,
-      femaleSwitched: false,
-      maleSwitched: false,
-      frontEndSwitched: false,
-      backEndSwitched: false,
+      veteran: false,
+      parent: false,
+      lgbtq: false,
+      female: false,
+      male: false,
+      frontEnd: false,
+      backEnd: false
     }
   }
 &nbsp;
-  toggleVeteran = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { veteranSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleVeteran = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { veteran } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ veteranSwitched: !veteranSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ veteran: !veteran })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }
 &nbsp;
-  toggleLgbtq = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { lgbtqSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleLgbtq = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { lgbtq } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ lgbtqSwitched: !lgbtqSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ lgbtq: !lgbtq })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }
 &nbsp;
-  toggleParent = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { parentSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleParent = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { parent } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ parentSwitched: !parentSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ parent: !parent })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }
 &nbsp;
-  toggleFemale = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { femaleSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleFemale = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { female } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ femaleSwitched: !femaleSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ female: !female })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }  
 &nbsp;
-  toggleMale = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { maleSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleMale = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { male } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ maleSwitched: !maleSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ male: !male })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }
 &nbsp;
-  toggleFE = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { frontEndSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleFE = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { frontEnd } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ frontEndSwitched: !frontEndSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ frontEnd: !frontEnd })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }
-  toggleBE = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const { backEndSwitched } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+  toggleBE = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    const { backEnd } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { changeMentorFilters } = <span class="cstat-no" title="statement not covered" >this.props;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.setState({ backEndSwitched: !backEndSwitched })</span>
+<span class="cstat-no" title="statement not covered" >    await this.setState({ backEnd: !backEnd })</span>
+<span class="cstat-no" title="statement not covered" >    changeMentorFilters(this.state)</span>
   }
 &nbsp;
   render() {
-    const { veteranSwitched, parentSwitched, frontEndSwitched, backEndSwitched, lgbtqSwitched, femaleSwitched, maleSwitched } = this.state;
+    const { veteran, parent, frontEnd, backEnd, lgbtq, female, male } = this.state;
 &nbsp;
     return (
       &lt;div className={this.props.preferencesClicked ? <span class="branch-0 cbranch-no" title="branch not covered" >'p-preferences-container' </span>: 'hide'}&gt;
@@ -367,56 +423,56 @@ export class Preferences extends Component {
           &lt;p&gt;Veteran&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleVeteran} 
-              on={veteranSwitched}
-              name='veteranSwitched'
+              on={veteran}
+              name='veteran'
             /&gt;
         &lt;/div&gt;
         &lt;div className='p-toggle-option'&gt;
           &lt;p&gt;Parent&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleParent} 
-              on={parentSwitched}
-              name='parentSwitched'
+              on={parent}
+              name='parent'
             /&gt;
         &lt;/div&gt;
         &lt;div className='p-toggle-option'&gt;
           &lt;p&gt;LGBTQIA+&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleLgbtq} 
-              on={lgbtqSwitched}
-              name='lgbtqSwitched'
+              on={lgbtq}
+              name='lgbtq'
             /&gt;
         &lt;/div&gt;
         &lt;div className='p-toggle-option'&gt;
           &lt;p&gt;Female-Identifying&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleFemale} 
-              on={femaleSwitched}
-              name='femaleSwitched'
+              on={female}
+              name='female'
             /&gt;
         &lt;/div&gt;
         &lt;div className='p-toggle-option'&gt;
           &lt;p&gt;Male-Identifying&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleMale} 
-              on={maleSwitched}
-              name='maleSwitched'
+              on={male}
+              name='male'
             /&gt;
         &lt;/div&gt;
         &lt;div className='p-toggle-option'&gt;
           &lt;p&gt;Front-End&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleFE} 
-              on={frontEndSwitched} 
-              name='frontEndSwitched'
+              on={frontEnd} 
+              name='frontEnd'
             /&gt;
         &lt;/div&gt;          
         &lt;div className='p-toggle-option'&gt;
           &lt;p&gt;Back-End&lt;/p&gt;
             &lt;Switch 
               onClick={this.toggleBE} 
-              on={backEndSwitched} 
-              name='backEndSwitched'
+              on={backEnd} 
+              name='backEnd'
             /&gt;
         &lt;/div&gt;          
       &lt;/div&gt;
@@ -424,13 +480,17 @@ export class Preferences extends Component {
   }
 }
 &nbsp;
-export default Preferences;</pre></td></tr>
+const mapDispatchToProps = <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+  changeMentorFilters: <span class="fstat-no" title="function not covered" >(f</span>ilters) =&gt; <span class="cstat-no" title="statement not covered" >dispatch(changeMentorFilters(filters))</span>
+})
+&nbsp;
+export default connect(null, mapDispatchToProps)(Preferences);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 30 2018 21:43:58 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 01 2019 21:19:15 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

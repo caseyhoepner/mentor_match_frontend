@@ -8,26 +8,38 @@ describe('AdminDashboard', () => {
   let mockMentors = [
     {
       name: 'Casey',
-      preferences: {
-        title: 'Awesome Coders'
-      }
+      identity_preference: [
+        'female-identifying'
+      ],
+      stack_preference: 'Front-End'
     },
     {
       name: 'Alex',
-      preferences: {
-        title: 'Other Coders'
-      }
+      identity_preference: [
+        'male-identifying'
+      ],
+      stack_preference: 'Back-End'
     }
   ]
   let mockMentor = {
     name: 'Casey',
-    preferences: {
-      title: 'Awesome Coders'
-    }
+    identity_preference: [
+      'female-identifying'
+    ],
+    stack_preference: 'Front-End'
+  }
+  let mockFilters = {
+    backEnd: false,
+    female: false,
+    frontEnd: false,
+    lgbtq: true,
+    male: false,
+    parent: false,
+    veteran: false
   }
   
   beforeEach(() => {
-    wrapper = shallow(<AdminDashboard  mentors={mockMentors} />)
+    wrapper = shallow(<AdminDashboard  mentors={mockMentors} mentorFilters={mockFilters} />)
   });
 
   it('matches the snapshot without modalInfo', () => {
@@ -35,38 +47,39 @@ describe('AdminDashboard', () => {
   });
 
   it('matches the snapshot with modalInfo', () => {
-    wrapper = shallow(<AdminDashboard  modalInfo ={mockMentor} mentors={mockMentors} />)
+    wrapper = shallow(<AdminDashboard  modalInfo ={mockMentor} mentors={mockMentors} mentorFilters={mockFilters} />)
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('matches the snapshot with searchTerms', () => {
-    wrapper = shallow(<AdminDashboard  searchTerm ='blarg' mentors={mockMentors} />)
+    wrapper = shallow(<AdminDashboard  searchTerm ='blarg' mentors={mockMentors} mentorFilters={mockFilters} />)
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('matches the snapshot with showingAllMentors filter toggled on', () => {
-    wrapper = shallow(<AdminDashboard  showingAllMentors={true} mentors={mockMentors} />)
+    wrapper = shallow(<AdminDashboard  showingAllMentors={true} mentors={mockMentors} mentorFilters={mockFilters} />)
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('matches the snapshot with showingAllMentors filter toggled off', () => {
-    wrapper = shallow(<AdminDashboard  showingAllMentors={false} mentors={mockMentors} />)
+    wrapper = shallow(<AdminDashboard  showingAllMentors={false} mentors={mockMentors} mentorFilters={mockFilters} />)
 
     expect(wrapper).toMatchSnapshot();
   });
 
   describe('filterBySearchTerm function', () => {
     it('should filter the mentors from props', () => {
-      wrapper = shallow(<AdminDashboard  searchTerm ='Alex' mentors={mockMentors} />)
+      wrapper = shallow(<AdminDashboard  searchTerm ='Alex' mentors={mockMentors} mentorFilters={mockFilters} />)
       const expected = [ 
         {
           name: 'Alex',
-          preferences: {
-            title: 'Other Coders'
-          } 
+          identity_preference: [
+            'male-identifying'
+          ],
+          stack_preference: 'Back-End'
         }
       ]
       let result = wrapper.instance().filterBySearchTerm()

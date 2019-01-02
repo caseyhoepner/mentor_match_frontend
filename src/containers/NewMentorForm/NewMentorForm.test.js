@@ -5,6 +5,10 @@ import * as API from '../../utils/api';
 
 describe('NewMentorForm', () => {
   let wrapper;
+  let mockHistory = {
+    location: '/new-mentor-form',
+    push: jest.fn()
+  }
   let mockState = {
     name: '',
     pronouns: '',
@@ -24,11 +28,22 @@ describe('NewMentorForm', () => {
     mentee_capacity: '0',
     meeting_location: [],
     selected1to1: 'No',
-    stack_preference: 'No Preference'
+    stack_preference: 'No Preference',
+    hasErrored: false
   }
+  let mockVerifiedState = { 
+    name: 'Broseph',
+    email: 'duderino@sup.com',
+    slack_username: 'broheim',
+    city: 'Denver',
+    state: 'CO',
+    country: 'USA',
+    background: 'Sup, brah?',
+    selected1to1: 'Yes'
+    }
   
   beforeEach(() => {
-    wrapper = shallow(<NewMentorForm />)
+    wrapper = shallow(<NewMentorForm history={mockHistory} />)
   });
 
   it('matches the snapshot', () => {
@@ -36,11 +51,47 @@ describe('NewMentorForm', () => {
   });
 
   describe('postNewMentor function', () => {
-    it('should fire the postMentor API function upon the Submit button clicked', async () => {
+    it('should fire validateForm function', async () => {
+      let spy = spyOn(wrapper.instance(), 'validateForm')
       API.postMentor = jest.fn()
-  
+      
+      wrapper.instance().setState(mockVerifiedState)
+      await wrapper.instance().postNewMentor()
+      expect(spy).toHaveBeenCalled()
+    });
+
+    it('should clear necessary state propeties if form is validated', async () => {
+      let mockOtherState = { 
+        name: 'Broseph',
+        email: 'duderino@sup.com',
+        slack_username: 'broheim',
+        city: 'Denver',
+        state: 'CO',
+        country: 'USA',
+        background: 'Sup, brah?',
+        selected1to1: 'No'
+        }
+      API.postMentor = jest.fn()
+
+      wrapper.instance().setState(mockOtherState)
+      await wrapper.instance().postNewMentor()
+      expect(wrapper.state().identity_preference).toEqual([])
+      expect(wrapper.state().mentee_capacity).toEqual('0')
+      expect(wrapper.state().meeting_location).toEqual([])
+      expect(wrapper.state().stack_preference).toEqual('')
+    });
+
+    it('should fire the postMentor API function if verification passes', async () => { 
+      API.postMentor = jest.fn()
+      
+      wrapper.instance().setState(mockVerifiedState)
       await wrapper.instance().postNewMentor()
       expect(API.postMentor).toHaveBeenCalled()
+    });
+
+    it('should change hasErrored in state to true if form is not validated', async () => {
+      await wrapper.instance().postNewMentor()
+      expect(wrapper.state().hasErrored).toEqual(true)
     });
   });
   
@@ -59,6 +110,22 @@ describe('NewMentorForm', () => {
       expect(wrapper.state()).toEqual(mockState)
       wrapper.instance().handleChangeRadio(mockRadioEvent)
       expect(wrapper.state().stack_preference).toEqual("Front-End")
+    });
+
+    it('should update mentee_capacity to 1 if selected1to1 is Yes', () => {
+      let mockRadioEvent = { target: { value: 'Yes', className: 'selected1to1' } }
+       
+      expect(wrapper.state()).toEqual(mockState)
+      wrapper.instance().handleChangeRadio(mockRadioEvent)
+      expect(wrapper.state().mentee_capacity).toEqual('1')
+    });
+
+    it('should update mentee_capacity to 0 if selected1to1 is No', () => {
+      let mockRadioEvent = { target: { value: 'No', className: 'selected1to1' } }
+      
+      wrapper.instance().setState({ mentee_capacity: '2' })
+      wrapper.instance().handleChangeRadio(mockRadioEvent)
+      expect(wrapper.state().mentee_capacity).toEqual('0')
     });
   });
 

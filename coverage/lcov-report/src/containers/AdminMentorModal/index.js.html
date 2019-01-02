@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95.83% </span>
+        <span class="strong">96% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>46/48</span>
+        <span class='fraction'>48/50</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">72.22% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>14/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95.65% </span>
+        <span class="strong">95.83% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>44/46</span>
+        <span class='fraction'>46/48</span>
       </div>
     </div>
   </div>
@@ -285,7 +285,11 @@
 240
 241
 242
-243</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+243
+244
+245
+246
+247</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -366,11 +370,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -379,9 +386,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -411,6 +418,7 @@
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -607,23 +615,26 @@ export class AdminMentorModal extends Component {
   }
 &nbsp;
   getPreferencesIcons = (preferences) =&gt; {
-    return preferences.map(preference =&gt; {
+    let prefIconArr = preferences.map(preference =&gt; {
+      let newPreference;
+      let prefIcon;
       <span class="missing-if-branch" title="else path not taken" >E</span>if (preference !== 'no preference') {
-        let newPreference = preference.toLowerCase();
-          <span class="missing-if-branch" title="if path not taken" >I</span>if (newPreference === 'lgbtq+') {
-<span class="cstat-no" title="statement not covered" >            newPreference = newPreference.slice(0, -1)</span>
-          }
-        return (
-          &lt;img 
+        newPreference = preference.toLowerCase();
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (newPreference === 'lgbtq+') {
+<span class="cstat-no" title="statement not covered" >          newPreference = newPreference.slice(0, -1)</span>
+        }
+      
+      prefIcon = &lt;img 
             className='amc-pref-icon' 
             src={require(`../../utils/assets/${newPreference}.svg`)} 
             alt={`${newPreference} preference indicator`} 
             key={`${newPreference}`}
             title={`${newPreference}`}
           /&gt;
-        )
-      }
+        }
+        return prefIcon
     })
+    return prefIconArr
   }
 &nbsp;
   render() {
@@ -638,7 +649,7 @@ export class AdminMentorModal extends Component {
         country,
         slack_username,
         matched,
-        active,
+        // active,
         pronouns,
         current_title,
         current_employer,
@@ -658,13 +669,14 @@ export class AdminMentorModal extends Component {
             &lt;img
               className='amm-pic'
               src={require('../../utils/assets/amm-pic.svg')}
-              alt='Mentor picture'
+              alt='Mentor profile'
             /&gt;
             &lt;div className='amm-header-info'&gt;
               &lt;div className='amm-top-line'&gt;
                 &lt;h1 className='amm-name'&gt;{name}&lt;/h1&gt;
                 &lt;img 
                   className='amm-x'
+                  alt='Click here to exit'
                   name='Exit' 
                   onClick={this.handleClick} 
                   src={require('../../utils/assets/x.svg')}/&gt;
@@ -775,7 +787,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMent
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 30 2018 21:43:58 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 01 2019 21:19:15 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

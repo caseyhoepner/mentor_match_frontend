@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">88.89% </span>
+        <span class="strong">87.5% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/9</span>
+        <span class='fraction'>7/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>5/6</span>
       </div>
     </div>
   </div>
@@ -94,9 +94,13 @@
 49
 50
 51
-52
-53
-54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,9 +120,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,19 +135,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
@@ -154,17 +150,19 @@ import { connect } from 'react-redux';
 import Login from '../../containers/Login'
 import AdminDashboard from '../../containers/AdminDashboard';
 import MentorContainer from '../MentorContainer'
+import SuccessPage from '../SuccessPage'
 import PathError from '../PathError';
 import EditableMentor from '../../containers/EditableMentor';
 import NewMentorForm from '../../containers/NewMentorForm';
+import NewStudentForm from '../NewStudentForm';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import './App.css';
 &nbsp;
 export class App extends Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 &nbsp;
   componentDidMount = () =&gt; {
     this.props.retrieveMentors();
@@ -177,9 +175,11 @@ export class App extends Component {
           &lt;Route path='/login' component={Login} /&gt;
           &lt;Route exact path='/' component={MentorContainer} /&gt;
           &lt;Route exact path='/new-mentor-form' component={NewMentorForm} /&gt;
+          &lt;Route exact path='/new-student-form' component={NewStudentForm} /&gt;
           &lt;Route path='/edit-mentor' render={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >&lt;EditableMentor currentMentor={this.props.modalInfo} /&gt;}</span> /&gt;
           {/* &lt;Route path='/mentor-profile' component={MentorProfile} /&gt; */}
           &lt;Route path='/admin-dashboard' component={AdminDashboard} /&gt;
+          &lt;Route path='/success' component={SuccessPage} /&gt;
           &lt;Route component={PathError} /&gt;
         &lt;/Switch&gt;
       &lt;/div&gt;
@@ -196,19 +196,13 @@ export const mapDispatchToProps = (dispatch) =&gt; ({
   retrieveMentors: () =&gt; dispatch(retrieveMentors())
 })
 &nbsp;
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;</pre></td></tr>
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 30 2018 21:43:58 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 01 2019 21:19:15 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

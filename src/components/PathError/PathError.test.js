@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PathError from '../PathError';
+import PathError from './';
 
 describe ('PathError', () => {
   let wrapper;

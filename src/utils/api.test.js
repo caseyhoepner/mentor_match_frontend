@@ -76,6 +76,21 @@ describe('API fetch calls', () => {
       expect(window.fetch).toHaveBeenCalled()
     });
   });
+
+  describe('PATCH request', () => {
+    it('should call fetch', async () => {
+      window.fetch = jest.fn().mockImplementation(() => 
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(mockMentor)
+        })
+      )
+
+      await API.patchMentor(mockMentor)
+      expect(window.fetch).toHaveBeenCalled()
+    });
+  
+  });
 });
 
 describe('helper functions', () => {
