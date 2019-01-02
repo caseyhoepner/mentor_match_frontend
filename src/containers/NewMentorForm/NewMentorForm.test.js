@@ -78,7 +78,7 @@ describe('NewMentorForm', () => {
       expect(wrapper.state().identity_preference).toEqual([])
       expect(wrapper.state().mentee_capacity).toEqual('0')
       expect(wrapper.state().meeting_location).toEqual([])
-      expect(wrapper.state().stack_preference).toEqual('')
+      expect(wrapper.state().stack_preference).toEqual('No Preference')
     });
 
     it('should fire the postMentor API function if verification passes', async () => { 
