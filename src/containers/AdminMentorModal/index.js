@@ -95,13 +95,20 @@ export class AdminMentorModal extends Component {
             title={`${newPreference}`}
           />
         }
-        return prefIcon
+        return prefIcon;
     })
-    return prefIconArr
+    return prefIconArr;
+  }
+
+  getStudentOptions = () => {
+    return this.props.students.map(student => {
+      return <option value={student.name}>student.name</option>
+    })
   }
 
   render() {
     let { isEditable } = this.props
+    let studentOptions;
 
     if(this.props.modalInfo && !isEditable) {
       let { 
@@ -158,11 +165,20 @@ export class AdminMentorModal extends Component {
             </div>
           </div>
 
-
+          <div className='amm-assign-student'>
             <div className='amm-bio'>
                 <h3>Bio</h3>
                 <p>{background}</p>
             </div>
+            <div className='amm-match-dropdown-container'>
+              <h3>Match</h3>
+              <select className='amm-match-dropdown'>
+                <option value=''>Select a Student</option>
+                { studentOptions }
+              </select>
+              <button>Assign</button>
+            </div>
+          </div>
 
           <div className='amm-card-container'>
             <div className='amm-card amm-contact'>
@@ -235,7 +251,8 @@ export class AdminMentorModal extends Component {
 export const mapStateToProps = (state) => ({
   modalInfo: state.modalInfo,
   mentors: state.mentors,
-  isEditable: state.isEditable
+  isEditable: state.isEditable,
+  students: state.students
 });
 
 export const mapDispatchToProps = (dispatch) => ({
