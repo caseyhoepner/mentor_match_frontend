@@ -166,8 +166,8 @@ export class AdminDashboard extends Component {
     const { students } = this.state;
 
     if (students) {
-      return students.map(student => {
-        return <AdminStudentCard key={student.id} student={student}/>
+      return students.map((student, index) => {
+        return <AdminStudentCard key={student.id + index} student={student}/>
     })
   } else {
     return <p className='ad-student-card'>No students to display.</p>
