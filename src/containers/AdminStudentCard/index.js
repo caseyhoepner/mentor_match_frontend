@@ -8,16 +8,40 @@ export class AdminStudentCard extends Component {
     super(props);
 }
 
+  getPrefIcons = (identities) => {
+    const identityIcons = identities.map(identity => {
+      let newIdentity = identity.toLowerCase();
+      let identityIcon;
+
+      if (newIdentity === 'lgbtq+') {
+        newIdentity = newIdentity.slice(0, -1)
+      }
+      if (newIdentity !== 'no preference') {
+      newIdentity = <img 
+              className='asc-pref-icon' 
+              src={require(`../../utils/assets/${newIdentity}.svg`)} 
+              alt={`${newIdentity} preference indicator`} 
+              key={`${newIdentity}`}
+              title={`${newIdentity}`} />
+      }
+      return newIdentity
+    })
+    return identityIcons
+  }
+
   render() {
-    const { name, matched, stack } = this.props.student;
+    const { name, identities, stack, matched } = this.props.student;
+    const identityIcons = this.getPrefIcons(identities);
 
     return (
-      <div className='amc-card'>
-        <p className='amc-record-item'>{name}</p>
-        <p className='amc-record-item'>{stack}</p>
-        <div className='amc-record-item amc-matched'>
+      <div className='asc-card'>
+        <p className='asc-name'>{name}</p>
+        <p className='asc-stack'>{stack}</p>
+        <div className='asc-prefs'>
+          { identityIcons }
+        </div>        <div className='asc-matched'>
           <img 
-            className='amc-matched-icon'
+            className='asc-matched-icon'
             alt='matched indicator'
             src={require(`../../utils/assets/matched-${matched}.svg`)} />
         </div>

@@ -17,6 +17,7 @@ export class AdminDashboard extends Component {
         stack: 'Front-End',
         name: 'Bob Bobs',
         matched: false,
+        identities: ['LGBTQ+', 'Male-Identifying']
       }]
     }
   }
@@ -167,7 +168,7 @@ export class AdminDashboard extends Component {
 
     if (students) {
       return students.map(student => {
-        return <AdminStudentCard key={student.id} student={student}/>
+        return <AdminStudentCard key={student.name} student={student}/>
     })
   } else {
     return <p className='ad-student-card'>No students to display.</p>
@@ -284,24 +285,22 @@ export class AdminDashboard extends Component {
           <AdminMentorSearch />
           <section className='ad-cards-container'>
             <div className='ad-mentor-cards-container'>
-              <div className='ad-cards-header'>
                 <h2 className='ad-cards-title'>Mentors</h2>
-                <div className='ad-heading-container'>
-                  <p className='ad-heading-item ad-name-title'>Name</p>
-                  <p className='ad-heading-item ad-pref-title'>Mentee Preferences</p>
-                  <p className='ad-heading-item ad-matched-title'>Availability</p>
+                <div className='ad-mentor-heading'>
+                  <p className='ad-name-title'>Name</p>
+                  <p className='ad-stack-title'>Stack</p>
+                  <p className='ad-pref-title'>Identity Preferences</p>
+                  <p className='ad-matched-title'>Availability</p>
                 </div>
-              </div>
               { mentorCards }
             </div>
             <div className='ad-student-cards-container'>
-              <div className='ad-cards-header'>
-                <h2 className='ad-cards-title'>Students</h2>
-                <div className='ad-heading-container'>
-                  <p className='ad-heading-item ad-name-title'>Name</p>
-                  <p className='ad-heading-item ad-pref-title'>Mentor Preferences</p>
-                  <p className='ad-heading-item ad-matched-title'>Availability</p>
-                </div>
+              <h2 className='ad-cards-title'>Students</h2>
+              <div className='ad-student-heading'>
+                <p className='ad-name-title'>Name</p>
+                <p className='ad-stack-title'>Program</p>
+                <p className='ad-pref-title'>Identity markers</p>
+                <p className='ad-matched-title'>Availability</p>
               </div>
               { studentCards }
             </div>
