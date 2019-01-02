@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import './SuccessPage.css';
 
 export const SuccessPage = (props) => {
-  const { history } = props;
+  // const { history } = props;
   const { state } = props.history.location;
   let successMessage;
 
