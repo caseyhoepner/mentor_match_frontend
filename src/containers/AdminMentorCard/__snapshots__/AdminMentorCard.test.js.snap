@@ -28,28 +28,27 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
-          className="amc-pic-name-container amc-record-item"
-        >
-          <img
-            alt="default profile"
-            className="amc-mentor-pic"
-            src={
-              Object {
-                "ReactComponent": [Function],
-                "__esModule": true,
-                "default": "mentor-pic-default.svg",
-              }
+        <img
+          alt="default profile"
+          className="amc-mentor-pic"
+          src={
+            Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "mentor-pic-default.svg",
             }
-          />
-          <p
-            className="amc-record-item"
-          >
-            Casey
-          </p>
-        </div>,
+          }
+        />,
+        <p
+          className="amc-name"
+        >
+          Casey
+        </p>,
+        <p
+          className="amc-stack"
+        />,
         <div
-          className="amc-record-item amc-pref"
+          className="amc-prefs"
         >
           <img
             alt="female-identifying preference indicator"
@@ -65,7 +64,7 @@ ShallowWrapper {
           />
         </div>,
         <div
-          className="amc-record-item amc-matched"
+          className="amc-matched"
         >
           <img
             alt="matched indicator"
@@ -90,59 +89,41 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <img
-              alt="default profile"
-              className="amc-mentor-pic"
-              src={
-                Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "mentor-pic-default.svg",
-                }
-              }
-            />,
-            <p
-              className="amc-record-item"
-            >
-              Casey
-            </p>,
-          ],
-          "className": "amc-pic-name-container amc-record-item",
+          "alt": "default profile",
+          "className": "amc-mentor-pic",
+          "src": Object {
+            "ReactComponent": [Function],
+            "__esModule": true,
+            "default": "mentor-pic-default.svg",
+          },
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "default profile",
-              "className": "amc-mentor-pic",
-              "src": Object {
-                "ReactComponent": [Function],
-                "__esModule": true,
-                "default": "mentor-pic-default.svg",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Casey",
-              "className": "amc-record-item",
-            },
-            "ref": null,
-            "rendered": "Casey",
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Casey",
+          "className": "amc-name",
+        },
+        "ref": null,
+        "rendered": "Casey",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "amc-stack",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "p",
       },
       Object {
         "instance": null,
@@ -163,7 +144,7 @@ ShallowWrapper {
               title="female-identifying"
             />,
           ],
-          "className": "amc-record-item amc-pref",
+          "className": "amc-prefs",
         },
         "ref": null,
         "rendered": Array [
@@ -204,7 +185,7 @@ ShallowWrapper {
               }
             }
           />,
-          "className": "amc-record-item amc-matched",
+          "className": "amc-matched",
         },
         "ref": null,
         "rendered": Object {
@@ -236,28 +217,27 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
-            className="amc-pic-name-container amc-record-item"
-          >
-            <img
-              alt="default profile"
-              className="amc-mentor-pic"
-              src={
-                Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "mentor-pic-default.svg",
-                }
+          <img
+            alt="default profile"
+            className="amc-mentor-pic"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "mentor-pic-default.svg",
               }
-            />
-            <p
-              className="amc-record-item"
-            >
-              Casey
-            </p>
-          </div>,
+            }
+          />,
+          <p
+            className="amc-name"
+          >
+            Casey
+          </p>,
+          <p
+            className="amc-stack"
+          />,
           <div
-            className="amc-record-item amc-pref"
+            className="amc-prefs"
           >
             <img
               alt="female-identifying preference indicator"
@@ -273,7 +253,7 @@ ShallowWrapper {
             />
           </div>,
           <div
-            className="amc-record-item amc-matched"
+            className="amc-matched"
           >
             <img
               alt="matched indicator"
@@ -298,59 +278,41 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <img
-                alt="default profile"
-                className="amc-mentor-pic"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "mentor-pic-default.svg",
-                  }
-                }
-              />,
-              <p
-                className="amc-record-item"
-              >
-                Casey
-              </p>,
-            ],
-            "className": "amc-pic-name-container amc-record-item",
+            "alt": "default profile",
+            "className": "amc-mentor-pic",
+            "src": Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "mentor-pic-default.svg",
+            },
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "default profile",
-                "className": "amc-mentor-pic",
-                "src": Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "mentor-pic-default.svg",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Casey",
-                "className": "amc-record-item",
-              },
-              "ref": null,
-              "rendered": "Casey",
-              "type": "p",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Casey",
+            "className": "amc-name",
+          },
+          "ref": null,
+          "rendered": "Casey",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "amc-stack",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
         },
         Object {
           "instance": null,
@@ -371,7 +333,7 @@ ShallowWrapper {
                 title="female-identifying"
               />,
             ],
-            "className": "amc-record-item amc-pref",
+            "className": "amc-prefs",
           },
           "ref": null,
           "rendered": Array [
@@ -412,7 +374,7 @@ ShallowWrapper {
                 }
               }
             />,
-            "className": "amc-record-item amc-matched",
+            "className": "amc-matched",
           },
           "ref": null,
           "rendered": Object {

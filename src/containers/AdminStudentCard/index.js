@@ -11,7 +11,7 @@ export class AdminStudentCard extends Component {
   getPrefIcons = (identities) => {
     const identityIcons = identities.map(identity => {
       let newIdentity = identity.toLowerCase();
-      let identityIcon;
+      // let identityIcon;
 
       if (newIdentity === 'lgbtq+') {
         newIdentity = newIdentity.slice(0, -1)

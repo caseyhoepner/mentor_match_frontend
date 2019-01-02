@@ -33,7 +33,7 @@ export class AdminMentorCard extends Component {
   }
 
   render() {
-    const { name, identity_preference, stack_preference, matched } = this.props.mentor;
+    const { name, stack_preference, matched } = this.props.mentor;
     const preferencesIcons = this.getPrefIcons();
 
     return (
