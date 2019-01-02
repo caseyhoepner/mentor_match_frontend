@@ -94,8 +94,19 @@ export class NewStudentForm extends Component {
     
     return (
       <div className='nsf-container'>
-      <h1 className='nsf-title'>New Student Form</h1>
-        <h2 className='nsf-question'>What is your name?<span className='nsf-required-star'>*</span></h2>
+        <div className='nsf-colors'>
+          <div className='nsf-color-yellow nsf-color'></div>
+          <div className='nsf-color-red nsf-color'></div>
+          <div className='nsf-color-blue nsf-color'></div>
+        </div>
+        <div className='nsf-title-container'>
+          <h1 className='nsf-title'>New</h1>
+          <h1 className='nsf-title'>Student</h1>
+          <h1 className='nsf-title'>Form</h1>
+        </div>
+      <div className='nsf-questions'>
+        <p className='nsf-instructions'>("*" denotes required field)</p>
+        <h2 className='nsf-question'>Name<span className='nsf-required-star'> *</span></h2>
           <input 
             name='name' 
             value={name} 
@@ -105,7 +116,7 @@ export class NewStudentForm extends Component {
             maxLength='50'
           />
 
-        <h2 className='nsf-question'>What are your preferred pronouns?</h2>
+        <h2 className='nsf-question'>Preferred pronouns:</h2>
           <input 
             name='pronouns' 
             value={pronouns} 
@@ -115,7 +126,21 @@ export class NewStudentForm extends Component {
             maxLength='20'
           />
 
-        <h2 className='nsf-question'>What is your contact info for Turing mentors to be able to reach you?<span className='nsf-required-star'>*</span></h2>
+          <h2 className='nsf-question'>Program:<span className='nsf-required-star'> *</span></h2>
+          <div>
+            <select 
+              className='nsf-capacity-dropdown'
+              name='stack' 
+              value={stack} 
+              onChange={this.handleChange}
+            >
+              <option value="">Select program:</option>
+              <option value="Front-End">Front-End</option>
+              <option value="Back-End">Back-End</option>
+            </select>
+          </div>
+          
+        <h2 className='nsf-question'>Contact info:<span className='nsf-required-star'> *</span></h2>
             <input 
               name='email' 
               value={email} 
@@ -133,7 +158,7 @@ export class NewStudentForm extends Component {
               maxLength='30'
             />
 
-        <h2 className='nsf-question'>What industries have you had experience in?</h2>
+        <h2 className='nsf-question'>Previous Industry Experience:</h2>
           <div className='nsf-options-container'>
               <label data-name='industries' className="nsf-checkbox-container">Marketing/Sales
                 <input type="checkbox" />
@@ -217,7 +242,7 @@ export class NewStudentForm extends Component {
               </label>
           </div>
 
-        <h2 className='nsf-question'>Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? </h2>
+        <h2 className='nsf-question'>Background:</h2>
           <textarea 
             name='background' 
             value={background} 
@@ -226,7 +251,7 @@ export class NewStudentForm extends Component {
             maxLength='250'
           />
 
-          <h2 className='nsf-question'>Student identity markers?</h2>
+          <h2 className='nsf-question'>Identity Markers:</h2>
             <div className='nsf-options-container'>
               <label data-name='identity_marker' className="nsf-checkbox-container">Veteran
                 <input type="checkbox" />
@@ -250,20 +275,16 @@ export class NewStudentForm extends Component {
               </label>
             </div>
 
-          <h2 className='nsf-question'>Which program is the student in?<span className='nsf-required-star'>*</span></h2>
-          <div>
-            <select 
-              name='stack' 
-              value={stack} 
-              onChange={this.handleChange}
-            >
-              <option value="">Select program:</option>
-              <option value="Front-End">Front-End</option>
-              <option value="Back-End">Back-End</option>
-            </select>
-          </div>
-        <button onClick={this.postNewStudent}>Submit</button>
+        </div>
         <p className={ hasErrored ? 'nsf-error' : 'hide' }>Make sure all required fields ("*") have been filled in.</p>
+        <button 
+            className='nsf-submit-btn'
+            onClick={this.postNewStudent}>Submit</button>
+        <div className='nmf-colors'>
+          <div className='nsf-color-yellow nmf-color'></div>
+          <div className='nsf-color-red nmf-color'></div>
+          <div className='nsf-color-blue nmf-color'></div>
+        </div>
       </div>
     )
   }

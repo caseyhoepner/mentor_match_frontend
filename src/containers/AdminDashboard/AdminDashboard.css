@@ -65,30 +65,33 @@
   padding: 10px 0 70px;
   background: 
     linear-gradient(
-      rgba(224,153,8, .4),
-      rgba(224,153,8, .4)),
+      rgba(0, 0, 0, .3),
+      rgba(0, 0, 0, .3)),
     url(../../utils/assets/banner.jpg);
-  background-position: 45% 20%;
+  background-position: 35% 20%;
   background-size: cover;
   border-bottom: 10px solid rgba(249, 174, 4);
 }
 
 .ad-tools-svg {
-  height: 50px;
-  width: 50px;
-  margin-top: 80px;
+  height: 40px;
+  width: 40px;
+  margin-top: 60px;
 }
 
 .ad-title-text {
-  margin: 5px auto 20px;
+  margin: 5px auto 5px;
   font-size: 4.1rem;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: normal;
+  letter-spacing: -2px;
 }
 
 
 .ad-tagline {
   letter-spacing: 1px;
   font-size: 1.5rem;
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 .ad-mentor-headings {
