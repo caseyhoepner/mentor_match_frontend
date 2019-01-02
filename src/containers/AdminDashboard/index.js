@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './AdminDashboard.css';
 import AdminMentorSearch from '../../containers/AdminMentorSearch';
+import AdminStudentCard from '../../containers/AdminStudentCard';
 import AdminMentorCard from '../AdminMentorCard';
 import AdminMentorModal from '../AdminMentorModal';
 import { connect } from 'react-redux';
@@ -12,6 +13,11 @@ export class AdminDashboard extends Component {
     super(props);
 
     this.state = {
+      students: [{
+        stack: 'Front-End',
+        name: 'Bob Bobs',
+        matched: false,
+      }]
     }
   }
 
@@ -156,11 +162,23 @@ export class AdminDashboard extends Component {
     return finalCard
   }
 
+  getStudentCards = () => {
+    const { students } = this.state;
+
+    if (students) {
+      return students.map(student => {
+        return <AdminStudentCard key={student.id} student={student}/>
+    })
+  } else {
+    return <p className='ad-student-card'>No students to display.</p>
+    }
+  }
+
   render() {
     let { mentors, showingAllMentors, searchTerm, mentorFilters, locale } = this.props
     let mentorCards;
-    let studentCards = <p className='ad-student-card'>No students to display.</p>
     let modal;
+    let studentCards;
 
     if (this.props.modalInfo) {
       modal = <AdminMentorModal currentMentor={this.props.modalInfo} />
@@ -193,6 +211,8 @@ export class AdminDashboard extends Component {
     if (Object.values(mentorFilters).includes(true)) {
       mentorCards = this.filterByPreference(mentorCards);
     }
+
+    studentCards = this.getStudentCards();
 
     return (
       <div>
