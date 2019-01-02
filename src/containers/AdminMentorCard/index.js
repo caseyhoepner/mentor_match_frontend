@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { setMentorModal } from '../../actions/mentor-actions';
 
 export class AdminMentorCard extends Component {
-//   constructor(props) {
-//     super(props);
-// }
 
   handleClick = () => {
     const { setMentorModal, mentor } = this.props;
@@ -14,8 +11,8 @@ export class AdminMentorCard extends Component {
     setMentorModal(mentor)
   }
 
-  render() {
-    const { name, identity_preference, matched } = this.props.mentor;
+  getPrefIcons = () => {
+    const { identity_preference } = this.props.mentor;
     const preferencesIcons = identity_preference.map(preference => {
       let newPreference = preference.toLowerCase();
       let prefImage;
@@ -32,21 +29,26 @@ export class AdminMentorCard extends Component {
       }
       return prefImage
     })
+    return preferencesIcons
+  }
+
+  render() {
+    const { name, identity_preference, stack_preference, matched } = this.props.mentor;
+    const preferencesIcons = this.getPrefIcons();
 
     return (
       <div className='amc-card' onClick={this.handleClick}>
-        <div className='amc-pic-name-container amc-record-item'>
           <img 
             className='amc-mentor-pic'
             alt='default profile'
             src={require('../../utils/assets/mentor-pic-default.svg')}
             />
-          <p className='amc-record-item'>{name}</p>
-        </div>
-        <div className='amc-record-item amc-pref'>
+          <p className='amc-name'>{name}</p>
+          <p className='amc-stack'>{stack_preference}</p>
+        <div className='amc-prefs'>
           { preferencesIcons }
         </div>
-        <div className='amc-record-item amc-matched'>
+        <div className='amc-matched'>
           <img 
             className='amc-matched-icon'
             alt='matched indicator'
