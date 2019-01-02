@@ -5,6 +5,10 @@ import * as API from '../../utils/api';
 
 describe('NewMentorForm', () => {
   let wrapper;
+  let mockHistory = {
+    location: '/new-mentor-form',
+    push: jest.fn()
+  }
   let mockState = {
     name: '',
     pronouns: '',
@@ -24,11 +28,22 @@ describe('NewMentorForm', () => {
     mentee_capacity: '0',
     meeting_location: [],
     selected1to1: 'No',
-    stack_preference: 'No Preference'
+    stack_preference: 'No Preference',
+    hasErrored: false
   }
+  let mockVerifiedState = { 
+    name: 'Broseph',
+    email: 'duderino@sup.com',
+    slack_username: 'broheim',
+    city: 'Denver',
+    state: 'CO',
+    country: 'USA',
+    background: 'Sup, brah?',
+    selected1to1: 'Yes'
+    }
   
   beforeEach(() => {
-    wrapper = shallow(<NewMentorForm />)
+    wrapper = shallow(<NewMentorForm history={mockHistory} />)
   });
 
   it('matches the snapshot', () => {
@@ -36,9 +51,10 @@ describe('NewMentorForm', () => {
   });
 
   describe('postNewMentor function', () => {
-    it('should fire the postMentor API function upon the Submit button clicked', async () => {
+    it('should fire the postMentor API function upon the Submit button clicked', async () => { 
       API.postMentor = jest.fn()
-  
+      
+      wrapper.instance().setState(mockVerifiedState)
       await wrapper.instance().postNewMentor()
       expect(API.postMentor).toHaveBeenCalled()
     });
