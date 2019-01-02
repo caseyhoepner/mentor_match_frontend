@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 // import { setMentorModal } from '../../actions/mentor-actions';
 
 export class AdminStudentCard extends Component {
-  constructor(props) {
-    super(props);
-}
+//   constructor(props) {
+//     super(props);
+// }
 
   getPrefIcons = (identities) => {
     const identityIcons = identities.map(identity => {
