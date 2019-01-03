@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import './MentorCard.css';
 
 export class MentorCard extends Component {
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
 
   render() {
-    const { name, current_title, background } = this.props.mentor;
+    const { name, current_title, background } = this.props.mentor.props.mentor;
+
     return (
       <div className='mcard-container'>
         <img 

@@ -3,7 +3,19 @@
 exports[`MentorCard matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MentorCard />,
+  Symbol(enzyme.__unrendered__): <MentorCard
+    mentor={
+      Object {
+        "props": Object {
+          "mentor": Object {
+            "background": "I know how to code!",
+            "current_title": "Coder",
+            "name": "Oscars Blues",
+          },
+        },
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,10 +29,83 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "MentorCard",
+      "children": Array [
+        <img
+          alt="Default profile"
+          className="mcard-pic"
+          src={
+            Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "mentor-pic-default.svg",
+            }
+          }
+        />,
+        <h2>
+          Oscars Blues
+        </h2>,
+        <p>
+          Coder
+        </p>,
+        <p>
+          I know how to code!
+        </p>,
+      ],
+      "className": "mcard-container",
     },
     "ref": null,
-    "rendered": "MentorCard",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Default profile",
+          "className": "mcard-pic",
+          "src": Object {
+            "ReactComponent": [Function],
+            "__esModule": true,
+            "default": "mentor-pic-default.svg",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Oscars Blues",
+        },
+        "ref": null,
+        "rendered": "Oscars Blues",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Coder",
+        },
+        "ref": null,
+        "rendered": "Coder",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "I know how to code!",
+        },
+        "ref": null,
+        "rendered": "I know how to code!",
+        "type": "p",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +114,83 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "MentorCard",
+        "children": Array [
+          <img
+            alt="Default profile"
+            className="mcard-pic"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "mentor-pic-default.svg",
+              }
+            }
+          />,
+          <h2>
+            Oscars Blues
+          </h2>,
+          <p>
+            Coder
+          </p>,
+          <p>
+            I know how to code!
+          </p>,
+        ],
+        "className": "mcard-container",
       },
       "ref": null,
-      "rendered": "MentorCard",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Default profile",
+            "className": "mcard-pic",
+            "src": Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "mentor-pic-default.svg",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Oscars Blues",
+          },
+          "ref": null,
+          "rendered": "Oscars Blues",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Coder",
+          },
+          "ref": null,
+          "rendered": "Coder",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "I know how to code!",
+          },
+          "ref": null,
+          "rendered": "I know how to code!",
+          "type": "p",
+        },
+      ],
       "type": "div",
     },
   ],

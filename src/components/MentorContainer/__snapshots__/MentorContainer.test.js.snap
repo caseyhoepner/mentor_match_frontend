@@ -3,7 +3,39 @@
 exports[`MentorContainer matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MentorContainer />,
+  Symbol(enzyme.__unrendered__): <MentorContainer
+    mentorFilters={
+      Object {
+        "backEnd": false,
+        "female": false,
+        "frontEnd": false,
+        "lgbtq": true,
+        "male": false,
+        "parent": false,
+        "veteran": false,
+      }
+    }
+    mentors={
+      Array [
+        Object {
+          "identity_preference": Array [
+            "female-identifying",
+          ],
+          "meeting_location": "Remote",
+          "name": "Casey",
+          "stack_preference": "Front-End",
+        },
+        Object {
+          "identity_preference": Array [
+            "male-identifying",
+          ],
+          "meeting_location": "Denver",
+          "name": "Alex",
+          "stack_preference": "Back-End",
+        },
+      ]
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -70,6 +102,9 @@ ShallowWrapper {
           </div>
         </header>,
         <Connect(Search) />,
+        <div
+          className="mc-card-container"
+        />,
       ],
     },
     "ref": null,
@@ -320,6 +355,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "mc-card-container",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -382,6 +429,9 @@ ShallowWrapper {
             </div>
           </header>,
           <Connect(Search) />,
+          <div
+            className="mc-card-container"
+          />,
         ],
       },
       "ref": null,
@@ -631,6 +681,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "mc-card-container",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
         },
       ],
       "type": "div",

@@ -32,8 +32,9 @@ export class Search extends Component {
     }
   }
 
-  toggleClicked = (event) => {
+  toggleClicked = async (event) => {
     const { name } = event.target;
+    await this.setState({ [name]: !this.state[name] })
 
     if (name === 'preferencesClicked') {
       this.setState({
