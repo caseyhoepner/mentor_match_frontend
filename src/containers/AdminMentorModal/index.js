@@ -124,9 +124,30 @@ export class AdminMentorModal extends Component {
     })
   }
 
+  getMentees = () => {
+    const { modalInfo, relationships, students } = this.props;
+    const mentorId = modalInfo.id;
+
+    const matchedRelationships = relationships.filter(relationship => relationship.mentor_id === mentorId);
+
+    const menteeIds = matchedRelationships.map(relationship => relationship.student_id);
+    
+    const mentees = [];
+    menteeIds.forEach(id => {
+      students.forEach(student => {
+        if (student.id === id) {
+          mentees.push(student)
+        }
+      })
+    })
+    const menteeNames = mentees.map(mentee => mentee.name)
+    return this.getList(menteeNames)
+  }
+
   render() {
     let { isEditable } = this.props;
     let studentOptions = this.getStudentOptions();
+    let mentees = this.getMentees();
 
     if(this.props.modalInfo && !isEditable) {
       let { 
@@ -185,8 +206,13 @@ export class AdminMentorModal extends Component {
 
           <div className='amm-assign-student'>
             <div className='amm-bio'>
-                <h3>Bio</h3>
-                <p>{background}</p>
+              <h3>Bio</h3>
+              <p>{background}</p>
+            </div>
+            <div>
+              <h3>Current Mentees</h3>
+              { mentees }
+
             </div>
             <div className='amm-match-dropdown-container'>
               <h3>Match</h3>
@@ -274,7 +300,8 @@ export const mapStateToProps = (state) => ({
   modalInfo: state.modalInfo,
   mentors: state.mentors,
   isEditable: state.isEditable,
-  students: state.students
+  students: state.students,
+  relationships: state.relationships
 });
 
 export const mapDispatchToProps = (dispatch) => ({

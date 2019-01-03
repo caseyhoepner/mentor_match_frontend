@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { setLocale, setSearch, toggleShowingMentors } from './search-reducers';
 import { setMentors, setMentorModal, isEditable, hasErrored, isLoading } from './mentors-reducers';
-import { setStudents } from './students-reducers';
+import { setStudents, setRelationships } from './students-reducers';
 import { changeMentorFilters } from './preferences-reducers';
 
 const rootReducer = combineReducers({
@@ -14,7 +14,8 @@ const rootReducer = combineReducers({
   modalInfo: setMentorModal,
   showingAllMentors: toggleShowingMentors,
   mentorFilters: changeMentorFilters,
-  students: setStudents
+  students: setStudents,
+  relationships: setRelationships
 });
 
 export default rootReducer;
