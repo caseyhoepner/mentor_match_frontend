@@ -19,29 +19,31 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="s-search-container"
+          className="ams-search-and-buttons"
         >
           <div
-            className="s-search-inputs-container"
+            className="ams-search-inputs-container"
           >
             <div
-              className="s-search-bar"
+              className="ams-search-bar"
             >
               <input
-                className="s-search-input"
+                className="ams-search-input"
                 name="search"
                 onChange={[Function]}
                 placeholder="Search here..."
                 type="text"
+                value=""
               />
               <div
-                className="s-search-icon"
+                className="ams-search-icon"
               />
             </div>
             <select
-              className="s-location-dropdown"
+              className="ams-location-dropdown"
               name="localeSelected"
               onChange={[Function]}
+              value=""
             >
               <option
                 value=""
@@ -58,21 +60,20 @@ ShallowWrapper {
               >
                 Remote
               </option>
-              <option />
             </select>
           </div>
           <div
-            className="s-filter-btn-container"
+            className="ams-filter-btn-container"
           >
             <button
-              className="s-filter-btn"
+              className="ams-filter-btn"
               name="preferencesClicked"
               onClick={[Function]}
             >
               Filter by Preferences
             </button>
             <button
-              className="s-filter-btn"
+              className="ams-filter-btn"
               name="allMentorsClicked"
               onClick={[Function]}
             >
@@ -91,6 +92,7 @@ ShallowWrapper {
           preferencesClicked={false}
         />,
       ],
+      "className": "ams-search-container",
     },
     "ref": null,
     "rendered": Array [
@@ -101,26 +103,28 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="s-search-inputs-container"
+              className="ams-search-inputs-container"
             >
               <div
-                className="s-search-bar"
+                className="ams-search-bar"
               >
                 <input
-                  className="s-search-input"
+                  className="ams-search-input"
                   name="search"
                   onChange={[Function]}
                   placeholder="Search here..."
                   type="text"
+                  value=""
                 />
                 <div
-                  className="s-search-icon"
+                  className="ams-search-icon"
                 />
               </div>
               <select
-                className="s-location-dropdown"
+                className="ams-location-dropdown"
                 name="localeSelected"
                 onChange={[Function]}
+                value=""
               >
                 <option
                   value=""
@@ -137,21 +141,20 @@ ShallowWrapper {
                 >
                   Remote
                 </option>
-                <option />
               </select>
             </div>,
             <div
-              className="s-filter-btn-container"
+              className="ams-filter-btn-container"
             >
               <button
-                className="s-filter-btn"
+                className="ams-filter-btn"
                 name="preferencesClicked"
                 onClick={[Function]}
               >
                 Filter by Preferences
               </button>
               <button
-                className="s-filter-btn"
+                className="ams-filter-btn"
                 name="allMentorsClicked"
                 onClick={[Function]}
               >
@@ -166,7 +169,7 @@ ShallowWrapper {
               />
             </div>,
           ],
-          "className": "s-search-container",
+          "className": "ams-search-and-buttons",
         },
         "ref": null,
         "rendered": Array [
@@ -177,23 +180,25 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="s-search-bar"
+                  className="ams-search-bar"
                 >
                   <input
-                    className="s-search-input"
+                    className="ams-search-input"
                     name="search"
                     onChange={[Function]}
                     placeholder="Search here..."
                     type="text"
+                    value=""
                   />
                   <div
-                    className="s-search-icon"
+                    className="ams-search-icon"
                   />
                 </div>,
                 <select
-                  className="s-location-dropdown"
+                  className="ams-location-dropdown"
                   name="localeSelected"
                   onChange={[Function]}
+                  value=""
                 >
                   <option
                     value=""
@@ -210,10 +215,9 @@ ShallowWrapper {
                   >
                     Remote
                   </option>
-                  <option />
                 </select>,
               ],
-              "className": "s-search-inputs-container",
+              "className": "ams-search-inputs-container",
             },
             "ref": null,
             "rendered": Array [
@@ -224,17 +228,18 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <input
-                      className="s-search-input"
+                      className="ams-search-input"
                       name="search"
                       onChange={[Function]}
                       placeholder="Search here..."
                       type="text"
+                      value=""
                     />,
                     <div
-                      className="s-search-icon"
+                      className="ams-search-icon"
                     />,
                   ],
-                  "className": "s-search-bar",
+                  "className": "ams-search-bar",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -243,12 +248,12 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "s-search-input",
+                      "className": "ams-search-input",
                       "name": "search",
                       "onChange": [Function],
                       "placeholder": "Search here...",
                       "type": "text",
-                      "value": undefined,
+                      "value": "",
                     },
                     "ref": null,
                     "rendered": null,
@@ -259,7 +264,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "s-search-icon",
+                      "className": "ams-search-icon",
                     },
                     "ref": null,
                     "rendered": null,
@@ -289,12 +294,11 @@ ShallowWrapper {
                     >
                       Remote
                     </option>,
-                    <option />,
                   ],
-                  "className": "s-location-dropdown",
+                  "className": "ams-location-dropdown",
                   "name": "localeSelected",
                   "onChange": [Function],
-                  "value": undefined,
+                  "value": "",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -334,15 +338,6 @@ ShallowWrapper {
                     "rendered": "Remote",
                     "type": "option",
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": "option",
-                  },
                 ],
                 "type": "select",
               },
@@ -356,14 +351,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <button
-                  className="s-filter-btn"
+                  className="ams-filter-btn"
                   name="preferencesClicked"
                   onClick={[Function]}
                 >
                   Filter by Preferences
                 </button>,
                 <button
-                  className="s-filter-btn"
+                  className="ams-filter-btn"
                   name="allMentorsClicked"
                   onClick={[Function]}
                 >
@@ -377,7 +372,7 @@ ShallowWrapper {
                   src="heart.svg"
                 />,
               ],
-              "className": "s-filter-btn-container",
+              "className": "ams-filter-btn-container",
             },
             "ref": null,
             "rendered": Array [
@@ -387,7 +382,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Filter by Preferences",
-                  "className": "s-filter-btn",
+                  "className": "ams-filter-btn",
                   "name": "preferencesClicked",
                   "onClick": [Function],
                 },
@@ -401,7 +396,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "All Mentors",
-                  "className": "s-filter-btn",
+                  "className": "ams-filter-btn",
                   "name": "allMentorsClicked",
                   "onClick": [Function],
                 },
@@ -452,29 +447,31 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="s-search-container"
+            className="ams-search-and-buttons"
           >
             <div
-              className="s-search-inputs-container"
+              className="ams-search-inputs-container"
             >
               <div
-                className="s-search-bar"
+                className="ams-search-bar"
               >
                 <input
-                  className="s-search-input"
+                  className="ams-search-input"
                   name="search"
                   onChange={[Function]}
                   placeholder="Search here..."
                   type="text"
+                  value=""
                 />
                 <div
-                  className="s-search-icon"
+                  className="ams-search-icon"
                 />
               </div>
               <select
-                className="s-location-dropdown"
+                className="ams-location-dropdown"
                 name="localeSelected"
                 onChange={[Function]}
+                value=""
               >
                 <option
                   value=""
@@ -491,21 +488,20 @@ ShallowWrapper {
                 >
                   Remote
                 </option>
-                <option />
               </select>
             </div>
             <div
-              className="s-filter-btn-container"
+              className="ams-filter-btn-container"
             >
               <button
-                className="s-filter-btn"
+                className="ams-filter-btn"
                 name="preferencesClicked"
                 onClick={[Function]}
               >
                 Filter by Preferences
               </button>
               <button
-                className="s-filter-btn"
+                className="ams-filter-btn"
                 name="allMentorsClicked"
                 onClick={[Function]}
               >
@@ -524,6 +520,7 @@ ShallowWrapper {
             preferencesClicked={false}
           />,
         ],
+        "className": "ams-search-container",
       },
       "ref": null,
       "rendered": Array [
@@ -534,26 +531,28 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="s-search-inputs-container"
+                className="ams-search-inputs-container"
               >
                 <div
-                  className="s-search-bar"
+                  className="ams-search-bar"
                 >
                   <input
-                    className="s-search-input"
+                    className="ams-search-input"
                     name="search"
                     onChange={[Function]}
                     placeholder="Search here..."
                     type="text"
+                    value=""
                   />
                   <div
-                    className="s-search-icon"
+                    className="ams-search-icon"
                   />
                 </div>
                 <select
-                  className="s-location-dropdown"
+                  className="ams-location-dropdown"
                   name="localeSelected"
                   onChange={[Function]}
+                  value=""
                 >
                   <option
                     value=""
@@ -570,21 +569,20 @@ ShallowWrapper {
                   >
                     Remote
                   </option>
-                  <option />
                 </select>
               </div>,
               <div
-                className="s-filter-btn-container"
+                className="ams-filter-btn-container"
               >
                 <button
-                  className="s-filter-btn"
+                  className="ams-filter-btn"
                   name="preferencesClicked"
                   onClick={[Function]}
                 >
                   Filter by Preferences
                 </button>
                 <button
-                  className="s-filter-btn"
+                  className="ams-filter-btn"
                   name="allMentorsClicked"
                   onClick={[Function]}
                 >
@@ -599,7 +597,7 @@ ShallowWrapper {
                 />
               </div>,
             ],
-            "className": "s-search-container",
+            "className": "ams-search-and-buttons",
           },
           "ref": null,
           "rendered": Array [
@@ -610,23 +608,25 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div
-                    className="s-search-bar"
+                    className="ams-search-bar"
                   >
                     <input
-                      className="s-search-input"
+                      className="ams-search-input"
                       name="search"
                       onChange={[Function]}
                       placeholder="Search here..."
                       type="text"
+                      value=""
                     />
                     <div
-                      className="s-search-icon"
+                      className="ams-search-icon"
                     />
                   </div>,
                   <select
-                    className="s-location-dropdown"
+                    className="ams-location-dropdown"
                     name="localeSelected"
                     onChange={[Function]}
+                    value=""
                   >
                     <option
                       value=""
@@ -643,10 +643,9 @@ ShallowWrapper {
                     >
                       Remote
                     </option>
-                    <option />
                   </select>,
                 ],
-                "className": "s-search-inputs-container",
+                "className": "ams-search-inputs-container",
               },
               "ref": null,
               "rendered": Array [
@@ -657,17 +656,18 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <input
-                        className="s-search-input"
+                        className="ams-search-input"
                         name="search"
                         onChange={[Function]}
                         placeholder="Search here..."
                         type="text"
+                        value=""
                       />,
                       <div
-                        className="s-search-icon"
+                        className="ams-search-icon"
                       />,
                     ],
-                    "className": "s-search-bar",
+                    "className": "ams-search-bar",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -676,12 +676,12 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "s-search-input",
+                        "className": "ams-search-input",
                         "name": "search",
                         "onChange": [Function],
                         "placeholder": "Search here...",
                         "type": "text",
-                        "value": undefined,
+                        "value": "",
                       },
                       "ref": null,
                       "rendered": null,
@@ -692,7 +692,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "s-search-icon",
+                        "className": "ams-search-icon",
                       },
                       "ref": null,
                       "rendered": null,
@@ -722,12 +722,11 @@ ShallowWrapper {
                       >
                         Remote
                       </option>,
-                      <option />,
                     ],
-                    "className": "s-location-dropdown",
+                    "className": "ams-location-dropdown",
                     "name": "localeSelected",
                     "onChange": [Function],
-                    "value": undefined,
+                    "value": "",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -767,15 +766,6 @@ ShallowWrapper {
                       "rendered": "Remote",
                       "type": "option",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {},
-                      "ref": null,
-                      "rendered": null,
-                      "type": "option",
-                    },
                   ],
                   "type": "select",
                 },
@@ -789,14 +779,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <button
-                    className="s-filter-btn"
+                    className="ams-filter-btn"
                     name="preferencesClicked"
                     onClick={[Function]}
                   >
                     Filter by Preferences
                   </button>,
                   <button
-                    className="s-filter-btn"
+                    className="ams-filter-btn"
                     name="allMentorsClicked"
                     onClick={[Function]}
                   >
@@ -810,7 +800,7 @@ ShallowWrapper {
                     src="heart.svg"
                   />,
                 ],
-                "className": "s-filter-btn-container",
+                "className": "ams-filter-btn-container",
               },
               "ref": null,
               "rendered": Array [
@@ -820,7 +810,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Filter by Preferences",
-                    "className": "s-filter-btn",
+                    "className": "ams-filter-btn",
                     "name": "preferencesClicked",
                     "onClick": [Function],
                   },
@@ -834,7 +824,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "All Mentors",
-                    "className": "s-filter-btn",
+                    "className": "ams-filter-btn",
                     "name": "allMentorsClicked",
                     "onClick": [Function],
                   },

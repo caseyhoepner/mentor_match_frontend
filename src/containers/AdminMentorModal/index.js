@@ -117,9 +117,9 @@ export class AdminMentorModal extends Component {
   }
 
   getStudentOptions = () => {
-    return this.props.students.map(student => {
+    return this.props.students.map((student, index) => {
       // if (student.active && !student.matched) {
-        return <option value={student.name}>{student.name}</option>
+        return <option key={index} value={student.name}>{student.name}</option>
       // }
     })
   }

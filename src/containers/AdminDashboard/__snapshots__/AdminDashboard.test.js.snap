@@ -286,19 +286,11 @@ ShallowWrapper {
                 Availability
               </p>
             </div>
-            <Connect(AdminStudentCard)
-              student={
-                Object {
-                  "identities": Array [
-                    "LGBTQ+",
-                    "Male-Identifying",
-                  ],
-                  "matched": false,
-                  "name": "Bob Bobs",
-                  "stack": "Front-End",
-                }
-              }
-            />
+            <p
+              className="ad-student-card"
+            >
+              No students to display.
+            </p>
           </div>
         </section>,
       ],
@@ -1273,19 +1265,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>,
           ],
           "className": "ad-cards-container",
@@ -1465,21 +1449,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>,
-                Array [
-                  <Connect(AdminStudentCard)
-                    student={
-                      Object {
-                        "identities": Array [
-                          "LGBTQ+",
-                          "Male-Identifying",
-                        ],
-                        "matched": false,
-                        "name": "Bob Bobs",
-                        "stack": "Front-End",
-                      }
-                    }
-                  />,
-                ],
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>,
               ],
               "className": "ad-student-cards-container",
             },
@@ -1581,22 +1555,15 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "NaN",
-                "nodeType": "class",
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
-                  "student": Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  },
+                  "children": "No students to display.",
+                  "className": "ad-student-card",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": "No students to display.",
+                "type": "p",
               },
             ],
             "type": "div",
@@ -1843,19 +1810,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>
           </section>,
         ],
@@ -2830,19 +2789,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>
-                <Connect(AdminStudentCard)
-                  student={
-                    Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    }
-                  }
-                />
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>
               </div>,
             ],
             "className": "ad-cards-container",
@@ -3022,21 +2973,11 @@ ShallowWrapper {
                       Availability
                     </p>
                   </div>,
-                  Array [
-                    <Connect(AdminStudentCard)
-                      student={
-                        Object {
-                          "identities": Array [
-                            "LGBTQ+",
-                            "Male-Identifying",
-                          ],
-                          "matched": false,
-                          "name": "Bob Bobs",
-                          "stack": "Front-End",
-                        }
-                      }
-                    />,
-                  ],
+                  <p
+                    className="ad-student-card"
+                  >
+                    No students to display.
+                  </p>,
                 ],
                 "className": "ad-student-cards-container",
               },
@@ -3138,22 +3079,15 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "NaN",
-                  "nodeType": "class",
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "student": Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    },
+                    "children": "No students to display.",
+                    "className": "ad-student-card",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "rendered": "No students to display.",
+                  "type": "p",
                 },
               ],
               "type": "div",
@@ -3453,19 +3387,11 @@ ShallowWrapper {
                 Availability
               </p>
             </div>
-            <Connect(AdminStudentCard)
-              student={
-                Object {
-                  "identities": Array [
-                    "LGBTQ+",
-                    "Male-Identifying",
-                  ],
-                  "matched": false,
-                  "name": "Bob Bobs",
-                  "stack": "Front-End",
-                }
-              }
-            />
+            <p
+              className="ad-student-card"
+            >
+              No students to display.
+            </p>
           </div>
         </section>,
       ],
@@ -4424,19 +4350,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>,
           ],
           "className": "ad-cards-container",
@@ -4616,21 +4534,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>,
-                Array [
-                  <Connect(AdminStudentCard)
-                    student={
-                      Object {
-                        "identities": Array [
-                          "LGBTQ+",
-                          "Male-Identifying",
-                        ],
-                        "matched": false,
-                        "name": "Bob Bobs",
-                        "stack": "Front-End",
-                      }
-                    }
-                  />,
-                ],
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>,
               ],
               "className": "ad-student-cards-container",
             },
@@ -4732,22 +4640,15 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "NaN",
-                "nodeType": "class",
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
-                  "student": Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  },
+                  "children": "No students to display.",
+                  "className": "ad-student-card",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": "No students to display.",
+                "type": "p",
               },
             ],
             "type": "div",
@@ -4984,19 +4885,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>
           </section>,
         ],
@@ -5955,19 +5848,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>
-                <Connect(AdminStudentCard)
-                  student={
-                    Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    }
-                  }
-                />
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>
               </div>,
             ],
             "className": "ad-cards-container",
@@ -6147,21 +6032,11 @@ ShallowWrapper {
                       Availability
                     </p>
                   </div>,
-                  Array [
-                    <Connect(AdminStudentCard)
-                      student={
-                        Object {
-                          "identities": Array [
-                            "LGBTQ+",
-                            "Male-Identifying",
-                          ],
-                          "matched": false,
-                          "name": "Bob Bobs",
-                          "stack": "Front-End",
-                        }
-                      }
-                    />,
-                  ],
+                  <p
+                    className="ad-student-card"
+                  >
+                    No students to display.
+                  </p>,
                 ],
                 "className": "ad-student-cards-container",
               },
@@ -6263,22 +6138,15 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "NaN",
-                  "nodeType": "class",
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "student": Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    },
+                    "children": "No students to display.",
+                    "className": "ad-student-card",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "rendered": "No students to display.",
+                  "type": "p",
                 },
               ],
               "type": "div",
@@ -6578,19 +6446,11 @@ ShallowWrapper {
                 Availability
               </p>
             </div>
-            <Connect(AdminStudentCard)
-              student={
-                Object {
-                  "identities": Array [
-                    "LGBTQ+",
-                    "Male-Identifying",
-                  ],
-                  "matched": false,
-                  "name": "Bob Bobs",
-                  "stack": "Front-End",
-                }
-              }
-            />
+            <p
+              className="ad-student-card"
+            >
+              No students to display.
+            </p>
           </div>
         </section>,
       ],
@@ -7549,19 +7409,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>,
           ],
           "className": "ad-cards-container",
@@ -7741,21 +7593,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>,
-                Array [
-                  <Connect(AdminStudentCard)
-                    student={
-                      Object {
-                        "identities": Array [
-                          "LGBTQ+",
-                          "Male-Identifying",
-                        ],
-                        "matched": false,
-                        "name": "Bob Bobs",
-                        "stack": "Front-End",
-                      }
-                    }
-                  />,
-                ],
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>,
               ],
               "className": "ad-student-cards-container",
             },
@@ -7857,22 +7699,15 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "NaN",
-                "nodeType": "class",
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
-                  "student": Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  },
+                  "children": "No students to display.",
+                  "className": "ad-student-card",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": "No students to display.",
+                "type": "p",
               },
             ],
             "type": "div",
@@ -8109,19 +7944,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>
           </section>,
         ],
@@ -9080,19 +8907,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>
-                <Connect(AdminStudentCard)
-                  student={
-                    Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    }
-                  }
-                />
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>
               </div>,
             ],
             "className": "ad-cards-container",
@@ -9272,21 +9091,11 @@ ShallowWrapper {
                       Availability
                     </p>
                   </div>,
-                  Array [
-                    <Connect(AdminStudentCard)
-                      student={
-                        Object {
-                          "identities": Array [
-                            "LGBTQ+",
-                            "Male-Identifying",
-                          ],
-                          "matched": false,
-                          "name": "Bob Bobs",
-                          "stack": "Front-End",
-                        }
-                      }
-                    />,
-                  ],
+                  <p
+                    className="ad-student-card"
+                  >
+                    No students to display.
+                  </p>,
                 ],
                 "className": "ad-student-cards-container",
               },
@@ -9388,22 +9197,15 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "NaN",
-                  "nodeType": "class",
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "student": Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    },
+                    "children": "No students to display.",
+                    "className": "ad-student-card",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "rendered": "No students to display.",
+                  "type": "p",
                 },
               ],
               "type": "div",
@@ -9703,19 +9505,11 @@ ShallowWrapper {
                 Availability
               </p>
             </div>
-            <Connect(AdminStudentCard)
-              student={
-                Object {
-                  "identities": Array [
-                    "LGBTQ+",
-                    "Male-Identifying",
-                  ],
-                  "matched": false,
-                  "name": "Bob Bobs",
-                  "stack": "Front-End",
-                }
-              }
-            />
+            <p
+              className="ad-student-card"
+            >
+              No students to display.
+            </p>
           </div>
         </section>,
       ],
@@ -10674,19 +10468,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>,
           ],
           "className": "ad-cards-container",
@@ -10866,21 +10652,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>,
-                Array [
-                  <Connect(AdminStudentCard)
-                    student={
-                      Object {
-                        "identities": Array [
-                          "LGBTQ+",
-                          "Male-Identifying",
-                        ],
-                        "matched": false,
-                        "name": "Bob Bobs",
-                        "stack": "Front-End",
-                      }
-                    }
-                  />,
-                ],
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>,
               ],
               "className": "ad-student-cards-container",
             },
@@ -10982,22 +10758,15 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "NaN",
-                "nodeType": "class",
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
-                  "student": Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  },
+                  "children": "No students to display.",
+                  "className": "ad-student-card",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": "No students to display.",
+                "type": "p",
               },
             ],
             "type": "div",
@@ -11234,19 +11003,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>
           </section>,
         ],
@@ -12205,19 +11966,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>
-                <Connect(AdminStudentCard)
-                  student={
-                    Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    }
-                  }
-                />
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>
               </div>,
             ],
             "className": "ad-cards-container",
@@ -12397,21 +12150,11 @@ ShallowWrapper {
                       Availability
                     </p>
                   </div>,
-                  Array [
-                    <Connect(AdminStudentCard)
-                      student={
-                        Object {
-                          "identities": Array [
-                            "LGBTQ+",
-                            "Male-Identifying",
-                          ],
-                          "matched": false,
-                          "name": "Bob Bobs",
-                          "stack": "Front-End",
-                        }
-                      }
-                    />,
-                  ],
+                  <p
+                    className="ad-student-card"
+                  >
+                    No students to display.
+                  </p>,
                 ],
                 "className": "ad-student-cards-container",
               },
@@ -12513,22 +12256,15 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "NaN",
-                  "nodeType": "class",
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "student": Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    },
+                    "children": "No students to display.",
+                    "className": "ad-student-card",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "rendered": "No students to display.",
+                  "type": "p",
                 },
               ],
               "type": "div",
@@ -12827,19 +12563,11 @@ ShallowWrapper {
                 Availability
               </p>
             </div>
-            <Connect(AdminStudentCard)
-              student={
-                Object {
-                  "identities": Array [
-                    "LGBTQ+",
-                    "Male-Identifying",
-                  ],
-                  "matched": false,
-                  "name": "Bob Bobs",
-                  "stack": "Front-End",
-                }
-              }
-            />
+            <p
+              className="ad-student-card"
+            >
+              No students to display.
+            </p>
           </div>
         </section>,
       ],
@@ -13798,19 +13526,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>,
           ],
           "className": "ad-cards-container",
@@ -13990,21 +13710,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>,
-                Array [
-                  <Connect(AdminStudentCard)
-                    student={
-                      Object {
-                        "identities": Array [
-                          "LGBTQ+",
-                          "Male-Identifying",
-                        ],
-                        "matched": false,
-                        "name": "Bob Bobs",
-                        "stack": "Front-End",
-                      }
-                    }
-                  />,
-                ],
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>,
               ],
               "className": "ad-student-cards-container",
             },
@@ -14106,22 +13816,15 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "NaN",
-                "nodeType": "class",
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
-                  "student": Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  },
+                  "children": "No students to display.",
+                  "className": "ad-student-card",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": "No students to display.",
+                "type": "p",
               },
             ],
             "type": "div",
@@ -14358,19 +14061,11 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
-              <Connect(AdminStudentCard)
-                student={
-                  Object {
-                    "identities": Array [
-                      "LGBTQ+",
-                      "Male-Identifying",
-                    ],
-                    "matched": false,
-                    "name": "Bob Bobs",
-                    "stack": "Front-End",
-                  }
-                }
-              />
+              <p
+                className="ad-student-card"
+              >
+                No students to display.
+              </p>
             </div>
           </section>,
         ],
@@ -15329,19 +15024,11 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>
-                <Connect(AdminStudentCard)
-                  student={
-                    Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    }
-                  }
-                />
+                <p
+                  className="ad-student-card"
+                >
+                  No students to display.
+                </p>
               </div>,
             ],
             "className": "ad-cards-container",
@@ -15521,21 +15208,11 @@ ShallowWrapper {
                       Availability
                     </p>
                   </div>,
-                  Array [
-                    <Connect(AdminStudentCard)
-                      student={
-                        Object {
-                          "identities": Array [
-                            "LGBTQ+",
-                            "Male-Identifying",
-                          ],
-                          "matched": false,
-                          "name": "Bob Bobs",
-                          "stack": "Front-End",
-                        }
-                      }
-                    />,
-                  ],
+                  <p
+                    className="ad-student-card"
+                  >
+                    No students to display.
+                  </p>,
                 ],
                 "className": "ad-student-cards-container",
               },
@@ -15637,22 +15314,15 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "NaN",
-                  "nodeType": "class",
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "student": Object {
-                      "identities": Array [
-                        "LGBTQ+",
-                        "Male-Identifying",
-                      ],
-                      "matched": false,
-                      "name": "Bob Bobs",
-                      "stack": "Front-End",
-                    },
+                    "children": "No students to display.",
+                    "className": "ad-student-card",
                   },
                   "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "rendered": "No students to display.",
+                  "type": "p",
                 },
               ],
               "type": "div",

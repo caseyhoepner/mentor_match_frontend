@@ -6,9 +6,10 @@ import { BrowserRouter } from 'react-router-dom';
 describe('App', () => {
   let wrapper;
   let mockThunk = jest.fn()
+  let mockThunk2 = jest.fn()
   
   beforeEach(() => {
-    wrapper = shallow(<App retrieveMentors={mockThunk} />)
+    wrapper = shallow(<App retrieveMentors={mockThunk} retrieveStudents={mockThunk2} />)
   });
 
   it('matches the snapshot', () => {
