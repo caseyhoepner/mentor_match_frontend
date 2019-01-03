@@ -3,7 +3,7 @@ import Preferences from '../../containers/Preferences';
 import hollowHeart from '../../utils/assets/heart.svg';
 import solidHeart from '../../utils/assets/solid-heart.svg';
 import { connect } from 'react-redux';
-import { setLocale, setSearch } from '../../actions/search-actions';
+import { setLocale, setSearch, toggleShowingMentors } from '../../actions/search-actions';
 import './Search.css';
 
 export class Search extends Component {
@@ -28,10 +28,13 @@ export class Search extends Component {
     }
   }
 
-  toggleClicked = (event) => {
+  toggleClicked = async (event) => {
     const { name } = event.target;
+    await this.setState({ [name]: !this.state[name] })
 
-    this.setState({ [name]: !this.state[name] })
+    if (name === 'allMentorsClicked') {
+      this.props.toggleShowingMentors(this.state.allMentorsClicked)
+    }
   }
 
   render() {
@@ -103,7 +106,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
     setLocale: locale => dispatch(setLocale(locale)),
-    setSearch: searchTerm => dispatch(setSearch(searchTerm))
+    setSearch: searchTerm => dispatch(setSearch(searchTerm)),
+    toggleShowingMentors: (bool) => dispatch(toggleShowingMentors(bool))
 })
 
 export default connect(mapDispatchToProps, mapDispatchToProps)(Search);

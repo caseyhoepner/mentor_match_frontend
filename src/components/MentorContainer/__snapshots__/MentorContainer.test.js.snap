@@ -3,7 +3,7 @@
 exports[`MentorContainer matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MentorContainer />,
+  Symbol(enzyme.__unrendered__): <Connect(MentorContainer) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,625 +15,59 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <header
-          className="mc-header"
-        >
-          <div
-            className="mc-nav-btns"
-          >
-            <img
-              alt="Turing Logo"
-              className="mc-turing-logo"
-              src="turing-logo.png"
-            />
-            <div
-              className="mc-github-btn"
-            >
-              <a
-                className="mc-gh-tagline"
-                href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-              >
-                Sign in with GitHub
-              </a>
-              <img
-                alt="GitHub Logo"
-                className="mc-github-logo"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "github-logo.svg",
-                  }
-                }
-              />
-            </div>
-          </div>
-          <div
-            className="mc-title"
-          >
-            <h1
-              className="mc-title-text"
-            >
-              Mentor Profiles
-            </h1>
-            <div
-              className="mc-line-break"
-            />
-            <p
-              className="mc-tagline"
-            >
-              Browse current mentors to find your match!
-            </p>
-          </div>
-        </header>,
-        <Connect(Search) />,
-      ],
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="mc-nav-btns"
-            >
-              <img
-                alt="Turing Logo"
-                className="mc-turing-logo"
-                src="turing-logo.png"
-              />
-              <div
-                className="mc-github-btn"
-              >
-                <a
-                  className="mc-gh-tagline"
-                  href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                >
-                  Sign in with GitHub
-                </a>
-                <img
-                  alt="GitHub Logo"
-                  className="mc-github-logo"
-                  src={
-                    Object {
-                      "ReactComponent": [Function],
-                      "__esModule": true,
-                      "default": "github-logo.svg",
-                    }
-                  }
-                />
-              </div>
-            </div>,
-            <div
-              className="mc-title"
-            >
-              <h1
-                className="mc-title-text"
-              >
-                Mentor Profiles
-              </h1>
-              <div
-                className="mc-line-break"
-              />
-              <p
-                className="mc-tagline"
-              >
-                Browse current mentors to find your match!
-              </p>
-            </div>,
-          ],
-          "className": "mc-header",
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "_calculateChangedBits": null,
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <img
-                  alt="Turing Logo"
-                  className="mc-turing-logo"
-                  src="turing-logo.png"
-                />,
-                <div
-                  className="mc-github-btn"
-                >
-                  <a
-                    className="mc-gh-tagline"
-                    href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                  >
-                    Sign in with GitHub
-                  </a>
-                  <img
-                    alt="GitHub Logo"
-                    className="mc-github-logo"
-                    src={
-                      Object {
-                        "ReactComponent": [Function],
-                        "__esModule": true,
-                        "default": "github-logo.svg",
-                      }
-                    }
-                  />
-                </div>,
-              ],
-              "className": "mc-nav-btns",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Turing Logo",
-                  "className": "mc-turing-logo",
-                  "src": "turing-logo.png",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <a
-                      className="mc-gh-tagline"
-                      href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                    >
-                      Sign in with GitHub
-                    </a>,
-                    <img
-                      alt="GitHub Logo"
-                      className="mc-github-logo"
-                      src={
-                        Object {
-                          "ReactComponent": [Function],
-                          "__esModule": true,
-                          "default": "github-logo.svg",
-                        }
-                      }
-                    />,
-                  ],
-                  "className": "mc-github-btn",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Sign in with GitHub",
-                      "className": "mc-gh-tagline",
-                      "href": "https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo",
-                    },
-                    "ref": null,
-                    "rendered": "Sign in with GitHub",
-                    "type": "a",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "GitHub Logo",
-                      "className": "mc-github-logo",
-                      "src": Object {
-                        "ReactComponent": [Function],
-                        "__esModule": true,
-                        "default": "github-logo.svg",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                ],
-                "type": "div",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h1
-                  className="mc-title-text"
-                >
-                  Mentor Profiles
-                </h1>,
-                <div
-                  className="mc-line-break"
-                />,
-                <p
-                  className="mc-tagline"
-                >
-                  Browse current mentors to find your match!
-                </p>,
-              ],
-              "className": "mc-title",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Mentor Profiles",
-                  "className": "mc-title-text",
-                },
-                "ref": null,
-                "rendered": "Mentor Profiles",
-                "type": "h1",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "mc-line-break",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Browse current mentors to find your match!",
-                  "className": "mc-tagline",
-                },
-                "ref": null,
-                "rendered": "Browse current mentors to find your match!",
-                "type": "p",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "header",
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": null,
+        "_currentValue2": null,
+        "_threadCount": 0,
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
+    },
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <header
-            className="mc-header"
-          >
-            <div
-              className="mc-nav-btns"
-            >
-              <img
-                alt="Turing Logo"
-                className="mc-turing-logo"
-                src="turing-logo.png"
-              />
-              <div
-                className="mc-github-btn"
-              >
-                <a
-                  className="mc-gh-tagline"
-                  href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                >
-                  Sign in with GitHub
-                </a>
-                <img
-                  alt="GitHub Logo"
-                  className="mc-github-logo"
-                  src={
-                    Object {
-                      "ReactComponent": [Function],
-                      "__esModule": true,
-                      "default": "github-logo.svg",
-                    }
-                  }
-                />
-              </div>
-            </div>
-            <div
-              className="mc-title"
-            >
-              <h1
-                className="mc-title-text"
-              >
-                Mentor Profiles
-              </h1>
-              <div
-                className="mc-line-break"
-              />
-              <p
-                className="mc-tagline"
-              >
-                Browse current mentors to find your match!
-              </p>
-            </div>
-          </header>,
-          <Connect(Search) />,
-        ],
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="mc-nav-btns"
-              >
-                <img
-                  alt="Turing Logo"
-                  className="mc-turing-logo"
-                  src="turing-logo.png"
-                />
-                <div
-                  className="mc-github-btn"
-                >
-                  <a
-                    className="mc-gh-tagline"
-                    href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                  >
-                    Sign in with GitHub
-                  </a>
-                  <img
-                    alt="GitHub Logo"
-                    className="mc-github-logo"
-                    src={
-                      Object {
-                        "ReactComponent": [Function],
-                        "__esModule": true,
-                        "default": "github-logo.svg",
-                      }
-                    }
-                  />
-                </div>
-              </div>,
-              <div
-                className="mc-title"
-              >
-                <h1
-                  className="mc-title-text"
-                >
-                  Mentor Profiles
-                </h1>
-                <div
-                  className="mc-line-break"
-                />
-                <p
-                  className="mc-tagline"
-                >
-                  Browse current mentors to find your match!
-                </p>
-              </div>,
-            ],
-            "className": "mc-header",
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": Object {
+            "$$typeof": Symbol(react.provider),
+            "_context": [Circular],
           },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <img
-                    alt="Turing Logo"
-                    className="mc-turing-logo"
-                    src="turing-logo.png"
-                  />,
-                  <div
-                    className="mc-github-btn"
-                  >
-                    <a
-                      className="mc-gh-tagline"
-                      href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                    >
-                      Sign in with GitHub
-                    </a>
-                    <img
-                      alt="GitHub Logo"
-                      className="mc-github-logo"
-                      src={
-                        Object {
-                          "ReactComponent": [Function],
-                          "__esModule": true,
-                          "default": "github-logo.svg",
-                        }
-                      }
-                    />
-                  </div>,
-                ],
-                "className": "mc-nav-btns",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "Turing Logo",
-                    "className": "mc-turing-logo",
-                    "src": "turing-logo.png",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <a
-                        className="mc-gh-tagline"
-                        href="https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo"
-                      >
-                        Sign in with GitHub
-                      </a>,
-                      <img
-                        alt="GitHub Logo"
-                        className="mc-github-logo"
-                        src={
-                          Object {
-                            "ReactComponent": [Function],
-                            "__esModule": true,
-                            "default": "github-logo.svg",
-                          }
-                        }
-                      />,
-                    ],
-                    "className": "mc-github-btn",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Sign in with GitHub",
-                        "className": "mc-gh-tagline",
-                        "href": "https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo",
-                      },
-                      "ref": null,
-                      "rendered": "Sign in with GitHub",
-                      "type": "a",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "GitHub Logo",
-                        "className": "mc-github-logo",
-                        "src": Object {
-                          "ReactComponent": [Function],
-                          "__esModule": true,
-                          "default": "github-logo.svg",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                  ],
-                  "type": "div",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h1
-                    className="mc-title-text"
-                  >
-                    Mentor Profiles
-                  </h1>,
-                  <div
-                    className="mc-line-break"
-                  />,
-                  <p
-                    className="mc-tagline"
-                  >
-                    Browse current mentors to find your match!
-                  </p>,
-                ],
-                "className": "mc-title",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Mentor Profiles",
-                    "className": "mc-title-text",
-                  },
-                  "ref": null,
-                  "rendered": "Mentor Profiles",
-                  "type": "h1",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "mc-line-break",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Browse current mentors to find your match!",
-                    "className": "mc-tagline",
-                  },
-                  "ref": null,
-                  "rendered": "Browse current mentors to find your match!",
-                  "type": "p",
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "header",
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": null,
+          "_currentValue2": null,
+          "_threadCount": 0,
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "div",
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {
