@@ -5,7 +5,7 @@ import { MentorCard } from '../../containers/MentorCard';
 import { connect } from 'react-redux';
 import uuid from 'uuid';
 
-class MentorContainer extends Component {
+export class MentorContainer extends Component {
 
   filterBySearchTerm = () => {
     let { searchTerm, mentors } = this.props
@@ -99,7 +99,6 @@ class MentorContainer extends Component {
   }
 
   makeMentorCards = (mentorCards) => {
-    // console.log(mentorCards, 'not w00t')
     return mentorCards.map(mentor => {
       return <MentorCard key={uuid()} mentor={mentor} />
     })
@@ -117,7 +116,6 @@ class MentorContainer extends Component {
         return <MentorCard key={uuid()} mentor={mentor}/>
       })
     } else {
-      console.log('esle!')
         mentorCards = mentors.map(mentor => {
         return <MentorCard key={uuid()} mentor={mentor}/>
       })
@@ -165,7 +163,7 @@ class MentorContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   mentors: state.mentors,
   mentorFilters: state.mentorFilters,
   locale: state.locale,
