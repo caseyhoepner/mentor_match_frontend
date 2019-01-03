@@ -11,6 +11,7 @@ import NewStudentForm from '../NewStudentForm';
 import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import { retrieveStudents } from '../../thunks/fetchStudents';
+import { retrieveRelationships } from '../../thunks/fetchRelationships';
 
 import './App.css';
 
@@ -19,6 +20,7 @@ export class App extends Component {
   componentDidMount = () => {
     this.props.retrieveMentors();
     this.props.retrieveStudents();
+    this.props.retrieveRelationships();
   }
 
   render() {
@@ -47,7 +49,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   retrieveMentors: () => dispatch(retrieveMentors()),
-  retrieveStudents: () => dispatch(retrieveStudents())
+  retrieveStudents: () => dispatch(retrieveStudents()),
+  retrieveRelationships: () => dispatch(retrieveRelationships())
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

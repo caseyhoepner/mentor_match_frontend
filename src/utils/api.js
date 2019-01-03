@@ -48,10 +48,13 @@ export const postRelationship = async (studentId, mentorId) => {
       mentor_id: mentorId
     })
   });
-  console.log(studentId)
-  console.log(mentorId)
-  console.log(response)
   const status = await response.json();
   console.log(status);
 };
 
+export const fetchRelationships = async () => {
+  const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
+  const response = await fetch(url);
+  const relationships = await response.json();
+  return cleanData(relationships);
+};

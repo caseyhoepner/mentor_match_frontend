@@ -18,3 +18,15 @@ export const setStudents = (state = [], action) => {
       return state;
   }
 }
+
+export const setRelationships = (state = [], action) => {
+  switch(action.type) {
+
+    case 'SET_RELATIONSHIPS':
+      return action.relationships;
+
+    default:
+      return state;
+  }
+}
+
