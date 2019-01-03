@@ -31,9 +31,22 @@ describe('AdminMentorModal', () => {
     { name: 'Casey' },
     { name: 'Alex' }
   ]
+  let mockRelationships = [
+    {
+      mentor_id: 1,
+      student_id: 2,
+      active: true
+    }
+  ]
 
   beforeEach(() => {
-    wrapper = shallow(<AdminMentorModal currentMentor={mockMentor} students={mockStudents} />)
+    wrapper = shallow(<AdminMentorModal 
+      currentMentor={mockMentor} 
+      students={mockStudents} 
+      modalInfo={mockMentor}
+      relationships={mockRelationships}
+      isEditable={false}
+    />)
   });
 
   it('should match the snapshot with props and when it is not editable', () => {
@@ -41,7 +54,13 @@ describe('AdminMentorModal', () => {
   });
 
   it('should match the snapshot with props and when it is editable', () => {
-    wrapper.instance().setState({ isEditable: true })
+    wrapper = shallow(<AdminMentorModal 
+      currentMentor={mockMentor} 
+      students={mockStudents} 
+      modalInfo={mockMentor}
+      relationships={mockRelationships}
+      isEditable={true}
+    />)
     expect(wrapper).toMatchSnapshot()
   });
 
@@ -57,6 +76,7 @@ describe('AdminMentorModal', () => {
         openEditMentor={mockFunction} 
         history={mockHistory}  
         students={mockStudents} 
+        relationships={mockRelationships}
       />)
       let mockEvent = { target: { name: 'Edit' } }
 
@@ -70,11 +90,13 @@ describe('AdminMentorModal', () => {
       let mockFunc2 = jest.fn()
       let mockEvent = { target: { name: 'Submit Changes' } }
       wrapper = shallow(<AdminMentorModal 
+        modalInfo={mockMentor}
         setMentorModal={mockFunc1} 
         updateChangedMentor={mockFunc2} 
         openEditMentor={mockFunction} 
         history={mockHistory} 
         students={mockStudents}
+        relationships={mockRelationships}
       />)
       
       wrapper.instance().handleClick(mockEvent)
@@ -93,6 +115,7 @@ describe('AdminMentorModal', () => {
         openEditMentor={mockFunction} 
         history={mockHistory} 
         students={mockStudents}
+        relationships={mockRelationships}
       />)
       
       wrapper.instance().handleClick(mockEvent1)
@@ -112,6 +135,7 @@ describe('AdminMentorModal', () => {
         openEditMentor={mockFunction}
         history={mockHistory} 
         students={mockStudents}
+        relationships={mockRelationships}
       />)
         
       wrapper.instance().handleClick(mockEvent1)
@@ -130,6 +154,7 @@ describe('AdminMentorModal', () => {
         openEditMentor={mockFunction}
         history={mockHistory} 
         students={mockStudents}
+        relationships={mockRelationships}
       />)
 
       wrapper.instance().handleClick(mockEvent1)
@@ -154,46 +179,48 @@ describe('AdminMentorModal', () => {
       expect(wrapper.state().menteeToAssign).toEqual('Halle Berry')
     });
   });
-
-  describe('mapStateToProps function', () => {
-    it('should return an object with a mentor object, isEditable boolean and a mentors array', () => {
-      const mockState = {
-        modalInfo: { name: 'Leslie Knope', identity_preference: 'female-identifying' },
-        mentors: [ { name: 'Ron Swanson', identity_preference: 'male-identifying' } ],
-        isEditable: false,
-        somethingElse: 'W00t!'
-      }
-      const expected = {
-        modalInfo: { name: 'Leslie Knope', identity_preference: 'female-identifying' },
-        mentors: [ { name: 'Ron Swanson', identity_preference: 'male-identifying' } ],
-        isEditable: false 
-      }
-      const mappedProps = mapStateToProps(mockState)
-      expect(mappedProps).toEqual(expected)
-    });
+});
+    
+describe('mapStateToProps function', () => {
+  it('should return an object with a mentor object, isEditable boolean and a mentors array', () => {
+    const mockState = {
+      modalInfo: { name: 'Leslie Knope', identity_preference: 'female-identifying' },
+      mentors: [ { name: 'Ron Swanson', identity_preference: 'male-identifying' } ],
+      isEditable: false,
+      relationships: [ { mentor_id: 1, student_id: 2, active: true } ],
+      somethingElse: 'W00t!'
+    }
+    const expected = {
+      modalInfo: { name: 'Leslie Knope', identity_preference: 'female-identifying' },
+      mentors: [ { name: 'Ron Swanson', identity_preference: 'male-identifying' } ],
+      isEditable: false,
+      relationships: [ { mentor_id: 1, student_id: 2, active: true } ]
+    }
+    const mappedProps = mapStateToProps(mockState)
+    expect(mappedProps).toEqual(expected)
+ });
+});
+  
+describe('mapDispatchToProps function', () => {
+  const mockDispatch = jest.fn()
+  let mappedProps;
+  
+  beforeEach(() => {
+    mappedProps = mapDispatchToProps(mockDispatch)
   });
-
-  describe('mapDispatchToProps function', () => {
-    const mockDispatch = jest.fn()
-    let mappedProps;
-
-    beforeEach(() => {
-      mappedProps = mapDispatchToProps(mockDispatch)
-    });
-
-    it('should call dispatch when setMentorModal is called', () =>{
-      mappedProps.setMentorModal(mockMentor)
-      expect(mockDispatch).toHaveBeenCalled()
-    });
-
-    it('should call dispatch when updateChangedMentor is called', () => {
-      mappedProps.updateChangedMentor(mockMentor)
-      expect(mockDispatch).toHaveBeenCalled()
-    });
-
-    it('should call dispatch when openEditMentor is called', () => {
-      mappedProps.openEditMentor(true)
-      expect(mockDispatch).toHaveBeenCalled()
-    });
+  
+  it('should call dispatch when setMentorModal is called', () =>{
+    mappedProps.setMentorModal()
+    expect(mockDispatch).toHaveBeenCalled()
+  });
+  
+  it('should call dispatch when updateChangedMentor is called', () => {
+    mappedProps.updateChangedMentor()
+    expect(mockDispatch).toHaveBeenCalled()
+  });
+  
+  it('should call dispatch when openEditMentor is called', () => {
+    mappedProps.openEditMentor(true)
+    expect(mockDispatch).toHaveBeenCalled()
   });
 });

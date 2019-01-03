@@ -17,6 +17,19 @@ ShallowWrapper {
         ],
       }
     }
+    retrieveRelationships={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     retrieveStudents={
       [MockFunction] {
         "calls": Array [
