@@ -53,13 +53,11 @@ export class AdminMentorModal extends Component {
     return student[0].id;
   }
 
-
   assignMentee = () => {
     const studentId = this.getStudentId(this.props.students);
-    console.log(studentId)
     const mentorId = this.props.modalInfo.id;
 
-    postRelationship(studentId, mentorId)
+    postRelationship(studentId, mentorId);
   }
 
   getMenteeIcons = (capacity) => {
