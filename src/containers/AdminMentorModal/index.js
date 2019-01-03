@@ -3,6 +3,7 @@ import './AdminMentorModal.css';
 import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor, isEditable } from '../../actions/mentor-actions';
 // import { patchMentor } from '../../utils/api';
+import { postRelationship } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor'
 import { withRouter } from 'react-router-dom';
 
@@ -11,7 +12,8 @@ export class AdminMentorModal extends Component {
     super(props);
 
     this.state = {
-      currentMentor: {}
+      currentMentor: {},
+      menteeToAssign: ''
     }
   }
 
@@ -40,10 +42,24 @@ export class AdminMentorModal extends Component {
 
   handleChange = (event) => {
     let { name, value } = event.target;
-    let mentorObj = Object.assign({}, this.state.currentMentor);
     
-    mentorObj[name] = value;
-    this.setState({ currentMentor: mentorObj });
+    this.setState({ [name]: value });
+  }
+
+  getStudentId = (students) => {
+    const student = students.filter(student => {
+      return student.name === this.state.menteeToAssign;
+    })
+    return student[0].id;
+  }
+
+
+  assignMentee = () => {
+    const studentId = this.getStudentId(this.props.students);
+    console.log(studentId)
+    const mentorId = this.props.modalInfo.id;
+
+    postRelationship(studentId, mentorId)
   }
 
   getMenteeIcons = (capacity) => {
@@ -102,13 +118,15 @@ export class AdminMentorModal extends Component {
 
   getStudentOptions = () => {
     return this.props.students.map(student => {
-      return <option value={student.name}>student.name</option>
+      // if (student.active && !student.matched) {
+        return <option value={student.name}>{student.name}</option>
+      // }
     })
   }
 
   render() {
-    let { isEditable } = this.props
-    let studentOptions;
+    let { isEditable } = this.props;
+    let studentOptions = this.getStudentOptions();
 
     if(this.props.modalInfo && !isEditable) {
       let { 
@@ -172,11 +190,15 @@ export class AdminMentorModal extends Component {
             </div>
             <div className='amm-match-dropdown-container'>
               <h3>Match</h3>
-              <select className='amm-match-dropdown'>
+              <select 
+                name='menteeToAssign'
+                onChange={this.handleChange} 
+                className='amm-match-dropdown'
+              >
                 <option value=''>Select a Student</option>
                 { studentOptions }
               </select>
-              <button>Assign</button>
+              <button onClick={this.assignMentee}>Assign</button>
             </div>
           </div>
 

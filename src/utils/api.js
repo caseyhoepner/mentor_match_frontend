@@ -36,3 +36,22 @@ export const patchMentor = async (mentor) => {
   const students = await response.json();
   return cleanData(students);
 };
+
+export const postRelationship = async (studentId, mentorId) => {
+  const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
+  const response = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" }, 
+    accept: "application/json",
+    body: JSON.stringify({
+      student_id: studentId,
+      mentor_id: mentorId
+    })
+  });
+  console.log(studentId)
+  console.log(mentorId)
+  console.log(response)
+  const status = await response.json();
+  console.log(status);
+};
+
