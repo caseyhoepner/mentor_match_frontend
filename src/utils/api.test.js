@@ -1,4 +1,3 @@
-import React from 'react';
 import * as API from './api';
 import * as Helper from './helper';
 
@@ -49,14 +48,14 @@ describe('API fetch calls', () => {
       expect(window.fetch).toHaveBeenCalled()
     });
 
-    it('should call cleanMentors with proper params after fetched info comes back', async () => {
+    it('should call cleanData with proper params after fetched info comes back', async () => {
       window.fetch = jest.fn().mockImplementation(() => 
         Promise.resolve({
           ok: true,
           json: () => Promise.resolve(mockMentors)
         })
       );
-      let spy = spyOn(Helper, 'cleanMentors')
+      let spy = jest.spyOn(Helper, 'cleanData')
 
       await API.fetchMentors()
       expect(spy).toHaveBeenCalled()
@@ -120,7 +119,7 @@ describe('helper functions', () => {
   });
 
   it('should clean the mentors array passed in', () => {
-    let mockCleanMentors = [
+    let mockCleanData = [
       {
         name: 'Casey',
         preferences: {
@@ -135,7 +134,7 @@ describe('helper functions', () => {
       }
     ]
 
-    let result = Helper.cleanMentors(mockMentors)
-    expect(result).toEqual(mockCleanMentors)
+    let result = Helper.cleanData(mockMentors)
+    expect(result).toEqual(mockCleanData)
   });
 });

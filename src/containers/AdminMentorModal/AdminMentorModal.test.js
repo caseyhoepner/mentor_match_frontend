@@ -27,9 +27,13 @@ describe('AdminMentorModal', () => {
     identity_preference: ['female-identifying'],
     meeting_location: 'Turing'
   }
+  let mockStudents = [
+    { name: 'Casey' },
+    { name: 'Alex' }
+  ]
 
   beforeEach(() => {
-    wrapper = shallow(<AdminMentorModal currentMentor={mockMentor} />)
+    wrapper = shallow(<AdminMentorModal currentMentor={mockMentor} students={mockStudents} />)
   });
 
   it('should match the snapshot with props and when it is not editable', () => {
@@ -41,14 +45,19 @@ describe('AdminMentorModal', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('should match the snapshot without props', () => {
-    wrapper = shallow(<AdminMentorModal />)
+  it('should match the snapshot without mentor props', () => {
+    wrapper = shallow(<AdminMentorModal students={mockStudents} />)
     expect(wrapper).toMatchSnapshot()
   })
 
   describe('handleClick function', () => {
     it('should update state to be editable and add the mentor from props in state', () => {
-      wrapper = shallow(<AdminMentorModal modalInfo={mockMentor} openEditMentor={mockFunction} history={mockHistory} />)
+      wrapper = shallow(<AdminMentorModal 
+        modalInfo={mockMentor} 
+        openEditMentor={mockFunction} 
+        history={mockHistory}  
+        students={mockStudents} 
+      />)
       let mockEvent = { target: { name: 'Edit' } }
 
       wrapper.instance().handleClick(mockEvent)
@@ -65,6 +74,7 @@ describe('AdminMentorModal', () => {
         updateChangedMentor={mockFunc2} 
         openEditMentor={mockFunction} 
         history={mockHistory} 
+        students={mockStudents}
       />)
       
       wrapper.instance().handleClick(mockEvent)
@@ -82,6 +92,7 @@ describe('AdminMentorModal', () => {
         updateChangedMentor={mockFunc2}
         openEditMentor={mockFunction} 
         history={mockHistory} 
+        students={mockStudents}
       />)
       
       wrapper.instance().handleClick(mockEvent1)
@@ -100,6 +111,7 @@ describe('AdminMentorModal', () => {
         updateChangedMentor={mockFunc2} 
         openEditMentor={mockFunction}
         history={mockHistory} 
+        students={mockStudents}
       />)
         
       wrapper.instance().handleClick(mockEvent1)
@@ -117,45 +129,29 @@ describe('AdminMentorModal', () => {
         setMentorModal={mockFunc1}
         openEditMentor={mockFunction}
         history={mockHistory} 
+        students={mockStudents}
       />)
 
       wrapper.instance().handleClick(mockEvent1)
-      expect(wrapper.state()).toEqual({ currentMentor: mockMentor })
+      expect(wrapper.state()).toEqual({ currentMentor: mockMentor, menteeToAssign: '' })
       wrapper.instance().handleClick(mockEvent2)
       expect(mockFunc1).toHaveBeenCalled()
       expect(mockFunction).toHaveBeenCalledWith(false)
-      expect(wrapper.state()).toEqual({ currentMentor: {} })
+      expect(wrapper.state()).toEqual({ currentMentor: {}, menteeToAssign: '' })
     });
   });
 
   describe('handleChange function', () => {
-    it('should update mentor in state when a value is changed', () => {
-      let mockChangedMentor = {
-        name: 'Halle Berry',
-        email: 'menty@mentor.com',
-        city: 'Denver',
-        state: 'CO',
-        country: 'USA',
-        slack_username: '@Menty',
-        matched: true,
-        active: true,
-        pronouns: 'she/her/hers',
-        current_title: 'Head Mentor',
-        current_employer: 'Department of Mentors',
-        background: 'I am a mentor!',
-        industries: ['Civic Tech'],
-        ways_to_mentor: ['Coffee Meetings'],
-        expertise_tech: ['React.js'],
-        expertise_non_tech: ['Parenting'],
-        mentee_capacity: '2',
-        identity_preference: ['female-identifying'],
-        meeting_location: 'Turing'
+    it('should update menteeToAssign in state when a value is changed', () => {
+      let mockOriginalState = {
+        menteeToAssign: 'Dan'
       }
-      let mockEvent = { target: { name: 'name', value: 'Halle Berry' } }
 
-      wrapper.instance().setState({ currentMentor: mockMentor })
+      let mockEvent = { target: { name: 'menteeToAssign', value: 'Halle Berry' } }
+
+      wrapper.instance().setState(mockOriginalState)
       wrapper.instance().handleChange(mockEvent)
-      expect(wrapper.state().currentMentor).toEqual(mockChangedMentor)
+      expect(wrapper.state().menteeToAssign).toEqual('Halle Berry')
     });
   });
 
