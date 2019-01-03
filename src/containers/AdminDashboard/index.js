@@ -32,7 +32,7 @@ export class AdminDashboard extends Component {
         if (typeof mentor[key] === 'string') {
           newMentor = (mentor[key].toLowerCase()).includes(searchTerm.toLowerCase())
         }
-        return newMentor
+        return newMentor;
       })
       if (foundMentor) {
         acc.push(mentor)
@@ -40,11 +40,11 @@ export class AdminDashboard extends Component {
       return acc
     },[])
 
-    return searchedMentors
+    return searchedMentors;
   }
 
   filterByLocale = (cards) => {
-    let { locale } = this.props
+    let { locale } = this.props;
     let filteredCards;
     
     if (locale === 'Denver') {
@@ -52,14 +52,13 @@ export class AdminDashboard extends Component {
     } else if (locale === 'Remote') {
       filteredCards = cards.filter((card) => card.props.mentor.meeting_location.includes('Remote'))
     }
-    return filteredCards
+    return filteredCards;
   }
 
   filterByPreference = (mentorCards) => {
-    let { mentorFilters } = this.props
-    let filterKeys = Object.keys(mentorFilters)
-    let finalCards = []
-
+    let { mentorFilters } = this.props;
+    let filterKeys = Object.keys(mentorFilters);
+    let finalCards = [];
     let trueVals = filterKeys.filter((key) => {
       let foundKey;
       if (mentorFilters[key] === true) {
@@ -69,35 +68,36 @@ export class AdminDashboard extends Component {
     });
 
     mentorCards.forEach((card) => {   
-      let checkedCard = this.checkPrefs(card, trueVals)
+      let checkedCard = this.checkPrefs(card, trueVals);
+
       if (checkedCard) {
-        finalCards.push(checkedCard)
+        finalCards.push(checkedCard);
       }
     })    
-    return finalCards
+    return finalCards;
   }
 
   cleanPrefs = (str) => {
     if (str === 'LGBTQ+') {
-      return 'lgbtq'
+      return 'lgbtq';
     } else if (str === 'Female-Identifying') {
-      return 'female'
+      return 'female';
     } else if (str === 'Male-Identifying') {
-      return 'male'
+      return 'male';
     } else if (str === 'Front-End') {
-      return 'frontEnd'
+      return 'frontEnd';
     } else if (str === 'Back-End') {
-      return 'backEnd'
+      return 'backEnd';
     } else {
-      return str.toLowerCase()
+      return str.toLowerCase();
     }
   }
 
   checkPrefs(card, valArr) {
-    let { identity_preference, stack_preference } = card.props.mentor
-    let totalPrefs = [...identity_preference, stack_preference]
+    let { identity_preference, stack_preference } = card.props.mentor;
+    let totalPrefs = [...identity_preference, stack_preference];
     totalPrefs = totalPrefs.map((pref) => {
-      return this.cleanPrefs(pref)
+      return this.cleanPrefs(pref);
     })
     let finalCard;
 
@@ -112,7 +112,7 @@ export class AdminDashboard extends Component {
         && totalPrefs.includes(valArr[4])
         && totalPrefs.includes(valArr[5])
       ) {
-        finalCard = card
+        finalCard = card;
       }
 
     } else if (valArr.length === 5) {
@@ -123,7 +123,7 @@ export class AdminDashboard extends Component {
         && totalPrefs.includes(valArr[3])
         && totalPrefs.includes(valArr[4])
       ) {
-        finalCard = card
+        finalCard = card;
       }
 
     } else if (valArr.length === 4) {
@@ -133,7 +133,7 @@ export class AdminDashboard extends Component {
         && totalPrefs.includes(valArr[2])
         && totalPrefs.includes(valArr[3])
       ) {
-        finalCard = card
+        finalCard = card;
       }
 
     } else if (valArr.length === 3) {
@@ -142,7 +142,7 @@ export class AdminDashboard extends Component {
         && totalPrefs.includes(valArr[1])
         && totalPrefs.includes(valArr[2])
       ) {
-        finalCard = card
+        finalCard = card;
       }
 
     } else if (valArr.length === 2) {
@@ -150,13 +150,13 @@ export class AdminDashboard extends Component {
       if (totalPrefs.includes(valArr[0]) 
         && totalPrefs.includes(valArr[1])
       ) {
-        finalCard = card
+        finalCard = card;
       }
 
     } else if (valArr.length === 1) {
 
       if (totalPrefs.includes(valArr[0])) {
-        finalCard = card
+        finalCard = card;
       }
 
     }
@@ -164,7 +164,7 @@ export class AdminDashboard extends Component {
   }
 
   getStudentCards = () => {
-    const { students } = this.state;
+    const { students } = this.props;
 
     if (students) {
       return students.map((student, index) => {
@@ -176,7 +176,7 @@ export class AdminDashboard extends Component {
   }
 
   render() {
-    let { mentors, showingAllMentors, searchTerm, mentorFilters, locale } = this.props
+    let { mentors, showingAllMentors, searchTerm, mentorFilters, locale } = this.props;
     let mentorCards;
     let modal;
     let studentCards;
@@ -317,7 +317,8 @@ export const mapStateToProps = (state) => ({
   showingAllMentors: state.showingAllMentors,
   searchTerm: state.searchTerm,
   locale: state.locale,
-  isEditable: state.isEditable
+  isEditable: state.isEditable,
+  students: state.students
 })
 
 export default connect(mapStateToProps)(AdminDashboard);

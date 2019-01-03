@@ -74,7 +74,6 @@ export class AdminMentorSearch extends Component {
               <option value=''>--Select locale--</option>
               <option value='Denver'>Denver</option>
               <option value='Remote'>Remote</option>
-              <option></option>
             </select>
           </div>
           <div className='ams-filter-btn-container'>

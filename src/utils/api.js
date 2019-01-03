@@ -1,10 +1,10 @@
-import { cleanMentors } from './helper';
+import { cleanData } from './helper';
 
 export const fetchMentors = async () => {
   const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
   const response = await fetch(url);
   const mentors = await response.json();
-  return cleanMentors(mentors);
+  return cleanData(mentors);
 };
 
 export const postMentor = async (mentor) => {
@@ -29,3 +29,29 @@ export const patchMentor = async (mentor) => {
    const status = await response.json();
    console.log(status);
  };
+
+ export const fetchStudents = async () => {
+  const url = 'https://mentor-match-api.herokuapp.com/api/v1/students';
+  const response = await fetch(url);
+  const students = await response.json();
+  return cleanData(students);
+};
+
+export const postRelationship = async (studentId, mentorId) => {
+  const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
+  const response = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" }, 
+    accept: "application/json",
+    body: JSON.stringify({
+      student_id: studentId,
+      mentor_id: mentorId
+    })
+  });
+  console.log(studentId)
+  console.log(mentorId)
+  console.log(response)
+  const status = await response.json();
+  console.log(status);
+};
+

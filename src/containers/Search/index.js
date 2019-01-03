@@ -11,6 +11,8 @@ export class Search extends Component {
     super();
 
     this.state = {
+      localeSelected: '',
+      search: '',
       favClicked: false,
       allMentorsClicked: false,
       preferencesClicked: false
@@ -20,6 +22,8 @@ export class Search extends Component {
   handleChange = (event) => {
     const { value, name } = event.target;
     const { setLocale, setSearch } = this.props; 
+    
+    this.setState({ [name]: value })
 
     if(name === 'localeSelected') {
       setLocale(value)
@@ -32,65 +36,69 @@ export class Search extends Component {
     const { name } = event.target;
     await this.setState({ [name]: !this.state[name] })
 
-    if (name === 'allMentorsClicked') {
-      this.props.toggleShowingMentors(this.state.allMentorsClicked)
+    if (name === 'preferencesClicked') {
+      this.setState({
+        showPreferences: !this.state.showPreferences
+      }) 
+    } else if (name === 'allMentorsClicked') {
+      this.props.toggleShowingMentors(!this.props.showingAllMentors)
     }
+
+    this.setState({ [name]: !this.state[name] })
   }
 
   render() {
-    const { preferencesClicked, allMentorsClicked, favClicked } = this.state;
-    const { locale, searchTerm } = this.props
+    const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
 
     return (
-      <div>
-        <div className='s-search-container'>
-          <div className='s-search-inputs-container'>
-            <div className='s-search-bar'>
+      <div className='ams-search-container'>
+        <div className='ams-search-and-buttons'>
+          <div className='ams-search-inputs-container'>
+            <div className='ams-search-bar'>
               <input 
                 name='search' 
                 type='text' 
-                value={searchTerm} 
+                value={search} 
                 onChange={this.handleChange} 
                 placeholder='Search here...'
-                className='s-search-input'
+                className='ams-search-input'
               />
-              <div className='s-search-icon'>
+              <div className='ams-search-icon'>
               </div>
             </div>
             <select
-              value={locale}
+              value={localeSelected}
               onChange={this.handleChange}
               name='localeSelected'
-              className='s-location-dropdown'
+              className='ams-location-dropdown'
             >
               <option value=''>--Select locale--</option>
               <option value='Denver'>Denver</option>
               <option value='Remote'>Remote</option>
-              <option></option>
             </select>
-            </div>
-          <div className='s-filter-btn-container'>
+          </div>
+          <div className='ams-filter-btn-container'>
             <button 
-              className={!preferencesClicked ? 's-filter-btn' : 's-filter-btn active'}
+              className={!preferencesClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
               onClick={this.toggleClicked}
               name='preferencesClicked'
             >
               Filter by Preferences
             </button>
             <button 
-              className={!allMentorsClicked ? 's-filter-btn' : 's-filter-btn active'}
+              className={!allMentorsClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
               onClick={this.toggleClicked}
               name='allMentorsClicked'
             >
               All Mentors
             </button>
             <img
-              src={!favClicked ? hollowHeart : solidHeart}
-              alt='favorite button'
-              className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
-              onClick={this.toggleClicked}
-              name='favClicked'
-            />
+                src={!favClicked ? hollowHeart : solidHeart}
+                alt='favorite button'
+                className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
+                onClick={this.toggleClicked}
+                name='favClicked'
+              />
           </div>
         </div>
         <Preferences preferencesClicked={preferencesClicked}/>
@@ -101,13 +109,14 @@ export class Search extends Component {
 
 export const mapStateToProps = (state) => ({
   locale: state.locale,
+  showingAllMentors: state.showingAllMentors,
   searchTerm: state.searchTerm
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-    setLocale: locale => dispatch(setLocale(locale)),
-    setSearch: searchTerm => dispatch(setSearch(searchTerm)),
-    toggleShowingMentors: (bool) => dispatch(toggleShowingMentors(bool))
+  setLocale: locale => dispatch(setLocale(locale)),
+  setSearch: searchTerm => dispatch(setSearch(searchTerm)),
+  toggleShowingMentors: (bool) => dispatch(toggleShowingMentors(bool))
 })
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

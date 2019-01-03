@@ -84,7 +84,21 @@
 }
 
 .amm-bio {
+  width: 70%;
+}
+
+.amm-match-dropdown-container {
+  width: 30%;
+}
+
+.amm-match-dropdown {
+  margin-top: 16px;
+}
+
+.amm-assign-student {
+  display: flex;
   padding: 20px 40px 0;
+  justify-content: space-between;
 }
 
 .amm-capacity-icon {
