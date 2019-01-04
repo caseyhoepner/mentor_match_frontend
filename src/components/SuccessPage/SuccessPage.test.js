@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SuccessPage from './';
+import { SuccessPage } from './';
 
 describe ('SuccessPage', () => {
   let wrapper;

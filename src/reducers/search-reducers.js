@@ -24,7 +24,6 @@ export const toggleShowingMentors = (state = false, action) => {
   switch(action.type) {
 
     case 'TOGGLE_SHOWING_MENTORS':
-    // console.log(action.showingAllMentors)
       return action.showingAllMentors;
 
     default:

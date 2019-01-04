@@ -20,7 +20,9 @@ ShallowWrapper {
         Object {
           "identity_preference": Array [
             "female-identifying",
+            "LGBTQ+",
           ],
+          "meeting_location": "Denver",
           "name": "Casey",
           "stack_preference": "Front-End",
         },
@@ -28,6 +30,7 @@ ShallowWrapper {
           "identity_preference": Array [
             "male-identifying",
           ],
+          "meeting_location": "Remote",
           "name": "Alex",
           "stack_preference": "Back-End",
         },
@@ -38,6 +41,7 @@ ShallowWrapper {
         "identity_preference": Array [
           "female-identifying",
         ],
+        "meeting_location": "Denver",
         "name": "Casey",
         "stack_preference": "Front-End",
       }
@@ -212,6 +216,7 @@ ShallowWrapper {
               "identity_preference": Array [
                 "female-identifying",
               ],
+              "meeting_location": "Denver",
               "name": "Casey",
               "stack_preference": "Front-End",
             }
@@ -1177,6 +1182,7 @@ ShallowWrapper {
             "identity_preference": Array [
               "female-identifying",
             ],
+            "meeting_location": "Denver",
             "name": "Casey",
             "stack_preference": "Front-End",
           },
@@ -1736,6 +1742,7 @@ ShallowWrapper {
                 "identity_preference": Array [
                   "female-identifying",
                 ],
+                "meeting_location": "Denver",
                 "name": "Casey",
                 "stack_preference": "Front-End",
               }
@@ -2701,6 +2708,7 @@ ShallowWrapper {
               "identity_preference": Array [
                 "female-identifying",
               ],
+              "meeting_location": "Denver",
               "name": "Casey",
               "stack_preference": "Front-End",
             },
@@ -3139,7 +3147,9 @@ ShallowWrapper {
         Object {
           "identity_preference": Array [
             "female-identifying",
+            "LGBTQ+",
           ],
+          "meeting_location": "Denver",
           "name": "Casey",
           "stack_preference": "Front-End",
         },
@@ -3147,6 +3157,7 @@ ShallowWrapper {
           "identity_preference": Array [
             "male-identifying",
           ],
+          "meeting_location": "Remote",
           "name": "Alex",
           "stack_preference": "Back-End",
         },
@@ -6198,7 +6209,9 @@ ShallowWrapper {
         Object {
           "identity_preference": Array [
             "female-identifying",
+            "LGBTQ+",
           ],
+          "meeting_location": "Denver",
           "name": "Casey",
           "stack_preference": "Front-End",
         },
@@ -6206,6 +6219,7 @@ ShallowWrapper {
           "identity_preference": Array [
             "male-identifying",
           ],
+          "meeting_location": "Remote",
           "name": "Alex",
           "stack_preference": "Back-End",
         },
@@ -9257,7 +9271,9 @@ ShallowWrapper {
         Object {
           "identity_preference": Array [
             "female-identifying",
+            "LGBTQ+",
           ],
+          "meeting_location": "Denver",
           "name": "Casey",
           "stack_preference": "Front-End",
         },
@@ -9265,6 +9281,7 @@ ShallowWrapper {
           "identity_preference": Array [
             "male-identifying",
           ],
+          "meeting_location": "Remote",
           "name": "Alex",
           "stack_preference": "Back-End",
         },
@@ -9472,6 +9489,19 @@ ShallowWrapper {
                 Availability
               </p>
             </div>
+            <Connect(AdminMentorCard)
+              mentor={
+                Object {
+                  "identity_preference": Array [
+                    "female-identifying",
+                    "LGBTQ+",
+                  ],
+                  "meeting_location": "Denver",
+                  "name": "Casey",
+                  "stack_preference": "Front-End",
+                }
+              }
+            />
           </div>
           <div
             className="ad-student-cards-container"
@@ -10435,6 +10465,19 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
+              <Connect(AdminMentorCard)
+                mentor={
+                  Object {
+                    "identity_preference": Array [
+                      "female-identifying",
+                      "LGBTQ+",
+                    ],
+                    "meeting_location": "Denver",
+                    "name": "Casey",
+                    "stack_preference": "Front-End",
+                  }
+                }
+              />
             </div>,
             <div
               className="ad-student-cards-container"
@@ -10514,7 +10557,21 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>,
-                Array [],
+                Array [
+                  <Connect(AdminMentorCard)
+                    mentor={
+                      Object {
+                        "identity_preference": Array [
+                          "female-identifying",
+                          "LGBTQ+",
+                        ],
+                        "meeting_location": "Denver",
+                        "name": "Casey",
+                        "stack_preference": "Front-End",
+                      }
+                    }
+                  />,
+                ],
               ],
               "className": "ad-mentor-cards-container",
             },
@@ -10613,6 +10670,25 @@ ShallowWrapper {
                   },
                 ],
                 "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "class",
+                "props": Object {
+                  "mentor": Object {
+                    "identity_preference": Array [
+                      "female-identifying",
+                      "LGBTQ+",
+                    ],
+                    "meeting_location": "Denver",
+                    "name": "Casey",
+                    "stack_preference": "Front-End",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
             ],
             "type": "div",
@@ -10970,6 +11046,19 @@ ShallowWrapper {
                   Availability
                 </p>
               </div>
+              <Connect(AdminMentorCard)
+                mentor={
+                  Object {
+                    "identity_preference": Array [
+                      "female-identifying",
+                      "LGBTQ+",
+                    ],
+                    "meeting_location": "Denver",
+                    "name": "Casey",
+                    "stack_preference": "Front-End",
+                  }
+                }
+              />
             </div>
             <div
               className="ad-student-cards-container"
@@ -11933,6 +12022,19 @@ ShallowWrapper {
                     Availability
                   </p>
                 </div>
+                <Connect(AdminMentorCard)
+                  mentor={
+                    Object {
+                      "identity_preference": Array [
+                        "female-identifying",
+                        "LGBTQ+",
+                      ],
+                      "meeting_location": "Denver",
+                      "name": "Casey",
+                      "stack_preference": "Front-End",
+                    }
+                  }
+                />
               </div>,
               <div
                 className="ad-student-cards-container"
@@ -12012,7 +12114,21 @@ ShallowWrapper {
                       Availability
                     </p>
                   </div>,
-                  Array [],
+                  Array [
+                    <Connect(AdminMentorCard)
+                      mentor={
+                        Object {
+                          "identity_preference": Array [
+                            "female-identifying",
+                            "LGBTQ+",
+                          ],
+                          "meeting_location": "Denver",
+                          "name": "Casey",
+                          "stack_preference": "Front-End",
+                        }
+                      }
+                    />,
+                  ],
                 ],
                 "className": "ad-mentor-cards-container",
               },
@@ -12111,6 +12227,25 @@ ShallowWrapper {
                     },
                   ],
                   "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "class",
+                  "props": Object {
+                    "mentor": Object {
+                      "identity_preference": Array [
+                        "female-identifying",
+                        "LGBTQ+",
+                      ],
+                      "meeting_location": "Denver",
+                      "name": "Casey",
+                      "stack_preference": "Front-End",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
                 },
               ],
               "type": "div",
@@ -12316,7 +12451,9 @@ ShallowWrapper {
         Object {
           "identity_preference": Array [
             "female-identifying",
+            "LGBTQ+",
           ],
+          "meeting_location": "Denver",
           "name": "Casey",
           "stack_preference": "Front-End",
         },
@@ -12324,6 +12461,7 @@ ShallowWrapper {
           "identity_preference": Array [
             "male-identifying",
           ],
+          "meeting_location": "Remote",
           "name": "Alex",
           "stack_preference": "Back-End",
         },
