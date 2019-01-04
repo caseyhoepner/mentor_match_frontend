@@ -4,6 +4,131 @@ exports[`AdminMentorModal should match the snapshot with props and when it is ed
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdminMentorModal
+    addModalMentees={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     currentMentor={
       Object {
         "active": true,
@@ -19,6 +144,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "React.js",
         ],
+        "id": 6,
         "identity_preference": Array [
           "female-identifying",
         ],
@@ -53,6 +179,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "React.js",
         ],
+        "id": 6,
         "identity_preference": Array [
           "female-identifying",
         ],
@@ -74,9 +201,11 @@ ShallowWrapper {
     relationships={
       Array [
         Object {
-          "active": true,
-          "mentor_id": 1,
-          "student_id": 2,
+          "attributes": Object {
+            "active": true,
+            "mentor_id": 1,
+            "student_id": 2,
+          },
         },
       ]
     }
@@ -147,6 +276,53 @@ exports[`AdminMentorModal should match the snapshot with props and when it is no
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdminMentorModal
+    addModalMentees={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     currentMentor={
       Object {
         "active": true,
@@ -162,6 +338,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "React.js",
         ],
+        "id": 6,
         "identity_preference": Array [
           "female-identifying",
         ],
@@ -196,6 +373,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "React.js",
         ],
+        "id": 6,
         "identity_preference": Array [
           "female-identifying",
         ],
@@ -217,9 +395,11 @@ ShallowWrapper {
     relationships={
       Array [
         Object {
-          "active": true,
-          "mentor_id": 1,
-          "student_id": 2,
+          "attributes": Object {
+            "active": true,
+            "mentor_id": 1,
+            "student_id": 2,
+          },
         },
       ]
     }
@@ -362,16 +542,6 @@ ShallowWrapper {
                 value=""
               >
                 Select a Student
-              </option>
-              <option
-                value="Casey"
-              >
-                Casey
-              </option>
-              <option
-                value="Alex"
-              >
-                Alex
               </option>
             </select>
             <button
@@ -1030,16 +1200,6 @@ ShallowWrapper {
                 >
                   Select a Student
                 </option>
-                <option
-                  value="Casey"
-                >
-                  Casey
-                </option>
-                <option
-                  value="Alex"
-                >
-                  Alex
-                </option>
               </select>
               <button
                 onClick={[Function]}
@@ -1141,16 +1301,6 @@ ShallowWrapper {
                   >
                     Select a Student
                   </option>
-                  <option
-                    value="Casey"
-                  >
-                    Casey
-                  </option>
-                  <option
-                    value="Alex"
-                  >
-                    Alex
-                  </option>
                 </select>,
                 <button
                   onClick={[Function]}
@@ -1185,16 +1335,8 @@ ShallowWrapper {
                       Select a Student
                     </option>,
                     Array [
-                      <option
-                        value="Casey"
-                      >
-                        Casey
-                      </option>,
-                      <option
-                        value="Alex"
-                      >
-                        Alex
-                      </option>,
+                      undefined,
+                      undefined,
                     ],
                   ],
                   "className": "amm-match-dropdown",
@@ -1215,30 +1357,8 @@ ShallowWrapper {
                     "rendered": "Select a Student",
                     "type": "option",
                   },
-                  Object {
-                    "instance": null,
-                    "key": "0",
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Casey",
-                      "value": "Casey",
-                    },
-                    "ref": null,
-                    "rendered": "Casey",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": "1",
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Alex",
-                      "value": "Alex",
-                    },
-                    "ref": null,
-                    "rendered": "Alex",
-                    "type": "option",
-                  },
+                  undefined,
+                  undefined,
                 ],
                 "type": "select",
               },
@@ -2381,16 +2501,6 @@ ShallowWrapper {
                 >
                   Select a Student
                 </option>
-                <option
-                  value="Casey"
-                >
-                  Casey
-                </option>
-                <option
-                  value="Alex"
-                >
-                  Alex
-                </option>
               </select>
               <button
                 onClick={[Function]}
@@ -3048,16 +3158,6 @@ ShallowWrapper {
                   >
                     Select a Student
                   </option>
-                  <option
-                    value="Casey"
-                  >
-                    Casey
-                  </option>
-                  <option
-                    value="Alex"
-                  >
-                    Alex
-                  </option>
                 </select>
                 <button
                   onClick={[Function]}
@@ -3159,16 +3259,6 @@ ShallowWrapper {
                     >
                       Select a Student
                     </option>
-                    <option
-                      value="Casey"
-                    >
-                      Casey
-                    </option>
-                    <option
-                      value="Alex"
-                    >
-                      Alex
-                    </option>
                   </select>,
                   <button
                     onClick={[Function]}
@@ -3203,16 +3293,8 @@ ShallowWrapper {
                         Select a Student
                       </option>,
                       Array [
-                        <option
-                          value="Casey"
-                        >
-                          Casey
-                        </option>,
-                        <option
-                          value="Alex"
-                        >
-                          Alex
-                        </option>,
+                        undefined,
+                        undefined,
                       ],
                     ],
                     "className": "amm-match-dropdown",
@@ -3233,30 +3315,8 @@ ShallowWrapper {
                       "rendered": "Select a Student",
                       "type": "option",
                     },
-                    Object {
-                      "instance": null,
-                      "key": "0",
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Casey",
-                        "value": "Casey",
-                      },
-                      "ref": null,
-                      "rendered": "Casey",
-                      "type": "option",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": "1",
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Alex",
-                        "value": "Alex",
-                      },
-                      "ref": null,
-                      "rendered": "Alex",
-                      "type": "option",
-                    },
+                    undefined,
+                    undefined,
                   ],
                   "type": "select",
                 },
@@ -4275,73 +4335,6 @@ ShallowWrapper {
           "type": "button",
         },
       ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
-`;
-
-exports[`AdminMentorModal should match the snapshot without mentor props 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AdminMentorModal
-    students={
-      Array [
-        Object {
-          "name": "Casey",
-        },
-        Object {
-          "name": "Alex",
-        },
-      ]
-    }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "className": "amm-modal-hide",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "className": "amm-modal-hide",
-      },
-      "ref": null,
-      "rendered": null,
       "type": "div",
     },
   ],

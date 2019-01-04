@@ -13,6 +13,11 @@ export const setMentorModal = (mentorInfo) => ({
   modalInfo: mentorInfo
 })
 
+export const addModalMentees = (modalMentees) => ({
+  type: "ADD_MODAL_MENTEES",
+  modalMentees
+})
+
 export const isEditable = (bool) => ({
   type: "IS_EDITABLE",
   isEditable: bool

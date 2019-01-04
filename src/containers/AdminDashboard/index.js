@@ -156,7 +156,7 @@ export class AdminDashboard extends Component {
 
     if (students) {
       return students.map((student, index) => {
-        return <AdminStudentCard key={student.id + index} student={student}/>
+        return <AdminStudentCard key={uuid()} student={student}/>
     })
   } else {
     return <p className='ad-student-card'>No students to display.</p>
@@ -178,18 +178,18 @@ export class AdminDashboard extends Component {
         return mentor.matched === false;
       })
         mentorCards = filteredMentors.map(mentor => {
-        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+        return <AdminMentorCard key={uuid()} mentor={{...mentor, mentees: []}}/>
       })
     } else {
         mentorCards = mentors.map(mentor => {
-        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+        return <AdminMentorCard key={uuid()} mentor={{...mentor, mentees: []}}/>
       })
     }
 
     if (searchTerm) {
       const searchedMentors = this.filterBySearchTerm()
       mentorCards = searchedMentors.map(mentor => {
-        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+        return <AdminMentorCard key={uuid()} mentor={{...mentor, mentees: []}}/>
       })
     }
 

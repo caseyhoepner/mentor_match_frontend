@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './NewStudentForm.css';
-// import { postStudent } from '../../utils/api';
+import { postStudent } from '../../utils/api';
 
 export class NewStudentForm extends Component {
   constructor() {
@@ -24,7 +24,7 @@ export class NewStudentForm extends Component {
     const { history } = this.props;
 
     if (this.validateForm()) {
-      // postMentor(this.state)
+      postStudent(this.state);
       history.push('/success', {from: location.pathname});
 
     } else {

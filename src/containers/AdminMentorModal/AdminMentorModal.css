@@ -59,6 +59,25 @@
   height: 20px;
 }
 
+.amm-trash-icon {
+  height: 15px;
+  width: 15px;
+  margin-left: 10px;
+}
+
+.amm-trash-icon:hover {
+  cursor: pointer;
+}
+
+.amm-list-item-container {
+  display: flex;
+  align-items: center;
+}
+
+.amm-mentees {
+  width: 175px;
+}
+
 .amm-job {
   text-transform: uppercase;
   font-weight: bold;
@@ -106,13 +125,12 @@
   width: 25px;
 }
 
-.amm-list-item-container {
-  display: flex;
-  align-items: center;
-}
-
 .amm-list-item {
   margin: 0 0 5px;
+}
+
+.amm-dash-list {
+  display: flex;
 }
 
 .amm-dash-icon {
