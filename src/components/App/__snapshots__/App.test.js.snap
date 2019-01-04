@@ -17,6 +17,19 @@ ShallowWrapper {
         ],
       }
     }
+    retrieveRelationships={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     retrieveStudents={
       [MockFunction] {
         "calls": Array [
@@ -45,10 +58,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <Switch>
-        <Route
-          component={[Function]}
-          path="/login"
-        />
         <Route
           component={[Function]}
           exact={true}
@@ -91,10 +100,6 @@ ShallowWrapper {
         "children": Array [
           <Route
             component={[Function]}
-            path="/login"
-          />,
-          <Route
-            component={[Function]}
             exact={true}
             path="/"
           />,
@@ -127,18 +132,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/login",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -239,10 +232,6 @@ ShallowWrapper {
         "children": <Switch>
           <Route
             component={[Function]}
-            path="/login"
-          />
-          <Route
-            component={[Function]}
             exact={true}
             path="/"
           />
@@ -283,10 +272,6 @@ ShallowWrapper {
           "children": Array [
             <Route
               component={[Function]}
-              path="/login"
-            />,
-            <Route
-              component={[Function]}
               exact={true}
               path="/"
             />,
@@ -319,18 +304,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "path": "/login",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
           Object {
             "instance": null,
             "key": undefined,

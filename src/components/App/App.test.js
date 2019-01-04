@@ -7,9 +7,14 @@ describe('App', () => {
   let wrapper;
   let mockThunk = jest.fn()
   let mockThunk2 = jest.fn()
+  let mockThunk3 = jest.fn()
   
   beforeEach(() => {
-    wrapper = shallow(<App retrieveMentors={mockThunk} retrieveStudents={mockThunk2} />)
+    wrapper = shallow(<App 
+      retrieveMentors={mockThunk} 
+      retrieveStudents={mockThunk2} 
+      retrieveRelationships={mockThunk3} 
+    />)
   });
 
   it('matches the snapshot', () => {
@@ -17,9 +22,16 @@ describe('App', () => {
   });
 
   describe('mapStateToProps function', () => {
-    it('should return an object with an array of mentors', () => {
-      const mockState = { mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ], somethingElse: 'somethingElse' }
-      const expected = { mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ] }
+    it('should return an object with an array of mentorsand the mentor modalInfo', () => {
+      const mockState = { 
+        mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ],
+        modalInfo: { name: 'Jo-jo', identity_preference: [ 'Veteran' ] },
+        somethingElse: 'somethingElse' 
+      }
+      const expected = { 
+        mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ],
+        modalInfo: { name: 'Jo-jo', identity_preference: [ 'Veteran' ] }
+      }
       const mappedProps = mapStateToProps(mockState)
       expect(mappedProps).toEqual(expected)
     });
@@ -35,6 +47,16 @@ describe('App', () => {
 
     it('should call dispatch when retrieveMentors is called', () => {
       mappedProps.retrieveMentors()
+      expect(mockDispatch).toHaveBeenCalled()
+    });
+
+    it('should call dispatch when retrieveStudents is called', () => {
+      mappedProps.retrieveStudents()
+      expect(mockDispatch).toHaveBeenCalled()
+    });
+
+    it('should call dispatch when retrieveRelationships is called', () => {
+      mappedProps.retrieveRelationships()
       expect(mockDispatch).toHaveBeenCalled()
     });
   });

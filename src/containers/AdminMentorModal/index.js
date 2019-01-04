@@ -146,10 +146,10 @@ export class AdminMentorModal extends Component {
 
   render() {
     let { isEditable } = this.props;
-    let studentOptions = this.getStudentOptions();
-    let mentees = this.getMentees();
-
+    
     if(this.props.modalInfo && !isEditable) {
+      let studentOptions = this.getStudentOptions();
+      let mentees = this.getMentees();
       let { 
         name,
         email,

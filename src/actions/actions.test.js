@@ -2,6 +2,7 @@ import * as GeneralActions from './';
 import * as MentorActions from './mentor-actions';
 import * as PreferencesActions from './preferences-actions';
 import * as SearchActions from './search-actions';
+import * as StudentActions from './student-actions';
 
 const mockMentors = [
   {
@@ -40,6 +41,30 @@ const mockFilters = {
   parent: false,
   veteran: false
 }
+
+const mockStudents = [
+  {
+    name: 'Johan Von Roy',
+    stack: 'Front-End'
+  },
+  {
+    name: 'Claus Larson',
+    stack: 'Back-End'
+  }
+]
+
+const mockRelationships = [
+  {
+    mentor_id: 9,
+    student_id: 22,
+    active: true
+  },
+  {
+    mentor_id: 2,
+    student_id: 5,
+    active: true
+  }
+]
 
 describe('General Action creators', () => {
   it('should have a type of IS_LOADING', () => {
@@ -184,6 +209,48 @@ describe('Search Action creators', () => {
     }
 
     const result = SearchActions.toggleShowingMentors(true)
+    expect(result).toEqual(expected)
+  });
+});
+
+describe('Student Action creators', () => {
+  it('should have a type of SET_STUDENTS', () => {
+    const expected = {
+      type: "SET_STUDENTS",
+      students: [
+        {
+          name: 'Johan Von Roy',
+          stack: 'Front-End'
+        },
+        {
+          name: 'Claus Larson',
+          stack: 'Back-End'
+        }
+      ]
+    }
+
+    const result = StudentActions.setStudents(mockStudents)
+    expect(result).toEqual(expected)
+  });
+
+  it('should have a type of SET_RELATIONSHIPS', () => {
+    const expected = {
+      type: "SET_RELATIONSHIPS",
+      relationships: [
+        {
+          mentor_id: 9,
+          student_id: 22,
+          active: true
+        },
+        {
+          mentor_id: 2,
+          student_id: 5,
+          active: true
+        }
+      ]
+    }
+
+    const result = StudentActions.setRelationships(mockRelationships)
     expect(result).toEqual(expected)
   });
 });

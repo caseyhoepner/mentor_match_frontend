@@ -1,0 +1,1871 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for containers/NewMentorForm/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">containers/NewMentorForm</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>38/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>27/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>38/38</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import './NewMentorForm.css';
+import { postMentor } from '../../utils/api';
+&nbsp;
+export class NewMentorForm extends Component {
+  constructor() {
+    super()
+&nbsp;
+    this.state = {
+      name: '',
+      pronouns: '',
+      email: '',
+      slack_username: '',
+      city: '',
+      state: '',
+      country: '',
+      current_employer: '',
+      current_title: '',
+      industries: [],
+      background: '',
+      ways_to_mentor: [],
+      expertise_tech: [],
+      expertise_non_tech: [],
+      identity_preference: [],
+      mentee_capacity: '0',
+      meeting_location: [],
+      selected1to1: 'No',
+      stack_preference: 'No Preference',
+      hasErrored: false
+    }
+  }
+&nbsp;
+  postNewMentor = async () =&gt; {
+    const { selected1to1 } = this.state;
+    const { location } = this.props.history;
+    const { history } = this.props;
+&nbsp;
+    if (this.validateForm()) {
+      if (selected1to1 === 'No') {
+        await this.setState({
+          identity_preference: [],
+          mentee_capacity: '0',
+          meeting_location: [],
+          stack_preference: 'No Preference'
+        })
+      }
+      postMentor(this.state)
+      history.push('/success', {from: location.pathname});
+    } else {
+      this.setState({ hasErrored: true })
+    }
+  }
+&nbsp;
+  validateForm = () =&gt; {
+    const { name,
+    email,
+    slack_username,
+    city,
+    state,
+    country,
+    background,
+    selected1to1 
+    } = this.state;
+&nbsp;
+    if (name &amp;&amp;
+        email &amp;&amp;
+        slack_username &amp;&amp;
+        city &amp;&amp;
+        state &amp;&amp;
+        country &amp;&amp;
+        background &amp;&amp;
+        selected1to1 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+&nbsp;
+  handleChangeRadio = (event) =&gt; {
+    const { value, className } = event.target;
+&nbsp;
+    this.setState({ [className]: value })
+&nbsp;
+    if (value === 'Yes') {
+      this.setState({ mentee_capacity: '1' })
+    } else if (value === 'No') {
+      this.setState({ mentee_capacity: '0' })
+    }
+  }
+&nbsp;
+  handleChange = (event) =&gt; {
+    const { name, value } = event.target;
+&nbsp;
+    this.setState({ [name]: value });
+  }
+&nbsp;
+  handleClick = (event) =&gt; {
+    const checkedItem = event.target.parentNode.innerText;
+    const stateKey = event.target.parentNode.getAttribute('data-name');
+&nbsp;
+    this.checkIndustries(checkedItem, stateKey)
+  }
+&nbsp;
+  checkIndustries = (checkedItem, stateKey) =&gt; {
+    const state = this.state[stateKey];
+&nbsp;
+    if (!state.includes(checkedItem)) {
+      state.push(checkedItem)
+      this.setState({ [stateKey]: state });
+&nbsp;
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (state.includes(checkedItem)) {
+      const newState = state.filter(item =&gt; {
+        let correctItem;
+        if (item !== checkedItem) {
+          correctItem = item;
+        }
+        return correctItem
+      })
+      this.setState({ [stateKey]: newState });
+    }
+  }
+&nbsp;
+  render() {
+    const { 
+      name,
+      pronouns,
+      email,
+      slack_username,
+      city,
+      state,
+      country,
+      current_employer,
+      current_title,
+      // industries,
+      background,
+      // ways_to_mentor,
+      // expertise_tech,
+      // expertise_non_tech,
+      // identity_preference,
+      mentee_capacity,
+      // meeting_location,
+      selected1to1,
+      stack_preference,
+      hasErrored
+    } = this.state;
+    
+    return (
+      &lt;div className='nmf-container'&gt;
+        &lt;div className='nmf-colors'&gt;
+          &lt;div className='nmf-color-yellow nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-red nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-blue nmf-color'&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className='nmf-title-container'&gt;
+          &lt;h1 className='nmf-title'&gt;New&lt;/h1&gt;
+          &lt;h1 className='nmf-title'&gt;Mentor&lt;/h1&gt;
+          &lt;h1 className='nmf-title'&gt;Form&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;div className='nmf-questions'&gt;
+      &lt;p className='nmf-instructions'&gt;("*" denotes required field)&lt;/p&gt;
+        &lt;h2 className='nmf-question'&gt;What is your name? &lt;span className='nmf-required-star'&gt; *&lt;/span&gt;&lt;/h2&gt;
+          &lt;input 
+            name='name' 
+            value={name} 
+            onChange={this.handleChange} 
+            className='nmf-input' 
+            placeholder='Full Name'
+            maxLength='30'
+          /&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;What are your preferred pronouns?&lt;/h2&gt;
+          &lt;input 
+            name='pronouns' 
+            value={pronouns} 
+            onChange={this.handleChange} 
+            className='nmf-input' 
+            placeholder='Example: she/her/hers'
+            maxLength='20'
+          /&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;What is your contact info for students to be able to reach you? &lt;span className='nmf-required-star'&gt; *&lt;/span&gt;&lt;/h2&gt;
+            &lt;input 
+              name='email' 
+              value={email} 
+              onChange={this.handleChange}  
+              className='nmf-input' 
+              placeholder='Email'
+              maxLength='50'
+            /&gt;
+            &lt;input 
+              name='slack_username' 
+              value={slack_username} 
+              onChange={this.handleChange}  
+              className='nmf-input' 
+              placeholder='Slack'
+              maxLength='30'
+            /&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;Where are you located? &lt;span className='nmf-required-star'&gt; *&lt;/span&gt;&lt;/h2&gt;
+            &lt;input 
+              name='city' 
+              value={city} 
+              onChange={this.handleChange}  
+              className='nmf-input' 
+              placeholder='City'
+              maxLength='30'
+            /&gt;
+            &lt;input 
+              name='state' 
+              value={state} 
+              onChange={this.handleChange}  
+              className='nmf-input' 
+              placeholder='State'
+              maxLength='30'
+            /&gt;
+            &lt;input 
+              name='country' 
+              value={country} 
+              onChange={this.handleChange}  
+              className='nmf-input' 
+              placeholder='Country'
+              maxLength='30'
+            /&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;Current Employment:&lt;/h2&gt;
+          &lt;input 
+            name='current_employer' 
+            value={current_employer} 
+            onChange={this.handleChange}  
+            className='nmf-input' 
+            placeholder='Current Employer'
+            maxLength='30'
+          /&gt;
+          &lt;input 
+            name='current_title' 
+            value={current_title} 
+            onChange={this.handleChange}  
+            className='nmf-input' 
+            placeholder='Job Title'
+            maxLength='40'
+          /&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;What industries have you had tech experience in?&lt;/h2&gt;
+          &lt;div className='nmf-options-container'&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;AdTech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;Green Tech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;Civic Tech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;FinTech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;EdTech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;LegalTech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;HealthTech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;Marketing Tech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='industries' className="nmf-checkbox-container"&gt;Blockchain Tech
+                &lt;input type="checkbox" /&gt;
+                &lt;span 
+                  onClick={this.handleClick} 
+                  className='nmf-checkmark'
+                &gt;
+                &lt;/span&gt;
+              &lt;/label&gt;
+          &lt;/div&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;Brief background: What would you like students to know about you? Turing Alum? Job history? Hobbies? &lt;span className='nmf-required-star'&gt; *&lt;/span&gt;&lt;/h2&gt;
+          &lt;textarea 
+            name='background' 
+            value={background} 
+            onChange={this.handleChange} 
+            className='nmf-textarea'
+            maxLength='250'
+          /&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;Areas of Technical Expertise:&lt;/h2&gt;
+          &lt;div className='nmf-options-container'&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Ruby/Rails
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;DevOps
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Go
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Data Science
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Machine Learning
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;CS Fundamentals
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Node.js
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;React.js
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Angular.js
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Ember.js
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Vue.js
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;UX/UI Development
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;CSS/SCSS/Sass
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_tech' className="nmf-checkbox-container"&gt;Functional Programming
+              &lt;input type="checkbox" /&gt;
+              &lt;span 
+                onClick={this.handleClick} 
+                className="nmf-checkmark nmf-tech-expert"&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;Areas of Non-Technical Expertise:&lt;/h2&gt;
+          &lt;div className='nmf-options-container'&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Public Speaking
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Project Management
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Parenting
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Social Issues in the Tech Industry
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Wellness &amp; Stress Management
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='expertise_non_tech' className="nmf-checkbox-container"&gt;Culture/Behavioral Interview Prep
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;In what ways would you like to support Turing students?&lt;/h2&gt;
+          &lt;div className='nmf-options-container'&gt;
+            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Resume &amp; Cover Letters
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Mock Interviews
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label data-name='ways_to_mentor' className="nmf-checkbox-container"&gt;Coffee Meetings
+              &lt;input type="checkbox" /&gt;
+              &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+&nbsp;
+        &lt;h2 className='nmf-question'&gt;Would you also like to be a 1-to-1 mentor?&lt;/h2&gt;
+            &lt;label className="nmf-radio-container-1"&gt;No
+              &lt;input 
+                value='No'
+                className='selected1to1' 
+                type="radio" 
+                name="nmf-1to1"
+                checked={selected1to1 === 'No'}
+                onChange={this.handleChangeRadio}
+              /&gt;
+              &lt;span className="nmf-radio-checkmark-1"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label className="nmf-radio-container-1"&gt;Yes
+              &lt;input 
+                value='Yes'
+                className='selected1to1' 
+                type="radio" 
+                name="nmf-1to1"
+                checked={selected1to1 === 'Yes'}
+                onChange={this.handleChangeRadio}
+              /&gt;
+              &lt;span className="nmf-radio-checkmark-1"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+&nbsp;
+        &lt;div className={selected1to1 === 'No' ? 'nmf-hide' : 'nmf-show'}&gt;
+          &lt;h2 className='nmf-question'&gt;How many students would you like to mentor?&lt;/h2&gt;
+            &lt;div&gt;
+              &lt;select 
+                className='nmf-capacity-dropdown'
+                name='mentee_capacity' 
+                value={mentee_capacity} 
+                onChange={this.handleChange}
+              &gt;
+                &lt;option value="1"&gt;1&lt;/option&gt;
+                &lt;option value="2"&gt;2&lt;/option&gt;
+                &lt;option value="3"&gt;3&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+&nbsp;
+          &lt;h2 className='nmf-question'&gt;Are there any identity markers you'd particularly like to work with (only shared with staff)?&lt;/h2&gt;
+            &lt;div className='nmf-options-container'&gt;
+              &lt;label data-name='identity_preference' className="nmf-checkbox-container"&gt;Veteran
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='identity_preference' className="nmf-checkbox-container"&gt;Parent
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='identity_preference' className="nmf-checkbox-container"&gt;LGBTQ+
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='identity_preference' className="nmf-checkbox-container"&gt;Female-Identifying
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='identity_preference' className="nmf-checkbox-container"&gt;Male-Identifying
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+&nbsp;
+          &lt;h2 className='nmf-question'&gt;Would you prefer Front-End or Back-End students?&lt;/h2&gt;
+            &lt;label className="nmf-radio-container"&gt;No Preference
+              &lt;input 
+                value='No Preference'
+                className='stack_preference'
+                type="radio" 
+                name="nmf-FE-BE" 
+                checked={stack_preference === 'No Preference'}
+                onChange={this.handleChangeRadio}
+              /&gt;
+              &lt;span className="nmf-radio-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label className="nmf-radio-container"&gt;Front-End
+              &lt;input 
+                value='Front-End'
+                className='stack_preference'
+                type="radio" 
+                name="nmf-FE-BE" 
+                checked={stack_preference === 'Front-End'}
+                onChange={this.handleChangeRadio}
+              /&gt;
+              &lt;span className="nmf-radio-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label className="nmf-radio-container"&gt;Back-End
+              &lt;input 
+                value='Back-End'
+                className='stack_preference'
+                type="radio" 
+                name="nmf-FE-BE" 
+                checked={stack_preference === 'Back-End'}
+                onChange={this.handleChangeRadio}
+              /&gt;
+              &lt;span className="nmf-radio-checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+&nbsp;
+          &lt;h2 className='nmf-question'&gt;Where would you prefer to meet with mentees?&lt;/h2&gt;
+            &lt;div className='nmf-options-container'&gt;
+              &lt;label data-name='meeting_location' className="nmf-checkbox-container"&gt;In Person at Turing
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='meeting_location' className="nmf-checkbox-container"&gt;In Person Not at Turing
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label data-name='meeting_location' className="nmf-checkbox-container"&gt;Remote
+                &lt;input type="checkbox" /&gt;
+                &lt;span onClick={this.handleClick} className="nmf-checkmark"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+          &lt;p className={ hasErrored ? 'nmf-error' : 'hide' }&gt;Make sure all required fields ("*") have been filled in.&lt;/p&gt;
+          &lt;button 
+            className='nmf-submit-btn'
+            onClick={this.postNewMentor}&gt;Submit&lt;/button&gt;
+        &lt;div className='nmf-colors'&gt;
+          &lt;div className='nmf-color-yellow nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-red nmf-color'&gt;&lt;/div&gt;
+          &lt;div className='nmf-color-blue nmf-color'&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default NewMentorForm;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 17:55:27 GMT-0700 (MST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

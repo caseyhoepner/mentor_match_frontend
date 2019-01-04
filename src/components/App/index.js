@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Login from '../../containers/Login'
 import AdminDashboard from '../../containers/AdminDashboard';
 import MentorContainer from '../MentorContainer'
 import SuccessPage from '../SuccessPage'
@@ -12,7 +11,6 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import { retrieveStudents } from '../../thunks/fetchStudents';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';
-
 import './App.css';
 
 export class App extends Component {
@@ -27,7 +25,6 @@ export class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path='/login' component={Login} />
           <Route exact path='/' component={MentorContainer} />
           <Route exact path='/new-mentor-form' component={NewMentorForm} />
           <Route exact path='/new-student-form' component={NewStudentForm} />
