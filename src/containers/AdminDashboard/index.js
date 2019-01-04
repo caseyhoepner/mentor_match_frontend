@@ -9,9 +9,6 @@ import { NavLink } from 'react-router-dom';
 import uuid from 'uuid';
 
 export class AdminDashboard extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   filterBySearchTerm = () => {
     let { searchTerm, mentors } = this.props
