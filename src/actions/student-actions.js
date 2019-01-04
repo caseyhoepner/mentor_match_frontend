@@ -7,3 +7,8 @@ export const setRelationships = (relationshipInfo) => ({
   type: "SET_RELATIONSHIPS",
   relationships: relationshipInfo
 });
+
+export const makeStudentInactive = (studentId) => ({
+  type: "MAKE_STUDENT_INACTIVE",
+  studentId
+});

@@ -14,6 +14,19 @@ export const setStudents = (state = [], action) => {
         }
       })
 
+    case 'MAKE_STUDENT_INACTIVE':
+      return state.map(student => {
+        if (student.id === action.studentId) {
+          console.log(student, 'before')
+          student.active = false;
+          student.matched = true;
+          console.log(student, 'after')
+          return student;
+        } else {
+          return student;
+        }
+      })
+
     default:
       return state;
   }

@@ -11,15 +11,6 @@ import uuid from 'uuid';
 export class AdminDashboard extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      students: [{
-        stack: 'Front-End',
-        name: 'Bob Bobs',
-        matched: false,
-        identities: ['LGBTQ+', 'Male-Identifying']
-      }]
-    }
   }
 
   filterBySearchTerm = () => {
@@ -190,18 +181,18 @@ export class AdminDashboard extends Component {
         return mentor.matched === false;
       })
         mentorCards = filteredMentors.map(mentor => {
-        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+        return <AdminMentorCard key={uuid()} mentor={{...mentor, mentees: []}}/>
       })
     } else {
         mentorCards = mentors.map(mentor => {
-        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+        return <AdminMentorCard key={uuid()} mentor={{...mentor, mentees: []}}/>
       })
     }
 
     if (searchTerm) {
       const searchedMentors = this.filterBySearchTerm()
       mentorCards = searchedMentors.map(mentor => {
-        return <AdminMentorCard key={uuid()} mentor={mentor}/>
+        return <AdminMentorCard key={uuid()} mentor={{...mentor, mentees: []}}/>
       })
     }
 

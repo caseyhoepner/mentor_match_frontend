@@ -3,3 +3,9 @@ export const cleanData = (data) => {
     return item.attributes;
   })
 }
+
+export const cleanRelationshipData = (relationships) => {
+  return relationships.data.map(relationship => {
+    return relationship;
+  })
+}

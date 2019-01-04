@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './AdminMentorModal.css';
 import { connect } from 'react-redux';
-import { setMentorModal, updateChangedMentor, isEditable } from '../../actions/mentor-actions';
+import { setMentorModal, updateChangedMentor, isEditable, addModalMentees } from '../../actions/mentor-actions';
+import { makeStudentInactive } from '../../actions/student-actions';
 // import { patchMentor } from '../../utils/api';
-import { postRelationship } from '../../utils/api';
+import { postRelationship, patchRelationship, patchStudent } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor'
 import { withRouter } from 'react-router-dom';
 
@@ -46,18 +47,21 @@ export class AdminMentorModal extends Component {
     this.setState({ [name]: value });
   }
 
-  getStudentId = (students) => {
+  getStudent = (students) => {
     const student = students.filter(student => {
       return student.name === this.state.menteeToAssign;
     })
-    return student[0].id;
+    return student[0];
   }
 
-  assignMentee = () => {
-    const studentId = this.getStudentId(this.props.students);
-    const mentorId = this.props.modalInfo.id;
+  assignMentee = async () => {
+    const { makeStudentInactive, modalInfo, students } = this.props;
+    const student = this.getStudent(students);
+    const mentorId = modalInfo.id;
 
-    postRelationship(studentId, mentorId);
+    postRelationship(student.id, mentorId);
+    await makeStudentInactive(student.id);
+    patchStudent(student)
   }
 
   getMenteeIcons = (capacity) => {
@@ -99,7 +103,7 @@ export class AdminMentorModal extends Component {
         newPreference = preference.toLowerCase();
         if (newPreference === 'lgbtq+') {
           newPreference = newPreference.slice(0, -1)
-        }
+        };
       
       prefIcon = <img 
             className='amc-pref-icon' 
@@ -116,20 +120,19 @@ export class AdminMentorModal extends Component {
 
   getStudentOptions = () => {
     return this.props.students.map((student, index) => {
-      // if (student.active && !student.matched) {
+      if (student.active && !student.matched) {
         return <option key={index} value={student.name}>{student.name}</option>
-      // }
+      } else {
+        return;
+      }
     })
   }
 
   getMentees = () => {
-    const { modalInfo, relationships, students } = this.props;
+    const { modalInfo, relationships, students, addModalMentees } = this.props;
     const mentorId = modalInfo.id;
-
-    const matchedRelationships = relationships.filter(relationship => relationship.mentor_id === mentorId);
-
-    const menteeIds = matchedRelationships.map(relationship => relationship.student_id);
-    
+    const matchedRelationships = relationships.filter(relationship => relationship.attributes.mentor_id === mentorId && relationship.attributes.active );
+    const menteeIds = matchedRelationships.map(relationship => relationship.attributes.student_id);
     const mentees = [];
     menteeIds.forEach(id => {
       students.forEach(student => {
@@ -138,16 +141,40 @@ export class AdminMentorModal extends Component {
         }
       })
     })
-    const menteeNames = mentees.map(mentee => mentee.name)
-    return this.getList(menteeNames)
+    addModalMentees(mentees);
+    return mentees.map((mentee, index) => {
+      return (
+        <div className='amm-list-item-container amm-mentees' key={matchedRelationships[0].id + index}>
+          <div className='amm-dash-list'>
+            <img 
+              className='amm-dash-icon' 
+              src={require('../../utils/assets/right-arrow.svg')}
+              alt='dash icon'
+            />
+            <p className='amm-list-item'>{mentee.name}</p>
+          </div>
+          <button
+            name={matchedRelationships[0].id}
+            onClick={(event) => this.unmatch(event, mentee.id)}
+          >Unmatch</button>
+        </div>
+      )
+    })
+  }
+
+  unmatch = (event, studentId) => {
+    const mentorId = this.props.modalInfo.id;
+    const relationshipId = event.target.name;
+
+    patchRelationship(studentId, mentorId, relationshipId);
   }
 
   render() {
     let { isEditable } = this.props;
-    let studentOptions = this.getStudentOptions();
-    let mentees = this.getMentees();
 
     if(this.props.modalInfo && !isEditable) {
+      let studentOptions = this.getStudentOptions();
+      let mentees = this.getMentees();
       let { 
         name,
         email,
@@ -305,7 +332,9 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   setMentorModal: mentor => dispatch(setMentorModal(mentor)),
   updateChangedMentor: mentor => dispatch(updateChangedMentor(mentor)),
-  openEditMentor: bool => dispatch(isEditable(bool))
+  openEditMentor: bool => dispatch(isEditable(bool)),
+  makeStudentInactive: studentId => dispatch(makeStudentInactive(studentId)),
+  addModalMentees: mentees => dispatch(addModalMentees(mentees))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal));
