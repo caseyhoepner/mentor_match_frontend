@@ -11,15 +11,6 @@ import uuid from 'uuid';
 export class AdminDashboard extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      students: [{
-        stack: 'Front-End',
-        name: 'Bob Bobs',
-        matched: false,
-        identities: ['LGBTQ+', 'Male-Identifying']
-      }]
-    }
   }
 
   filterBySearchTerm = () => {

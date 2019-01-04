@@ -3,7 +3,7 @@
 exports[`SuccessPage should match the snapshot when it came from NewMentorForm 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(SuccessPage)
+  Symbol(enzyme.__unrendered__): <SuccessPage
     history={
       Object {
         "location": Object {
@@ -25,25 +25,115 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <h1>
+          Success!
+        </h1>,
+        <div>
+          <p>
+            Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
+          </p>
+        </div>,
+      ],
+      "className": "sp-container",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Success!",
+        },
+        "ref": null,
+        "rendered": "Success!",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p>
+            Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
+          </p>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
+          },
+          "ref": null,
+          "rendered": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
+          "type": "p",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <h1>
+            Success!
+          </h1>,
+          <div>
+            <p>
+              Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
+            </p>
+          </div>,
+        ],
+        "className": "sp-container",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Success!",
+          },
+          "ref": null,
+          "rendered": "Success!",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p>
+              Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
+            </p>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
+            },
+            "ref": null,
+            "rendered": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
+            "type": "p",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -69,7 +159,7 @@ ShallowWrapper {
 exports[`SuccessPage should match the snapshot when it came from NewStudentForm 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(SuccessPage)
+  Symbol(enzyme.__unrendered__): <SuccessPage
     history={
       Object {
         "location": Object {
@@ -91,25 +181,179 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <h1>
+          Success!
+        </h1>,
+        <div>
+          <p>
+            New student successfully added!
+          </p>
+          <Link
+            className="sp-new-student-btn"
+            replace={false}
+            to="/new-student-form"
+          >
+            Add Another Student
+          </Link>
+        </div>,
+      ],
+      "className": "sp-container",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Success!",
+        },
+        "ref": null,
+        "rendered": "Success!",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              New student successfully added!
+            </p>,
+            <Link
+              className="sp-new-student-btn"
+              replace={false}
+              to="/new-student-form"
+            >
+              Add Another Student
+            </Link>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "New student successfully added!",
+            },
+            "ref": null,
+            "rendered": "New student successfully added!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Add Another Student",
+              "className": "sp-new-student-btn",
+              "replace": false,
+              "to": "/new-student-form",
+            },
+            "ref": null,
+            "rendered": "Add Another Student",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <h1>
+            Success!
+          </h1>,
+          <div>
+            <p>
+              New student successfully added!
+            </p>
+            <Link
+              className="sp-new-student-btn"
+              replace={false}
+              to="/new-student-form"
+            >
+              Add Another Student
+            </Link>
+          </div>,
+        ],
+        "className": "sp-container",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Success!",
+          },
+          "ref": null,
+          "rendered": "Success!",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                New student successfully added!
+              </p>,
+              <Link
+                className="sp-new-student-btn"
+                replace={false}
+                to="/new-student-form"
+              >
+                Add Another Student
+              </Link>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "New student successfully added!",
+              },
+              "ref": null,
+              "rendered": "New student successfully added!",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Add Another Student",
+                "className": "sp-new-student-btn",
+                "replace": false,
+                "to": "/new-student-form",
+              },
+              "ref": null,
+              "rendered": "Add Another Student",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

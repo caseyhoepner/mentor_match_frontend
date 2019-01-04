@@ -8,8 +8,8 @@ ShallowWrapper {
       Object {
         "backEnd": false,
         "female": false,
-        "frontEnd": false,
-        "lgbtq": true,
+        "frontEnd": true,
+        "lgbtq": false,
         "male": false,
         "parent": false,
         "veteran": false,

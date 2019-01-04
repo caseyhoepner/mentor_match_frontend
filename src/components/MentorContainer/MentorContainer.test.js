@@ -26,8 +26,8 @@ describe('MentorContainer', () => {
   let mockFilters = {
     backEnd: false,
     female: false,
-    frontEnd: false,
-    lgbtq: true,
+    frontEnd: true,
+    lgbtq: false,
     male: false,
     parent: false,
     veteran: false
@@ -38,7 +38,8 @@ describe('MentorContainer', () => {
         mentor: {
           name: 'Casey',
           identity_preference: [
-            'female-identifying'
+            'female-identifying',
+            'LGBTQ+'
           ],
           stack_preference: 'Front-End',
           meeting_location: 'Remote'
@@ -142,7 +143,8 @@ describe('MentorContainer', () => {
             mentor: {
               name: 'Casey',
               identity_preference: [
-                'female-identifying'
+                'female-identifying',
+                'LGBTQ+'
               ],
               stack_preference: 'Front-End',
               meeting_location: 'Remote'
@@ -160,7 +162,29 @@ describe('MentorContainer', () => {
       let spy = jest.spyOn(wrapper.instance(), 'checkPrefs')
 
       wrapper.instance().filterByPreference(mockCards)
-      expect(spy).toHaveBeenCalledWith(mockCards[0], ['lgbtq'])
+      expect(spy).toHaveBeenCalledWith(mockCards[0], ['frontEnd'])
+      expect(spy).toHaveBeenCalledWith(mockCards[1], ['frontEnd'])
+    });
+
+    it('should return the card that matches the preference filter', () => {
+      let expected = [
+        { 
+          props: {
+            mentor: {
+              name: 'Casey',
+              identity_preference: [
+                'female-identifying',
+                'LGBTQ+'
+              ],
+              stack_preference: 'Front-End',
+              meeting_location: 'Remote'
+            }
+          }
+        }
+      ]
+
+      const result = wrapper.instance().filterByPreference(mockCards)
+      expect(result).toEqual(expected)
     });
   });
 

@@ -1,6 +1,6 @@
-// import * as SearchActions from '../actions/search-actions';
 import { setLocale, setSearch, toggleShowingMentors } from './search-reducers';
 import { setMentors, setMentorModal, isLoading, isEditable, hasErrored } from './mentors-reducers';
+import { setStudents, setRelationships } from './students-reducers';
 import { changeMentorFilters } from './preferences-reducers';
 
 describe('isLoading', () => {
@@ -239,5 +239,133 @@ describe('changeMentorFilters', () => {
 
     const result = changeMentorFilters(undefined, mockAction)
     expect(result).toEqual({})
+  });
+});
+
+describe('setStudents', () => {
+  it('should set state with the students array', () => {
+    let mockStudentAction = {
+      type: "SET_STUDENTS",
+      students: [
+        {
+          name: 'Casey'
+        },
+        {
+          name: 'Alex'
+        }
+      ]
+    }
+    let expected = [
+      {
+        name: 'Casey'
+      },
+      {
+        name: 'Alex'
+      }
+    ]
+
+    const result = setStudents(undefined, mockStudentAction)
+    expect(result).toEqual(expected)
+  });
+
+  it('should update a student in state', () => {
+    let mockStudentAction = {
+      type: "UPDATE_CHANGED_STUDENT",
+      student : { id: 2, name: 'Gunther' }
+    }
+    let mockStudentState = [
+      {
+        id: 1,
+        name: 'Dieter'
+      },
+      {
+        id: 2,
+        name: 'Heinrich'
+      }
+    ]
+    let expected = [
+      {
+        id: 1,
+        name: 'Dieter'
+      },
+      {
+        id: 2,
+        name: 'Gunther'
+      }
+    ]
+
+    const result = setStudents(mockStudentState, mockStudentAction)
+    expect(result).toEqual(expected)
+  });
+
+  it('should return default state', () => {
+    let mockStudentAction = {
+      students: [
+        {
+          name: 'Casey'
+        },
+        {
+          name: 'Alex'
+        }
+      ]
+    }
+
+    const result = setStudents(undefined, mockStudentAction)
+    expect(result).toEqual([])
+  });
+});
+
+describe('setRelationships', () => {
+  it('should set relationships array to state', () => {
+    let mockRelationshipAction = {
+      type: "SET_RELATIONSHIPS",
+      relationships: [
+        {
+          mentor_id: 2,
+          student_id: 9,
+          active: true
+        },
+        {
+          mentor_id: 15,
+          student_id: 20,
+          active: true
+        }
+      ]
+    }
+    let expected = [
+      {
+        mentor_id: 2,
+        student_id: 9,
+        active: true
+      },
+      {
+        mentor_id: 15,
+        student_id: 20,
+        active: true
+      }
+    ]
+
+    const result = setRelationships(undefined, mockRelationshipAction)
+    expect(result).toEqual(expected)
+  });
+
+  it('should return original state as a default', () => {
+    let mockRelationshipAction = {
+      relationships: [
+        {
+          mentor_id: 2,
+          student_id: 9,
+          active: true
+        },
+        {
+          mentor_id: 15,
+          student_id: 20,
+          active: true
+        }
+      ]
+    }
+
+      const result = setRelationships(undefined, mockRelationshipAction)
+      expect(result).toEqual([])
   });
 });

@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">7.69% </span>
+        <span class="strong">90.91% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/13</span>
+        <span class='fraction'>10/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.33% </span>
+        <span class="strong">90.91% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/12</span>
+        <span class='fraction'>10/11</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -89,51 +89,36 @@
 44
 45
 46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+47</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,47 +133,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
 import './AdminStudentCard.css';
-import { connect } from 'react-redux';
-// import { setMentorModal } from '../../actions/mentor-actions';
 &nbsp;
 export class AdminStudentCard extends Component {
-//   constructor(props) {
-//     super(props);
-// }
 &nbsp;
-  getPrefIcons = <span class="fstat-no" title="function not covered" >(i</span>dentities) =&gt; {
-    const identityIcons = <span class="cstat-no" title="statement not covered" >identities.map(<span class="fstat-no" title="function not covered" >id</span>entity =&gt; {</span>
-      let newIdentity = <span class="cstat-no" title="statement not covered" >identity.toLowerCase();</span>
-      // let identityIcon;
+  getPrefIcons = (identities) =&gt; {
+    const identityIcons = identities.map(identity =&gt; {
+      let newIdentity = identity.toLowerCase();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (newIdentity === 'lgbtq+') {</span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (newIdentity === 'lgbtq+') {
 <span class="cstat-no" title="statement not covered" >        newIdentity = newIdentity.slice(0, -1)</span>
       }
-<span class="cstat-no" title="statement not covered" >      if (newIdentity !== 'no preference') {</span>
-<span class="cstat-no" title="statement not covered" >      newIdentity = &lt;img </span>
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (newIdentity !== 'no preference') {
+      newIdentity = &lt;img 
               className='asc-pref-icon' 
               src={require(`../../utils/assets/${newIdentity}.svg`)} 
               alt={`${newIdentity} preference indicator`} 
               key={`${newIdentity}`}
               title={`${newIdentity}`} /&gt;
       }
-<span class="cstat-no" title="statement not covered" >      return newIdentity</span>
+      return newIdentity;
     })
-<span class="cstat-no" title="statement not covered" >    return identityIcons</span>
+    return identityIcons;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
-    const { name, identities, stack, matched } = <span class="cstat-no" title="statement not covered" >this.props.student;</span>
-    const identityIcons = <span class="cstat-no" title="statement not covered" >this.getPrefIcons(identities);</span>
+  render() {
+    const { name, identity_marker, stack, matched } = this.props.student;
+    const identityIcons = this.getPrefIcons(identity_marker);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;div className='asc-card'&gt;
         &lt;p className='asc-name'&gt;{name}&lt;/p&gt;
         &lt;p className='asc-stack'&gt;{stack}&lt;/p&gt;
@@ -205,16 +181,13 @@ export class AdminStudentCard extends Component {
   }
 }
 &nbsp;
-export const mapDispatchToProps = <span class="fstat-no" title="function not covered" >(d</span>ispatch) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-})
-&nbsp;
-export default connect(null, mapDispatchToProps)(AdminStudentCard);</pre></td></tr>
+export default AdminStudentCard;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 11:03:18 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 17:48:11 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
