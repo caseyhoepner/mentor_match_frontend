@@ -7,6 +7,7 @@ describe('AdminMentorModal', () => {
   let mockFunction = jest.fn()
   let mockHistory = []
   let mockMentor = {
+    id: 6,
     name: 'Menty the Mentor',
     email: 'menty@mentor.com',
     city: 'Denver',
@@ -31,11 +32,14 @@ describe('AdminMentorModal', () => {
     { name: 'Casey' },
     { name: 'Alex' }
   ]
+  
   let mockRelationships = [
     {
-      mentor_id: 1,
-      student_id: 2,
-      active: true
+      attributes: {
+        mentor_id: 1,
+        student_id: 2,
+        active: true
+      }
     }
   ]
 
@@ -46,6 +50,7 @@ describe('AdminMentorModal', () => {
       modalInfo={mockMentor}
       relationships={mockRelationships}
       isEditable={false}
+      addModalMentees={mockFunction}
     />)
   });
 
@@ -60,14 +65,10 @@ describe('AdminMentorModal', () => {
       modalInfo={mockMentor}
       relationships={mockRelationships}
       isEditable={true}
+      addModalMentees={mockFunction}
     />)
     expect(wrapper).toMatchSnapshot()
   });
-
-  it('should match the snapshot without mentor props', () => {
-    wrapper = shallow(<AdminMentorModal students={mockStudents} />)
-    expect(wrapper).toMatchSnapshot()
-  })
 
   describe('handleClick function', () => {
     it('should update state to be editable and add the mentor from props in state', () => {
@@ -77,6 +78,7 @@ describe('AdminMentorModal', () => {
         history={mockHistory}  
         students={mockStudents} 
         relationships={mockRelationships}
+        addModalMentees={mockFunction}
       />)
       let mockEvent = { target: { name: 'Edit' } }
 
@@ -97,6 +99,7 @@ describe('AdminMentorModal', () => {
         history={mockHistory} 
         students={mockStudents}
         relationships={mockRelationships}
+        addModalMentees={mockFunction}
       />)
       
       wrapper.instance().handleClick(mockEvent)
@@ -116,6 +119,7 @@ describe('AdminMentorModal', () => {
         history={mockHistory} 
         students={mockStudents}
         relationships={mockRelationships}
+        addModalMentees={mockFunction}
       />)
       
       wrapper.instance().handleClick(mockEvent1)
@@ -136,6 +140,7 @@ describe('AdminMentorModal', () => {
         history={mockHistory} 
         students={mockStudents}
         relationships={mockRelationships}
+        addModalMentees={mockFunction}
       />)
         
       wrapper.instance().handleClick(mockEvent1)
@@ -155,14 +160,15 @@ describe('AdminMentorModal', () => {
         history={mockHistory} 
         students={mockStudents}
         relationships={mockRelationships}
+        addModalMentees={mockFunction}
       />)
 
       wrapper.instance().handleClick(mockEvent1)
-      expect(wrapper.state()).toEqual({ currentMentor: mockMentor, menteeToAssign: '' })
+      expect(wrapper.state()).toEqual({ currentMentor: mockMentor, menteeToAssign: '', mentees: [] })
       wrapper.instance().handleClick(mockEvent2)
       expect(mockFunc1).toHaveBeenCalled()
       expect(mockFunction).toHaveBeenCalledWith(false)
-      expect(wrapper.state()).toEqual({ currentMentor: {}, menteeToAssign: '' })
+      expect(wrapper.state()).toEqual({ currentMentor: {}, menteeToAssign: '', mentees: [] })
     });
   });
 

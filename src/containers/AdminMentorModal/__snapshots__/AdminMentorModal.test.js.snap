@@ -4,6 +4,131 @@ exports[`AdminMentorModal should match the snapshot with props and when it is ed
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdminMentorModal
+    addModalMentees={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
     currentMentor={
       Object {
         "active": true,
@@ -19,6 +144,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "React.js",
         ],
+        "id": 6,
         "identity_preference": Array [
           "female-identifying",
         ],
@@ -53,6 +179,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "React.js",
         ],
+        "id": 6,
         "identity_preference": Array [
           "female-identifying",
         ],
@@ -74,9 +201,11 @@ ShallowWrapper {
     relationships={
       Array [
         Object {
-          "active": true,
-          "mentor_id": 1,
-          "student_id": 2,
+          "attributes": Object {
+            "active": true,
+            "mentor_id": 1,
+            "student_id": 2,
+          },
         },
       ]
     }
@@ -143,12 +272,137 @@ ShallowWrapper {
 }
 `;
 
-exports[`AdminMentorModal should match the snapshot with props and when it is not editable 1`] = `undefined`;
-
-exports[`AdminMentorModal should match the snapshot without mentor props 1`] = `
+exports[`AdminMentorModal should match the snapshot with props and when it is not editable 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdminMentorModal
+    addModalMentees={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "active": true,
+              "background": "I am a mentor!",
+              "city": "Denver",
+              "country": "USA",
+              "current_employer": "Department of Mentors",
+              "current_title": "Head Mentor",
+              "email": "menty@mentor.com",
+              "expertise_non_tech": Array [
+                "Parenting",
+              ],
+              "expertise_tech": Array [
+                "React.js",
+              ],
+              "id": 6,
+              "identity_preference": Array [
+                "female-identifying",
+              ],
+              "industries": Array [
+                "Civic Tech",
+              ],
+              "matched": true,
+              "meeting_location": "Turing",
+              "mentee_capacity": "2",
+              "mentees": Array [],
+              "name": "Menty the Mentor",
+              "pronouns": "she/her/hers",
+              "slack_username": "@Menty",
+              "state": "CO",
+              "ways_to_mentor": Array [
+                "Coffee Meetings",
+              ],
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    currentMentor={
+      Object {
+        "active": true,
+        "background": "I am a mentor!",
+        "city": "Denver",
+        "country": "USA",
+        "current_employer": "Department of Mentors",
+        "current_title": "Head Mentor",
+        "email": "menty@mentor.com",
+        "expertise_non_tech": Array [
+          "Parenting",
+        ],
+        "expertise_tech": Array [
+          "React.js",
+        ],
+        "id": 6,
+        "identity_preference": Array [
+          "female-identifying",
+        ],
+        "industries": Array [
+          "Civic Tech",
+        ],
+        "matched": true,
+        "meeting_location": "Turing",
+        "mentee_capacity": "2",
+        "name": "Menty the Mentor",
+        "pronouns": "she/her/hers",
+        "slack_username": "@Menty",
+        "state": "CO",
+        "ways_to_mentor": Array [
+          "Coffee Meetings",
+        ],
+      }
+    }
+    isEditable={false}
+    modalInfo={
+      Object {
+        "active": true,
+        "background": "I am a mentor!",
+        "city": "Denver",
+        "country": "USA",
+        "current_employer": "Department of Mentors",
+        "current_title": "Head Mentor",
+        "email": "menty@mentor.com",
+        "expertise_non_tech": Array [
+          "Parenting",
+        ],
+        "expertise_tech": Array [
+          "React.js",
+        ],
+        "id": 6,
+        "identity_preference": Array [
+          "female-identifying",
+        ],
+        "industries": Array [
+          "Civic Tech",
+        ],
+        "matched": true,
+        "meeting_location": "Turing",
+        "mentee_capacity": "2",
+        "name": "Menty the Mentor",
+        "pronouns": "she/her/hers",
+        "slack_username": "@Menty",
+        "state": "CO",
+        "ways_to_mentor": Array [
+          "Coffee Meetings",
+        ],
+      }
+    }
+    relationships={
+      Array [
+        Object {
+          "attributes": Object {
+            "active": true,
+            "mentor_id": 1,
+            "student_id": 2,
+          },
+        },
+      ]
+    }
     students={
       Array [
         Object {
@@ -173,10 +427,1956 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "amm-modal-hide",
+      "children": Array [
+        <div
+          className="amm-basic-info"
+        >
+          <img
+            alt="Mentor profile"
+            className="amm-pic"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "amm-pic.svg",
+              }
+            }
+          />
+          <div
+            className="amm-header-info"
+          >
+            <div
+              className="amm-top-line"
+            >
+              <h1
+                className="amm-name"
+              >
+                Menty the Mentor
+              </h1>
+              <img
+                alt="Click here to exit"
+                className="amm-x"
+                name="Exit"
+                onClick={[Function]}
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "x.svg",
+                  }
+                }
+              />
+            </div>
+            <p
+              className="amm-job"
+            >
+              Head Mentor
+               @ 
+              Department of Mentors
+            </p>
+            <div
+              className="amm-bottom-line"
+            >
+              <div
+                className="amm-location-container"
+              >
+                <img
+                  alt="Matched = true"
+                  className="amm-matched"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "matched-true.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-location"
+                >
+                  Denver
+                  , 
+                  CO
+                  , 
+                  USA
+                </p>
+              </div>
+              <p
+                className="amm-pronoun"
+              >
+                (she/her/hers)
+              </p>
+            </div>
+          </div>
+        </div>,
+        <div
+          className="amm-assign-student"
+        >
+          <div
+            className="amm-bio"
+          >
+            <h3>
+              Bio
+            </h3>
+            <p>
+              I am a mentor!
+            </p>
+          </div>
+          <div>
+            <h3>
+              Current Mentees
+            </h3>
+          </div>
+          <div
+            className="amm-match-dropdown-container"
+          >
+            <h3>
+              Match
+            </h3>
+            <select
+              className="amm-match-dropdown"
+              name="menteeToAssign"
+              onChange={[Function]}
+            >
+              <option
+                value=""
+              >
+                Select a Student
+              </option>
+            </select>
+            <button
+              onClick={[Function]}
+            >
+              Assign
+            </button>
+          </div>
+        </div>,
+        <div
+          className="amm-card-container"
+        >
+          <div
+            className="amm-card amm-contact"
+          >
+            <h3
+              className="amm-contact-title"
+            >
+              Contact
+            </h3>
+            <div
+              className="amm-flex"
+            >
+              <h4>
+                Email:
+              </h4>
+              <p
+                className="amm-email"
+              >
+                menty@mentor.com
+              </p>
+            </div>
+            <div
+              className="amm-flex"
+            >
+              <h4>
+                Slack:
+              </h4>
+              <p
+                className="amm-slack"
+              >
+                @Menty
+              </p>
+            </div>
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              Industry Knowlegde
+            </h3>
+            <div
+              className="amm-list-item-container"
+            >
+              <img
+                alt="dash icon"
+                className="amm-dash-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "right-arrow.svg",
+                  }
+                }
+              />
+              <p
+                className="amm-list-item"
+              >
+                Civic Tech
+              </p>
+            </div>
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              How I Can Help
+            </h3>
+            <div
+              className="amm-list-item-container"
+            >
+              <img
+                alt="dash icon"
+                className="amm-dash-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "right-arrow.svg",
+                  }
+                }
+              />
+              <p
+                className="amm-list-item"
+              >
+                Coffee Meetings
+              </p>
+            </div>
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              Tech Expertise
+            </h3>
+            <div
+              className="amm-list-item-container"
+            >
+              <img
+                alt="dash icon"
+                className="amm-dash-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "right-arrow.svg",
+                  }
+                }
+              />
+              <p
+                className="amm-list-item"
+              >
+                React.js
+              </p>
+            </div>
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              Non-Tech Expertise
+            </h3>
+            <div
+              className="amm-list-item-container"
+            >
+              <img
+                alt="dash icon"
+                className="amm-dash-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "right-arrow.svg",
+                  }
+                }
+              />
+              <p
+                className="amm-list-item"
+              >
+                Parenting
+              </p>
+            </div>
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              Capacity
+            </h3>
+            <img
+              alt="capacity icon"
+              className="amm-capacity-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "capacity.svg",
+                }
+              }
+            />
+            <img
+              alt="capacity icon"
+              className="amm-capacity-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "capacity.svg",
+                }
+              }
+            />
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              Meeting Location
+            </h3>
+            <p>
+              Turing
+            </p>
+          </div>
+          <div
+            className="amm-card"
+          >
+            <h3>
+              Mentee Preferences
+            </h3>
+            <img
+              alt="female-identifying preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "female-identifying.svg",
+                }
+              }
+              title="female-identifying"
+            />
+          </div>
+        </div>,
+        <button
+          className="amm-edit-btn"
+          name="Edit"
+          onClick={[Function]}
+        >
+          Edit
+        </button>,
+      ],
+      "className": "amm-modal-show",
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Mentor profile"
+              className="amm-pic"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "amm-pic.svg",
+                }
+              }
+            />,
+            <div
+              className="amm-header-info"
+            >
+              <div
+                className="amm-top-line"
+              >
+                <h1
+                  className="amm-name"
+                >
+                  Menty the Mentor
+                </h1>
+                <img
+                  alt="Click here to exit"
+                  className="amm-x"
+                  name="Exit"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "x.svg",
+                    }
+                  }
+                />
+              </div>
+              <p
+                className="amm-job"
+              >
+                Head Mentor
+                 @ 
+                Department of Mentors
+              </p>
+              <div
+                className="amm-bottom-line"
+              >
+                <div
+                  className="amm-location-container"
+                >
+                  <img
+                    alt="Matched = true"
+                    className="amm-matched"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "matched-true.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-location"
+                  >
+                    Denver
+                    , 
+                    CO
+                    , 
+                    USA
+                  </p>
+                </div>
+                <p
+                  className="amm-pronoun"
+                >
+                  (she/her/hers)
+                </p>
+              </div>
+            </div>,
+          ],
+          "className": "amm-basic-info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Mentor profile",
+              "className": "amm-pic",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "amm-pic.svg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="amm-top-line"
+                >
+                  <h1
+                    className="amm-name"
+                  >
+                    Menty the Mentor
+                  </h1>
+                  <img
+                    alt="Click here to exit"
+                    className="amm-x"
+                    name="Exit"
+                    onClick={[Function]}
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "x.svg",
+                      }
+                    }
+                  />
+                </div>,
+                <p
+                  className="amm-job"
+                >
+                  Head Mentor
+                   @ 
+                  Department of Mentors
+                </p>,
+                <div
+                  className="amm-bottom-line"
+                >
+                  <div
+                    className="amm-location-container"
+                  >
+                    <img
+                      alt="Matched = true"
+                      className="amm-matched"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "matched-true.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-location"
+                    >
+                      Denver
+                      , 
+                      CO
+                      , 
+                      USA
+                    </p>
+                  </div>
+                  <p
+                    className="amm-pronoun"
+                  >
+                    (she/her/hers)
+                  </p>
+                </div>,
+              ],
+              "className": "amm-header-info",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h1
+                      className="amm-name"
+                    >
+                      Menty the Mentor
+                    </h1>,
+                    <img
+                      alt="Click here to exit"
+                      className="amm-x"
+                      name="Exit"
+                      onClick={[Function]}
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "x.svg",
+                        }
+                      }
+                    />,
+                  ],
+                  "className": "amm-top-line",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Menty the Mentor",
+                      "className": "amm-name",
+                    },
+                    "ref": null,
+                    "rendered": "Menty the Mentor",
+                    "type": "h1",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Click here to exit",
+                      "className": "amm-x",
+                      "name": "Exit",
+                      "onClick": [Function],
+                      "src": Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "x.svg",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Head Mentor",
+                    " @ ",
+                    "Department of Mentors",
+                  ],
+                  "className": "amm-job",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Head Mentor",
+                  " @ ",
+                  "Department of Mentors",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="amm-location-container"
+                    >
+                      <img
+                        alt="Matched = true"
+                        className="amm-matched"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "matched-true.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-location"
+                      >
+                        Denver
+                        , 
+                        CO
+                        , 
+                        USA
+                      </p>
+                    </div>,
+                    <p
+                      className="amm-pronoun"
+                    >
+                      (she/her/hers)
+                    </p>,
+                  ],
+                  "className": "amm-bottom-line",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="Matched = true"
+                          className="amm-matched"
+                          src={
+                            Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "matched-true.svg",
+                            }
+                          }
+                        />,
+                        <p
+                          className="amm-location"
+                        >
+                          Denver
+                          , 
+                          CO
+                          , 
+                          USA
+                        </p>,
+                      ],
+                      "className": "amm-location-container",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "Matched = true",
+                          "className": "amm-matched",
+                          "src": Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "matched-true.svg",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Denver",
+                            ", ",
+                            "CO",
+                            ", ",
+                            "USA",
+                          ],
+                          "className": "amm-location",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Denver",
+                          ", ",
+                          "CO",
+                          ", ",
+                          "USA",
+                        ],
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "(she/her/hers)",
+                      "className": "amm-pronoun",
+                    },
+                    "ref": null,
+                    "rendered": "(she/her/hers)",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="amm-bio"
+            >
+              <h3>
+                Bio
+              </h3>
+              <p>
+                I am a mentor!
+              </p>
+            </div>,
+            <div>
+              <h3>
+                Current Mentees
+              </h3>
+            </div>,
+            <div
+              className="amm-match-dropdown-container"
+            >
+              <h3>
+                Match
+              </h3>
+              <select
+                className="amm-match-dropdown"
+                name="menteeToAssign"
+                onChange={[Function]}
+              >
+                <option
+                  value=""
+                >
+                  Select a Student
+                </option>
+              </select>
+              <button
+                onClick={[Function]}
+              >
+                Assign
+              </button>
+            </div>,
+          ],
+          "className": "amm-assign-student",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Bio
+                </h3>,
+                <p>
+                  I am a mentor!
+                </p>,
+              ],
+              "className": "amm-bio",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Bio",
+                },
+                "ref": null,
+                "rendered": "Bio",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "I am a mentor!",
+                },
+                "ref": null,
+                "rendered": "I am a mentor!",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Current Mentees
+                </h3>,
+                Array [],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Current Mentees",
+                },
+                "ref": null,
+                "rendered": "Current Mentees",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Match
+                </h3>,
+                <select
+                  className="amm-match-dropdown"
+                  name="menteeToAssign"
+                  onChange={[Function]}
+                >
+                  <option
+                    value=""
+                  >
+                    Select a Student
+                  </option>
+                </select>,
+                <button
+                  onClick={[Function]}
+                >
+                  Assign
+                </button>,
+              ],
+              "className": "amm-match-dropdown-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Match",
+                },
+                "ref": null,
+                "rendered": "Match",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value=""
+                    >
+                      Select a Student
+                    </option>,
+                    Array [
+                      undefined,
+                      undefined,
+                    ],
+                  ],
+                  "className": "amm-match-dropdown",
+                  "name": "menteeToAssign",
+                  "onChange": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Select a Student",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": "Select a Student",
+                    "type": "option",
+                  },
+                  undefined,
+                  undefined,
+                ],
+                "type": "select",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Assign",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Assign",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="amm-card amm-contact"
+            >
+              <h3
+                className="amm-contact-title"
+              >
+                Contact
+              </h3>
+              <div
+                className="amm-flex"
+              >
+                <h4>
+                  Email:
+                </h4>
+                <p
+                  className="amm-email"
+                >
+                  menty@mentor.com
+                </p>
+              </div>
+              <div
+                className="amm-flex"
+              >
+                <h4>
+                  Slack:
+                </h4>
+                <p
+                  className="amm-slack"
+                >
+                  @Menty
+                </p>
+              </div>
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Industry Knowlegde
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Civic Tech
+                </p>
+              </div>
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                How I Can Help
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Coffee Meetings
+                </p>
+              </div>
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Tech Expertise
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  React.js
+                </p>
+              </div>
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Non-Tech Expertise
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Parenting
+                </p>
+              </div>
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Capacity
+              </h3>
+              <img
+                alt="capacity icon"
+                className="amm-capacity-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "capacity.svg",
+                  }
+                }
+              />
+              <img
+                alt="capacity icon"
+                className="amm-capacity-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "capacity.svg",
+                  }
+                }
+              />
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Meeting Location
+              </h3>
+              <p>
+                Turing
+              </p>
+            </div>,
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Mentee Preferences
+              </h3>
+              <img
+                alt="female-identifying preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "female-identifying.svg",
+                  }
+                }
+                title="female-identifying"
+              />
+            </div>,
+          ],
+          "className": "amm-card-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="amm-contact-title"
+                >
+                  Contact
+                </h3>,
+                <div
+                  className="amm-flex"
+                >
+                  <h4>
+                    Email:
+                  </h4>
+                  <p
+                    className="amm-email"
+                  >
+                    menty@mentor.com
+                  </p>
+                </div>,
+                <div
+                  className="amm-flex"
+                >
+                  <h4>
+                    Slack:
+                  </h4>
+                  <p
+                    className="amm-slack"
+                  >
+                    @Menty
+                  </p>
+                </div>,
+              ],
+              "className": "amm-card amm-contact",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Contact",
+                  "className": "amm-contact-title",
+                },
+                "ref": null,
+                "rendered": "Contact",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h4>
+                      Email:
+                    </h4>,
+                    <p
+                      className="amm-email"
+                    >
+                      menty@mentor.com
+                    </p>,
+                  ],
+                  "className": "amm-flex",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Email:",
+                    },
+                    "ref": null,
+                    "rendered": "Email:",
+                    "type": "h4",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "menty@mentor.com",
+                      "className": "amm-email",
+                    },
+                    "ref": null,
+                    "rendered": "menty@mentor.com",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h4>
+                      Slack:
+                    </h4>,
+                    <p
+                      className="amm-slack"
+                    >
+                      @Menty
+                    </p>,
+                  ],
+                  "className": "amm-flex",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Slack:",
+                    },
+                    "ref": null,
+                    "rendered": "Slack:",
+                    "type": "h4",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "@Menty",
+                      "className": "amm-slack",
+                    },
+                    "ref": null,
+                    "rendered": "@Menty",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Industry Knowlegde
+                </h3>,
+                Array [
+                  <div
+                    className="amm-list-item-container"
+                  >
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
+                    >
+                      Civic Tech
+                    </p>
+                  </div>,
+                ],
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Industry Knowlegde",
+                },
+                "ref": null,
+                "rendered": "Industry Knowlegde",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "Civic Tech",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />,
+                    <p
+                      className="amm-list-item"
+                    >
+                      Civic Tech
+                    </p>,
+                  ],
+                  "className": "amm-list-item-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "dash icon",
+                      "className": "amm-dash-icon",
+                      "src": Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Civic Tech",
+                      "className": "amm-list-item",
+                    },
+                    "ref": null,
+                    "rendered": "Civic Tech",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  How I Can Help
+                </h3>,
+                Array [
+                  <div
+                    className="amm-list-item-container"
+                  >
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
+                    >
+                      Coffee Meetings
+                    </p>
+                  </div>,
+                ],
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "How I Can Help",
+                },
+                "ref": null,
+                "rendered": "How I Can Help",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "Coffee Meetings",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />,
+                    <p
+                      className="amm-list-item"
+                    >
+                      Coffee Meetings
+                    </p>,
+                  ],
+                  "className": "amm-list-item-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "dash icon",
+                      "className": "amm-dash-icon",
+                      "src": Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Coffee Meetings",
+                      "className": "amm-list-item",
+                    },
+                    "ref": null,
+                    "rendered": "Coffee Meetings",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Tech Expertise
+                </h3>,
+                Array [
+                  <div
+                    className="amm-list-item-container"
+                  >
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
+                    >
+                      React.js
+                    </p>
+                  </div>,
+                ],
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Tech Expertise",
+                },
+                "ref": null,
+                "rendered": "Tech Expertise",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "React.js",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />,
+                    <p
+                      className="amm-list-item"
+                    >
+                      React.js
+                    </p>,
+                  ],
+                  "className": "amm-list-item-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "dash icon",
+                      "className": "amm-dash-icon",
+                      "src": Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "React.js",
+                      "className": "amm-list-item",
+                    },
+                    "ref": null,
+                    "rendered": "React.js",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Non-Tech Expertise
+                </h3>,
+                Array [
+                  <div
+                    className="amm-list-item-container"
+                  >
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
+                    >
+                      Parenting
+                    </p>
+                  </div>,
+                ],
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Non-Tech Expertise",
+                },
+                "ref": null,
+                "rendered": "Non-Tech Expertise",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "Parenting",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />,
+                    <p
+                      className="amm-list-item"
+                    >
+                      Parenting
+                    </p>,
+                  ],
+                  "className": "amm-list-item-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "dash icon",
+                      "className": "amm-dash-icon",
+                      "src": Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Parenting",
+                      "className": "amm-list-item",
+                    },
+                    "ref": null,
+                    "rendered": "Parenting",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Capacity
+                </h3>,
+                Array [
+                  <img
+                    alt="capacity icon"
+                    className="amm-capacity-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "capacity.svg",
+                      }
+                    }
+                  />,
+                  <img
+                    alt="capacity icon"
+                    className="amm-capacity-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "capacity.svg",
+                      }
+                    }
+                  />,
+                ],
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Capacity",
+                },
+                "ref": null,
+                "rendered": "Capacity",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "capacity icon",
+                  "className": "amm-capacity-icon",
+                  "src": Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "capacity.svg",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "capacity icon",
+                  "className": "amm-capacity-icon",
+                  "src": Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "capacity.svg",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Meeting Location
+                </h3>,
+                <p>
+                  Turing
+                </p>,
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Meeting Location",
+                },
+                "ref": null,
+                "rendered": "Meeting Location",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Turing",
+                },
+                "ref": null,
+                "rendered": "Turing",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Mentee Preferences
+                </h3>,
+                Array [
+                  <img
+                    alt="female-identifying preference indicator"
+                    className="amc-pref-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "female-identifying.svg",
+                      }
+                    }
+                    title="female-identifying"
+                  />,
+                ],
+              ],
+              "className": "amm-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Mentee Preferences",
+                },
+                "ref": null,
+                "rendered": "Mentee Preferences",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "female-identifying",
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "female-identifying preference indicator",
+                  "className": "amc-pref-icon",
+                  "src": Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "female-identifying.svg",
+                  },
+                  "title": "female-identifying",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Edit",
+          "className": "amm-edit-btn",
+          "name": "Edit",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Edit",
+        "type": "button",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -185,10 +2385,1956 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "amm-modal-hide",
+        "children": Array [
+          <div
+            className="amm-basic-info"
+          >
+            <img
+              alt="Mentor profile"
+              className="amm-pic"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "amm-pic.svg",
+                }
+              }
+            />
+            <div
+              className="amm-header-info"
+            >
+              <div
+                className="amm-top-line"
+              >
+                <h1
+                  className="amm-name"
+                >
+                  Menty the Mentor
+                </h1>
+                <img
+                  alt="Click here to exit"
+                  className="amm-x"
+                  name="Exit"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "x.svg",
+                    }
+                  }
+                />
+              </div>
+              <p
+                className="amm-job"
+              >
+                Head Mentor
+                 @ 
+                Department of Mentors
+              </p>
+              <div
+                className="amm-bottom-line"
+              >
+                <div
+                  className="amm-location-container"
+                >
+                  <img
+                    alt="Matched = true"
+                    className="amm-matched"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "matched-true.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-location"
+                  >
+                    Denver
+                    , 
+                    CO
+                    , 
+                    USA
+                  </p>
+                </div>
+                <p
+                  className="amm-pronoun"
+                >
+                  (she/her/hers)
+                </p>
+              </div>
+            </div>
+          </div>,
+          <div
+            className="amm-assign-student"
+          >
+            <div
+              className="amm-bio"
+            >
+              <h3>
+                Bio
+              </h3>
+              <p>
+                I am a mentor!
+              </p>
+            </div>
+            <div>
+              <h3>
+                Current Mentees
+              </h3>
+            </div>
+            <div
+              className="amm-match-dropdown-container"
+            >
+              <h3>
+                Match
+              </h3>
+              <select
+                className="amm-match-dropdown"
+                name="menteeToAssign"
+                onChange={[Function]}
+              >
+                <option
+                  value=""
+                >
+                  Select a Student
+                </option>
+              </select>
+              <button
+                onClick={[Function]}
+              >
+                Assign
+              </button>
+            </div>
+          </div>,
+          <div
+            className="amm-card-container"
+          >
+            <div
+              className="amm-card amm-contact"
+            >
+              <h3
+                className="amm-contact-title"
+              >
+                Contact
+              </h3>
+              <div
+                className="amm-flex"
+              >
+                <h4>
+                  Email:
+                </h4>
+                <p
+                  className="amm-email"
+                >
+                  menty@mentor.com
+                </p>
+              </div>
+              <div
+                className="amm-flex"
+              >
+                <h4>
+                  Slack:
+                </h4>
+                <p
+                  className="amm-slack"
+                >
+                  @Menty
+                </p>
+              </div>
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Industry Knowlegde
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Civic Tech
+                </p>
+              </div>
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                How I Can Help
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Coffee Meetings
+                </p>
+              </div>
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Tech Expertise
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  React.js
+                </p>
+              </div>
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Non-Tech Expertise
+              </h3>
+              <div
+                className="amm-list-item-container"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Parenting
+                </p>
+              </div>
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Capacity
+              </h3>
+              <img
+                alt="capacity icon"
+                className="amm-capacity-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "capacity.svg",
+                  }
+                }
+              />
+              <img
+                alt="capacity icon"
+                className="amm-capacity-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "capacity.svg",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Meeting Location
+              </h3>
+              <p>
+                Turing
+              </p>
+            </div>
+            <div
+              className="amm-card"
+            >
+              <h3>
+                Mentee Preferences
+              </h3>
+              <img
+                alt="female-identifying preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "female-identifying.svg",
+                  }
+                }
+                title="female-identifying"
+              />
+            </div>
+          </div>,
+          <button
+            className="amm-edit-btn"
+            name="Edit"
+            onClick={[Function]}
+          >
+            Edit
+          </button>,
+        ],
+        "className": "amm-modal-show",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Mentor profile"
+                className="amm-pic"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "amm-pic.svg",
+                  }
+                }
+              />,
+              <div
+                className="amm-header-info"
+              >
+                <div
+                  className="amm-top-line"
+                >
+                  <h1
+                    className="amm-name"
+                  >
+                    Menty the Mentor
+                  </h1>
+                  <img
+                    alt="Click here to exit"
+                    className="amm-x"
+                    name="Exit"
+                    onClick={[Function]}
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "x.svg",
+                      }
+                    }
+                  />
+                </div>
+                <p
+                  className="amm-job"
+                >
+                  Head Mentor
+                   @ 
+                  Department of Mentors
+                </p>
+                <div
+                  className="amm-bottom-line"
+                >
+                  <div
+                    className="amm-location-container"
+                  >
+                    <img
+                      alt="Matched = true"
+                      className="amm-matched"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "matched-true.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-location"
+                    >
+                      Denver
+                      , 
+                      CO
+                      , 
+                      USA
+                    </p>
+                  </div>
+                  <p
+                    className="amm-pronoun"
+                  >
+                    (she/her/hers)
+                  </p>
+                </div>
+              </div>,
+            ],
+            "className": "amm-basic-info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Mentor profile",
+                "className": "amm-pic",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "amm-pic.svg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="amm-top-line"
+                  >
+                    <h1
+                      className="amm-name"
+                    >
+                      Menty the Mentor
+                    </h1>
+                    <img
+                      alt="Click here to exit"
+                      className="amm-x"
+                      name="Exit"
+                      onClick={[Function]}
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "x.svg",
+                        }
+                      }
+                    />
+                  </div>,
+                  <p
+                    className="amm-job"
+                  >
+                    Head Mentor
+                     @ 
+                    Department of Mentors
+                  </p>,
+                  <div
+                    className="amm-bottom-line"
+                  >
+                    <div
+                      className="amm-location-container"
+                    >
+                      <img
+                        alt="Matched = true"
+                        className="amm-matched"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "matched-true.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-location"
+                      >
+                        Denver
+                        , 
+                        CO
+                        , 
+                        USA
+                      </p>
+                    </div>
+                    <p
+                      className="amm-pronoun"
+                    >
+                      (she/her/hers)
+                    </p>
+                  </div>,
+                ],
+                "className": "amm-header-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h1
+                        className="amm-name"
+                      >
+                        Menty the Mentor
+                      </h1>,
+                      <img
+                        alt="Click here to exit"
+                        className="amm-x"
+                        name="Exit"
+                        onClick={[Function]}
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "x.svg",
+                          }
+                        }
+                      />,
+                    ],
+                    "className": "amm-top-line",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Menty the Mentor",
+                        "className": "amm-name",
+                      },
+                      "ref": null,
+                      "rendered": "Menty the Mentor",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Click here to exit",
+                        "className": "amm-x",
+                        "name": "Exit",
+                        "onClick": [Function],
+                        "src": Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "x.svg",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Head Mentor",
+                      " @ ",
+                      "Department of Mentors",
+                    ],
+                    "className": "amm-job",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Head Mentor",
+                    " @ ",
+                    "Department of Mentors",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="amm-location-container"
+                      >
+                        <img
+                          alt="Matched = true"
+                          className="amm-matched"
+                          src={
+                            Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "matched-true.svg",
+                            }
+                          }
+                        />
+                        <p
+                          className="amm-location"
+                        >
+                          Denver
+                          , 
+                          CO
+                          , 
+                          USA
+                        </p>
+                      </div>,
+                      <p
+                        className="amm-pronoun"
+                      >
+                        (she/her/hers)
+                      </p>,
+                    ],
+                    "className": "amm-bottom-line",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <img
+                            alt="Matched = true"
+                            className="amm-matched"
+                            src={
+                              Object {
+                                "ReactComponent": [Function],
+                                "__esModule": true,
+                                "default": "matched-true.svg",
+                              }
+                            }
+                          />,
+                          <p
+                            className="amm-location"
+                          >
+                            Denver
+                            , 
+                            CO
+                            , 
+                            USA
+                          </p>,
+                        ],
+                        "className": "amm-location-container",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "Matched = true",
+                            "className": "amm-matched",
+                            "src": Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "matched-true.svg",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Denver",
+                              ", ",
+                              "CO",
+                              ", ",
+                              "USA",
+                            ],
+                            "className": "amm-location",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Denver",
+                            ", ",
+                            "CO",
+                            ", ",
+                            "USA",
+                          ],
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "(she/her/hers)",
+                        "className": "amm-pronoun",
+                      },
+                      "ref": null,
+                      "rendered": "(she/her/hers)",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="amm-bio"
+              >
+                <h3>
+                  Bio
+                </h3>
+                <p>
+                  I am a mentor!
+                </p>
+              </div>,
+              <div>
+                <h3>
+                  Current Mentees
+                </h3>
+              </div>,
+              <div
+                className="amm-match-dropdown-container"
+              >
+                <h3>
+                  Match
+                </h3>
+                <select
+                  className="amm-match-dropdown"
+                  name="menteeToAssign"
+                  onChange={[Function]}
+                >
+                  <option
+                    value=""
+                  >
+                    Select a Student
+                  </option>
+                </select>
+                <button
+                  onClick={[Function]}
+                >
+                  Assign
+                </button>
+              </div>,
+            ],
+            "className": "amm-assign-student",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Bio
+                  </h3>,
+                  <p>
+                    I am a mentor!
+                  </p>,
+                ],
+                "className": "amm-bio",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Bio",
+                  },
+                  "ref": null,
+                  "rendered": "Bio",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "I am a mentor!",
+                  },
+                  "ref": null,
+                  "rendered": "I am a mentor!",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Current Mentees
+                  </h3>,
+                  Array [],
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Current Mentees",
+                  },
+                  "ref": null,
+                  "rendered": "Current Mentees",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Match
+                  </h3>,
+                  <select
+                    className="amm-match-dropdown"
+                    name="menteeToAssign"
+                    onChange={[Function]}
+                  >
+                    <option
+                      value=""
+                    >
+                      Select a Student
+                    </option>
+                  </select>,
+                  <button
+                    onClick={[Function]}
+                  >
+                    Assign
+                  </button>,
+                ],
+                "className": "amm-match-dropdown-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Match",
+                  },
+                  "ref": null,
+                  "rendered": "Match",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <option
+                        value=""
+                      >
+                        Select a Student
+                      </option>,
+                      Array [
+                        undefined,
+                        undefined,
+                      ],
+                    ],
+                    "className": "amm-match-dropdown",
+                    "name": "menteeToAssign",
+                    "onChange": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Select a Student",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": "Select a Student",
+                      "type": "option",
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                  "type": "select",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Assign",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Assign",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="amm-card amm-contact"
+              >
+                <h3
+                  className="amm-contact-title"
+                >
+                  Contact
+                </h3>
+                <div
+                  className="amm-flex"
+                >
+                  <h4>
+                    Email:
+                  </h4>
+                  <p
+                    className="amm-email"
+                  >
+                    menty@mentor.com
+                  </p>
+                </div>
+                <div
+                  className="amm-flex"
+                >
+                  <h4>
+                    Slack:
+                  </h4>
+                  <p
+                    className="amm-slack"
+                  >
+                    @Menty
+                  </p>
+                </div>
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  Industry Knowlegde
+                </h3>
+                <div
+                  className="amm-list-item-container"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    Civic Tech
+                  </p>
+                </div>
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  How I Can Help
+                </h3>
+                <div
+                  className="amm-list-item-container"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    Coffee Meetings
+                  </p>
+                </div>
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  Tech Expertise
+                </h3>
+                <div
+                  className="amm-list-item-container"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    React.js
+                  </p>
+                </div>
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  Non-Tech Expertise
+                </h3>
+                <div
+                  className="amm-list-item-container"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    Parenting
+                  </p>
+                </div>
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  Capacity
+                </h3>
+                <img
+                  alt="capacity icon"
+                  className="amm-capacity-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "capacity.svg",
+                    }
+                  }
+                />
+                <img
+                  alt="capacity icon"
+                  className="amm-capacity-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "capacity.svg",
+                    }
+                  }
+                />
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  Meeting Location
+                </h3>
+                <p>
+                  Turing
+                </p>
+              </div>,
+              <div
+                className="amm-card"
+              >
+                <h3>
+                  Mentee Preferences
+                </h3>
+                <img
+                  alt="female-identifying preference indicator"
+                  className="amc-pref-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "female-identifying.svg",
+                    }
+                  }
+                  title="female-identifying"
+                />
+              </div>,
+            ],
+            "className": "amm-card-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="amm-contact-title"
+                  >
+                    Contact
+                  </h3>,
+                  <div
+                    className="amm-flex"
+                  >
+                    <h4>
+                      Email:
+                    </h4>
+                    <p
+                      className="amm-email"
+                    >
+                      menty@mentor.com
+                    </p>
+                  </div>,
+                  <div
+                    className="amm-flex"
+                  >
+                    <h4>
+                      Slack:
+                    </h4>
+                    <p
+                      className="amm-slack"
+                    >
+                      @Menty
+                    </p>
+                  </div>,
+                ],
+                "className": "amm-card amm-contact",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Contact",
+                    "className": "amm-contact-title",
+                  },
+                  "ref": null,
+                  "rendered": "Contact",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Email:
+                      </h4>,
+                      <p
+                        className="amm-email"
+                      >
+                        menty@mentor.com
+                      </p>,
+                    ],
+                    "className": "amm-flex",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Email:",
+                      },
+                      "ref": null,
+                      "rendered": "Email:",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "menty@mentor.com",
+                        "className": "amm-email",
+                      },
+                      "ref": null,
+                      "rendered": "menty@mentor.com",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4>
+                        Slack:
+                      </h4>,
+                      <p
+                        className="amm-slack"
+                      >
+                        @Menty
+                      </p>,
+                    ],
+                    "className": "amm-flex",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Slack:",
+                      },
+                      "ref": null,
+                      "rendered": "Slack:",
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "@Menty",
+                        "className": "amm-slack",
+                      },
+                      "ref": null,
+                      "rendered": "@Menty",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Industry Knowlegde
+                  </h3>,
+                  Array [
+                    <div
+                      className="amm-list-item-container"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Civic Tech
+                      </p>
+                    </div>,
+                  ],
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Industry Knowlegde",
+                  },
+                  "ref": null,
+                  "rendered": "Industry Knowlegde",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "Civic Tech",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />,
+                      <p
+                        className="amm-list-item"
+                      >
+                        Civic Tech
+                      </p>,
+                    ],
+                    "className": "amm-list-item-container",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "dash icon",
+                        "className": "amm-dash-icon",
+                        "src": Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Civic Tech",
+                        "className": "amm-list-item",
+                      },
+                      "ref": null,
+                      "rendered": "Civic Tech",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    How I Can Help
+                  </h3>,
+                  Array [
+                    <div
+                      className="amm-list-item-container"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Coffee Meetings
+                      </p>
+                    </div>,
+                  ],
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "How I Can Help",
+                  },
+                  "ref": null,
+                  "rendered": "How I Can Help",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "Coffee Meetings",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />,
+                      <p
+                        className="amm-list-item"
+                      >
+                        Coffee Meetings
+                      </p>,
+                    ],
+                    "className": "amm-list-item-container",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "dash icon",
+                        "className": "amm-dash-icon",
+                        "src": Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Coffee Meetings",
+                        "className": "amm-list-item",
+                      },
+                      "ref": null,
+                      "rendered": "Coffee Meetings",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Tech Expertise
+                  </h3>,
+                  Array [
+                    <div
+                      className="amm-list-item-container"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        React.js
+                      </p>
+                    </div>,
+                  ],
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Tech Expertise",
+                  },
+                  "ref": null,
+                  "rendered": "Tech Expertise",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "React.js",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />,
+                      <p
+                        className="amm-list-item"
+                      >
+                        React.js
+                      </p>,
+                    ],
+                    "className": "amm-list-item-container",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "dash icon",
+                        "className": "amm-dash-icon",
+                        "src": Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "React.js",
+                        "className": "amm-list-item",
+                      },
+                      "ref": null,
+                      "rendered": "React.js",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Non-Tech Expertise
+                  </h3>,
+                  Array [
+                    <div
+                      className="amm-list-item-container"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Parenting
+                      </p>
+                    </div>,
+                  ],
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Non-Tech Expertise",
+                  },
+                  "ref": null,
+                  "rendered": "Non-Tech Expertise",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "Parenting",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />,
+                      <p
+                        className="amm-list-item"
+                      >
+                        Parenting
+                      </p>,
+                    ],
+                    "className": "amm-list-item-container",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "dash icon",
+                        "className": "amm-dash-icon",
+                        "src": Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Parenting",
+                        "className": "amm-list-item",
+                      },
+                      "ref": null,
+                      "rendered": "Parenting",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Capacity
+                  </h3>,
+                  Array [
+                    <img
+                      alt="capacity icon"
+                      className="amm-capacity-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "capacity.svg",
+                        }
+                      }
+                    />,
+                    <img
+                      alt="capacity icon"
+                      className="amm-capacity-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "capacity.svg",
+                        }
+                      }
+                    />,
+                  ],
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Capacity",
+                  },
+                  "ref": null,
+                  "rendered": "Capacity",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "capacity icon",
+                    "className": "amm-capacity-icon",
+                    "src": Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "capacity.svg",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "capacity icon",
+                    "className": "amm-capacity-icon",
+                    "src": Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "capacity.svg",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Meeting Location
+                  </h3>,
+                  <p>
+                    Turing
+                  </p>,
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Meeting Location",
+                  },
+                  "ref": null,
+                  "rendered": "Meeting Location",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Turing",
+                  },
+                  "ref": null,
+                  "rendered": "Turing",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Mentee Preferences
+                  </h3>,
+                  Array [
+                    <img
+                      alt="female-identifying preference indicator"
+                      className="amc-pref-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "female-identifying.svg",
+                        }
+                      }
+                      title="female-identifying"
+                    />,
+                  ],
+                ],
+                "className": "amm-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Mentee Preferences",
+                  },
+                  "ref": null,
+                  "rendered": "Mentee Preferences",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "female-identifying",
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "female-identifying preference indicator",
+                    "className": "amc-pref-icon",
+                    "src": Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "female-identifying.svg",
+                    },
+                    "title": "female-identifying",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Edit",
+            "className": "amm-edit-btn",
+            "name": "Edit",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Edit",
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
   ],

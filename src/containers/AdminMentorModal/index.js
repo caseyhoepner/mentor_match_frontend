@@ -323,10 +323,6 @@ export class AdminMentorModal extends Component {
       return (
         <EditableMentor currentMentor={this.state.currentMentor}/>
       )
-    } else {
-      return (
-        <div className='amm-modal-hide'></div>
-      )
     }
   }
 }
