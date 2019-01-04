@@ -13,9 +13,9 @@ export const setMentorModal = (mentorInfo) => ({
   modalInfo: mentorInfo
 })
 
-export const addModalMentees = (mentees) => ({
+export const addModalMentees = (modalMentees) => ({
   type: "ADD_MODAL_MENTEES",
-  mentees
+  modalMentees
 })
 
 export const isEditable = (bool) => ({

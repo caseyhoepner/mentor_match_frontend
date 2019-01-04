@@ -25,8 +25,8 @@ export const setMentorModal = (state = null, action) => {
     case 'SET_MENTOR_MODAL':
       return action.modalInfo;
 
-    // case 'ADD_MODAL_MENTEES':
-    //   return a
+    case 'ADD_MODAL_MENTEES':
+      return action.modalMentees
 
     default:
       return state;

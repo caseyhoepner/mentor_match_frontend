@@ -5,7 +5,7 @@ export const cleanData = (data) => {
 }
 
 export const cleanRelationshipData = (relationships) => {
-  return relationships.data.map(relationship => {
-    return relationship;
+  return relationships.data.filter(relationship => {
+    return relationship.attributes.active;
   })
 }
