@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Preferences from '../../containers/Preferences';
+import AdminPreferences from '../../containers/AdminPreferences';
 // import hollowHeart from '../../utils/assets/heart.svg';
 // import solidHeart from '../../utils/assets/solid-heart.svg';
 import { connect } from 'react-redux';
@@ -93,7 +93,7 @@ export class AdminMentorSearch extends Component {
             </button>
           </div>
         </div>
-        <Preferences preferencesClicked={preferencesClicked}/>
+        <AdminPreferences preferencesClicked={preferencesClicked}/>
       </div>
     )
   }
