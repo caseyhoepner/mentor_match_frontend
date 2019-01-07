@@ -59,7 +59,7 @@ ShallowWrapper {
             <img
               alt="Turing Logo"
               className="mc-turing-logo"
-              src="turing-logo.png"
+              src="turing-full-black.png"
             />
             <div
               className="mc-github-btn"
@@ -121,7 +121,7 @@ ShallowWrapper {
               <img
                 alt="Turing Logo"
                 className="mc-turing-logo"
-                src="turing-logo.png"
+                src="turing-full-black.png"
               />
               <div
                 className="mc-github-btn"
@@ -176,7 +176,7 @@ ShallowWrapper {
                 <img
                   alt="Turing Logo"
                   className="mc-turing-logo"
-                  src="turing-logo.png"
+                  src="turing-full-black.png"
                 />,
                 <div
                   className="mc-github-btn"
@@ -211,7 +211,7 @@ ShallowWrapper {
                 "props": Object {
                   "alt": "Turing Logo",
                   "className": "mc-turing-logo",
-                  "src": "turing-logo.png",
+                  "src": "turing-full-black.png",
                 },
                 "ref": null,
                 "rendered": null,
@@ -386,7 +386,7 @@ ShallowWrapper {
               <img
                 alt="Turing Logo"
                 className="mc-turing-logo"
-                src="turing-logo.png"
+                src="turing-full-black.png"
               />
               <div
                 className="mc-github-btn"
@@ -448,7 +448,7 @@ ShallowWrapper {
                 <img
                   alt="Turing Logo"
                   className="mc-turing-logo"
-                  src="turing-logo.png"
+                  src="turing-full-black.png"
                 />
                 <div
                   className="mc-github-btn"
@@ -503,7 +503,7 @@ ShallowWrapper {
                   <img
                     alt="Turing Logo"
                     className="mc-turing-logo"
-                    src="turing-logo.png"
+                    src="turing-full-black.png"
                   />,
                   <div
                     className="mc-github-btn"
@@ -538,7 +538,7 @@ ShallowWrapper {
                   "props": Object {
                     "alt": "Turing Logo",
                     "className": "mc-turing-logo",
-                    "src": "turing-logo.png",
+                    "src": "turing-full-black.png",
                   },
                   "ref": null,
                   "rendered": null,

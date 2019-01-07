@@ -142,7 +142,7 @@ export class MentorContainer extends Component {
       <div>
         <header className='mc-header'>
           <div className='mc-nav-btns'>
-            <img src={require('../../utils/assets/turing-logo.png')} alt='Turing Logo' className='mc-turing-logo' />
+            <img src={require('../../utils/assets/turing-full-black.png')} alt='Turing Logo' className='mc-turing-logo' />
             <div className='mc-github-btn'>
               <a href='https://github.com/login/oauth/authorize?client_id=81ef33f7e5b1e21f0162&scope=repo' className='mc-gh-tagline'>Sign in with GitHub</a>
               <img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='mc-github-logo' />

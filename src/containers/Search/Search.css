@@ -1,10 +1,10 @@
 .s-search-container {
-  align-items: center;
+  align-items: flex-start;
   background-color: #03c1d1;
   display: flex;
   height: 120px;
   justify-content: space-between;
-  padding: 0 10%;
+  padding: 2% 10% 6%;
 }
 
 .s-search-and-pref-container {

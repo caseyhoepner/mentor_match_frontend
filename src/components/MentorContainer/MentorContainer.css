@@ -1,11 +1,19 @@
 .mc-header {
-  background-color: grey;
+  /* background-color: grey; */
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, .2),
+    rgba(0, 0, 0, .2)),
+  url(../../utils/assets/student-form-pic.jpg);
+  background-position: top -100px right 0;
+  background-size: cover;
 }
 .mc-title-text {
   margin-bottom: 20px;
 }
 .mc-nav-btns {
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
