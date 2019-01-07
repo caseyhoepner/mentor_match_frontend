@@ -2,9 +2,18 @@
   align-items: center;
   background-color: #03c1d1;
   display: flex;
-  height: 70px;
+  height: 120px;
   justify-content: space-between;
   padding: 0 10%;
+}
+
+.s-search-and-pref-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.s-search-and-buttons {
+  display: flex;
 }
 
 .s-search-inputs-container {

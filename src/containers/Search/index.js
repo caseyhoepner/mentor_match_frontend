@@ -36,72 +36,68 @@ export class Search extends Component {
     const { name } = event.target;
     await this.setState({ [name]: !this.state[name] })
 
-    if (name === 'preferencesClicked') {
-      this.setState({
-        showPreferences: !this.state.showPreferences
-      }) 
-    } else if (name === 'allMentorsClicked') {
+    if (name === 'allMentorsClicked') {
       this.props.toggleShowingMentors(!this.props.showingAllMentors)
     }
-
-    this.setState({ [name]: !this.state[name] })
   }
 
   render() {
     const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
 
     return (
-      <div className='ams-search-container'>
-        <div className='ams-search-and-buttons'>
-          <div className='ams-search-inputs-container'>
-            <div className='ams-search-bar'>
-              <input 
-                name='search' 
-                type='text' 
-                value={search} 
-                onChange={this.handleChange} 
-                placeholder='Search here...'
-                className='ams-search-input'
-              />
-              <div className='ams-search-icon'>
+      <div className='s-search-container'>
+        <div className='s-search-and-pref-container'>
+          <div className='s-search-and-buttons'>
+            <div className='s-search-inputs-container'>
+              <div className='s-search-bar'>
+                <input 
+                  name='search' 
+                  type='text' 
+                  value={search} 
+                  onChange={this.handleChange} 
+                  placeholder='Search here...'
+                  className='s-search-input'
+                />
+                <div className='s-search-icon'>
+                </div>
               </div>
+              <select
+                value={localeSelected}
+                onChange={this.handleChange}
+                name='localeSelected'
+                className='s-location-dropdown'
+              >
+                <option value=''>--Select locale--</option>
+                <option value='Denver'>Denver</option>
+                <option value='Remote'>Remote</option>
+              </select>
             </div>
-            <select
-              value={localeSelected}
-              onChange={this.handleChange}
-              name='localeSelected'
-              className='ams-location-dropdown'
-            >
-              <option value=''>--Select locale--</option>
-              <option value='Denver'>Denver</option>
-              <option value='Remote'>Remote</option>
-            </select>
-          </div>
-          <div className='ams-filter-btn-container'>
-            <button 
-              className={!preferencesClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
-              onClick={this.toggleClicked}
-              name='preferencesClicked'
-            >
-              Filter by Preferences
-            </button>
-            <button 
-              className={!allMentorsClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
-              onClick={this.toggleClicked}
-              name='allMentorsClicked'
-            >
-              All Mentors
-            </button>
-            <img
-                src={!favClicked ? hollowHeart : solidHeart}
-                alt='favorite button'
-                className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
+            <div className='s-filter-btn-container'>
+              <button 
+                className={!preferencesClicked ? 's-filter-btn' : 's-filter-btn active'}
                 onClick={this.toggleClicked}
-                name='favClicked'
-              />
+                name='preferencesClicked'
+              >
+                Filter by Preferences
+              </button>
+              <button 
+                className={!allMentorsClicked ? 's-filter-btn' : 's-filter-btn active'}
+                onClick={this.toggleClicked}
+                name='allMentorsClicked'
+              >
+                All Mentors
+              </button>
+              <img
+                  src={!favClicked ? hollowHeart : solidHeart}
+                  alt='favorite button'
+                  className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
+                  onClick={this.toggleClicked}
+                  name='favClicked'
+                />
+            </div>
           </div>
+          <Preferences preferencesClicked={preferencesClicked}/>
         </div>
-        <Preferences preferencesClicked={preferencesClicked}/>
       </div>
     )
   }
