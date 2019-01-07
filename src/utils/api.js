@@ -15,6 +15,7 @@ export const postMentor = async (mentor) => {
     accept: "application/json",
     body: JSON.stringify(mentor)
   });
+  console.log(JSON.stringify(mentor))
   const status = await response.json();
   console.log(status);
 };
