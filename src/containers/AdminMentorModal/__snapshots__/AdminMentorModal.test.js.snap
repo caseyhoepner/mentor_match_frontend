@@ -545,6 +545,8 @@ ShallowWrapper {
               </option>
             </select>
             <button
+              className="amm-assign-btn"
+              disabled={true}
               onClick={[Function]}
             >
               Assign
@@ -1202,6 +1204,8 @@ ShallowWrapper {
                 </option>
               </select>
               <button
+                className="amm-assign-btn"
+                disabled={true}
                 onClick={[Function]}
               >
                 Assign
@@ -1303,6 +1307,8 @@ ShallowWrapper {
                   </option>
                 </select>,
                 <button
+                  className="amm-assign-btn"
+                  disabled={true}
                   onClick={[Function]}
                 >
                   Assign
@@ -1368,6 +1374,8 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Assign",
+                  "className": "amm-assign-btn",
+                  "disabled": true,
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -2503,6 +2511,8 @@ ShallowWrapper {
                 </option>
               </select>
               <button
+                className="amm-assign-btn"
+                disabled={true}
                 onClick={[Function]}
               >
                 Assign
@@ -3160,6 +3170,8 @@ ShallowWrapper {
                   </option>
                 </select>
                 <button
+                  className="amm-assign-btn"
+                  disabled={true}
                   onClick={[Function]}
                 >
                   Assign
@@ -3261,6 +3273,8 @@ ShallowWrapper {
                     </option>
                   </select>,
                   <button
+                    className="amm-assign-btn"
+                    disabled={true}
                     onClick={[Function]}
                   >
                     Assign
@@ -3326,6 +3340,8 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Assign",
+                    "className": "amm-assign-btn",
+                    "disabled": true,
                     "onClick": [Function],
                   },
                   "ref": null,
