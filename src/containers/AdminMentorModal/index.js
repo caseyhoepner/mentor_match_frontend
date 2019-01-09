@@ -200,6 +200,7 @@ export class AdminMentorModal extends Component {
     if(this.props.modalInfo && !isEditable) {
       let studentOptions = this.getStudentOptions();
       let mentees = this.state.mentees;
+      let { menteeToAssign } = this.state
       let { 
         name,
         email,
@@ -274,7 +275,11 @@ export class AdminMentorModal extends Component {
                 <option value=''>Select a Student</option>
                 { studentOptions }
               </select>
-              <button onClick={this.assignMentee}>Assign</button>
+              <button 
+                className='amm-assign-btn' 
+                onClick={this.assignMentee} 
+                disabled={!mentee_capacity || !menteeToAssign} 
+              >Assign</button>
             </div>
           </div>
 
