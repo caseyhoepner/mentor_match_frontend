@@ -68,7 +68,7 @@ export class AdminDashboard extends Component {
   cleanPrefs = (str) => {
     if (str === 'LGBTQ+') {
       return 'lgbtq';
-    } else if (str === 'Female-Identifying') {
+    } else if (str === 'Female-identifying' || str === 'Female-Identifying') {
       return 'female';
     } else if (str === 'Male-Identifying') {
       return 'male';
