@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor, isEditable, addModalMentees } from '../../actions/mentor-actions';
 import { makeStudentInactive } from '../../actions/student-actions';
 // import { patchMentor } from '../../utils/api';
-import { postRelationship, patchRelationship, patchStudent } from '../../utils/api';
+import { postRelationship, patchRelationship, patchStudent, patchMentor } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';
 import { withRouter } from 'react-router-dom';
@@ -64,7 +64,14 @@ export class AdminMentorModal extends Component {
     const { makeStudentInactive, modalInfo, students } = this.props;
     const student = this.getStudent(students);
     const mentorId = modalInfo.id;
+    let mentorToChange = this.props.currentMentor
+    let numToChange = this.props.currentMentor.mentee_capacity - 1
+    
+    mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
 
+    await patchMentor(mentorToChange)
+    await this.props.updateChangedMentor(mentorToChange)
+    await this.props.setMentorModal(mentorToChange)
     await postRelationship(student.id, mentorId);
     await makeStudentInactive(student.id);
     await patchStudent(student)
@@ -174,6 +181,14 @@ export class AdminMentorModal extends Component {
   unmatch = async (event, studentId) => {
     const mentorId = this.props.modalInfo.id;
     const relationshipId = event.target.name;
+    let mentorToChange = this.props.currentMentor
+    let numToChange = this.props.currentMentor.mentee_capacity + 1
+    
+    mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
+
+    await patchMentor(mentorToChange)
+    await this.props.updateChangedMentor(mentorToChange)
+    await this.props.setMentorModal(mentorToChange)
     await patchRelationship(studentId, mentorId, relationshipId);
     await this.props.retrieveRelationships()
     await this.setState({ mentees: this.getMentees() })

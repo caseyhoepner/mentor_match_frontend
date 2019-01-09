@@ -174,7 +174,7 @@ export class EditableMentor extends Component {
             className='active' 
             type="radio" 
             name="em-active"
-            checked={active === 'false'}
+            checked={!active}
             onChange={this.handleChangeRadio}
           />
           <span className="em-radio-checkmark-1"></span>
@@ -185,7 +185,7 @@ export class EditableMentor extends Component {
             className='active' 
             type="radio" 
             name="em-active"
-            checked={active === 'true'}
+            checked={active}
             onChange={this.handleChangeRadio}
           />
           <span className="em-radio-checkmark-1"></span>
