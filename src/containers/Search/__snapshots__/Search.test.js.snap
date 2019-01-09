@@ -17,18 +17,20 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="s-search-and-pref-container"
+      >
         <div
-          className="ams-search-and-buttons"
+          className="s-search-and-buttons"
         >
           <div
-            className="ams-search-inputs-container"
+            className="s-search-inputs-container"
           >
             <div
-              className="ams-search-bar"
+              className="s-search-bar"
             >
               <input
-                className="ams-search-input"
+                className="s-search-input"
                 name="search"
                 onChange={[Function]}
                 placeholder="Search here..."
@@ -36,11 +38,11 @@ ShallowWrapper {
                 value=""
               />
               <div
-                className="ams-search-icon"
+                className="s-search-icon"
               />
             </div>
             <select
-              className="ams-location-dropdown"
+              className="s-location-dropdown"
               name="localeSelected"
               onChange={[Function]}
               value=""
@@ -63,17 +65,17 @@ ShallowWrapper {
             </select>
           </div>
           <div
-            className="ams-filter-btn-container"
+            className="s-filter-btn-container"
           >
             <button
-              className="ams-filter-btn"
+              className="s-filter-btn"
               name="preferencesClicked"
               onClick={[Function]}
             >
               Filter by Preferences
             </button>
             <button
-              className="ams-filter-btn"
+              className="s-filter-btn"
               name="allMentorsClicked"
               onClick={[Function]}
             >
@@ -87,376 +89,31 @@ ShallowWrapper {
               src="heart.svg"
             />
           </div>
-        </div>,
+        </div>
         <Connect(Preferences)
           preferencesClicked={false}
-        />,
-      ],
-      "className": "ams-search-container",
+        />
+      </div>,
+      "className": "s-search-container",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="ams-search-inputs-container"
-            >
-              <div
-                className="ams-search-bar"
-              >
-                <input
-                  className="ams-search-input"
-                  name="search"
-                  onChange={[Function]}
-                  placeholder="Search here..."
-                  type="text"
-                  value=""
-                />
-                <div
-                  className="ams-search-icon"
-                />
-              </div>
-              <select
-                className="ams-location-dropdown"
-                name="localeSelected"
-                onChange={[Function]}
-                value=""
-              >
-                <option
-                  value=""
-                >
-                  --Select locale--
-                </option>
-                <option
-                  value="Denver"
-                >
-                  Denver
-                </option>
-                <option
-                  value="Remote"
-                >
-                  Remote
-                </option>
-              </select>
-            </div>,
-            <div
-              className="ams-filter-btn-container"
-            >
-              <button
-                className="ams-filter-btn"
-                name="preferencesClicked"
-                onClick={[Function]}
-              >
-                Filter by Preferences
-              </button>
-              <button
-                className="ams-filter-btn"
-                name="allMentorsClicked"
-                onClick={[Function]}
-              >
-                All Mentors
-              </button>
-              <img
-                alt="favorite button"
-                className="s-favorite-btn"
-                name="favClicked"
-                onClick={[Function]}
-                src="heart.svg"
-              />
-            </div>,
-          ],
-          "className": "ams-search-and-buttons",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div
-                  className="ams-search-bar"
-                >
-                  <input
-                    className="ams-search-input"
-                    name="search"
-                    onChange={[Function]}
-                    placeholder="Search here..."
-                    type="text"
-                    value=""
-                  />
-                  <div
-                    className="ams-search-icon"
-                  />
-                </div>,
-                <select
-                  className="ams-location-dropdown"
-                  name="localeSelected"
-                  onChange={[Function]}
-                  value=""
-                >
-                  <option
-                    value=""
-                  >
-                    --Select locale--
-                  </option>
-                  <option
-                    value="Denver"
-                  >
-                    Denver
-                  </option>
-                  <option
-                    value="Remote"
-                  >
-                    Remote
-                  </option>
-                </select>,
-              ],
-              "className": "ams-search-inputs-container",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <input
-                      className="ams-search-input"
-                      name="search"
-                      onChange={[Function]}
-                      placeholder="Search here..."
-                      type="text"
-                      value=""
-                    />,
-                    <div
-                      className="ams-search-icon"
-                    />,
-                  ],
-                  "className": "ams-search-bar",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "ams-search-input",
-                      "name": "search",
-                      "onChange": [Function],
-                      "placeholder": "Search here...",
-                      "type": "text",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "input",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "ams-search-icon",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <option
-                      value=""
-                    >
-                      --Select locale--
-                    </option>,
-                    <option
-                      value="Denver"
-                    >
-                      Denver
-                    </option>,
-                    <option
-                      value="Remote"
-                    >
-                      Remote
-                    </option>,
-                  ],
-                  "className": "ams-location-dropdown",
-                  "name": "localeSelected",
-                  "onChange": [Function],
-                  "value": "",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "--Select locale--",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": "--Select locale--",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Denver",
-                      "value": "Denver",
-                    },
-                    "ref": null,
-                    "rendered": "Denver",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Remote",
-                      "value": "Remote",
-                    },
-                    "ref": null,
-                    "rendered": "Remote",
-                    "type": "option",
-                  },
-                ],
-                "type": "select",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <button
-                  className="ams-filter-btn"
-                  name="preferencesClicked"
-                  onClick={[Function]}
-                >
-                  Filter by Preferences
-                </button>,
-                <button
-                  className="ams-filter-btn"
-                  name="allMentorsClicked"
-                  onClick={[Function]}
-                >
-                  All Mentors
-                </button>,
-                <img
-                  alt="favorite button"
-                  className="s-favorite-btn"
-                  name="favClicked"
-                  onClick={[Function]}
-                  src="heart.svg"
-                />,
-              ],
-              "className": "ams-filter-btn-container",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Filter by Preferences",
-                  "className": "ams-filter-btn",
-                  "name": "preferencesClicked",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "Filter by Preferences",
-                "type": "button",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "All Mentors",
-                  "className": "ams-filter-btn",
-                  "name": "allMentorsClicked",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "All Mentors",
-                "type": "button",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "favorite button",
-                  "className": "s-favorite-btn",
-                  "name": "favClicked",
-                  "onClick": [Function],
-                  "src": "heart.svg",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "preferencesClicked": false,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
-            className="ams-search-and-buttons"
+            className="s-search-and-buttons"
           >
             <div
-              className="ams-search-inputs-container"
+              className="s-search-inputs-container"
             >
               <div
-                className="ams-search-bar"
+                className="s-search-bar"
               >
                 <input
-                  className="ams-search-input"
+                  className="s-search-input"
                   name="search"
                   onChange={[Function]}
                   placeholder="Search here..."
@@ -464,11 +121,11 @@ ShallowWrapper {
                   value=""
                 />
                 <div
-                  className="ams-search-icon"
+                  className="s-search-icon"
                 />
               </div>
               <select
-                className="ams-location-dropdown"
+                className="s-location-dropdown"
                 name="localeSelected"
                 onChange={[Function]}
                 value=""
@@ -491,17 +148,17 @@ ShallowWrapper {
               </select>
             </div>
             <div
-              className="ams-filter-btn-container"
+              className="s-filter-btn-container"
             >
               <button
-                className="ams-filter-btn"
+                className="s-filter-btn"
                 name="preferencesClicked"
                 onClick={[Function]}
               >
                 Filter by Preferences
               </button>
               <button
-                className="ams-filter-btn"
+                className="s-filter-btn"
                 name="allMentorsClicked"
                 onClick={[Function]}
               >
@@ -520,7 +177,7 @@ ShallowWrapper {
             preferencesClicked={false}
           />,
         ],
-        "className": "ams-search-container",
+        "className": "s-search-and-pref-container",
       },
       "ref": null,
       "rendered": Array [
@@ -531,13 +188,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="ams-search-inputs-container"
+                className="s-search-inputs-container"
               >
                 <div
-                  className="ams-search-bar"
+                  className="s-search-bar"
                 >
                   <input
-                    className="ams-search-input"
+                    className="s-search-input"
                     name="search"
                     onChange={[Function]}
                     placeholder="Search here..."
@@ -545,11 +202,11 @@ ShallowWrapper {
                     value=""
                   />
                   <div
-                    className="ams-search-icon"
+                    className="s-search-icon"
                   />
                 </div>
                 <select
-                  className="ams-location-dropdown"
+                  className="s-location-dropdown"
                   name="localeSelected"
                   onChange={[Function]}
                   value=""
@@ -572,17 +229,17 @@ ShallowWrapper {
                 </select>
               </div>,
               <div
-                className="ams-filter-btn-container"
+                className="s-filter-btn-container"
               >
                 <button
-                  className="ams-filter-btn"
+                  className="s-filter-btn"
                   name="preferencesClicked"
                   onClick={[Function]}
                 >
                   Filter by Preferences
                 </button>
                 <button
-                  className="ams-filter-btn"
+                  className="s-filter-btn"
                   name="allMentorsClicked"
                   onClick={[Function]}
                 >
@@ -597,7 +254,7 @@ ShallowWrapper {
                 />
               </div>,
             ],
-            "className": "ams-search-and-buttons",
+            "className": "s-search-and-buttons",
           },
           "ref": null,
           "rendered": Array [
@@ -608,10 +265,10 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div
-                    className="ams-search-bar"
+                    className="s-search-bar"
                   >
                     <input
-                      className="ams-search-input"
+                      className="s-search-input"
                       name="search"
                       onChange={[Function]}
                       placeholder="Search here..."
@@ -619,11 +276,11 @@ ShallowWrapper {
                       value=""
                     />
                     <div
-                      className="ams-search-icon"
+                      className="s-search-icon"
                     />
                   </div>,
                   <select
-                    className="ams-location-dropdown"
+                    className="s-location-dropdown"
                     name="localeSelected"
                     onChange={[Function]}
                     value=""
@@ -645,7 +302,7 @@ ShallowWrapper {
                     </option>
                   </select>,
                 ],
-                "className": "ams-search-inputs-container",
+                "className": "s-search-inputs-container",
               },
               "ref": null,
               "rendered": Array [
@@ -656,7 +313,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <input
-                        className="ams-search-input"
+                        className="s-search-input"
                         name="search"
                         onChange={[Function]}
                         placeholder="Search here..."
@@ -664,10 +321,10 @@ ShallowWrapper {
                         value=""
                       />,
                       <div
-                        className="ams-search-icon"
+                        className="s-search-icon"
                       />,
                     ],
-                    "className": "ams-search-bar",
+                    "className": "s-search-bar",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -676,7 +333,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "ams-search-input",
+                        "className": "s-search-input",
                         "name": "search",
                         "onChange": [Function],
                         "placeholder": "Search here...",
@@ -692,7 +349,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "ams-search-icon",
+                        "className": "s-search-icon",
                       },
                       "ref": null,
                       "rendered": null,
@@ -723,7 +380,7 @@ ShallowWrapper {
                         Remote
                       </option>,
                     ],
-                    "className": "ams-location-dropdown",
+                    "className": "s-location-dropdown",
                     "name": "localeSelected",
                     "onChange": [Function],
                     "value": "",
@@ -779,14 +436,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <button
-                    className="ams-filter-btn"
+                    className="s-filter-btn"
                     name="preferencesClicked"
                     onClick={[Function]}
                   >
                     Filter by Preferences
                   </button>,
                   <button
-                    className="ams-filter-btn"
+                    className="s-filter-btn"
                     name="allMentorsClicked"
                     onClick={[Function]}
                   >
@@ -800,7 +457,7 @@ ShallowWrapper {
                     src="heart.svg"
                   />,
                 ],
-                "className": "ams-filter-btn-container",
+                "className": "s-filter-btn-container",
               },
               "ref": null,
               "rendered": Array [
@@ -810,7 +467,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Filter by Preferences",
-                    "className": "ams-filter-btn",
+                    "className": "s-filter-btn",
                     "name": "preferencesClicked",
                     "onClick": [Function],
                   },
@@ -824,7 +481,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "All Mentors",
-                    "className": "ams-filter-btn",
+                    "className": "s-filter-btn",
                     "name": "allMentorsClicked",
                     "onClick": [Function],
                   },
@@ -865,6 +522,523 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="s-search-and-pref-container"
+        >
+          <div
+            className="s-search-and-buttons"
+          >
+            <div
+              className="s-search-inputs-container"
+            >
+              <div
+                className="s-search-bar"
+              >
+                <input
+                  className="s-search-input"
+                  name="search"
+                  onChange={[Function]}
+                  placeholder="Search here..."
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="s-search-icon"
+                />
+              </div>
+              <select
+                className="s-location-dropdown"
+                name="localeSelected"
+                onChange={[Function]}
+                value=""
+              >
+                <option
+                  value=""
+                >
+                  --Select locale--
+                </option>
+                <option
+                  value="Denver"
+                >
+                  Denver
+                </option>
+                <option
+                  value="Remote"
+                >
+                  Remote
+                </option>
+              </select>
+            </div>
+            <div
+              className="s-filter-btn-container"
+            >
+              <button
+                className="s-filter-btn"
+                name="preferencesClicked"
+                onClick={[Function]}
+              >
+                Filter by Preferences
+              </button>
+              <button
+                className="s-filter-btn"
+                name="allMentorsClicked"
+                onClick={[Function]}
+              >
+                All Mentors
+              </button>
+              <img
+                alt="favorite button"
+                className="s-favorite-btn"
+                name="favClicked"
+                onClick={[Function]}
+                src="heart.svg"
+              />
+            </div>
+          </div>
+          <Connect(Preferences)
+            preferencesClicked={false}
+          />
+        </div>,
+        "className": "s-search-container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="s-search-and-buttons"
+            >
+              <div
+                className="s-search-inputs-container"
+              >
+                <div
+                  className="s-search-bar"
+                >
+                  <input
+                    className="s-search-input"
+                    name="search"
+                    onChange={[Function]}
+                    placeholder="Search here..."
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="s-search-icon"
+                  />
+                </div>
+                <select
+                  className="s-location-dropdown"
+                  name="localeSelected"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    --Select locale--
+                  </option>
+                  <option
+                    value="Denver"
+                  >
+                    Denver
+                  </option>
+                  <option
+                    value="Remote"
+                  >
+                    Remote
+                  </option>
+                </select>
+              </div>
+              <div
+                className="s-filter-btn-container"
+              >
+                <button
+                  className="s-filter-btn"
+                  name="preferencesClicked"
+                  onClick={[Function]}
+                >
+                  Filter by Preferences
+                </button>
+                <button
+                  className="s-filter-btn"
+                  name="allMentorsClicked"
+                  onClick={[Function]}
+                >
+                  All Mentors
+                </button>
+                <img
+                  alt="favorite button"
+                  className="s-favorite-btn"
+                  name="favClicked"
+                  onClick={[Function]}
+                  src="heart.svg"
+                />
+              </div>
+            </div>,
+            <Connect(Preferences)
+              preferencesClicked={false}
+            />,
+          ],
+          "className": "s-search-and-pref-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="s-search-inputs-container"
+                >
+                  <div
+                    className="s-search-bar"
+                  >
+                    <input
+                      className="s-search-input"
+                      name="search"
+                      onChange={[Function]}
+                      placeholder="Search here..."
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      className="s-search-icon"
+                    />
+                  </div>
+                  <select
+                    className="s-location-dropdown"
+                    name="localeSelected"
+                    onChange={[Function]}
+                    value=""
+                  >
+                    <option
+                      value=""
+                    >
+                      --Select locale--
+                    </option>
+                    <option
+                      value="Denver"
+                    >
+                      Denver
+                    </option>
+                    <option
+                      value="Remote"
+                    >
+                      Remote
+                    </option>
+                  </select>
+                </div>,
+                <div
+                  className="s-filter-btn-container"
+                >
+                  <button
+                    className="s-filter-btn"
+                    name="preferencesClicked"
+                    onClick={[Function]}
+                  >
+                    Filter by Preferences
+                  </button>
+                  <button
+                    className="s-filter-btn"
+                    name="allMentorsClicked"
+                    onClick={[Function]}
+                  >
+                    All Mentors
+                  </button>
+                  <img
+                    alt="favorite button"
+                    className="s-favorite-btn"
+                    name="favClicked"
+                    onClick={[Function]}
+                    src="heart.svg"
+                  />
+                </div>,
+              ],
+              "className": "s-search-and-buttons",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="s-search-bar"
+                    >
+                      <input
+                        className="s-search-input"
+                        name="search"
+                        onChange={[Function]}
+                        placeholder="Search here..."
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="s-search-icon"
+                      />
+                    </div>,
+                    <select
+                      className="s-location-dropdown"
+                      name="localeSelected"
+                      onChange={[Function]}
+                      value=""
+                    >
+                      <option
+                        value=""
+                      >
+                        --Select locale--
+                      </option>
+                      <option
+                        value="Denver"
+                      >
+                        Denver
+                      </option>
+                      <option
+                        value="Remote"
+                      >
+                        Remote
+                      </option>
+                    </select>,
+                  ],
+                  "className": "s-search-inputs-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          className="s-search-input"
+                          name="search"
+                          onChange={[Function]}
+                          placeholder="Search here..."
+                          type="text"
+                          value=""
+                        />,
+                        <div
+                          className="s-search-icon"
+                        />,
+                      ],
+                      "className": "s-search-bar",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "s-search-input",
+                          "name": "search",
+                          "onChange": [Function],
+                          "placeholder": "Search here...",
+                          "type": "text",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "s-search-icon",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <option
+                          value=""
+                        >
+                          --Select locale--
+                        </option>,
+                        <option
+                          value="Denver"
+                        >
+                          Denver
+                        </option>,
+                        <option
+                          value="Remote"
+                        >
+                          Remote
+                        </option>,
+                      ],
+                      "className": "s-location-dropdown",
+                      "name": "localeSelected",
+                      "onChange": [Function],
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "--Select locale--",
+                          "value": "",
+                        },
+                        "ref": null,
+                        "rendered": "--Select locale--",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Denver",
+                          "value": "Denver",
+                        },
+                        "ref": null,
+                        "rendered": "Denver",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Remote",
+                          "value": "Remote",
+                        },
+                        "ref": null,
+                        "rendered": "Remote",
+                        "type": "option",
+                      },
+                    ],
+                    "type": "select",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <button
+                      className="s-filter-btn"
+                      name="preferencesClicked"
+                      onClick={[Function]}
+                    >
+                      Filter by Preferences
+                    </button>,
+                    <button
+                      className="s-filter-btn"
+                      name="allMentorsClicked"
+                      onClick={[Function]}
+                    >
+                      All Mentors
+                    </button>,
+                    <img
+                      alt="favorite button"
+                      className="s-favorite-btn"
+                      name="favClicked"
+                      onClick={[Function]}
+                      src="heart.svg"
+                    />,
+                  ],
+                  "className": "s-filter-btn-container",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Filter by Preferences",
+                      "className": "s-filter-btn",
+                      "name": "preferencesClicked",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Filter by Preferences",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "All Mentors",
+                      "className": "s-filter-btn",
+                      "name": "allMentorsClicked",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "All Mentors",
+                    "type": "button",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "favorite button",
+                      "className": "s-favorite-btn",
+                      "name": "favClicked",
+                      "onClick": [Function],
+                      "src": "heart.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "preferencesClicked": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],

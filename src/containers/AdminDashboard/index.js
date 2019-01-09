@@ -252,10 +252,10 @@ export class AdminDashboard extends Component {
               </div>
               <div className='ad-nav-btn'>
                 <div className='ad-nav-tagline-container'>
-                  <p className='ad-nav-tagline'>Sign in</p>
-                  <p className='ad-nav-tagline'>with github</p>
+                  <p className='ad-nav-tagline'>Click Here</p>
+                  <p className='ad-nav-tagline'>to Sign Out</p>
                 </div>
-                <img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-nav-logo' />
+                <img src={require('../../utils/assets/sign-out.svg')} alt='GitHub Logo' className='ad-nav-logo' />
               </div>
             </div>
           </div>

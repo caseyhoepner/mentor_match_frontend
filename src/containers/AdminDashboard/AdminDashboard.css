@@ -16,12 +16,12 @@
 }
 
 .ad-nav-btn {
-  align-items: center;
-  color: #fff;
-  margin-left: 30px;
-  display: flex;
   align-items: flex-end;
   border-bottom: 3px solid #fff;
+  color: #fff;
+  display: flex;
+  margin-left: 30px;
+  justify-content: center;
   padding: 12px 0;
 }
 
@@ -46,9 +46,9 @@
 }
 
 .ad-nav-logo {
-  height: 26px;
+  height: 36px;
   margin-left: 10px;
-  width: 26px;
+  width: 36px;
 }
 
 .ad-turing-logo {

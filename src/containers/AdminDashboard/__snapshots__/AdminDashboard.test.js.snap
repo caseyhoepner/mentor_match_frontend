@@ -162,12 +162,12 @@ ShallowWrapper {
                   <p
                     className="ad-nav-tagline"
                   >
-                    Sign in
+                    Click Here
                   </p>
                   <p
                     className="ad-nav-tagline"
                   >
-                    with github
+                    to Sign Out
                   </p>
                 </div>
                 <img
@@ -177,7 +177,7 @@ ShallowWrapper {
                     Object {
                       "ReactComponent": [Function],
                       "__esModule": true,
-                      "default": "github-logo.svg",
+                      "default": "sign-out.svg",
                     }
                   }
                 />
@@ -406,12 +406,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -421,7 +421,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -559,12 +559,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -574,7 +574,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -691,12 +691,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -706,7 +706,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -996,12 +996,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>,
                         <img
@@ -1011,7 +1011,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />,
@@ -1029,12 +1029,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>,
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>,
                           ],
                           "className": "ad-nav-tagline-container",
@@ -1046,11 +1046,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Sign in",
+                              "children": "Click Here",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "Sign in",
+                            "rendered": "Click Here",
                             "type": "p",
                           },
                           Object {
@@ -1058,11 +1058,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "with github",
+                              "children": "to Sign Out",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "with github",
+                            "rendered": "to Sign Out",
                             "type": "p",
                           },
                         ],
@@ -1078,7 +1078,7 @@ ShallowWrapper {
                           "src": Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           },
                         },
                         "ref": null,
@@ -1688,12 +1688,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -1703,7 +1703,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -1932,12 +1932,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -1947,7 +1947,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -2085,12 +2085,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -2100,7 +2100,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -2217,12 +2217,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>
                         <img
@@ -2232,7 +2232,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />
@@ -2522,12 +2522,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>
                           </div>,
                           <img
@@ -2537,7 +2537,7 @@ ShallowWrapper {
                               Object {
                                 "ReactComponent": [Function],
                                 "__esModule": true,
-                                "default": "github-logo.svg",
+                                "default": "sign-out.svg",
                               }
                             }
                           />,
@@ -2555,12 +2555,12 @@ ShallowWrapper {
                               <p
                                 className="ad-nav-tagline"
                               >
-                                Sign in
+                                Click Here
                               </p>,
                               <p
                                 className="ad-nav-tagline"
                               >
-                                with github
+                                to Sign Out
                               </p>,
                             ],
                             "className": "ad-nav-tagline-container",
@@ -2572,11 +2572,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Sign in",
+                                "children": "Click Here",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "Sign in",
+                              "rendered": "Click Here",
                               "type": "p",
                             },
                             Object {
@@ -2584,11 +2584,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "with github",
+                                "children": "to Sign Out",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "with github",
+                              "rendered": "to Sign Out",
                               "type": "p",
                             },
                           ],
@@ -2604,7 +2604,7 @@ ShallowWrapper {
                             "src": Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             },
                           },
                           "ref": null,
@@ -3280,12 +3280,12 @@ ShallowWrapper {
                   <p
                     className="ad-nav-tagline"
                   >
-                    Sign in
+                    Click Here
                   </p>
                   <p
                     className="ad-nav-tagline"
                   >
-                    with github
+                    to Sign Out
                   </p>
                 </div>
                 <img
@@ -3295,7 +3295,7 @@ ShallowWrapper {
                     Object {
                       "ReactComponent": [Function],
                       "__esModule": true,
-                      "default": "github-logo.svg",
+                      "default": "sign-out.svg",
                     }
                   }
                 />
@@ -3513,12 +3513,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -3528,7 +3528,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -3666,12 +3666,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -3681,7 +3681,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -3798,12 +3798,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -3813,7 +3813,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -4103,12 +4103,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>,
                         <img
@@ -4118,7 +4118,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />,
@@ -4136,12 +4136,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>,
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>,
                           ],
                           "className": "ad-nav-tagline-container",
@@ -4153,11 +4153,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Sign in",
+                              "children": "Click Here",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "Sign in",
+                            "rendered": "Click Here",
                             "type": "p",
                           },
                           Object {
@@ -4165,11 +4165,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "with github",
+                              "children": "to Sign Out",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "with github",
+                            "rendered": "to Sign Out",
                             "type": "p",
                           },
                         ],
@@ -4185,7 +4185,7 @@ ShallowWrapper {
                           "src": Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           },
                         },
                         "ref": null,
@@ -4778,12 +4778,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -4793,7 +4793,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -5011,12 +5011,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -5026,7 +5026,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -5164,12 +5164,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -5179,7 +5179,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -5296,12 +5296,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>
                         <img
@@ -5311,7 +5311,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />
@@ -5601,12 +5601,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>
                           </div>,
                           <img
@@ -5616,7 +5616,7 @@ ShallowWrapper {
                               Object {
                                 "ReactComponent": [Function],
                                 "__esModule": true,
-                                "default": "github-logo.svg",
+                                "default": "sign-out.svg",
                               }
                             }
                           />,
@@ -5634,12 +5634,12 @@ ShallowWrapper {
                               <p
                                 className="ad-nav-tagline"
                               >
-                                Sign in
+                                Click Here
                               </p>,
                               <p
                                 className="ad-nav-tagline"
                               >
-                                with github
+                                to Sign Out
                               </p>,
                             ],
                             "className": "ad-nav-tagline-container",
@@ -5651,11 +5651,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Sign in",
+                                "children": "Click Here",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "Sign in",
+                              "rendered": "Click Here",
                               "type": "p",
                             },
                             Object {
@@ -5663,11 +5663,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "with github",
+                                "children": "to Sign Out",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "with github",
+                              "rendered": "to Sign Out",
                               "type": "p",
                             },
                           ],
@@ -5683,7 +5683,7 @@ ShallowWrapper {
                             "src": Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             },
                           },
                           "ref": null,
@@ -6342,12 +6342,12 @@ ShallowWrapper {
                   <p
                     className="ad-nav-tagline"
                   >
-                    Sign in
+                    Click Here
                   </p>
                   <p
                     className="ad-nav-tagline"
                   >
-                    with github
+                    to Sign Out
                   </p>
                 </div>
                 <img
@@ -6357,7 +6357,7 @@ ShallowWrapper {
                     Object {
                       "ReactComponent": [Function],
                       "__esModule": true,
-                      "default": "github-logo.svg",
+                      "default": "sign-out.svg",
                     }
                   }
                 />
@@ -6575,12 +6575,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -6590,7 +6590,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -6728,12 +6728,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -6743,7 +6743,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -6860,12 +6860,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -6875,7 +6875,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -7165,12 +7165,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>,
                         <img
@@ -7180,7 +7180,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />,
@@ -7198,12 +7198,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>,
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>,
                           ],
                           "className": "ad-nav-tagline-container",
@@ -7215,11 +7215,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Sign in",
+                              "children": "Click Here",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "Sign in",
+                            "rendered": "Click Here",
                             "type": "p",
                           },
                           Object {
@@ -7227,11 +7227,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "with github",
+                              "children": "to Sign Out",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "with github",
+                            "rendered": "to Sign Out",
                             "type": "p",
                           },
                         ],
@@ -7247,7 +7247,7 @@ ShallowWrapper {
                           "src": Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           },
                         },
                         "ref": null,
@@ -7840,12 +7840,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -7855,7 +7855,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -8073,12 +8073,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -8088,7 +8088,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -8226,12 +8226,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -8241,7 +8241,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -8358,12 +8358,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>
                         <img
@@ -8373,7 +8373,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />
@@ -8663,12 +8663,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>
                           </div>,
                           <img
@@ -8678,7 +8678,7 @@ ShallowWrapper {
                               Object {
                                 "ReactComponent": [Function],
                                 "__esModule": true,
-                                "default": "github-logo.svg",
+                                "default": "sign-out.svg",
                               }
                             }
                           />,
@@ -8696,12 +8696,12 @@ ShallowWrapper {
                               <p
                                 className="ad-nav-tagline"
                               >
-                                Sign in
+                                Click Here
                               </p>,
                               <p
                                 className="ad-nav-tagline"
                               >
-                                with github
+                                to Sign Out
                               </p>,
                             ],
                             "className": "ad-nav-tagline-container",
@@ -8713,11 +8713,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Sign in",
+                                "children": "Click Here",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "Sign in",
+                              "rendered": "Click Here",
                               "type": "p",
                             },
                             Object {
@@ -8725,11 +8725,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "with github",
+                                "children": "to Sign Out",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "with github",
+                              "rendered": "to Sign Out",
                               "type": "p",
                             },
                           ],
@@ -8745,7 +8745,7 @@ ShallowWrapper {
                             "src": Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             },
                           },
                           "ref": null,
@@ -9404,12 +9404,12 @@ ShallowWrapper {
                   <p
                     className="ad-nav-tagline"
                   >
-                    Sign in
+                    Click Here
                   </p>
                   <p
                     className="ad-nav-tagline"
                   >
-                    with github
+                    to Sign Out
                   </p>
                 </div>
                 <img
@@ -9419,7 +9419,7 @@ ShallowWrapper {
                     Object {
                       "ReactComponent": [Function],
                       "__esModule": true,
-                      "default": "github-logo.svg",
+                      "default": "sign-out.svg",
                     }
                   }
                 />
@@ -9651,12 +9651,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -9666,7 +9666,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -9804,12 +9804,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -9819,7 +9819,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -9936,12 +9936,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -9951,7 +9951,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -10241,12 +10241,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>,
                         <img
@@ -10256,7 +10256,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />,
@@ -10274,12 +10274,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>,
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>,
                           ],
                           "className": "ad-nav-tagline-container",
@@ -10291,11 +10291,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Sign in",
+                              "children": "Click Here",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "Sign in",
+                            "rendered": "Click Here",
                             "type": "p",
                           },
                           Object {
@@ -10303,11 +10303,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "with github",
+                              "children": "to Sign Out",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "with github",
+                            "rendered": "to Sign Out",
                             "type": "p",
                           },
                         ],
@@ -10323,7 +10323,7 @@ ShallowWrapper {
                           "src": Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           },
                         },
                         "ref": null,
@@ -10965,12 +10965,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -10980,7 +10980,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -11212,12 +11212,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -11227,7 +11227,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -11365,12 +11365,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -11380,7 +11380,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -11497,12 +11497,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>
                         <img
@@ -11512,7 +11512,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />
@@ -11802,12 +11802,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>
                           </div>,
                           <img
@@ -11817,7 +11817,7 @@ ShallowWrapper {
                               Object {
                                 "ReactComponent": [Function],
                                 "__esModule": true,
-                                "default": "github-logo.svg",
+                                "default": "sign-out.svg",
                               }
                             }
                           />,
@@ -11835,12 +11835,12 @@ ShallowWrapper {
                               <p
                                 className="ad-nav-tagline"
                               >
-                                Sign in
+                                Click Here
                               </p>,
                               <p
                                 className="ad-nav-tagline"
                               >
-                                with github
+                                to Sign Out
                               </p>,
                             ],
                             "className": "ad-nav-tagline-container",
@@ -11852,11 +11852,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Sign in",
+                                "children": "Click Here",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "Sign in",
+                              "rendered": "Click Here",
                               "type": "p",
                             },
                             Object {
@@ -11864,11 +11864,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "with github",
+                                "children": "to Sign Out",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "with github",
+                              "rendered": "to Sign Out",
                               "type": "p",
                             },
                           ],
@@ -11884,7 +11884,7 @@ ShallowWrapper {
                             "src": Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             },
                           },
                           "ref": null,
@@ -12591,12 +12591,12 @@ ShallowWrapper {
                   <p
                     className="ad-nav-tagline"
                   >
-                    Sign in
+                    Click Here
                   </p>
                   <p
                     className="ad-nav-tagline"
                   >
-                    with github
+                    to Sign Out
                   </p>
                 </div>
                 <img
@@ -12606,7 +12606,7 @@ ShallowWrapper {
                     Object {
                       "ReactComponent": [Function],
                       "__esModule": true,
-                      "default": "github-logo.svg",
+                      "default": "sign-out.svg",
                     }
                   }
                 />
@@ -12824,12 +12824,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -12839,7 +12839,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -12977,12 +12977,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -12992,7 +12992,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -13109,12 +13109,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -13124,7 +13124,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -13414,12 +13414,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>,
                         <img
@@ -13429,7 +13429,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />,
@@ -13447,12 +13447,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>,
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>,
                           ],
                           "className": "ad-nav-tagline-container",
@@ -13464,11 +13464,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Sign in",
+                              "children": "Click Here",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "Sign in",
+                            "rendered": "Click Here",
                             "type": "p",
                           },
                           Object {
@@ -13476,11 +13476,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "with github",
+                              "children": "to Sign Out",
                               "className": "ad-nav-tagline",
                             },
                             "ref": null,
-                            "rendered": "with github",
+                            "rendered": "to Sign Out",
                             "type": "p",
                           },
                         ],
@@ -13496,7 +13496,7 @@ ShallowWrapper {
                           "src": Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           },
                         },
                         "ref": null,
@@ -14089,12 +14089,12 @@ ShallowWrapper {
                     <p
                       className="ad-nav-tagline"
                     >
-                      Sign in
+                      Click Here
                     </p>
                     <p
                       className="ad-nav-tagline"
                     >
-                      with github
+                      to Sign Out
                     </p>
                   </div>
                   <img
@@ -14104,7 +14104,7 @@ ShallowWrapper {
                       Object {
                         "ReactComponent": [Function],
                         "__esModule": true,
-                        "default": "github-logo.svg",
+                        "default": "sign-out.svg",
                       }
                     }
                   />
@@ -14322,12 +14322,12 @@ ShallowWrapper {
                       <p
                         className="ad-nav-tagline"
                       >
-                        Sign in
+                        Click Here
                       </p>
                       <p
                         className="ad-nav-tagline"
                       >
-                        with github
+                        to Sign Out
                       </p>
                     </div>
                     <img
@@ -14337,7 +14337,7 @@ ShallowWrapper {
                         Object {
                           "ReactComponent": [Function],
                           "__esModule": true,
-                          "default": "github-logo.svg",
+                          "default": "sign-out.svg",
                         }
                       }
                     />
@@ -14475,12 +14475,12 @@ ShallowWrapper {
                         <p
                           className="ad-nav-tagline"
                         >
-                          Sign in
+                          Click Here
                         </p>
                         <p
                           className="ad-nav-tagline"
                         >
-                          with github
+                          to Sign Out
                         </p>
                       </div>
                       <img
@@ -14490,7 +14490,7 @@ ShallowWrapper {
                           Object {
                             "ReactComponent": [Function],
                             "__esModule": true,
-                            "default": "github-logo.svg",
+                            "default": "sign-out.svg",
                           }
                         }
                       />
@@ -14607,12 +14607,12 @@ ShallowWrapper {
                           <p
                             className="ad-nav-tagline"
                           >
-                            Sign in
+                            Click Here
                           </p>
                           <p
                             className="ad-nav-tagline"
                           >
-                            with github
+                            to Sign Out
                           </p>
                         </div>
                         <img
@@ -14622,7 +14622,7 @@ ShallowWrapper {
                             Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             }
                           }
                         />
@@ -14912,12 +14912,12 @@ ShallowWrapper {
                             <p
                               className="ad-nav-tagline"
                             >
-                              Sign in
+                              Click Here
                             </p>
                             <p
                               className="ad-nav-tagline"
                             >
-                              with github
+                              to Sign Out
                             </p>
                           </div>,
                           <img
@@ -14927,7 +14927,7 @@ ShallowWrapper {
                               Object {
                                 "ReactComponent": [Function],
                                 "__esModule": true,
-                                "default": "github-logo.svg",
+                                "default": "sign-out.svg",
                               }
                             }
                           />,
@@ -14945,12 +14945,12 @@ ShallowWrapper {
                               <p
                                 className="ad-nav-tagline"
                               >
-                                Sign in
+                                Click Here
                               </p>,
                               <p
                                 className="ad-nav-tagline"
                               >
-                                with github
+                                to Sign Out
                               </p>,
                             ],
                             "className": "ad-nav-tagline-container",
@@ -14962,11 +14962,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Sign in",
+                                "children": "Click Here",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "Sign in",
+                              "rendered": "Click Here",
                               "type": "p",
                             },
                             Object {
@@ -14974,11 +14974,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "with github",
+                                "children": "to Sign Out",
                                 "className": "ad-nav-tagline",
                               },
                               "ref": null,
-                              "rendered": "with github",
+                              "rendered": "to Sign Out",
                               "type": "p",
                             },
                           ],
@@ -14994,7 +14994,7 @@ ShallowWrapper {
                             "src": Object {
                               "ReactComponent": [Function],
                               "__esModule": true,
-                              "default": "github-logo.svg",
+                              "default": "sign-out.svg",
                             },
                           },
                           "ref": null,

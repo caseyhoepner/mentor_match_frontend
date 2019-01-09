@@ -81,7 +81,7 @@ ShallowWrapper {
             </button>
           </div>
         </div>,
-        <Connect(Preferences)
+        <Connect(AdminPreferences)
           preferencesClicked={false}
         />,
       ],
@@ -473,7 +473,7 @@ ShallowWrapper {
               </button>
             </div>
           </div>,
-          <Connect(Preferences)
+          <Connect(AdminPreferences)
             preferencesClicked={false}
           />,
         ],
