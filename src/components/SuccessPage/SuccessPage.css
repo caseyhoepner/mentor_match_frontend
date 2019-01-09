@@ -1,0 +1,48 @@
+.sp-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+  width: 50%;
+}
+
+.sp-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: normal;
+  font-size: 5rem;
+  margin: 20px 0;
+}
+
+.sp-text {
+  padding: 0px 50px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sp-new-student-btn {
+  background-color: #10f1fc;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  margin: 100px 0;
+}
+
+.sp-new-student-btn:hover {
+  background-color: #0CC0C9;
+}
+
+.sp-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.sp-email-link {
+  color: #10f1fc;
+}
+
+.sp-email-link:hover {
+  color: #0CC0C9;
+}

@@ -8,19 +8,24 @@ export const SuccessPage = (props) => {
 
   if (state.from === "/new-student-form") {
     successMessage = (
-      <div>
+      <div className='sp-text'>
         <p>New student successfully added!</p>
         <Link
           className='sp-new-student-btn'
           to='/new-student-form'
-        >Add Another Student
+        >+ Add Another Student
         </Link>
       </div>
       )
   } else if (state.from === "/new-mentor-form") {
     successMessage = (
-      <div>
-        <p>Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.</p>
+      <div className='sp-text'>
+        <p>Thank you for your interest in mentoring our students. We will reach out to you shortly.</p>
+        <p>If you have any questions, reach out to 
+          <a 
+            className='sp-email-link'
+            href="mailto:kayt@turing.io"> kayt@turing.io
+          </a>.</p>
       </div>
     )
   }
@@ -28,7 +33,12 @@ export const SuccessPage = (props) => {
 
   return (
     <div className='sp-container'>
-      <h1>Success!</h1>
+      <img 
+        className='sp-icon'
+        src={require('../../utils/assets/success-check.svg')}
+        alt='Success Icon'
+        />
+      <h1 className='sp-title'>Success!</h1>
       { successMessage }
     </div>
   )
