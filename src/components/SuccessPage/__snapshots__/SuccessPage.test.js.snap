@@ -28,12 +28,37 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
+        <img
+          alt="Success Icon"
+          className="sp-icon"
+          src={
+            Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "success-check.svg",
+            }
+          }
+        />,
+        <h1
+          className="sp-title"
+        >
           Success!
         </h1>,
-        <div>
+        <div
+          className="sp-text"
+        >
           <p>
-            Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
+            Thank you for your interest in mentoring our students. We will reach out to you shortly.
+          </p>
+          <p>
+            If you have any questions, reach out to
+            <a
+              className="sp-email-link"
+              href="mailto:kayt@turing.io"
+            >
+               kayt@turing.io
+            </a>
+            .
           </p>
         </div>,
       ],
@@ -46,7 +71,25 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "alt": "Success Icon",
+          "className": "sp-icon",
+          "src": Object {
+            "ReactComponent": [Function],
+            "__esModule": true,
+            "default": "success-check.svg",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Success!",
+          "className": "sp-title",
         },
         "ref": null,
         "rendered": "Success!",
@@ -57,22 +100,73 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <p>
-            Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
-          </p>,
+          "children": Array [
+            <p>
+              Thank you for your interest in mentoring our students. We will reach out to you shortly.
+            </p>,
+            <p>
+              If you have any questions, reach out to
+              <a
+                className="sp-email-link"
+                href="mailto:kayt@turing.io"
+              >
+                 kayt@turing.io
+              </a>
+              .
+            </p>,
+          ],
+          "className": "sp-text",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Thank you for your interest in mentoring our students. We will reach out to you shortly.",
+            },
+            "ref": null,
+            "rendered": "Thank you for your interest in mentoring our students. We will reach out to you shortly.",
+            "type": "p",
           },
-          "ref": null,
-          "rendered": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
-          "type": "p",
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "If you have any questions, reach out to",
+                <a
+                  className="sp-email-link"
+                  href="mailto:kayt@turing.io"
+                >
+                   kayt@turing.io
+                </a>,
+                ".",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "If you have any questions, reach out to",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " kayt@turing.io",
+                  "className": "sp-email-link",
+                  "href": "mailto:kayt@turing.io",
+                },
+                "ref": null,
+                "rendered": " kayt@turing.io",
+                "type": "a",
+              },
+              ".",
+            ],
+            "type": "p",
+          },
+        ],
         "type": "div",
       },
     ],
@@ -85,12 +179,37 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
+          <img
+            alt="Success Icon"
+            className="sp-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "success-check.svg",
+              }
+            }
+          />,
+          <h1
+            className="sp-title"
+          >
             Success!
           </h1>,
-          <div>
+          <div
+            className="sp-text"
+          >
             <p>
-              Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
+              Thank you for your interest in mentoring our students. We will reach out to you shortly.
+            </p>
+            <p>
+              If you have any questions, reach out to
+              <a
+                className="sp-email-link"
+                href="mailto:kayt@turing.io"
+              >
+                 kayt@turing.io
+              </a>
+              .
             </p>
           </div>,
         ],
@@ -103,7 +222,25 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "Success Icon",
+            "className": "sp-icon",
+            "src": Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "success-check.svg",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": "Success!",
+            "className": "sp-title",
           },
           "ref": null,
           "rendered": "Success!",
@@ -114,22 +251,73 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <p>
-              Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.
-            </p>,
+            "children": Array [
+              <p>
+                Thank you for your interest in mentoring our students. We will reach out to you shortly.
+              </p>,
+              <p>
+                If you have any questions, reach out to
+                <a
+                  className="sp-email-link"
+                  href="mailto:kayt@turing.io"
+                >
+                   kayt@turing.io
+                </a>
+                .
+              </p>,
+            ],
+            "className": "sp-text",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Thank you for your interest in mentoring our students. We will reach out to you shortly.",
+              },
+              "ref": null,
+              "rendered": "Thank you for your interest in mentoring our students. We will reach out to you shortly.",
+              "type": "p",
             },
-            "ref": null,
-            "rendered": "Thank you for signing up to be a mentor! We'll be in touch when we find you a student to mentor.",
-            "type": "p",
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "If you have any questions, reach out to",
+                  <a
+                    className="sp-email-link"
+                    href="mailto:kayt@turing.io"
+                  >
+                     kayt@turing.io
+                  </a>,
+                  ".",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "If you have any questions, reach out to",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " kayt@turing.io",
+                    "className": "sp-email-link",
+                    "href": "mailto:kayt@turing.io",
+                  },
+                  "ref": null,
+                  "rendered": " kayt@turing.io",
+                  "type": "a",
+                },
+                ".",
+              ],
+              "type": "p",
+            },
+          ],
           "type": "div",
         },
       ],
@@ -184,10 +372,25 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
+        <img
+          alt="Success Icon"
+          className="sp-icon"
+          src={
+            Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "success-check.svg",
+            }
+          }
+        />,
+        <h1
+          className="sp-title"
+        >
           Success!
         </h1>,
-        <div>
+        <div
+          className="sp-text"
+        >
           <p>
             New student successfully added!
           </p>
@@ -196,7 +399,7 @@ ShallowWrapper {
             replace={false}
             to="/new-student-form"
           >
-            Add Another Student
+            + Add Another Student
           </Link>
         </div>,
       ],
@@ -209,7 +412,25 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "alt": "Success Icon",
+          "className": "sp-icon",
+          "src": Object {
+            "ReactComponent": [Function],
+            "__esModule": true,
+            "default": "success-check.svg",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Success!",
+          "className": "sp-title",
         },
         "ref": null,
         "rendered": "Success!",
@@ -229,9 +450,10 @@ ShallowWrapper {
               replace={false}
               to="/new-student-form"
             >
-              Add Another Student
+              + Add Another Student
             </Link>,
           ],
+          "className": "sp-text",
         },
         "ref": null,
         "rendered": Array [
@@ -251,13 +473,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "Add Another Student",
+              "children": "+ Add Another Student",
               "className": "sp-new-student-btn",
               "replace": false,
               "to": "/new-student-form",
             },
             "ref": null,
-            "rendered": "Add Another Student",
+            "rendered": "+ Add Another Student",
             "type": [Function],
           },
         ],
@@ -273,10 +495,25 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
+          <img
+            alt="Success Icon"
+            className="sp-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "success-check.svg",
+              }
+            }
+          />,
+          <h1
+            className="sp-title"
+          >
             Success!
           </h1>,
-          <div>
+          <div
+            className="sp-text"
+          >
             <p>
               New student successfully added!
             </p>
@@ -285,7 +522,7 @@ ShallowWrapper {
               replace={false}
               to="/new-student-form"
             >
-              Add Another Student
+              + Add Another Student
             </Link>
           </div>,
         ],
@@ -298,7 +535,25 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "Success Icon",
+            "className": "sp-icon",
+            "src": Object {
+              "ReactComponent": [Function],
+              "__esModule": true,
+              "default": "success-check.svg",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": "Success!",
+            "className": "sp-title",
           },
           "ref": null,
           "rendered": "Success!",
@@ -318,9 +573,10 @@ ShallowWrapper {
                 replace={false}
                 to="/new-student-form"
               >
-                Add Another Student
+                + Add Another Student
               </Link>,
             ],
+            "className": "sp-text",
           },
           "ref": null,
           "rendered": Array [
@@ -340,13 +596,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "Add Another Student",
+                "children": "+ Add Another Student",
                 "className": "sp-new-student-btn",
                 "replace": false,
                 "to": "/new-student-form",
               },
               "ref": null,
-              "rendered": "Add Another Student",
+              "rendered": "+ Add Another Student",
               "type": [Function],
             },
           ],
