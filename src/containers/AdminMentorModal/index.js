@@ -151,8 +151,9 @@ export class AdminMentorModal extends Component {
     })
     addModalMentees({...modalInfo, mentees: mentees});
     return mentees.map((mentee, index) => {
+      let relationshipId = matchedRelationships.filter(relationship => relationship.attributes.student_id === mentee.id)
       return (
-        <div className='amm-list-item-container amm-mentees' key={matchedRelationships[0].id + index}>
+        <div className='amm-list-item-container amm-mentees' key={relationshipId[0].id + index}>
           <div className='amm-dash-list'>
             <img 
               className='amm-dash-icon' 
@@ -162,7 +163,7 @@ export class AdminMentorModal extends Component {
             <p className='amm-list-item'>{mentee.name}</p>
           </div>
           <button
-            name={matchedRelationships[0].id}
+            name={relationshipId[0].id}
             onClick={(event) => this.unmatch(event, mentee.id)}
           >Unmatch</button>
         </div>
@@ -173,7 +174,6 @@ export class AdminMentorModal extends Component {
   unmatch = async (event, studentId) => {
     const mentorId = this.props.modalInfo.id;
     const relationshipId = event.target.name;
-
     await patchRelationship(studentId, mentorId, relationshipId);
     await this.props.retrieveRelationships()
     await this.setState({ mentees: this.getMentees() })
