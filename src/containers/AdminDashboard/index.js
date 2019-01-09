@@ -212,44 +212,32 @@ export class AdminDashboard extends Component {
               alt='Turing Logo' 
               className='ad-turing-logo' />
             <div className='ad-nav-btn-container'>
-              <div className='ad-new-mentor-btn ad-nav-btn'>
-                <div className='ad-nav-tagline-container'>
-                  <NavLink
-                    className='ad-nav-tagline'
-                    to='/new-student-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >New
-                  </NavLink>
-                  <NavLink
-                    className='ad-nav-tagline'
-                    to='/new-student-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >Student Form
-                  </NavLink>
+              <NavLink
+                to='/new-student-form'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='ad-new-mentor-btn ad-nav-btn'>
+                  <div className='ad-nav-tagline'>
+                    <p className='ad-btn-text'>New</p>
+                    <p className='ad-btn-text'>Student Form</p>
+                  </div>
+                  <img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' />
                 </div>
-                <img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' />
-              </div>
-              <div className='ad-new-mentor-btn ad-nav-btn'>
-                <div className='ad-nav-tagline-container'>
-                  <NavLink
-                    className='ad-nav-tagline'
-                    to='/new-mentor-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >New
-                  </NavLink>
-                  <NavLink
-                    className='ad-nav-tagline'
-                    to='/new-mentor-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >Mentor Form
-                  </NavLink>
+              </NavLink>
+              <NavLink
+                to='/new-mentor-form'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='ad-new-mentor-btn ad-nav-btn'>
+                  <div className='ad-nav-tagline'>
+                    <p className='ad-btn-text'>New</p>
+                    <p className='ad-btn-text'>Mentor Form</p>
+                  </div>
+                  <img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' />
                 </div>
-                <img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' />
-              </div>
+              </NavLink>
               <div className='ad-nav-btn'>
                 <div className='ad-nav-tagline-container'>
                   <p className='ad-nav-tagline'>Click Here</p>
