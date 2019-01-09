@@ -600,13 +600,13 @@ export class EditableMentor extends Component {
             </label>
             <label data-name='identity_preference' className="em-checkbox-container">Female-Identifying
               <input 
-                checked={this.checkIfChecked('identity_preference', 'LGBTQ+')}
+                checked={this.checkIfChecked('identity_preference', 'Female-Identifying')}
                 type="checkbox" />
               <span onClick={this.handleClick} className="em-checkmark"></span>
             </label>
             <label data-name='identity_preference' className="em-checkbox-container">Male-Identifying
               <input 
-                checked={this.checkIfChecked('identity_preference', 'LGBTQ+')}
+                checked={this.checkIfChecked('identity_preference', 'Male-Identifying')}
                 type="checkbox" />
               <span onClick={this.handleClick} className="em-checkmark"></span>
             </label>
