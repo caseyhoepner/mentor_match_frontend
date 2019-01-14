@@ -141,7 +141,7 @@ export class AdminPreferences extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   changeMentorFilters: (filters) => dispatch(changeMentorFilters(filters))
 })
 
