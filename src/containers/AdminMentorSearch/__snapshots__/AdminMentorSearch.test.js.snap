@@ -3,7 +3,12 @@
 exports[`AdminMentorSearch matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AdminMentorSearch />,
+  Symbol(enzyme.__unrendered__): <AdminMentorSearch
+    setLocale={[MockFunction]}
+    setSearch={[MockFunction]}
+    showingAllMentors={false}
+    toggleShowingMentors={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

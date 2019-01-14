@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1547433573200" clover="3.2.0">
-  <project timestamp="1547433573200" name="All files">
-    <metrics statements="653" coveredstatements="509" conditionals="291" coveredconditionals="203" methods="207" coveredmethods="158" elements="1151" coveredelements="870" complexity="0" loc="653" ncloc="653" packages="21" files="31" classes="31">
+<coverage generated="1547435846252" clover="3.2.0">
+  <project timestamp="1547435846252" name="All files">
+    <metrics statements="653" coveredstatements="525" conditionals="291" coveredconditionals="211" methods="207" coveredmethods="165" elements="1151" coveredelements="901" complexity="0" loc="653" ncloc="653" packages="21" files="31" classes="31">
       <package name="actions">
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
         <file name="index.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/actions/index.js">
@@ -402,31 +402,31 @@
         </file>
       </package>
       <package name="containers.AdminMentorSearch">
-        <metrics statements="22" coveredstatements="6" conditionals="12" coveredconditionals="2" methods="9" coveredmethods="2"/>
+        <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="10" methods="9" coveredmethods="9"/>
         <file name="index.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/containers/AdminMentorSearch/index.js">
-          <metrics statements="22" coveredstatements="6" conditionals="12" coveredconditionals="2" methods="9" coveredmethods="2"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
-          <line num="23" count="0" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
-          <line num="26" count="0" type="stmt"/>
-          <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="31" count="0" type="stmt"/>
-          <line num="36" count="0" type="stmt"/>
-          <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="43" count="0" type="stmt"/>
-          <line num="46" count="0" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
-          <line num="102" count="3" type="stmt"/>
-          <line num="107" count="3" type="stmt"/>
-          <line num="108" count="0" type="stmt"/>
-          <line num="109" count="0" type="stmt"/>
-          <line num="110" count="0" type="stmt"/>
+          <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="10" methods="9" coveredmethods="9"/>
+          <line num="9" count="7" type="stmt"/>
+          <line num="11" count="7" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
+          <line num="21" count="4" type="stmt"/>
+          <line num="23" count="4" type="stmt"/>
+          <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="27" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+          <line num="35" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="39" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="43" count="2" type="stmt"/>
+          <line num="47" count="14" type="stmt"/>
+          <line num="49" count="14" type="stmt"/>
+          <line num="99" count="3" type="stmt"/>
+          <line num="104" count="3" type="stmt"/>
+          <line num="105" count="1" type="stmt"/>
+          <line num="106" count="1" type="stmt"/>
+          <line num="107" count="1" type="stmt"/>
         </file>
       </package>
       <package name="containers.AdminPreferences">
