@@ -150,6 +150,23 @@ describe('Mentor Action creators', () => {
     expect(result).toEqual(expected)
   });
 
+  it('should have a type of ADD_MODAL_MENTEES', () => {
+    const expected = {
+      type: "ADD_MODAL_MENTEES",
+      modalMentees: {
+        name: 'Jim Bob',
+        identity_preference: [
+          'Veteran'
+        ],
+        stack_preference: 'Back-End',
+        meeting_location: 'Denver'
+      }
+    }
+
+    const result = MentorActions.addModalMentees(mockMentor)
+    expect(result).toEqual(expected)
+  });
+
   it('should have a type of IS_EDITABLE', () => {
     const expected = {
       type: "IS_EDITABLE",
@@ -251,6 +268,16 @@ describe('Student Action creators', () => {
     }
 
     const result = StudentActions.setRelationships(mockRelationships)
+    expect(result).toEqual(expected)
+  });
+
+  it('should have a type of MAKE_STUDENT_INACTIVE', () => {
+    const expected = {
+      type: "MAKE_STUDENT_INACTIVE",
+      studentId: 5
+    }
+
+    const result = StudentActions.makeStudentInactive(5)
     expect(result).toEqual(expected)
   });
 });
