@@ -204,7 +204,7 @@ ShallowWrapper {
           "attributes": Object {
             "active": true,
             "mentor_id": 1,
-            "student_id": 2,
+            "student_id": 5,
           },
         },
       ]
@@ -212,9 +212,15 @@ ShallowWrapper {
     students={
       Array [
         Object {
+          "active": true,
+          "id": 1,
+          "matched": false,
           "name": "Casey",
         },
         Object {
+          "active": false,
+          "id": 2,
+          "matched": true,
           "name": "Alex",
         },
       ]
@@ -358,6 +364,7 @@ ShallowWrapper {
       }
     }
     isEditable={false}
+    makeStudentInactive={[MockFunction]}
     modalInfo={
       Object {
         "active": true,
@@ -392,27 +399,37 @@ ShallowWrapper {
         ],
       }
     }
+    openEditMentor={[MockFunction]}
     relationships={
       Array [
         Object {
           "attributes": Object {
             "active": true,
             "mentor_id": 1,
-            "student_id": 2,
+            "student_id": 5,
           },
         },
       ]
     }
+    retrieveRelationships={[MockFunction]}
+    setMentorModal={[MockFunction]}
     students={
       Array [
         Object {
+          "active": true,
+          "id": 1,
+          "matched": false,
           "name": "Casey",
         },
         Object {
+          "active": false,
+          "id": 2,
+          "matched": true,
           "name": "Alex",
         },
       ]
     }
+    updateChangedMentor={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -542,6 +559,11 @@ ShallowWrapper {
                 value=""
               >
                 Select a Student
+              </option>
+              <option
+                value="Casey"
+              >
+                Casey
               </option>
             </select>
             <button
@@ -1202,6 +1224,11 @@ ShallowWrapper {
                 >
                   Select a Student
                 </option>
+                <option
+                  value="Casey"
+                >
+                  Casey
+                </option>
               </select>
               <button
                 className="amm-assign-btn"
@@ -1305,6 +1332,11 @@ ShallowWrapper {
                   >
                     Select a Student
                   </option>
+                  <option
+                    value="Casey"
+                  >
+                    Casey
+                  </option>
                 </select>,
                 <button
                   className="amm-assign-btn"
@@ -1341,7 +1373,11 @@ ShallowWrapper {
                       Select a Student
                     </option>,
                     Array [
-                      undefined,
+                      <option
+                        value="Casey"
+                      >
+                        Casey
+                      </option>,
                       undefined,
                     ],
                   ],
@@ -1363,7 +1399,18 @@ ShallowWrapper {
                     "rendered": "Select a Student",
                     "type": "option",
                   },
-                  undefined,
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Casey",
+                      "value": "Casey",
+                    },
+                    "ref": null,
+                    "rendered": "Casey",
+                    "type": "option",
+                  },
                   undefined,
                 ],
                 "type": "select",
@@ -2509,6 +2556,11 @@ ShallowWrapper {
                 >
                   Select a Student
                 </option>
+                <option
+                  value="Casey"
+                >
+                  Casey
+                </option>
               </select>
               <button
                 className="amm-assign-btn"
@@ -3168,6 +3220,11 @@ ShallowWrapper {
                   >
                     Select a Student
                   </option>
+                  <option
+                    value="Casey"
+                  >
+                    Casey
+                  </option>
                 </select>
                 <button
                   className="amm-assign-btn"
@@ -3271,6 +3328,11 @@ ShallowWrapper {
                     >
                       Select a Student
                     </option>
+                    <option
+                      value="Casey"
+                    >
+                      Casey
+                    </option>
                   </select>,
                   <button
                     className="amm-assign-btn"
@@ -3307,7 +3369,11 @@ ShallowWrapper {
                         Select a Student
                       </option>,
                       Array [
-                        undefined,
+                        <option
+                          value="Casey"
+                        >
+                          Casey
+                        </option>,
                         undefined,
                       ],
                     ],
@@ -3329,7 +3395,18 @@ ShallowWrapper {
                       "rendered": "Select a Student",
                       "type": "option",
                     },
-                    undefined,
+                    Object {
+                      "instance": null,
+                      "key": "0",
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Casey",
+                        "value": "Casey",
+                      },
+                      "ref": null,
+                      "rendered": "Casey",
+                      "type": "option",
+                    },
                     undefined,
                   ],
                   "type": "select",
