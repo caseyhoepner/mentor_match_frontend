@@ -19,6 +19,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "Angular.js",
         ],
+        "id": 3,
         "identity_preference": Array [
           "male-identifying",
         ],
@@ -37,6 +38,10 @@ ShallowWrapper {
         ],
       }
     }
+    history={Array []}
+    openEditMentor={[MockFunction]}
+    setMentorModal={[MockFunction]}
+    updateChangedMentor={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
