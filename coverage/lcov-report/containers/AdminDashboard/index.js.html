@@ -25,9 +25,9 @@
         <span class='fraction'>80/94</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">51.19% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>41/82</span>
+        <span class='fraction'>43/84</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">90% </span>
@@ -342,19 +342,7 @@
 297
 298
 299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+300</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -642,18 +630,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -735,7 +711,7 @@ export class AdminDashboard extends Component {
   cleanPrefs = (str) =&gt; {
     if (str === 'LGBTQ+') {
       return 'lgbtq';
-    } else if (str === 'Female-Identifying') {
+    } else if (str === 'Female-identifying' || str === 'Female-Identifying') {
       return 'female';
     } else if (str === 'Male-Identifying') {
       return 'male';
@@ -879,50 +855,38 @@ export class AdminDashboard extends Component {
               alt='Turing Logo' 
               className='ad-turing-logo' /&gt;
             &lt;div className='ad-nav-btn-container'&gt;
-              &lt;div className='ad-new-mentor-btn ad-nav-btn'&gt;
-                &lt;div className='ad-nav-tagline-container'&gt;
-                  &lt;NavLink
-                    className='ad-nav-tagline'
-                    to='/new-student-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  &gt;New
-                  &lt;/NavLink&gt;
-                  &lt;NavLink
-                    className='ad-nav-tagline'
-                    to='/new-student-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  &gt;Student Form
-                  &lt;/NavLink&gt;
+              &lt;NavLink
+                to='/new-student-form'
+                target='_blank'
+                rel='noopener noreferrer'
+              &gt;
+                &lt;div className='ad-new-mentor-btn ad-nav-btn'&gt;
+                  &lt;div className='ad-nav-tagline'&gt;
+                    &lt;p className='ad-btn-text'&gt;New&lt;/p&gt;
+                    &lt;p className='ad-btn-text'&gt;Student Form&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' /&gt;
                 &lt;/div&gt;
-                &lt;img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' /&gt;
-              &lt;/div&gt;
-              &lt;div className='ad-new-mentor-btn ad-nav-btn'&gt;
-                &lt;div className='ad-nav-tagline-container'&gt;
-                  &lt;NavLink
-                    className='ad-nav-tagline'
-                    to='/new-mentor-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  &gt;New
-                  &lt;/NavLink&gt;
-                  &lt;NavLink
-                    className='ad-nav-tagline'
-                    to='/new-mentor-form'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  &gt;Mentor Form
-                  &lt;/NavLink&gt;
+              &lt;/NavLink&gt;
+              &lt;NavLink
+                to='/new-mentor-form'
+                target='_blank'
+                rel='noopener noreferrer'
+              &gt;
+                &lt;div className='ad-new-mentor-btn ad-nav-btn'&gt;
+                  &lt;div className='ad-nav-tagline'&gt;
+                    &lt;p className='ad-btn-text'&gt;New&lt;/p&gt;
+                    &lt;p className='ad-btn-text'&gt;Mentor Form&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' /&gt;
                 &lt;/div&gt;
-                &lt;img src={require('../../utils/assets/nmf-icon.svg')} alt='New Mentor Form Logo' className='ad-nav-logo' /&gt;
-              &lt;/div&gt;
+              &lt;/NavLink&gt;
               &lt;div className='ad-nav-btn'&gt;
                 &lt;div className='ad-nav-tagline-container'&gt;
-                  &lt;p className='ad-nav-tagline'&gt;Sign in&lt;/p&gt;
-                  &lt;p className='ad-nav-tagline'&gt;with github&lt;/p&gt;
+                  &lt;p className='ad-nav-tagline'&gt;Click Here&lt;/p&gt;
+                  &lt;p className='ad-nav-tagline'&gt;to Sign Out&lt;/p&gt;
                 &lt;/div&gt;
-                &lt;img src={require('../../utils/assets/github-logo.svg')} alt='GitHub Logo' className='ad-nav-logo' /&gt;
+                &lt;img src={require('../../utils/assets/sign-out.svg')} alt='GitHub Logo' className='ad-nav-logo' /&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -982,7 +946,7 @@ export default connect(mapStateToProps)(AdminDashboard);</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 04 2019 14:35:10 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 13 2019 18:42:51 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

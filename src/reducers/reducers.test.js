@@ -186,6 +186,27 @@ describe('setMentorModal', () => {
     expect(result).toEqual(expected)
   });
 
+  it('should edit the mentees assigned to a mentor', () => {
+    const mockAction = {
+      type: "ADD_MODAL_MENTEES",
+      modalMentees: {
+        name: 'carrie hairy', 
+        city: 'halle berry', 
+        preferences: { title: 'Doin\' Stuff' },
+        mentees: [ { name: 'Jake Paralta' } ]
+      }
+    }
+    const expected = {
+      name: 'carrie hairy', 
+      city: 'halle berry', 
+      preferences: { title: 'Doin\' Stuff' },
+      mentees: [ { name: 'Jake Paralta' } ]
+    }
+
+    const result = setMentorModal({}, mockAction)
+    expect(result).toEqual(expected)
+  });
+
   it('should return state of null as a default', () => {
     const mockAction = {
       modalInfo: { name: 'carrie hairy', city: 'halle berry', preferences: { title: 'Doin\' Stuff' } }
@@ -291,6 +312,44 @@ describe('setStudents', () => {
       {
         id: 2,
         name: 'Gunther'
+      }
+    ]
+
+    const result = setStudents(mockStudentState, mockStudentAction)
+    expect(result).toEqual(expected)
+  });
+
+  it('should toggle an existing student to inactive/matched status', () => {
+    let mockStudentAction = {
+      type: "MAKE_STUDENT_INACTIVE",
+      studentId: 2
+    }
+    let mockStudentState = [
+      {
+        id: 1,
+        name: 'Casey',
+        active: true,
+        matched: false
+      },
+      {
+        id: 2,
+        name: 'Alex',
+        active: true,
+        matched: false
+      }
+    ]
+    let expected = [
+      {
+        id: 1,
+        name: 'Casey',
+        active: true,
+        matched: false
+      },
+      {
+        id: 2,
+        name: 'Alex',
+        active: false,
+        matched: true
       }
     ]
 

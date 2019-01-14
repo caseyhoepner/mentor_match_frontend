@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">69.32% </span>
+        <span class="strong">60.19% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>61/88</span>
+        <span class='fraction'>62/103</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">65.38% </span>
+        <span class="strong">67.86% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>17/26</span>
+        <span class='fraction'>19/28</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">61.29% </span>
+        <span class="strong">59.38% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>19/31</span>
+        <span class='fraction'>19/32</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">69.05% </span>
+        <span class="strong">60.2% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>58/84</span>
+        <span class='fraction'>59/98</span>
       </div>
     </div>
   </div>
@@ -389,7 +389,27 @@
 344
 345
 346
-347</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -455,7 +475,14 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -543,6 +570,7 @@
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -564,7 +592,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -576,6 +611,7 @@
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -599,6 +635,10 @@
 <span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -741,7 +781,7 @@ import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor, isEditable, addModalMentees } from '../../actions/mentor-actions';
 import { makeStudentInactive } from '../../actions/student-actions';
 // import { patchMentor } from '../../utils/api';
-import { postRelationship, patchRelationship, patchStudent } from '../../utils/api';
+import { postRelationship, patchRelationship, patchStudent, patchMentor } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';
 import { withRouter } from 'react-router-dom';
@@ -801,7 +841,14 @@ export class AdminMentorModal extends Component {
     const { makeStudentInactive, modalInfo, students } = <span class="cstat-no" title="statement not covered" >this.props;</span>
     const student = <span class="cstat-no" title="statement not covered" >this.getStudent(students);</span>
     const mentorId = <span class="cstat-no" title="statement not covered" >modalInfo.id;</span>
+    let mentorToChange = <span class="cstat-no" title="statement not covered" >this.props.currentMentor</span>
+    let numToChange = <span class="cstat-no" title="statement not covered" >this.props.currentMentor.mentee_capacity - 1</span>
+    
+<span class="cstat-no" title="statement not covered" >    mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })</span>
 &nbsp;
+<span class="cstat-no" title="statement not covered" >    await patchMentor(mentorToChange)</span>
+<span class="cstat-no" title="statement not covered" >    await this.props.updateChangedMentor(mentorToChange)</span>
+<span class="cstat-no" title="statement not covered" >    await this.props.setMentorModal(mentorToChange)</span>
 <span class="cstat-no" title="statement not covered" >    await postRelationship(student.id, mentorId);</span>
 <span class="cstat-no" title="statement not covered" >    await makeStudentInactive(student.id);</span>
 <span class="cstat-no" title="statement not covered" >    await patchStudent(student)</span>
@@ -888,8 +935,9 @@ export class AdminMentorModal extends Component {
     })
     addModalMentees({...modalInfo, mentees: mentees});
     return mentees.map(<span class="fstat-no" title="function not covered" >(m</span>entee, index) =&gt; {
+      let relationshipId = <span class="cstat-no" title="statement not covered" >matchedRelationships.filter(<span class="fstat-no" title="function not covered" >re</span>lationship =&gt; <span class="cstat-no" title="statement not covered" >relationship.attributes.student_id === mentee.id)</span></span>
 <span class="cstat-no" title="statement not covered" >      return (</span>
-        &lt;div className='amm-list-item-container amm-mentees' key={matchedRelationships[0].id + index}&gt;
+        &lt;div className='amm-list-item-container amm-mentees' key={relationshipId[0].id + index}&gt;
           &lt;div className='amm-dash-list'&gt;
             &lt;img 
               className='amm-dash-icon' 
@@ -899,7 +947,7 @@ export class AdminMentorModal extends Component {
             &lt;p className='amm-list-item'&gt;{mentee.name}&lt;/p&gt;
           &lt;/div&gt;
           &lt;button
-            name={matchedRelationships[0].id}
+            name={relationshipId[0].id}
             onClick={<span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; <span class="cstat-no" title="statement not covered" >this.unmatch(event, mentee.id)}</span>
           &gt;Unmatch&lt;/button&gt;
         &lt;/div&gt;
@@ -910,7 +958,14 @@ export class AdminMentorModal extends Component {
   unmatch = <span class="fstat-no" title="function not covered" >as</span>ync (event, studentId) =&gt; {
     const mentorId = <span class="cstat-no" title="statement not covered" >this.props.modalInfo.id;</span>
     const relationshipId = <span class="cstat-no" title="statement not covered" >event.target.name;</span>
+    let mentorToChange = <span class="cstat-no" title="statement not covered" >this.props.currentMentor</span>
+    let numToChange = <span class="cstat-no" title="statement not covered" >this.props.currentMentor.mentee_capacity + 1</span>
+    
+<span class="cstat-no" title="statement not covered" >    mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })</span>
 &nbsp;
+<span class="cstat-no" title="statement not covered" >    await patchMentor(mentorToChange)</span>
+<span class="cstat-no" title="statement not covered" >    await this.props.updateChangedMentor(mentorToChange)</span>
+<span class="cstat-no" title="statement not covered" >    await this.props.setMentorModal(mentorToChange)</span>
 <span class="cstat-no" title="statement not covered" >    await patchRelationship(studentId, mentorId, relationshipId);</span>
 <span class="cstat-no" title="statement not covered" >    await this.props.retrieveRelationships()</span>
 <span class="cstat-no" title="statement not covered" >    await this.setState({ mentees: this.getMentees() })</span>
@@ -922,6 +977,7 @@ export class AdminMentorModal extends Component {
     if(this.props.modalInfo &amp;&amp; !isEditable) {
       let studentOptions = this.getStudentOptions();
       let mentees = this.state.mentees;
+      let { menteeToAssign } = this.state
       let { 
         name,
         email,
@@ -996,7 +1052,11 @@ export class AdminMentorModal extends Component {
                 &lt;option value=''&gt;Select a Student&lt;/option&gt;
                 { studentOptions }
               &lt;/select&gt;
-              &lt;button onClick={this.assignMentee}&gt;Assign&lt;/button&gt;
+              &lt;button 
+                className='amm-assign-btn' 
+                onClick={this.assignMentee} 
+                disabled={!mentee_capacity || !menteeToAssign} 
+              &gt;Assign&lt;/button&gt;
             &lt;/div&gt;
           &lt;/div&gt;
 &nbsp;
@@ -1087,7 +1147,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMent
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 04 2019 14:35:10 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 13 2019 18:42:51 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../prettify.js"></script>
