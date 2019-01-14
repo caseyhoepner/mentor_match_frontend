@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1547430171157" clover="3.2.0">
-  <project timestamp="1547430171157" name="All files">
-    <metrics statements="653" coveredstatements="487" conditionals="291" coveredconditionals="203" methods="207" coveredmethods="150" elements="1151" coveredelements="840" complexity="0" loc="653" ncloc="653" packages="21" files="31" classes="31">
+<coverage generated="1547433113132" clover="3.2.0">
+  <project timestamp="1547433113132" name="All files">
+    <metrics statements="653" coveredstatements="509" conditionals="291" coveredconditionals="203" methods="207" coveredmethods="156" elements="1151" coveredelements="868" complexity="0" loc="653" ncloc="653" packages="21" files="31" classes="31">
       <package name="actions">
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="12"/>
         <file name="index.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/actions/index.js">
@@ -751,9 +751,9 @@
         </file>
       </package>
       <package name="utils">
-        <metrics statements="52" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="7"/>
+        <metrics statements="52" coveredstatements="52" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="13"/>
         <file name="api.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/utils/api.js">
-          <metrics statements="46" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="5"/>
+          <metrics statements="46" coveredstatements="46" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
           <line num="3" count="8" type="stmt"/>
           <line num="4" count="3" type="stmt"/>
           <line num="5" count="3" type="stmt"/>
@@ -771,44 +771,44 @@
           <line num="30" count="1" type="stmt"/>
           <line num="31" count="1" type="stmt"/>
           <line num="34" count="8" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="36" count="1" type="stmt"/>
-          <line num="37" count="0" type="stmt"/>
-          <line num="38" count="0" type="stmt"/>
+          <line num="35" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="37" count="2" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
           <line num="41" count="8" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="43" count="0" type="stmt"/>
-          <line num="49" count="0" type="stmt"/>
-          <line num="50" count="0" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
           <line num="53" count="8" type="stmt"/>
-          <line num="54" count="0" type="stmt"/>
-          <line num="55" count="0" type="stmt"/>
-          <line num="60" count="0" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
           <line num="64" count="8" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
-          <line num="66" count="1" type="stmt"/>
-          <line num="67" count="0" type="stmt"/>
-          <line num="68" count="0" type="stmt"/>
+          <line num="65" count="3" type="stmt"/>
+          <line num="66" count="3" type="stmt"/>
+          <line num="67" count="2" type="stmt"/>
+          <line num="68" count="2" type="stmt"/>
           <line num="71" count="8" type="stmt"/>
-          <line num="72" count="0" type="stmt"/>
-          <line num="73" count="0" type="stmt"/>
-          <line num="82" count="0" type="stmt"/>
-          <line num="83" count="0" type="stmt"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="73" count="1" type="stmt"/>
+          <line num="82" count="1" type="stmt"/>
+          <line num="83" count="1" type="stmt"/>
           <line num="86" count="8" type="stmt"/>
-          <line num="87" count="0" type="stmt"/>
-          <line num="88" count="0" type="stmt"/>
-          <line num="97" count="0" type="stmt"/>
-          <line num="98" count="0" type="stmt"/>
+          <line num="87" count="1" type="stmt"/>
+          <line num="88" count="1" type="stmt"/>
+          <line num="97" count="1" type="stmt"/>
+          <line num="98" count="1" type="stmt"/>
         </file>
         <file name="helper.js" path="/Users/alexanderrau/Desktop/Turing/Mod4/cross-pollination/mentor_match_frontend/src/utils/helper.js">
-          <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
           <line num="1" count="8" type="stmt"/>
-          <line num="2" count="3" type="stmt"/>
-          <line num="3" count="6" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="10" type="stmt"/>
           <line num="7" count="8" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
         </file>
       </package>
     </metrics>
