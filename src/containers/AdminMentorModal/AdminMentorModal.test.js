@@ -30,7 +30,7 @@ describe('AdminMentorModal', () => {
     ways_to_mentor: ['Coffee Meetings'],
     expertise_tech: ['React.js'],
     expertise_non_tech: ['Parenting'],
-    mentee_capacity: '2',
+    mentee_capacity: 2,
     identity_preference: ['female-identifying'],
     meeting_location: 'Turing'
   }
@@ -42,8 +42,9 @@ describe('AdminMentorModal', () => {
   let mockRelationships = [
     {
       attributes: {
-        mentor_id: 1,
-        student_id: 5,
+        id: 1,
+        mentor_id: 6,
+        student_id: 2,
         active: true
       }
     }
@@ -175,11 +176,11 @@ describe('AdminMentorModal', () => {
       />)
 
       wrapper.instance().handleClick(mockEvent1)
-      expect(wrapper.state()).toEqual({ currentMentor: mockMentor, menteeToAssign: '', mentees: [] })
+      expect(wrapper.state().currentMentor).toEqual(mockMentor)
       wrapper.instance().handleClick(mockEvent2)
       expect(mockFunc1).toHaveBeenCalled()
       expect(mockFunction).toHaveBeenCalledWith(false)
-      expect(wrapper.state()).toEqual({ currentMentor: {}, menteeToAssign: '', mentees: [] })
+      expect(wrapper.state().currentMentor).toEqual({})
     });
   });
 
@@ -214,8 +215,11 @@ describe('AdminMentorModal', () => {
       expect(spy).toHaveBeenCalledWith(mockStudents)
     });
 
-    it('should fire patchMentor fetch call with correct params', async () => {
+    it('should fire all subsequent needed functions with correct params', async () => {
       let spy = jest.spyOn(API, 'patchMentor')
+      let spy2 = jest.spyOn(API, 'postRelationship')
+      let spy3 = jest.spyOn(API, 'patchStudent')
+      let spy4 = jest.spyOn(wrapper.instance(), 'getMentees')
       let expected = {
         id: 6,
         name: 'Menty the Mentor',
@@ -241,95 +245,13 @@ describe('AdminMentorModal', () => {
       wrapper.instance().setState({ menteeToAssign: 'Casey' })
       await wrapper.instance().assignMentee()
       expect(spy).toHaveBeenCalledWith(expected)
-    });
-
-    it('should fire updateChangedMentor with correct params', async () => {
-      let expected = {
-        id: 6,
-        name: 'Menty the Mentor',
-        email: 'menty@mentor.com',
-        city: 'Denver',
-        state: 'CO',
-        country: 'USA',
-        slack_username: '@Menty',
-        matched: true,
-        active: true,
-        pronouns: 'she/her/hers',
-        current_title: 'Head Mentor',
-        current_employer: 'Department of Mentors',
-        background: 'I am a mentor!',
-        industries: ['Civic Tech'],
-        ways_to_mentor: ['Coffee Meetings'],
-        expertise_tech: ['React.js'],
-        expertise_non_tech: ['Parenting'],
-        mentee_capacity: 1,
-        identity_preference: ['female-identifying'],
-        meeting_location: 'Turing'
-      }
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
       expect(mockFunc2).toHaveBeenCalledWith(expected)
-    });
-
-    it('should fire setMentorModal with correct params', async () => {
-      let expected = {
-        id: 6,
-        name: 'Menty the Mentor',
-        email: 'menty@mentor.com',
-        city: 'Denver',
-        state: 'CO',
-        country: 'USA',
-        slack_username: '@Menty',
-        matched: true,
-        active: true,
-        pronouns: 'she/her/hers',
-        current_title: 'Head Mentor',
-        current_employer: 'Department of Mentors',
-        background: 'I am a mentor!',
-        industries: ['Civic Tech'],
-        ways_to_mentor: ['Coffee Meetings'],
-        expertise_tech: ['React.js'],
-        expertise_non_tech: ['Parenting'],
-        mentee_capacity: 1,
-        identity_preference: ['female-identifying'],
-        meeting_location: 'Turing'        
-      }
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
       expect(mockFunc3).toHaveBeenCalledWith(expected)
-    });
-
-    it('should fire postRelationship fetch call with correct params', async () => {
-      let spy = jest.spyOn(API, 'postRelationship')
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
-      expect(spy).toHaveBeenCalledWith(1, 6)
-    });
-
-    it('should fire makeStudentInactive function with correct params', async () => {
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
+      expect(spy2).toHaveBeenCalledWith(1, 6)
       expect(mockFunc5).toHaveBeenCalledWith(1)
-    });
-
-    it('should fire patchStudent fetch call with correct params', async () => {
-      let spy = jest.spyOn(API, 'patchStudent')
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
-      expect(spy).toHaveBeenCalledWith({ name: 'Casey', id: 1, active: true, matched: false })
-    });
-
-    it('should fire retrieveRelationships function', async () => {
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
+      expect(spy3).toHaveBeenCalledWith({ name: 'Casey', id: 1, active: true, matched: false })
       expect(mockFunc6).toHaveBeenCalled()
-    });
-
-    it('should fire getMentees function', async () => {
-      let spy = jest.spyOn(wrapper.instance(), 'getMentees')
-      wrapper.instance().setState({ menteeToAssign: 'Casey' })
-      await wrapper.instance().assignMentee()
-      expect(spy).toHaveBeenCalled()
+      expect(spy4).toHaveBeenCalled()
     });
   });
 
@@ -358,6 +280,83 @@ describe('AdminMentorModal', () => {
     it('should return array of students', () => {
       let result = wrapper.instance().getStudentOptions()
       expect(result.length).toEqual(2)
+    });
+  });
+
+  describe('getMentees function', () => {
+    it('should fire addModalMentees function with correct params', () => {
+      let expected = {
+        id: 6,
+        name: 'Menty the Mentor',
+        email: 'menty@mentor.com',
+        city: 'Denver',
+        state: 'CO',
+        country: 'USA',
+        slack_username: '@Menty',
+        matched: true,
+        active: true,
+        pronouns: 'she/her/hers',
+        current_title: 'Head Mentor',
+        current_employer: 'Department of Mentors',
+        background: 'I am a mentor!',
+        industries: ['Civic Tech'],
+        ways_to_mentor: ['Coffee Meetings'],
+        expertise_tech: ['React.js'],
+        expertise_non_tech: ['Parenting'],
+        mentee_capacity: 2,
+        identity_preference: ['female-identifying'],
+        meeting_location: 'Turing',
+        mentees: [{  name: 'Alex', id: 2, active: false, matched: true  }]
+      }
+      wrapper.instance().getMentees()
+      expect(mockFunction).toHaveBeenCalledWith(expected)
+    });
+
+    it('should return an array of the number of matched mentees to that specific mentor', () => {
+      let result = wrapper.instance().getMentees()
+      expect(result.length).toEqual(1)
+    });
+  });
+
+  describe('unmatch function', () => {
+    it('should fire all needed functions with correct params', async () => {
+      let spy = jest.spyOn(API, 'patchMentor')
+      let spy2 = jest.spyOn(API, 'patchRelationship')
+      let spy3 = jest.spyOn(wrapper.instance(), 'getMentees')
+      let mockEvent = {
+        target: {
+          name: 1
+        }
+      }
+      let expected = {
+        id: 6,
+        name: 'Menty the Mentor',
+        email: 'menty@mentor.com',
+        city: 'Denver',
+        state: 'CO',
+        country: 'USA',
+        slack_username: '@Menty',
+        matched: true,
+        active: true,
+        pronouns: 'she/her/hers',
+        current_title: 'Head Mentor',
+        current_employer: 'Department of Mentors',
+        background: 'I am a mentor!',
+        industries: ['Civic Tech'],
+        ways_to_mentor: ['Coffee Meetings'],
+        expertise_tech: ['React.js'],
+        expertise_non_tech: ['Parenting'],
+        mentee_capacity: 3,
+        identity_preference: ['female-identifying'],
+        meeting_location: 'Turing'
+      }
+      await wrapper.instance().unmatch(mockEvent, 2)
+      expect(spy).toHaveBeenCalledWith(expected)
+      expect(mockFunc2).toHaveBeenCalledWith(expected)
+      expect(mockFunc3).toHaveBeenCalledWith(expected)
+      expect(spy2).toHaveBeenCalledWith(2, 6, 1)
+      expect(mockFunc6).toHaveBeenCalled()
+      expect(spy3).toHaveBeenCalled()
     });
   });
 });

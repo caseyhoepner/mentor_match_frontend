@@ -3,7 +3,6 @@ import './AdminMentorModal.css';
 import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor, isEditable, addModalMentees } from '../../actions/mentor-actions';
 import { makeStudentInactive } from '../../actions/student-actions';
-// import { patchMentor } from '../../utils/api';
 import { postRelationship, patchRelationship, patchStudent, patchMentor } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';

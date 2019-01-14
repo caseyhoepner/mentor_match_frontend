@@ -31,8 +31,15 @@ ShallowWrapper {
               ],
               "matched": true,
               "meeting_location": "Turing",
-              "mentee_capacity": "2",
-              "mentees": Array [],
+              "mentee_capacity": 2,
+              "mentees": Array [
+                Object {
+                  "active": false,
+                  "id": 2,
+                  "matched": true,
+                  "name": "Alex",
+                },
+              ],
               "name": "Menty the Mentor",
               "pronouns": "she/her/hers",
               "slack_username": "@Menty",
@@ -66,8 +73,15 @@ ShallowWrapper {
               ],
               "matched": true,
               "meeting_location": "Turing",
-              "mentee_capacity": "2",
-              "mentees": Array [],
+              "mentee_capacity": 2,
+              "mentees": Array [
+                Object {
+                  "active": false,
+                  "id": 2,
+                  "matched": true,
+                  "name": "Alex",
+                },
+              ],
               "name": "Menty the Mentor",
               "pronouns": "she/her/hers",
               "slack_username": "@Menty",
@@ -101,8 +115,15 @@ ShallowWrapper {
               ],
               "matched": true,
               "meeting_location": "Turing",
-              "mentee_capacity": "2",
-              "mentees": Array [],
+              "mentee_capacity": 2,
+              "mentees": Array [
+                Object {
+                  "active": false,
+                  "id": 2,
+                  "matched": true,
+                  "name": "Alex",
+                },
+              ],
               "name": "Menty the Mentor",
               "pronouns": "she/her/hers",
               "slack_username": "@Menty",
@@ -153,7 +174,7 @@ ShallowWrapper {
         ],
         "matched": true,
         "meeting_location": "Turing",
-        "mentee_capacity": "2",
+        "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
         "slack_username": "@Menty",
@@ -188,7 +209,7 @@ ShallowWrapper {
         ],
         "matched": true,
         "meeting_location": "Turing",
-        "mentee_capacity": "2",
+        "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
         "slack_username": "@Menty",
@@ -203,8 +224,9 @@ ShallowWrapper {
         Object {
           "attributes": Object {
             "active": true,
-            "mentor_id": 1,
-            "student_id": 5,
+            "id": 1,
+            "mentor_id": 6,
+            "student_id": 2,
           },
         },
       ]
@@ -309,8 +331,15 @@ ShallowWrapper {
               ],
               "matched": true,
               "meeting_location": "Turing",
-              "mentee_capacity": "2",
-              "mentees": Array [],
+              "mentee_capacity": 2,
+              "mentees": Array [
+                Object {
+                  "active": false,
+                  "id": 2,
+                  "matched": true,
+                  "name": "Alex",
+                },
+              ],
               "name": "Menty the Mentor",
               "pronouns": "she/her/hers",
               "slack_username": "@Menty",
@@ -353,7 +382,7 @@ ShallowWrapper {
         ],
         "matched": true,
         "meeting_location": "Turing",
-        "mentee_capacity": "2",
+        "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
         "slack_username": "@Menty",
@@ -389,7 +418,7 @@ ShallowWrapper {
         ],
         "matched": true,
         "meeting_location": "Turing",
-        "mentee_capacity": "2",
+        "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
         "slack_username": "@Menty",
@@ -405,8 +434,9 @@ ShallowWrapper {
         Object {
           "attributes": Object {
             "active": true,
-            "mentor_id": 1,
-            "student_id": 5,
+            "id": 1,
+            "mentor_id": 6,
+            "student_id": 2,
           },
         },
       ]
@@ -543,6 +573,35 @@ ShallowWrapper {
             <h3>
               Current Mentees
             </h3>
+            <div
+              className="amm-list-item-container amm-mentees"
+            >
+              <div
+                className="amm-dash-list"
+              >
+                <img
+                  alt="dash icon"
+                  className="amm-dash-icon"
+                  src={
+                    Object {
+                      "ReactComponent": [Function],
+                      "__esModule": true,
+                      "default": "right-arrow.svg",
+                    }
+                  }
+                />
+                <p
+                  className="amm-list-item"
+                >
+                  Alex
+                </p>
+              </div>
+              <button
+                onClick={[Function]}
+              >
+                Unmatch
+              </button>
+            </div>
           </div>
           <div
             className="amm-match-dropdown-container"
@@ -1207,6 +1266,35 @@ ShallowWrapper {
               <h3>
                 Current Mentees
               </h3>
+              <div
+                className="amm-list-item-container amm-mentees"
+              >
+                <div
+                  className="amm-dash-list"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    Alex
+                  </p>
+                </div>
+                <button
+                  onClick={[Function]}
+                >
+                  Unmatch
+                </button>
+              </div>
             </div>,
             <div
               className="amm-match-dropdown-container"
@@ -1294,7 +1382,37 @@ ShallowWrapper {
                 <h3>
                   Current Mentees
                 </h3>,
-                Array [],
+                Array [
+                  <div
+                    className="amm-list-item-container amm-mentees"
+                  >
+                    <div
+                      className="amm-dash-list"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Alex
+                      </p>
+                    </div>
+                    <button
+                      onClick={[Function]}
+                    >
+                      Unmatch
+                    </button>
+                  </div>,
+                ],
               ],
             },
             "ref": null,
@@ -1309,6 +1427,117 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "Current Mentees",
                 "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "NaN",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="amm-dash-list"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Alex
+                      </p>
+                    </div>,
+                    <button
+                      onClick={[Function]}
+                    >
+                      Unmatch
+                    </button>,
+                  ],
+                  "className": "amm-list-item-container amm-mentees",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="dash icon"
+                          className="amm-dash-icon"
+                          src={
+                            Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "right-arrow.svg",
+                            }
+                          }
+                        />,
+                        <p
+                          className="amm-list-item"
+                        >
+                          Alex
+                        </p>,
+                      ],
+                      "className": "amm-dash-list",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "dash icon",
+                          "className": "amm-dash-icon",
+                          "src": Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Alex",
+                          "className": "amm-list-item",
+                        },
+                        "ref": null,
+                        "rendered": "Alex",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Unmatch",
+                      "name": undefined,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Unmatch",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
               },
             ],
             "type": "div",
@@ -2539,6 +2768,35 @@ ShallowWrapper {
               <h3>
                 Current Mentees
               </h3>
+              <div
+                className="amm-list-item-container amm-mentees"
+              >
+                <div
+                  className="amm-dash-list"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    Alex
+                  </p>
+                </div>
+                <button
+                  onClick={[Function]}
+                >
+                  Unmatch
+                </button>
+              </div>
             </div>
             <div
               className="amm-match-dropdown-container"
@@ -3203,6 +3461,35 @@ ShallowWrapper {
                 <h3>
                   Current Mentees
                 </h3>
+                <div
+                  className="amm-list-item-container amm-mentees"
+                >
+                  <div
+                    className="amm-dash-list"
+                  >
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
+                    >
+                      Alex
+                    </p>
+                  </div>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Unmatch
+                  </button>
+                </div>
               </div>,
               <div
                 className="amm-match-dropdown-container"
@@ -3290,7 +3577,37 @@ ShallowWrapper {
                   <h3>
                     Current Mentees
                   </h3>,
-                  Array [],
+                  Array [
+                    <div
+                      className="amm-list-item-container amm-mentees"
+                    >
+                      <div
+                        className="amm-dash-list"
+                      >
+                        <img
+                          alt="dash icon"
+                          className="amm-dash-icon"
+                          src={
+                            Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "right-arrow.svg",
+                            }
+                          }
+                        />
+                        <p
+                          className="amm-list-item"
+                        >
+                          Alex
+                        </p>
+                      </div>
+                      <button
+                        onClick={[Function]}
+                      >
+                        Unmatch
+                      </button>
+                    </div>,
+                  ],
                 ],
               },
               "ref": null,
@@ -3305,6 +3622,117 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": "Current Mentees",
                   "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": "NaN",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="amm-dash-list"
+                      >
+                        <img
+                          alt="dash icon"
+                          className="amm-dash-icon"
+                          src={
+                            Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "right-arrow.svg",
+                            }
+                          }
+                        />
+                        <p
+                          className="amm-list-item"
+                        >
+                          Alex
+                        </p>
+                      </div>,
+                      <button
+                        onClick={[Function]}
+                      >
+                        Unmatch
+                      </button>,
+                    ],
+                    "className": "amm-list-item-container amm-mentees",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <img
+                            alt="dash icon"
+                            className="amm-dash-icon"
+                            src={
+                              Object {
+                                "ReactComponent": [Function],
+                                "__esModule": true,
+                                "default": "right-arrow.svg",
+                              }
+                            }
+                          />,
+                          <p
+                            className="amm-list-item"
+                          >
+                            Alex
+                          </p>,
+                        ],
+                        "className": "amm-dash-list",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "dash icon",
+                            "className": "amm-dash-icon",
+                            "src": Object {
+                              "ReactComponent": [Function],
+                              "__esModule": true,
+                              "default": "right-arrow.svg",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Alex",
+                            "className": "amm-list-item",
+                          },
+                          "ref": null,
+                          "rendered": "Alex",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Unmatch",
+                        "name": undefined,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Unmatch",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
                 },
               ],
               "type": "div",
