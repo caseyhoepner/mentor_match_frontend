@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96% </span>
+        <span class="strong">95.45% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>24/25</span>
+        <span class='fraction'>21/22</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.75% </span>
+        <span class="strong">92.86% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>15/16</span>
+        <span class='fraction'>13/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">88.89% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>8/9</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95.65% </span>
+        <span class="strong">95% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>22/23</span>
+        <span class='fraction'>19/20</span>
       </div>
     </div>
   </div>
@@ -160,11 +160,7 @@
 115
 116
 117
-118
-119
-120
-121
-122</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+118</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -206,17 +202,13 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">19x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -323,72 +315,68 @@ export class Search extends Component {
     const { name } = event.target;
     await this.setState({ [name]: !this.state[name] })
 &nbsp;
-    if (name === 'preferencesClicked') {
-      this.setState({
-        showPreferences: !this.state.showPreferences
-      }) 
-    } else if (name === 'allMentorsClicked') {
+    if (name === 'allMentorsClicked') {
       this.props.toggleShowingMentors(!this.props.showingAllMentors)
     }
-&nbsp;
-    this.setState({ [name]: !this.state[name] })
   }
 &nbsp;
   render() {
     const {search, localeSelected, preferencesClicked, allMentorsClicked, favClicked } = this.state;
 &nbsp;
     return (
-      &lt;div className='ams-search-container'&gt;
-        &lt;div className='ams-search-and-buttons'&gt;
-          &lt;div className='ams-search-inputs-container'&gt;
-            &lt;div className='ams-search-bar'&gt;
-              &lt;input 
-                name='search' 
-                type='text' 
-                value={search} 
-                onChange={this.handleChange} 
-                placeholder='Search here...'
-                className='ams-search-input'
-              /&gt;
-              &lt;div className='ams-search-icon'&gt;
+      &lt;div className='s-search-container'&gt;
+        &lt;div className='s-search-and-pref-container'&gt;
+          &lt;div className='s-search-and-buttons'&gt;
+            &lt;div className='s-search-inputs-container'&gt;
+              &lt;div className='s-search-bar'&gt;
+                &lt;input 
+                  name='search' 
+                  type='text' 
+                  value={search} 
+                  onChange={this.handleChange} 
+                  placeholder='Search here...'
+                  className='s-search-input'
+                /&gt;
+                &lt;div className='s-search-icon'&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
+              &lt;select
+                value={localeSelected}
+                onChange={this.handleChange}
+                name='localeSelected'
+                className='s-location-dropdown'
+              &gt;
+                &lt;option value=''&gt;--Select locale--&lt;/option&gt;
+                &lt;option value='Denver'&gt;Denver&lt;/option&gt;
+                &lt;option value='Remote'&gt;Remote&lt;/option&gt;
+              &lt;/select&gt;
             &lt;/div&gt;
-            &lt;select
-              value={localeSelected}
-              onChange={this.handleChange}
-              name='localeSelected'
-              className='ams-location-dropdown'
-            &gt;
-              &lt;option value=''&gt;--Select locale--&lt;/option&gt;
-              &lt;option value='Denver'&gt;Denver&lt;/option&gt;
-              &lt;option value='Remote'&gt;Remote&lt;/option&gt;
-            &lt;/select&gt;
-          &lt;/div&gt;
-          &lt;div className='ams-filter-btn-container'&gt;
-            &lt;button 
-              className={!preferencesClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
-              onClick={this.toggleClicked}
-              name='preferencesClicked'
-            &gt;
-              Filter by Preferences
-            &lt;/button&gt;
-            &lt;button 
-              className={!allMentorsClicked ? 'ams-filter-btn' : 'ams-filter-btn active'}
-              onClick={this.toggleClicked}
-              name='allMentorsClicked'
-            &gt;
-              All Mentors
-            &lt;/button&gt;
-            &lt;img
-                src={!favClicked ? hollowHeart : solidHeart}
-                alt='favorite button'
-                className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
+            &lt;div className='s-filter-btn-container'&gt;
+              &lt;button 
+                className={!preferencesClicked ? 's-filter-btn' : 's-filter-btn active'}
                 onClick={this.toggleClicked}
-                name='favClicked'
-              /&gt;
+                name='preferencesClicked'
+              &gt;
+                Filter by Preferences
+              &lt;/button&gt;
+              &lt;button 
+                className={!allMentorsClicked ? 's-filter-btn' : 's-filter-btn active'}
+                onClick={this.toggleClicked}
+                name='allMentorsClicked'
+              &gt;
+                All Mentors
+              &lt;/button&gt;
+              &lt;img
+                  src={!favClicked ? hollowHeart : solidHeart}
+                  alt='favorite button'
+                  className={!favClicked ? 's-favorite-btn' : 's-favorite-btn selected'}
+                  onClick={this.toggleClicked}
+                  name='favClicked'
+                /&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
+          &lt;Preferences preferencesClicked={preferencesClicked}/&gt;
         &lt;/div&gt;
-        &lt;Preferences preferencesClicked={preferencesClicked}/&gt;
       &lt;/div&gt;
     )
   }
@@ -412,7 +400,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Search);</pre></td><
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 04 2019 14:35:10 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 14 2019 12:01:41 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

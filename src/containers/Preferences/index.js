@@ -22,6 +22,7 @@ export class Preferences extends Component {
     await this.setState({ frontEnd: !frontEnd })
     changeMentorFilters(this.state)
   }
+
   toggleBE = async () => {
     const { backEnd } = this.state;
     const { changeMentorFilters } = this.props;
@@ -56,7 +57,7 @@ export class Preferences extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   changeMentorFilters: (filters) => dispatch(changeMentorFilters(filters))
 })
 
