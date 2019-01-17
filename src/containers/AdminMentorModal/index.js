@@ -3,8 +3,7 @@ import './AdminMentorModal.css';
 import { connect } from 'react-redux';
 import { setMentorModal, updateChangedMentor, isEditable, addModalMentees } from '../../actions/mentor-actions';
 import { makeStudentInactive } from '../../actions/student-actions';
-// import { patchMentor } from '../../utils/api';
-import { postRelationship, patchRelationship, patchStudent } from '../../utils/api';
+import { postRelationship, patchRelationship, patchStudent, patchMentor } from '../../utils/api';
 import { EditableMentor } from '../EditableMentor';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';
 import { withRouter } from 'react-router-dom';
@@ -64,7 +63,14 @@ export class AdminMentorModal extends Component {
     const { makeStudentInactive, modalInfo, students } = this.props;
     const student = this.getStudent(students);
     const mentorId = modalInfo.id;
+    let mentorToChange = this.props.currentMentor
+    let numToChange = this.props.currentMentor.mentee_capacity - 1
+    
+    mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
 
+    await patchMentor(mentorToChange)
+    await this.props.updateChangedMentor(mentorToChange)
+    await this.props.setMentorModal(mentorToChange)
     await postRelationship(student.id, mentorId);
     await makeStudentInactive(student.id);
     await patchStudent(student)
@@ -151,8 +157,9 @@ export class AdminMentorModal extends Component {
     })
     addModalMentees({...modalInfo, mentees: mentees});
     return mentees.map((mentee, index) => {
+      let relationshipId = matchedRelationships.filter(relationship => relationship.attributes.student_id === mentee.id)
       return (
-        <div className='amm-list-item-container amm-mentees' key={matchedRelationships[0].id + index}>
+        <div className='amm-list-item-container amm-mentees' key={relationshipId[0].id + index}>
           <div className='amm-dash-list'>
             <img 
               className='amm-dash-icon' 
@@ -162,7 +169,7 @@ export class AdminMentorModal extends Component {
             <p className='amm-list-item'>{mentee.name}</p>
           </div>
           <button
-            name={matchedRelationships[0].id}
+            name={relationshipId[0].id}
             onClick={(event) => this.unmatch(event, mentee.id)}
           >Unmatch</button>
         </div>
@@ -173,7 +180,14 @@ export class AdminMentorModal extends Component {
   unmatch = async (event, studentId) => {
     const mentorId = this.props.modalInfo.id;
     const relationshipId = event.target.name;
+    let mentorToChange = this.props.currentMentor
+    let numToChange = this.props.currentMentor.mentee_capacity + 1
+    
+    mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
 
+    await patchMentor(mentorToChange)
+    await this.props.updateChangedMentor(mentorToChange)
+    await this.props.setMentorModal(mentorToChange)
     await patchRelationship(studentId, mentorId, relationshipId);
     await this.props.retrieveRelationships()
     await this.setState({ mentees: this.getMentees() })
@@ -185,6 +199,7 @@ export class AdminMentorModal extends Component {
     if(this.props.modalInfo && !isEditable) {
       let studentOptions = this.getStudentOptions();
       let mentees = this.state.mentees;
+      let { menteeToAssign } = this.state
       let { 
         name,
         email,
@@ -263,6 +278,23 @@ export class AdminMentorModal extends Component {
                 <button onClick={this.assignMentee}>Assign</button>
               </div>
             </div>
+            <div className='amm-match-dropdown-container'>
+              <h3>Match</h3>
+              <select 
+                name='menteeToAssign'
+                onChange={this.handleChange} 
+                className='amm-match-dropdown'
+              >
+                <option value=''>Select a Student</option>
+                { studentOptions }
+              </select>
+              <button 
+                className='amm-assign-btn' 
+                onClick={this.assignMentee} 
+                disabled={!mentee_capacity || !menteeToAssign} 
+              >Assign</button>
+            </div>
+          </div>
 
             <div className='amm-card-container'>
               <div className='amm-card amm-contact'>

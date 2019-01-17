@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import AdminPreferences from '../../containers/AdminPreferences';
-// import hollowHeart from '../../utils/assets/heart.svg';
-// import solidHeart from '../../utils/assets/solid-heart.svg';
 import { connect } from 'react-redux';
 import { setLocale, setSearch, toggleShowingMentors } from '../../actions/search-actions';
 import './AdminMentorSearch.css';
@@ -13,7 +11,6 @@ export class AdminMentorSearch extends Component {
     this.state = {
       localeSelected: '',
       search: '',
-      favClicked: false,
       allMentorsClicked: false,
       preferencesClicked: false
     }

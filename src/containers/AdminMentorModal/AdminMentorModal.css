@@ -188,6 +188,11 @@
   background-color: rgba(3, 193, 209, 1);
 }
 
+.amm-assign-btn:disabled {
+  background-color: grey;
+  color: #000;
+}
+
 .amm-modal-hide {
   display: none;
 }

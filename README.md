@@ -30,9 +30,8 @@ In this repo, you will find the code and documentation for the Mentor Match fron
 ## <a name="initial-setup"></a>Initial Setup
 Run locally:
 1. Clone the repo found here: (https://github.com/caseyhoepner/mentor_match_frontend.git)
-2.
-3.
-4.
+2. npm install
+3. npm start
 
 ## <a name="dependencies"></a>Dependencies
 
@@ -53,9 +52,7 @@ Alex Rau<br>
 Tim Fielder
 
 ## <a name="tech-stack"></a>Tech Stack
-* Node
-* JS
 * React
+* React Router
 * Redux
-
-
+* Redux Thunks

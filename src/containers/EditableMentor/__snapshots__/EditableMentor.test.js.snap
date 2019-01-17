@@ -19,6 +19,7 @@ ShallowWrapper {
         "expertise_tech": Array [
           "Angular.js",
         ],
+        "id": 3,
         "identity_preference": Array [
           "male-identifying",
         ],
@@ -37,6 +38,10 @@ ShallowWrapper {
         ],
       }
     }
+    history={Array []}
+    openEditMentor={[MockFunction]}
+    setMentorModal={[MockFunction]}
+    updateChangedMentor={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -83,7 +88,7 @@ ShallowWrapper {
         >
           Yes
           <input
-            checked={false}
+            checked={true}
             className="active"
             name="em-active"
             onChange={[Function]}
@@ -1003,7 +1008,7 @@ ShallowWrapper {
           "children": Array [
             "Yes",
             <input
-              checked={false}
+              checked={true}
               className="active"
               name="em-active"
               onChange={[Function]}
@@ -1024,7 +1029,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "checked": false,
+              "checked": true,
               "className": "active",
               "name": "em-active",
               "onChange": [Function],
@@ -4367,7 +4372,7 @@ ShallowWrapper {
           >
             Yes
             <input
-              checked={false}
+              checked={true}
               className="active"
               name="em-active"
               onChange={[Function]}
@@ -5287,7 +5292,7 @@ ShallowWrapper {
             "children": Array [
               "Yes",
               <input
-                checked={false}
+                checked={true}
                 className="active"
                 name="em-active"
                 onChange={[Function]}
@@ -5308,7 +5313,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "checked": false,
+                "checked": true,
                 "className": "active",
                 "name": "em-active",
                 "onChange": [Function],
