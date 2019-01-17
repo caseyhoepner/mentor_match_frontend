@@ -26,7 +26,7 @@ describe('AdminMentorModal', () => {
     expertise_non_tech: ['Parenting'],
     mentee_capacity: '2',
     identity_preference: ['female-identifying'],
-    meeting_location: 'Turing'
+    meeting_location: ['Turing']
   }
   let mockStudents = [
     { name: 'Casey' },
