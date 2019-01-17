@@ -303,7 +303,7 @@ export class AdminMentorModal extends Component {
 
               <div className='amm-card'>
                 <h3>Meeting Location</h3>
-                <p>{meeting_location}</p>
+                {this.getList(meeting_location)}
               </div>
 
               <div className='amm-card'>
