@@ -240,7 +240,7 @@ describe('AdminMentorModal', () => {
         expertise_non_tech: ['Parenting'],
         mentee_capacity: 1,
         identity_preference: ['female-identifying'],
-        meeting_location: 'Turing'
+        meeting_location: ['Turing']
       }
       wrapper.instance().setState({ menteeToAssign: 'Casey' })
       await wrapper.instance().assignMentee()
@@ -305,7 +305,7 @@ describe('AdminMentorModal', () => {
         expertise_non_tech: ['Parenting'],
         mentee_capacity: 2,
         identity_preference: ['female-identifying'],
-        meeting_location: 'Turing',
+        meeting_location: ['Turing'],
         mentees: [{  name: 'Alex', id: 2, active: false, matched: true  }]
       }
       wrapper.instance().getMentees()
@@ -348,7 +348,7 @@ describe('AdminMentorModal', () => {
         expertise_non_tech: ['Parenting'],
         mentee_capacity: 3,
         identity_preference: ['female-identifying'],
-        meeting_location: 'Turing'
+        meeting_location: ['Turing']
       }
       await wrapper.instance().unmatch(mockEvent, 2)
       expect(spy).toHaveBeenCalledWith(expected)

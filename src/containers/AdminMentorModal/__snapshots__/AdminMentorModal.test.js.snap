@@ -30,7 +30,9 @@ ShallowWrapper {
                 "Civic Tech",
               ],
               "matched": true,
-              "meeting_location": "Turing",
+              "meeting_location": Array [
+                "Turing",
+              ],
               "mentee_capacity": 2,
               "mentees": Array [
                 Object {
@@ -72,7 +74,9 @@ ShallowWrapper {
                 "Civic Tech",
               ],
               "matched": true,
-              "meeting_location": "Turing",
+              "meeting_location": Array [
+                "Turing",
+              ],
               "mentee_capacity": 2,
               "mentees": Array [
                 Object {
@@ -114,7 +118,9 @@ ShallowWrapper {
                 "Civic Tech",
               ],
               "matched": true,
-              "meeting_location": "Turing",
+              "meeting_location": Array [
+                "Turing",
+              ],
               "mentee_capacity": 2,
               "mentees": Array [
                 Object {
@@ -173,7 +179,9 @@ ShallowWrapper {
           "Civic Tech",
         ],
         "matched": true,
-        "meeting_location": "Turing",
+        "meeting_location": Array [
+          "Turing",
+        ],
         "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
@@ -208,7 +216,9 @@ ShallowWrapper {
           "Civic Tech",
         ],
         "matched": true,
-        "meeting_location": "Turing",
+        "meeting_location": Array [
+          "Turing",
+        ],
         "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
@@ -330,7 +340,9 @@ ShallowWrapper {
                 "Civic Tech",
               ],
               "matched": true,
-              "meeting_location": "Turing",
+              "meeting_location": Array [
+                "Turing",
+              ],
               "mentee_capacity": 2,
               "mentees": Array [
                 Object {
@@ -381,7 +393,9 @@ ShallowWrapper {
           "Civic Tech",
         ],
         "matched": true,
-        "meeting_location": "Turing",
+        "meeting_location": Array [
+          "Turing",
+        ],
         "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
@@ -417,7 +431,9 @@ ShallowWrapper {
           "Civic Tech",
         ],
         "matched": true,
-        "meeting_location": "Turing",
+        "meeting_location": Array [
+          "Turing",
+        ],
         "mentee_capacity": 2,
         "name": "Menty the Mentor",
         "pronouns": "she/her/hers",
@@ -475,348 +491,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
-          className="amm-basic-info"
-        >
-          <img
-            alt="Mentor profile"
-            className="amm-pic"
-            src={
-              Object {
-                "ReactComponent": [Function],
-                "__esModule": true,
-                "default": "amm-pic.svg",
-              }
-            }
-          />
-          <div
-            className="amm-header-info"
-          >
-            <div
-              className="amm-top-line"
-            >
-              <h1
-                className="amm-name"
-              >
-                Menty the Mentor
-              </h1>
-              <img
-                alt="Click here to exit"
-                className="amm-x"
-                name="Exit"
-                onClick={[Function]}
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "x.svg",
-                  }
-                }
-              />
-            </div>
-            <p
-              className="amm-job"
-            >
-              Head Mentor
-               @ 
-              Department of Mentors
-            </p>
-            <div
-              className="amm-bottom-line"
-            >
-              <div
-                className="amm-location-container"
-              >
-                <img
-                  alt="Matched = true"
-                  className="amm-matched"
-                  src={
-                    Object {
-                      "ReactComponent": [Function],
-                      "__esModule": true,
-                      "default": "matched-true.svg",
-                    }
-                  }
-                />
-                <p
-                  className="amm-location"
-                >
-                  Denver
-                  , 
-                  CO
-                  , 
-                  USA
-                </p>
-              </div>
-              <p
-                className="amm-pronoun"
-              >
-                (she/her/hers)
-              </p>
-            </div>
-          </div>
-        </div>,
-        <div
-          className="amm-assign-student"
-        >
-          <div
-            className="amm-bio"
-          >
-            <h3>
-              Bio
-            </h3>
-            <p>
-              I am a mentor!
-            </p>
-          </div>
-          <div>
-            <h3>
-              Current Mentees
-            </h3>
-            <div
-              className="amm-list-item-container amm-mentees"
-            >
-              <div
-                className="amm-dash-list"
-              >
-                <img
-                  alt="dash icon"
-                  className="amm-dash-icon"
-                  src={
-                    Object {
-                      "ReactComponent": [Function],
-                      "__esModule": true,
-                      "default": "right-arrow.svg",
-                    }
-                  }
-                />
-                <p
-                  className="amm-list-item"
-                >
-                  Alex
-                </p>
-              </div>
-              <button
-                onClick={[Function]}
-              >
-                Unmatch
-              </button>
-            </div>
-          </div>
-          <div
-            className="amm-match-dropdown-container"
-          >
-            <h3>
-              Match
-            </h3>
-            <select
-              className="amm-match-dropdown"
-              name="menteeToAssign"
-              onChange={[Function]}
-            >
-              <option
-                value=""
-              >
-                Select a Student
-              </option>
-              <option
-                value="Casey"
-              >
-                Casey
-              </option>
-            </select>
-            <button
-              className="amm-assign-btn"
-              disabled={true}
-              onClick={[Function]}
-            >
-              Assign
-            </button>
-          </div>
-        </div>,
-        <div
-          className="amm-card-container"
-        >
-          <div
-            className="amm-card amm-contact"
-          >
-            <h3
-              className="amm-contact-title"
-            >
-              Contact
-            </h3>
-            <div
-              className="amm-flex"
-            >
-              <h4>
-                Email:
-              </h4>
-              <p
-                className="amm-email"
-              >
-                menty@mentor.com
-              </p>
-            </div>
-            <div
-              className="amm-flex"
-            >
-              <h4>
-                Slack:
-              </h4>
-              <p
-                className="amm-slack"
-              >
-                @Menty
-              </p>
-            </div>
-          </div>
-          <div
-            className="amm-card"
-          >
-            <h3>
-              Industry Knowlegde
-            </h3>
-            <div
-              className="amm-list-item-container"
-            >
-              <img
-                alt="dash icon"
-                className="amm-dash-icon"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "right-arrow.svg",
-                  }
-                }
-              />
-              <p
-                className="amm-list-item"
-              >
-                Civic Tech
-              </p>
-            </div>
-          </div>
-          <div
-            className="amm-card"
-          >
-            <h3>
-              How I Can Help
-            </h3>
-            <div
-              className="amm-list-item-container"
-            >
-              <img
-                alt="dash icon"
-                className="amm-dash-icon"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "right-arrow.svg",
-                  }
-                }
-              />
-              <p
-                className="amm-list-item"
-              >
-                Coffee Meetings
-              </p>
-            </div>
-          </div>
-          <div
-            className="amm-card"
-          >
-            <h3>
-              Tech Expertise
-            </h3>
-            <div
-              className="amm-list-item-container"
-            >
-              <img
-                alt="dash icon"
-                className="amm-dash-icon"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "right-arrow.svg",
-                  }
-                }
-              />
-              <p
-                className="amm-list-item"
-              >
-                React.js
-              </p>
-            </div>
-          </div>
-          <div
-            className="amm-card"
-          >
-            <h3>
-              Non-Tech Expertise
-            </h3>
-            <div
-              className="amm-list-item-container"
-            >
-              <img
-                alt="dash icon"
-                className="amm-dash-icon"
-                src={
-                  Object {
-                    "ReactComponent": [Function],
-                    "__esModule": true,
-                    "default": "right-arrow.svg",
-                  }
-                }
-              />
-              <p
-                className="amm-list-item"
-              >
-                Parenting
-              </p>
-            </div>
-          </div>
-          <div
-            className="amm-card"
-          >
-            <h3>
-              Capacity
-            </h3>
-            <img
-              alt="capacity icon"
-              className="amm-capacity-icon"
-              src={
-                Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "capacity.svg",
-                }
-              }
-            />
-            <img
-              alt="capacity icon"
-              className="amm-capacity-icon"
-              src={
-                Object {
-                  "ReactComponent": [Function],
-                  "__esModule": true,
-                  "default": "capacity.svg",
-                }
-              }
-            />
-          </div>
-          <div
-            className="amm-card"
-          >
-            <h3>
-              Meeting Location
-            </h3>
-            <p>
-              Turing
-            </p>
-          </div>
+        <div>
           <div
             className="amm-basic-info"
           >
@@ -915,6 +590,35 @@ ShallowWrapper {
               <h3>
                 Current Mentees
               </h3>
+              <div
+                className="amm-list-item-container amm-mentees"
+              >
+                <div
+                  className="amm-dash-list"
+                >
+                  <img
+                    alt="dash icon"
+                    className="amm-dash-icon"
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "right-arrow.svg",
+                      }
+                    }
+                  />
+                  <p
+                    className="amm-list-item"
+                  >
+                    Alex
+                  </p>
+                </div>
+                <button
+                  onClick={[Function]}
+                >
+                  Unmatch
+                </button>
+              </div>
             </div>
             <div
               className="amm-match-dropdown-container"
@@ -932,8 +636,15 @@ ShallowWrapper {
                 >
                   Select a Student
                 </option>
+                <option
+                  value="Casey"
+                >
+                  Casey
+                </option>
               </select>
               <button
+                className="amm-assign-btn"
+                disabled={true}
                 onClick={[Function]}
               >
                 Assign
@@ -1182,51 +893,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="amm-bio"
-            >
-              <h3>
-                Bio
-              </h3>
-              <p>
-                I am a mentor!
-              </p>
-            </div>,
-            <div>
-              <h3>
-                Current Mentees
-              </h3>
-              <div
-                className="amm-list-item-container amm-mentees"
-              >
-                <div
-                  className="amm-dash-list"
-                >
-                  <img
-                    alt="dash icon"
-                    className="amm-dash-icon"
-                    src={
-                      Object {
-                        "ReactComponent": [Function],
-                        "__esModule": true,
-                        "default": "right-arrow.svg",
-                      }
-                    }
-                  />
-                  <p
-                    className="amm-list-item"
-                  >
-                    Alex
-                  </p>
-                </div>
-                <button
-                  onClick={[Function]}
-                >
-                  Unmatch
-                </button>
-              </div>
-            </div>,
-            <div
-              className="amm-match-dropdown-container"
+              className="amm-basic-info"
             >
               <img
                 alt="Mentor profile"
@@ -1245,21 +912,66 @@ ShallowWrapper {
                 <div
                   className="amm-top-line"
                 >
-                  Select a Student
-                </option>
-                <option
-                  value="Casey"
+                  <h1
+                    className="amm-name"
+                  >
+                    Menty the Mentor
+                  </h1>
+                  <img
+                    alt="Click here to exit"
+                    className="amm-x"
+                    name="Exit"
+                    onClick={[Function]}
+                    src={
+                      Object {
+                        "ReactComponent": [Function],
+                        "__esModule": true,
+                        "default": "x.svg",
+                      }
+                    }
+                  />
+                </div>
+                <p
+                  className="amm-job"
                 >
-                  Casey
-                </option>
-              </select>
-              <button
-                className="amm-assign-btn"
-                disabled={true}
-                onClick={[Function]}
-              >
-                Assign
-              </button>
+                  Head Mentor
+                   @ 
+                  Department of Mentors
+                </p>
+                <div
+                  className="amm-bottom-line"
+                >
+                  <div
+                    className="amm-location-container"
+                  >
+                    <img
+                      alt="Matched = true"
+                      className="amm-matched"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "matched-true.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-location"
+                    >
+                      Denver
+                      , 
+                      CO
+                      , 
+                      USA
+                    </p>
+                  </div>
+                  <p
+                    className="amm-pronoun"
+                  >
+                    (she/her/hers)
+                  </p>
+                </div>
+              </div>
             </div>,
             <div
               className="amm-assign-student"
@@ -1277,173 +989,40 @@ ShallowWrapper {
               <div>
                 <h3>
                   Current Mentees
-                </h3>,
-                Array [
+                </h3>
+                <div
+                  className="amm-list-item-container amm-mentees"
+                >
                   <div
-                    className="amm-list-item-container amm-mentees"
+                    className="amm-dash-list"
                   >
-                    <div
-                      className="amm-dash-list"
-                    >
-                      <img
-                        alt="dash icon"
-                        className="amm-dash-icon"
-                        src={
-                          Object {
-                            "ReactComponent": [Function],
-                            "__esModule": true,
-                            "default": "right-arrow.svg",
-                          }
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
                         }
-                      />
-                      <p
-                        className="amm-list-item"
-                      >
-                        Alex
-                      </p>
-                    </div>
-                    <button
-                      onClick={[Function]}
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
                     >
-                      Unmatch
-                    </button>
-                  </div>,
-                ],
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Current Mentees",
-                },
-                "ref": null,
-                "rendered": "Current Mentees",
-                "type": "h3",
-              },
-              Object {
-                "instance": null,
-                "key": "NaN",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <div
-                      className="amm-dash-list"
-                    >
-                      <img
-                        alt="dash icon"
-                        className="amm-dash-icon"
-                        src={
-                          Object {
-                            "ReactComponent": [Function],
-                            "__esModule": true,
-                            "default": "right-arrow.svg",
-                          }
-                        }
-                      />
-                      <p
-                        className="amm-list-item"
-                      >
-                        Alex
-                      </p>
-                    </div>,
-                    <button
-                      onClick={[Function]}
-                    >
-                      Unmatch
-                    </button>,
-                  ],
-                  "className": "amm-list-item-container amm-mentees",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        <img
-                          alt="dash icon"
-                          className="amm-dash-icon"
-                          src={
-                            Object {
-                              "ReactComponent": [Function],
-                              "__esModule": true,
-                              "default": "right-arrow.svg",
-                            }
-                          }
-                        />,
-                        <p
-                          className="amm-list-item"
-                        >
-                          Alex
-                        </p>,
-                      ],
-                      "className": "amm-dash-list",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "alt": "dash icon",
-                          "className": "amm-dash-icon",
-                          "src": Object {
-                            "ReactComponent": [Function],
-                            "__esModule": true,
-                            "default": "right-arrow.svg",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "img",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Alex",
-                          "className": "amm-list-item",
-                        },
-                        "ref": null,
-                        "rendered": "Alex",
-                        "type": "p",
-                      },
-                    ],
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Unmatch",
-                      "name": undefined,
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": "Unmatch",
-                    "type": "button",
-                  },
-                ],
-                "type": "div",
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
+                      Alex
+                    </p>
+                  </div>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Unmatch
+                  </button>
+                </div>
+              </div>
+              <div
+                className="amm-match-dropdown-container"
+              >
                 <h3>
                   Match
                 </h3>
@@ -1462,110 +1041,16 @@ ShallowWrapper {
                   >
                     Casey
                   </option>
-                </select>,
+                </select>
                 <button
                   className="amm-assign-btn"
                   disabled={true}
                   onClick={[Function]}
                 >
                   Assign
-                </button>,
-              ],
-              "className": "amm-match-dropdown-container",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Match",
-                },
-                "ref": null,
-                "rendered": "Match",
-                "type": "h3",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <option
-                      value=""
-                    >
-                      Select a Student
-                    </option>,
-                    Array [
-                      <option
-                        value="Casey"
-                      >
-                        Casey
-                      </option>,
-                      undefined,
-                    ],
-                  ],
-                  "className": "amm-match-dropdown",
-                  "name": "menteeToAssign",
-                  "onChange": [Function],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Select a Student",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": "Select a Student",
-                    "type": "option",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": "0",
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Casey",
-                      "value": "Casey",
-                    },
-                    "ref": null,
-                    "rendered": "Casey",
-                    "type": "option",
-                  },
-                  undefined,
-                ],
-                "type": "select",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Assign",
-                  "className": "amm-assign-btn",
-                  "disabled": true,
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "Assign",
-                "type": "button",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
+                </button>
+              </div>
+            </div>,
             <div
               className="amm-card-container"
             >
@@ -2207,6 +1692,35 @@ ShallowWrapper {
                   <h3>
                     Current Mentees
                   </h3>
+                  <div
+                    className="amm-list-item-container amm-mentees"
+                  >
+                    <div
+                      className="amm-dash-list"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Alex
+                      </p>
+                    </div>
+                    <button
+                      onClick={[Function]}
+                    >
+                      Unmatch
+                    </button>
+                  </div>
                 </div>,
                 <div
                   className="amm-match-dropdown-container"
@@ -2224,8 +1738,15 @@ ShallowWrapper {
                     >
                       Select a Student
                     </option>
+                    <option
+                      value="Casey"
+                    >
+                      Casey
+                    </option>
                   </select>
                   <button
+                    className="amm-assign-btn"
+                    disabled={true}
                     onClick={[Function]}
                   >
                     Assign
@@ -2287,7 +1808,37 @@ ShallowWrapper {
                     <h3>
                       Current Mentees
                     </h3>,
-                    Array [],
+                    Array [
+                      <div
+                        className="amm-list-item-container amm-mentees"
+                      >
+                        <div
+                          className="amm-dash-list"
+                        >
+                          <img
+                            alt="dash icon"
+                            className="amm-dash-icon"
+                            src={
+                              Object {
+                                "ReactComponent": [Function],
+                                "__esModule": true,
+                                "default": "right-arrow.svg",
+                              }
+                            }
+                          />
+                          <p
+                            className="amm-list-item"
+                          >
+                            Alex
+                          </p>
+                        </div>
+                        <button
+                          onClick={[Function]}
+                        >
+                          Unmatch
+                        </button>
+                      </div>,
+                    ],
                   ],
                 },
                 "ref": null,
@@ -2302,6 +1853,117 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": "Current Mentees",
                     "type": "h3",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "NaN",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="amm-dash-list"
+                        >
+                          <img
+                            alt="dash icon"
+                            className="amm-dash-icon"
+                            src={
+                              Object {
+                                "ReactComponent": [Function],
+                                "__esModule": true,
+                                "default": "right-arrow.svg",
+                              }
+                            }
+                          />
+                          <p
+                            className="amm-list-item"
+                          >
+                            Alex
+                          </p>
+                        </div>,
+                        <button
+                          onClick={[Function]}
+                        >
+                          Unmatch
+                        </button>,
+                      ],
+                      "className": "amm-list-item-container amm-mentees",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <img
+                              alt="dash icon"
+                              className="amm-dash-icon"
+                              src={
+                                Object {
+                                  "ReactComponent": [Function],
+                                  "__esModule": true,
+                                  "default": "right-arrow.svg",
+                                }
+                              }
+                            />,
+                            <p
+                              className="amm-list-item"
+                            >
+                              Alex
+                            </p>,
+                          ],
+                          "className": "amm-dash-list",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "alt": "dash icon",
+                              "className": "amm-dash-icon",
+                              "src": Object {
+                                "ReactComponent": [Function],
+                                "__esModule": true,
+                                "default": "right-arrow.svg",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "img",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Alex",
+                              "className": "amm-list-item",
+                            },
+                            "ref": null,
+                            "rendered": "Alex",
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Unmatch",
+                          "name": undefined,
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": "Unmatch",
+                        "type": "button",
+                      },
+                    ],
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -2325,8 +1987,15 @@ ShallowWrapper {
                       >
                         Select a Student
                       </option>
+                      <option
+                        value="Casey"
+                      >
+                        Casey
+                      </option>
                     </select>,
                     <button
+                      className="amm-assign-btn"
+                      disabled={true}
                       onClick={[Function]}
                     >
                       Assign
@@ -2359,7 +2028,11 @@ ShallowWrapper {
                           Select a Student
                         </option>,
                         Array [
-                          undefined,
+                          <option
+                            value="Casey"
+                          >
+                            Casey
+                          </option>,
                           undefined,
                         ],
                       ],
@@ -2381,7 +2054,18 @@ ShallowWrapper {
                         "rendered": "Select a Student",
                         "type": "option",
                       },
-                      undefined,
+                      Object {
+                        "instance": null,
+                        "key": "0",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Casey",
+                          "value": "Casey",
+                        },
+                        "ref": null,
+                        "rendered": "Casey",
+                        "type": "option",
+                      },
                       undefined,
                     ],
                     "type": "select",
@@ -2392,6 +2076,8 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Assign",
+                      "className": "amm-assign-btn",
+                      "disabled": true,
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -3612,6 +3298,35 @@ ShallowWrapper {
                 <h3>
                   Current Mentees
                 </h3>
+                <div
+                  className="amm-list-item-container amm-mentees"
+                >
+                  <div
+                    className="amm-dash-list"
+                  >
+                    <img
+                      alt="dash icon"
+                      className="amm-dash-icon"
+                      src={
+                        Object {
+                          "ReactComponent": [Function],
+                          "__esModule": true,
+                          "default": "right-arrow.svg",
+                        }
+                      }
+                    />
+                    <p
+                      className="amm-list-item"
+                    >
+                      Alex
+                    </p>
+                  </div>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Unmatch
+                  </button>
+                </div>
               </div>
               <div
                 className="amm-match-dropdown-container"
@@ -3629,8 +3344,15 @@ ShallowWrapper {
                   >
                     Select a Student
                   </option>
+                  <option
+                    value="Casey"
+                  >
+                    Casey
+                  </option>
                 </select>
                 <button
+                  className="amm-assign-btn"
+                  disabled={true}
                   onClick={[Function]}
                 >
                   Assign
@@ -3700,30 +3422,14 @@ ShallowWrapper {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>,
-          <div
-            className="amm-assign-student"
-          >
-            <div
-              className="amm-bio"
-            >
-              <h3>
-                Bio
-              </h3>
-              <p>
-                I am a mentor!
-              </p>
-            </div>
-            <div>
-              <h3>
-                Current Mentees
-              </h3>
               <div
-                className="amm-list-item-container amm-mentees"
+                className="amm-card"
               >
+                <h3>
+                  How I Can Help
+                </h3>
                 <div
-                  className="amm-dash-list"
+                  className="amm-list-item-container"
                 >
                   <img
                     alt="dash icon"
@@ -3739,61 +3445,10 @@ ShallowWrapper {
                   <p
                     className="amm-list-item"
                   >
-                    Alex
+                    Coffee Meetings
                   </p>
                 </div>
-                <button
-                  onClick={[Function]}
-                >
-                  Unmatch
-                </button>
               </div>
-            </div>
-            <div
-              className="amm-match-dropdown-container"
-            >
-              <h3>
-                Match
-              </h3>
-              <select
-                className="amm-match-dropdown"
-                name="menteeToAssign"
-                onChange={[Function]}
-              >
-                <h3>
-                  How I Can Help
-                </h3>
-                <div
-                  className="amm-list-item-container"
-                >
-                  Select a Student
-                </option>
-                <option
-                  value="Casey"
-                >
-                  Casey
-                </option>
-              </select>
-              <button
-                className="amm-assign-btn"
-                disabled={true}
-                onClick={[Function]}
-              >
-                Assign
-              </button>
-            </div>
-          </div>,
-          <div
-            className="amm-card-container"
-          >
-            <div
-              className="amm-card amm-contact"
-            >
-              <h3
-                className="amm-contact-title"
-              >
-                Contact
-              </h3>
               <div
                 className="amm-card"
               >
@@ -4043,6 +3698,35 @@ ShallowWrapper {
                   <h3>
                     Current Mentees
                   </h3>
+                  <div
+                    className="amm-list-item-container amm-mentees"
+                  >
+                    <div
+                      className="amm-dash-list"
+                    >
+                      <img
+                        alt="dash icon"
+                        className="amm-dash-icon"
+                        src={
+                          Object {
+                            "ReactComponent": [Function],
+                            "__esModule": true,
+                            "default": "right-arrow.svg",
+                          }
+                        }
+                      />
+                      <p
+                        className="amm-list-item"
+                      >
+                        Alex
+                      </p>
+                    </div>
+                    <button
+                      onClick={[Function]}
+                    >
+                      Unmatch
+                    </button>
+                  </div>
                 </div>
                 <div
                   className="amm-match-dropdown-container"
@@ -4060,8 +3744,15 @@ ShallowWrapper {
                     >
                       Select a Student
                     </option>
+                    <option
+                      value="Casey"
+                    >
+                      Casey
+                    </option>
                   </select>
                   <button
+                    className="amm-assign-btn"
+                    disabled={true}
                     onClick={[Function]}
                   >
                     Assign
@@ -4689,146 +4380,26 @@ ShallowWrapper {
               ],
               "type": "div",
             },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="amm-bio"
-              >
-                <h3>
-                  Bio
-                </h3>
-                <p>
-                  I am a mentor!
-                </p>
-              </div>,
-              <div>
-                <h3>
-                  Current Mentees
-                </h3>
-                <div
-                  className="amm-list-item-container amm-mentees"
-                >
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
                   <div
-                    className="amm-dash-list"
+                    className="amm-bio"
                   >
-                    <img
-                      alt="dash icon"
-                      className="amm-dash-icon"
-                      src={
-                        Object {
-                          "ReactComponent": [Function],
-                          "__esModule": true,
-                          "default": "right-arrow.svg",
-                        }
-                      }
-                    />
-                    <p
-                      className="amm-list-item"
-                    >
-                      Alex
+                    <h3>
+                      Bio
+                    </h3>
+                    <p>
+                      I am a mentor!
                     </p>
-                  </div>
-                  <button
-                    onClick={[Function]}
-                  >
-                    Unmatch
-                  </button>
-                </div>
-              </div>,
-              <div
-                className="amm-match-dropdown-container"
-              >
-                <h3>
-                  Match
-                </h3>
-                <select
-                  className="amm-match-dropdown"
-                  name="menteeToAssign"
-                  onChange={[Function]}
-                >
-                  <option
-                    value=""
-                  >
-                    Select a Student
-                  </option>
-                  <option
-                    value="Casey"
-                  >
-                    Casey
-                  </option>
-                </select>
-                <button
-                  className="amm-assign-btn"
-                  disabled={true}
-                  onClick={[Function]}
-                >
-                  Assign
-                </button>
-              </div>,
-            ],
-            "className": "amm-assign-student",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h3>
-                    Bio
-                  </h3>,
-                  <p>
-                    I am a mentor!
-                  </p>,
-                ],
-                "className": "amm-bio",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Bio",
-                  },
-                  "ref": null,
-                  "rendered": "Bio",
-                  "type": "h3",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "I am a mentor!",
-                  },
-                  "ref": null,
-                  "rendered": "I am a mentor!",
-                  "type": "p",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h3>
-                    Current Mentees
-                  </h3>,
-                  Array [
+                  </div>,
+                  <div>
+                    <h3>
+                      Current Mentees
+                    </h3>
                     <div
                       className="amm-list-item-container amm-mentees"
                     >
@@ -4857,8 +4428,38 @@ ShallowWrapper {
                       >
                         Unmatch
                       </button>
-                    </div>,
-                  ],
+                    </div>
+                  </div>,
+                  <div
+                    className="amm-match-dropdown-container"
+                  >
+                    <h3>
+                      Match
+                    </h3>
+                    <select
+                      className="amm-match-dropdown"
+                      name="menteeToAssign"
+                      onChange={[Function]}
+                    >
+                      <option
+                        value=""
+                      >
+                        Select a Student
+                      </option>
+                      <option
+                        value="Casey"
+                      >
+                        Casey
+                      </option>
+                    </select>
+                    <button
+                      className="amm-assign-btn"
+                      disabled={true}
+                      onClick={[Function]}
+                    >
+                      Assign
+                    </button>
+                  </div>,
                 ],
                 "className": "amm-assign-student",
               },
@@ -4908,157 +4509,6 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "NaN",
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <div
-                        className="amm-dash-list"
-                      >
-                        <img
-                          alt="dash icon"
-                          className="amm-dash-icon"
-                          src={
-                            Object {
-                              "ReactComponent": [Function],
-                              "__esModule": true,
-                              "default": "right-arrow.svg",
-                            }
-                          }
-                        />
-                        <p
-                          className="amm-list-item"
-                        >
-                          Alex
-                        </p>
-                      </div>,
-                      <button
-                        onClick={[Function]}
-                      >
-                        Unmatch
-                      </button>,
-                    ],
-                    "className": "amm-list-item-container amm-mentees",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
-                          <img
-                            alt="dash icon"
-                            className="amm-dash-icon"
-                            src={
-                              Object {
-                                "ReactComponent": [Function],
-                                "__esModule": true,
-                                "default": "right-arrow.svg",
-                              }
-                            }
-                          />,
-                          <p
-                            className="amm-list-item"
-                          >
-                            Alex
-                          </p>,
-                        ],
-                        "className": "amm-dash-list",
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "alt": "dash icon",
-                            "className": "amm-dash-icon",
-                            "src": Object {
-                              "ReactComponent": [Function],
-                              "__esModule": true,
-                              "default": "right-arrow.svg",
-                            },
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": "img",
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": "Alex",
-                            "className": "amm-list-item",
-                          },
-                          "ref": null,
-                          "rendered": "Alex",
-                          "type": "p",
-                        },
-                      ],
-                      "type": "div",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Unmatch",
-                        "name": undefined,
-                        "onClick": [Function],
-                      },
-                      "ref": null,
-                      "rendered": "Unmatch",
-                      "type": "button",
-                    },
-                  ],
-                  "type": "div",
-                },
-              ],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h3>
-                    Match
-                  </h3>,
-                  <select
-                    className="amm-match-dropdown"
-                    name="menteeToAssign"
-                    onChange={[Function]}
-                  >
-                    <option
-                      value=""
-                    >
-                      Select a Student
-                    </option>
-                    <option
-                      value="Casey"
-                    >
-                      Casey
-                    </option>
-                  </select>,
-                  <button
-                    className="amm-assign-btn"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    Assign
-                  </button>,
-                ],
-                "className": "amm-match-dropdown-container",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
@@ -5066,7 +4516,37 @@ ShallowWrapper {
                       <h3>
                         Current Mentees
                       </h3>,
-                      Array [],
+                      Array [
+                        <div
+                          className="amm-list-item-container amm-mentees"
+                        >
+                          <div
+                            className="amm-dash-list"
+                          >
+                            <img
+                              alt="dash icon"
+                              className="amm-dash-icon"
+                              src={
+                                Object {
+                                  "ReactComponent": [Function],
+                                  "__esModule": true,
+                                  "default": "right-arrow.svg",
+                                }
+                              }
+                            />
+                            <p
+                              className="amm-list-item"
+                            >
+                              Alex
+                            </p>
+                          </div>
+                          <button
+                            onClick={[Function]}
+                          >
+                            Unmatch
+                          </button>
+                        </div>,
+                      ],
                     ],
                   },
                   "ref": null,
@@ -5081,6 +4561,117 @@ ShallowWrapper {
                       "ref": null,
                       "rendered": "Current Mentees",
                       "type": "h3",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "NaN",
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <div
+                            className="amm-dash-list"
+                          >
+                            <img
+                              alt="dash icon"
+                              className="amm-dash-icon"
+                              src={
+                                Object {
+                                  "ReactComponent": [Function],
+                                  "__esModule": true,
+                                  "default": "right-arrow.svg",
+                                }
+                              }
+                            />
+                            <p
+                              className="amm-list-item"
+                            >
+                              Alex
+                            </p>
+                          </div>,
+                          <button
+                            onClick={[Function]}
+                          >
+                            Unmatch
+                          </button>,
+                        ],
+                        "className": "amm-list-item-container amm-mentees",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <img
+                                alt="dash icon"
+                                className="amm-dash-icon"
+                                src={
+                                  Object {
+                                    "ReactComponent": [Function],
+                                    "__esModule": true,
+                                    "default": "right-arrow.svg",
+                                  }
+                                }
+                              />,
+                              <p
+                                className="amm-list-item"
+                              >
+                                Alex
+                              </p>,
+                            ],
+                            "className": "amm-dash-list",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "alt": "dash icon",
+                                "className": "amm-dash-icon",
+                                "src": Object {
+                                  "ReactComponent": [Function],
+                                  "__esModule": true,
+                                  "default": "right-arrow.svg",
+                                },
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "img",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Alex",
+                                "className": "amm-list-item",
+                              },
+                              "ref": null,
+                              "rendered": "Alex",
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Unmatch",
+                            "name": undefined,
+                            "onClick": [Function],
+                          },
+                          "ref": null,
+                          "rendered": "Unmatch",
+                          "type": "button",
+                        },
+                      ],
+                      "type": "div",
                     },
                   ],
                   "type": "div",
@@ -5099,16 +4690,24 @@ ShallowWrapper {
                         name="menteeToAssign"
                         onChange={[Function]}
                       >
-                        Select a Student
-                      </option>,
-                      Array [
+                        <option
+                          value=""
+                        >
+                          Select a Student
+                        </option>
                         <option
                           value="Casey"
                         >
                           Casey
-                        </option>,
-                        undefined,
-                      ],
+                        </option>
+                      </select>,
+                      <button
+                        className="amm-assign-btn"
+                        disabled={true}
+                        onClick={[Function]}
+                      >
+                        Assign
+                      </button>,
                     ],
                     "className": "amm-match-dropdown-container",
                   },
@@ -5137,7 +4736,11 @@ ShallowWrapper {
                             Select a Student
                           </option>,
                           Array [
-                            undefined,
+                            <option
+                              value="Casey"
+                            >
+                              Casey
+                            </option>,
                             undefined,
                           ],
                         ],
@@ -5159,7 +4762,18 @@ ShallowWrapper {
                           "rendered": "Select a Student",
                           "type": "option",
                         },
-                        undefined,
+                        Object {
+                          "instance": null,
+                          "key": "0",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Casey",
+                            "value": "Casey",
+                          },
+                          "ref": null,
+                          "rendered": "Casey",
+                          "type": "option",
+                        },
                         undefined,
                       ],
                       "type": "select",
@@ -5170,41 +4784,16 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Assign",
+                        "className": "amm-assign-btn",
+                        "disabled": true,
                         "onClick": [Function],
                       },
                       "ref": null,
                       "rendered": "Assign",
                       "type": "button",
                     },
-                    Object {
-                      "instance": null,
-                      "key": "0",
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Casey",
-                        "value": "Casey",
-                      },
-                      "ref": null,
-                      "rendered": "Casey",
-                      "type": "option",
-                    },
-                    undefined,
                   ],
-                  "type": "select",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Assign",
-                    "className": "amm-assign-btn",
-                    "disabled": true,
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Assign",
-                  "type": "button",
+                  "type": "div",
                 },
               ],
               "type": "div",

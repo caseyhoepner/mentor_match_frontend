@@ -275,26 +275,13 @@ export class AdminMentorModal extends Component {
                   <option value=''>Select a Student</option>
                   { studentOptions }
                 </select>
-                <button onClick={this.assignMentee}>Assign</button>
+                <button
+                  className='amm-assign-btn' 
+                  onClick={this.assignMentee}
+                  disabled={!mentee_capacity || !menteeToAssign} 
+                >Assign</button>
               </div>
             </div>
-            <div className='amm-match-dropdown-container'>
-              <h3>Match</h3>
-              <select 
-                name='menteeToAssign'
-                onChange={this.handleChange} 
-                className='amm-match-dropdown'
-              >
-                <option value=''>Select a Student</option>
-                { studentOptions }
-              </select>
-              <button 
-                className='amm-assign-btn' 
-                onClick={this.assignMentee} 
-                disabled={!mentee_capacity || !menteeToAssign} 
-              >Assign</button>
-            </div>
-          </div>
 
             <div className='amm-card-container'>
               <div className='amm-card amm-contact'>
