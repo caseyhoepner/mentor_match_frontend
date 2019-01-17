@@ -209,114 +209,117 @@ export class AdminMentorModal extends Component {
 
       return (
         <div className='amm-modal-show'>
-          <div className='amm-basic-info'>
-            <img
-              className='amm-pic'
-              src={require('../../utils/assets/amm-pic.svg')}
-              alt='Mentor profile'
-            />
-            <div className='amm-header-info'>
-              <div className='amm-top-line'>
-                <h1 className='amm-name'>{name}</h1>
-                <img 
-                  className='amm-x'
-                  alt='Click here to exit'
-                  name='Exit' 
-                  onClick={this.handleClick} 
-                  src={require('../../utils/assets/x.svg')}/>
+          <div>
+            <div className='amm-basic-info'>
+              <img
+                className='amm-pic'
+                src={require('../../utils/assets/amm-pic.svg')}
+                alt='Mentor profile'
+              />
+              <div className='amm-header-info'>
+                <div className='amm-top-line'>
+                  <h1 className='amm-name'>{name}</h1>
+                  <img 
+                    className='amm-x'
+                    alt='Click here to exit'
+                    name='Exit' 
+                    onClick={this.handleClick} 
+                    src={require('../../utils/assets/x.svg')}/>
+                </div>
+                <p className='amm-job'>{current_title} @ {current_employer}</p>
+                <div className='amm-bottom-line'>
+                  <div className='amm-location-container'>
+                      <img 
+                        className='amm-matched'
+                        src={require(`../../utils/assets/matched-${matched}.svg`)}
+                        alt={`Matched = ${matched}`} />
+                      <p className='amm-location'>{city}, {state}, {country}</p>
+                    </div>
+                    <p className='amm-pronoun'>{`(${pronouns})`}</p>
+                </div>
               </div>
-              <p className='amm-job'>{current_title} @ {current_employer}</p>
-              <div className='amm-bottom-line'>
-                <div className='amm-location-container'>
-                    <img 
-                      className='amm-matched'
-                      src={require(`../../utils/assets/matched-${matched}.svg`)}
-                      alt={`Matched = ${matched}`} />
-                    <p className='amm-location'>{city}, {state}, {country}</p>
+            </div>
+
+            <div className='amm-assign-student'>
+              <div className='amm-bio'>
+                <h3>Bio</h3>
+                <p>{background}</p>
+              </div>
+              <div>
+                <h3>Current Mentees</h3>
+                { mentees }
+
+              </div>
+              <div className='amm-match-dropdown-container'>
+                <h3>Match</h3>
+                <select 
+                  name='menteeToAssign'
+                  onChange={this.handleChange} 
+                  className='amm-match-dropdown'
+                >
+                  <option value=''>Select a Student</option>
+                  { studentOptions }
+                </select>
+                <button onClick={this.assignMentee}>Assign</button>
+              </div>
+            </div>
+
+            <div className='amm-card-container'>
+              <div className='amm-card amm-contact'>
+                <h3 className='amm-contact-title'>Contact</h3>
+                  <div className='amm-flex'>
+                    <h4>Email:</h4>
+                    <p className='amm-email'>{email}</p>
                   </div>
-                  <p className='amm-pronoun'>{`(${pronouns})`}</p>
+                  <div className='amm-flex'>
+                    <h4>Slack:</h4>
+                    <p className='amm-slack'>{slack_username}</p>
+                  </div>
+              </div>
+
+              <div className='amm-card'>
+                <h3>Industry Knowlegde</h3>
+                {this.getList(industries)}
+              </div>
+
+              <div className='amm-card'>
+                <h3>How I Can Help</h3>
+                {this.getList(ways_to_mentor)}
+              </div>
+              
+              <div className='amm-card'>
+                <h3>Tech Expertise</h3>
+                {this.getList(expertise_tech)}
+              </div>
+
+              <div className='amm-card'>
+                <h3>Non-Tech Expertise</h3>
+                {this.getList(expertise_non_tech)}
+              </div>
+              <div className='amm-card'>
+                <h3>Capacity</h3>
+                {this.getMenteeIcons(mentee_capacity)}
+              </div>
+
+              <div className='amm-card'>
+                <h3>Meeting Location</h3>
+                <p>{meeting_location}</p>
+              </div>
+
+              <div className='amm-card'>
+                <h3>Mentee Preferences</h3>
+                {this.getPreferencesIcons(identity_preference)}
               </div>
             </div>
           </div>
-
-          <div className='amm-assign-student'>
-            <div className='amm-bio'>
-              <h3>Bio</h3>
-              <p>{background}</p>
-            </div>
-            <div>
-              <h3>Current Mentees</h3>
-              { mentees }
-
-            </div>
-            <div className='amm-match-dropdown-container'>
-              <h3>Match</h3>
-              <select 
-                name='menteeToAssign'
-                onChange={this.handleChange} 
-                className='amm-match-dropdown'
-              >
-                <option value=''>Select a Student</option>
-                { studentOptions }
-              </select>
-              <button onClick={this.assignMentee}>Assign</button>
-            </div>
+          <div>
+            <button 
+              className='amm-edit-btn' 
+              name='Edit' 
+              onClick={this.handleClick}>
+              Edit
+            </button>
           </div>
-
-          <div className='amm-card-container'>
-            <div className='amm-card amm-contact'>
-              <h3 className='amm-contact-title'>Contact</h3>
-                <div className='amm-flex'>
-                  <h4>Email:</h4>
-                  <p className='amm-email'>{email}</p>
-                </div>
-                <div className='amm-flex'>
-                  <h4>Slack:</h4>
-                  <p className='amm-slack'>{slack_username}</p>
-                </div>
-            </div>
-
-            <div className='amm-card'>
-              <h3>Industry Knowlegde</h3>
-              {this.getList(industries)}
-            </div>
-
-            <div className='amm-card'>
-              <h3>How I Can Help</h3>
-              {this.getList(ways_to_mentor)}
-            </div>
-            
-            <div className='amm-card'>
-              <h3>Tech Expertise</h3>
-              {this.getList(expertise_tech)}
-            </div>
-
-            <div className='amm-card'>
-              <h3>Non-Tech Expertise</h3>
-              {this.getList(expertise_non_tech)}
-            </div>
-            <div className='amm-card'>
-              <h3>Capacity</h3>
-              {this.getMenteeIcons(mentee_capacity)}
-            </div>
-
-            <div className='amm-card'>
-              <h3>Meeting Location</h3>
-              <p>{meeting_location}</p>
-            </div>
-
-            <div className='amm-card'>
-              <h3>Mentee Preferences</h3>
-              {this.getPreferencesIcons(identity_preference)}
-            </div>
-          </div>
-          
-          <button 
-            className='amm-edit-btn' 
-            name='Edit' 
-            onClick={this.handleClick}>
-            Edit
-          </button>
         </div>
       )
     } else if (this.props.modalInfo && isEditable) {
