@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewStudentForm.css';
 import { postStudent } from '../../utils/api';
+import { connect } from 'react-redux';
 
 export class NewStudentForm extends Component {
   constructor() {
@@ -21,10 +22,10 @@ export class NewStudentForm extends Component {
 
   postNewStudent = async () => {
     const { location } = this.props.history;
-    const { history } = this.props;
+    const { history, token } = this.props;
 
     if (this.validateForm()) {
-      postStudent(this.state);
+      postStudent(this.state, token);
       history.push('/success', {from: location.pathname});
 
     } else {
@@ -290,4 +291,8 @@ export class NewStudentForm extends Component {
   }
 }
 
-export default NewStudentForm;
+export const mapStateToProps = (state) => ({
+  token: state.token
+})
+
+export default connect(mapStateToProps)(NewStudentForm);

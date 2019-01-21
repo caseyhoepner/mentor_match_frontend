@@ -11,14 +11,37 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import { retrieveStudents } from '../../thunks/fetchStudents';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';
+import { setToken } from '../../actions';
 import './App.css';
 
 export class App extends Component {
 
   componentDidMount = () => {
-    this.props.retrieveMentors();
-    this.props.retrieveStudents();
-    this.props.retrieveRelationships();
+    let { 
+      location, 
+      retrieveMentors, 
+      retrieveStudents, 
+      retrieveRelationships,
+      setToken
+    } = this.props
+
+    if(location.search !== '') {
+      let cleanedToken = this.cleanToken(location.search)
+      retrieveMentors(cleanedToken);
+      retrieveStudents(cleanedToken);
+      retrieveRelationships(cleanedToken);
+      setToken(cleanedToken)
+    } else {
+      return
+    }
+  }
+
+  cleanToken = (urlParam) => {
+    if(urlParam.startsWith('?token=')) {
+      return urlParam.slice(7)
+    } else {
+      return
+    }
   }
 
   render() {
@@ -45,9 +68,10 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  retrieveMentors: () => dispatch(retrieveMentors()),
-  retrieveStudents: () => dispatch(retrieveStudents()),
-  retrieveRelationships: () => dispatch(retrieveRelationships())
+  retrieveMentors: (token) => dispatch(retrieveMentors(token)),
+  retrieveStudents: (token) => dispatch(retrieveStudents(token)),
+  retrieveRelationships: (token) => dispatch(retrieveRelationships(token)),
+  setToken: (token) => dispatch(setToken(token))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

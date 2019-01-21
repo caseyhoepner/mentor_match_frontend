@@ -10,6 +10,10 @@ import uuid from 'uuid';
 
 export class AdminDashboard extends Component {
 
+  componentDidMount() {
+    console.log(this.props.location)
+  }
+
   filterBySearchTerm = () => {
     let { searchTerm, mentors } = this.props
 

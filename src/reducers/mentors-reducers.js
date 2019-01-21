@@ -64,3 +64,14 @@ export const hasErrored = (state = false, action) => {
       return state;
   }
 }
+
+export const setToken = (state = '', action) => {
+  switch(action.type) {
+
+    case 'SET_TOKEN':
+      return action.token;
+
+    default:
+      return state;
+  }
+}
