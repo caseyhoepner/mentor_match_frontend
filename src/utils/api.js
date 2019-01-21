@@ -2,13 +2,9 @@ import { cleanData, cleanRelationshipData } from './helper';
 
 //need new fetch call for landing page to fetch mentors
 
-export const fetchMentors = async (token) => {
-  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/mentors';
-  const response = await fetch(url, {
-    method: "GET",
-    headers: {"Authorization": token }
-  });
+export const fetchMentors = async () => {
+  const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
+  const response = await fetch(url);
   const mentors = await response.json();
   return cleanData(mentors);
 };
