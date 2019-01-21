@@ -67,7 +67,7 @@ export class AdminMentorModal extends Component {
     let numToChange = this.props.currentMentor.mentee_capacity - 1
     
     mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
-
+    console.log(mentorToChange)
     await patchMentor(mentorToChange, token)
     await this.props.updateChangedMentor(mentorToChange)
     await this.props.setMentorModal(mentorToChange)

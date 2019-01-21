@@ -39,6 +39,7 @@ describe('EditableMEntor', () => {
       setMentorModal={mockFunc2}
       updateChangedMentor={mockFunc3}
       history={mockHistory}
+      token={234}
     />)
   });
 
@@ -50,7 +51,7 @@ describe('EditableMEntor', () => {
     it('should fire patchMentor fetch call with current state as params', async () => {
       let spy = jest.spyOn(API, 'patchMentor')
       await wrapper.instance().patchMentor()
-      expect(spy).toHaveBeenCalledWith(mockMentor)
+      expect(spy).toHaveBeenCalledWith(mockMentor, 234)
     });
 
     it('should fire setMentorModal with the current state as params', async () => {

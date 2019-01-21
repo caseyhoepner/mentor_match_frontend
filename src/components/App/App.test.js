@@ -1,19 +1,22 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App, mapStateToProps, mapDispatchToProps } from './';
-import { BrowserRouter } from 'react-router-dom';
 
 describe('App', () => {
   let wrapper;
   let mockThunk = jest.fn()
   let mockThunk2 = jest.fn()
   let mockThunk3 = jest.fn()
+  let mockFunc4 = jest.fn()
+  let mockSearch = { search: '?token=3' }
   
   beforeEach(() => {
     wrapper = shallow(<App 
       retrieveMentors={mockThunk} 
       retrieveStudents={mockThunk2} 
       retrieveRelationships={mockThunk3} 
+      setToken={mockFunc4}
+      location={mockSearch}
     />)
   });
 
