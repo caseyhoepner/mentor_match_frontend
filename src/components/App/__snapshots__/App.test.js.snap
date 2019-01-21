@@ -4,6 +4,11 @@ exports[`App matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    location={
+      Object {
+        "search": "?token=3",
+      }
+    }
     retrieveMentors={
       [MockFunction] {
         "calls": Array [
@@ -20,7 +25,9 @@ ShallowWrapper {
     retrieveRelationships={
       [MockFunction] {
         "calls": Array [
-          Array [],
+          Array [
+            "3",
+          ],
         ],
         "results": Array [
           Object {
@@ -33,7 +40,24 @@ ShallowWrapper {
     retrieveStudents={
       [MockFunction] {
         "calls": Array [
-          Array [],
+          Array [
+            "3",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    setToken={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "3",
+          ],
         ],
         "results": Array [
           Object {

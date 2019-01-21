@@ -60,21 +60,21 @@ export class AdminMentorModal extends Component {
   }
 
   assignMentee = async () => {
-    const { makeStudentInactive, modalInfo, students } = this.props;
+    const { makeStudentInactive, modalInfo, students, token } = this.props;
     const student = this.getStudent(students);
     const mentorId = modalInfo.id;
     let mentorToChange = this.props.currentMentor
     let numToChange = this.props.currentMentor.mentee_capacity - 1
     
     mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
-
-    await patchMentor(mentorToChange)
+    console.log(mentorToChange)
+    await patchMentor(mentorToChange, token)
     await this.props.updateChangedMentor(mentorToChange)
     await this.props.setMentorModal(mentorToChange)
-    await postRelationship(student.id, mentorId);
+    await postRelationship(student.id, mentorId, token);
     await makeStudentInactive(student.id);
-    await patchStudent(student)
-    await this.props.retrieveRelationships()
+    await patchStudent(student, token)
+    await this.props.retrieveRelationships(token)
     this.setState({ mentees: this.getMentees() })
   }
 
@@ -182,14 +182,15 @@ export class AdminMentorModal extends Component {
     const relationshipId = event.target.name;
     let mentorToChange = this.props.currentMentor
     let numToChange = this.props.currentMentor.mentee_capacity + 1
+    let { token } = this.props
     
     mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
 
-    await patchMentor(mentorToChange)
+    await patchMentor(mentorToChange, token)
     await this.props.updateChangedMentor(mentorToChange)
     await this.props.setMentorModal(mentorToChange)
-    await patchRelationship(studentId, mentorId, relationshipId);
-    await this.props.retrieveRelationships()
+    await patchRelationship(studentId, mentorId, relationshipId, token);
+    await this.props.retrieveRelationships(token)
     await this.setState({ mentees: this.getMentees() })
   }
 
@@ -354,7 +355,8 @@ export const mapStateToProps = (state) => ({
   mentors: state.mentors,
   isEditable: state.isEditable,
   students: state.students,
-  relationships: state.relationships
+  relationships: state.relationships,
+  token: state.token
 });
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -363,7 +365,7 @@ export const mapDispatchToProps = (dispatch) => ({
   openEditMentor: bool => dispatch(isEditable(bool)),
   makeStudentInactive: studentId => dispatch(makeStudentInactive(studentId)),
   addModalMentees: mentees => dispatch(addModalMentees(mentees)),
-  retrieveRelationships: () => dispatch(retrieveRelationships())
+  retrieveRelationships: (token) => dispatch(retrieveRelationships(token))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal));

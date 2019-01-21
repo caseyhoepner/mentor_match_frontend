@@ -41,6 +41,7 @@ ShallowWrapper {
     history={Array []}
     openEditMentor={[MockFunction]}
     setMentorModal={[MockFunction]}
+    token={234}
     updateChangedMentor={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {

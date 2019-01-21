@@ -475,6 +475,7 @@ ShallowWrapper {
         },
       ]
     }
+    token={789}
     updateChangedMentor={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {

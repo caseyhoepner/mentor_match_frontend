@@ -85,7 +85,9 @@ export class EditableMentor extends Component {
   }
 
   patchMentor = async () => {
-    await patchMentor(this.state)
+    let { token } = this.props
+    
+    await patchMentor(this.state, token)
     await this.props.setMentorModal(this.state)
     await this.props.updateChangedMentor(this.state);
     await this.props.openEditMentor(false)
@@ -674,10 +676,14 @@ export class EditableMentor extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  token: state.token
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   openEditMentor: bool => dispatch(isEditable(bool)),
   setMentorModal: mentor => dispatch(setMentorModal(mentor)),
   updateChangedMentor: mentor => dispatch(updateChangedMentor(mentor))
 });
 
-export default withRouter(connect(null, mapDispatchToProps)(EditableMentor));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditableMentor));

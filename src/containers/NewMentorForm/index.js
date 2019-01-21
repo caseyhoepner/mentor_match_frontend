@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewMentorForm.css';
 import { postMentor } from '../../utils/api';
+import { connect } from 'react-redux';
 
 export class NewMentorForm extends Component {
   constructor() {
@@ -33,7 +34,7 @@ export class NewMentorForm extends Component {
   postNewMentor = async () => {
     const { selected1to1 } = this.state;
     const { location } = this.props.history;
-    const { history } = this.props;
+    const { history, token } = this.props;
 
     if (this.validateForm()) {
       if (selected1to1 === 'No') {
@@ -44,7 +45,7 @@ export class NewMentorForm extends Component {
           stack_preference: 'No Preference'
         })
       }
-      postMentor(this.state)
+      postMentor(this.state, token)
       history.push('/success', {from: location.pathname});
     } else {
       this.setState({ hasErrored: true })
@@ -600,4 +601,8 @@ export class NewMentorForm extends Component {
   }
 }
 
-export default NewMentorForm;
+export const mapStateToProps = (state) => ({
+  token: state.token
+})
+
+export default connect(mapStateToProps)(NewMentorForm);
