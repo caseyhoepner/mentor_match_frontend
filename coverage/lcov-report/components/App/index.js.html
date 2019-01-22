@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.67% </span>
+        <span class="strong">95.24% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/12</span>
+        <span class='fraction'>20/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>7/8</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">90% </span>
-        <span class="quiet">Lines</span>
+        <span class="quiet">Functions</span>
         <span class='fraction'>9/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/19</span>
       </div>
     </div>
   </div>
@@ -95,7 +95,38 @@
 50
 51
 52
-53</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -114,8 +145,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,7 +188,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -160,14 +208,37 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import { retrieveMentors } from '../../thunks/fetchMentors';
 import { retrieveStudents } from '../../thunks/fetchStudents';
 import { retrieveRelationships } from '../../thunks/fetchRelationships';
+import { setToken } from '../../actions';
 import './App.css';
 &nbsp;
 export class App extends Component {
 &nbsp;
   componentDidMount = () =&gt; {
-    this.props.retrieveMentors();
-    this.props.retrieveStudents();
-    this.props.retrieveRelationships();
+    let { 
+      location, 
+      retrieveMentors, 
+      retrieveStudents, 
+      retrieveRelationships,
+      setToken
+    } = this.props
+&nbsp;
+    if(location.search !== '') {
+      let cleanedToken = this.cleanToken(location.search)
+      retrieveMentors(cleanedToken);
+      retrieveStudents(cleanedToken);
+      retrieveRelationships(cleanedToken);
+      setToken(cleanedToken)
+    } else {
+      retrieveMentors();
+    }
+  }
+&nbsp;
+  cleanToken = (urlParam) =&gt; {
+    if(urlParam.startsWith('?token=')) {
+      return urlParam.slice(7)
+    } else {
+      return
+    }
   }
 &nbsp;
   render() {
@@ -194,9 +265,10 @@ export const mapStateToProps = (state) =&gt; ({
 })
 &nbsp;
 export const mapDispatchToProps = (dispatch) =&gt; ({
-  retrieveMentors: () =&gt; dispatch(retrieveMentors()),
-  retrieveStudents: () =&gt; dispatch(retrieveStudents()),
-  retrieveRelationships: () =&gt; dispatch(retrieveRelationships())
+  retrieveMentors: (token) =&gt; dispatch(retrieveMentors(token)),
+  retrieveStudents: (token) =&gt; dispatch(retrieveStudents(token)),
+  retrieveRelationships: (token) =&gt; dispatch(retrieveRelationships(token)),
+  setToken: (token) =&gt; dispatch(setToken(token))
 })
 &nbsp;
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));</pre></td></tr>
@@ -205,7 +277,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));</p
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 14 2019 12:01:41 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 22 2019 11:26:14 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

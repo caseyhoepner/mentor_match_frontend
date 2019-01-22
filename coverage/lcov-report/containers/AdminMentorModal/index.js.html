@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">99.03% </span>
+        <span class="strong">99.05% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>102/103</span>
+        <span class='fraction'>104/105</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">89.29% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>31/32</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">98.98% </span>
+        <span class="strong">99% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>97/98</span>
+        <span class='fraction'>99/100</span>
       </div>
     </div>
   </div>
@@ -408,7 +408,12 @@
 363
 364
 365
-366</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+366
+367
+368
+369
+370
+371</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -477,7 +482,7 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -505,8 +510,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">249x</span>
-<span class="cline-any cline-yes">250x</span>
+<span class="cline-any cline-yes">311x</span>
+<span class="cline-any cline-yes">312x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -592,6 +597,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -633,6 +639,9 @@
 <span class="cline-any cline-yes">62x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">62x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -764,6 +773,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -835,21 +845,21 @@ export class AdminMentorModal extends Component {
   }
 &nbsp;
   assignMentee = async () =&gt; {
-    const { makeStudentInactive, modalInfo, students } = this.props;
+    const { makeStudentInactive, modalInfo, students, token } = this.props;
     const student = this.getStudent(students);
     const mentorId = modalInfo.id;
     let mentorToChange = this.props.currentMentor
     let numToChange = this.props.currentMentor.mentee_capacity - 1
     
     mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
-&nbsp;
-    await patchMentor(mentorToChange)
+    console.log(mentorToChange)
+    await patchMentor(mentorToChange, token)
     await this.props.updateChangedMentor(mentorToChange)
     await this.props.setMentorModal(mentorToChange)
-    await postRelationship(student.id, mentorId);
+    await postRelationship(student.id, mentorId, token);
     await makeStudentInactive(student.id);
-    await patchStudent(student)
-    await this.props.retrieveRelationships()
+    await patchStudent(student, token)
+    await this.props.retrieveRelationships(token)
     this.setState({ mentees: this.getMentees() })
   }
 &nbsp;
@@ -957,14 +967,15 @@ export class AdminMentorModal extends Component {
     const relationshipId = event.target.name;
     let mentorToChange = this.props.currentMentor
     let numToChange = this.props.currentMentor.mentee_capacity + 1
+    let { token } = this.props
     
     mentorToChange = Object.assign({...mentorToChange}, { mentee_capacity: numToChange })
 &nbsp;
-    await patchMentor(mentorToChange)
+    await patchMentor(mentorToChange, token)
     await this.props.updateChangedMentor(mentorToChange)
     await this.props.setMentorModal(mentorToChange)
-    await patchRelationship(studentId, mentorId, relationshipId);
-    await this.props.retrieveRelationships()
+    await patchRelationship(studentId, mentorId, relationshipId, token);
+    await this.props.retrieveRelationships(token)
     await this.setState({ mentees: this.getMentees() })
   }
 &nbsp;
@@ -999,118 +1010,121 @@ export class AdminMentorModal extends Component {
 &nbsp;
       return (
         &lt;div className='amm-modal-show'&gt;
-          &lt;div className='amm-basic-info'&gt;
-            &lt;img
-              className='amm-pic'
-              src={require('../../utils/assets/amm-pic.svg')}
-              alt='Mentor profile'
-            /&gt;
-            &lt;div className='amm-header-info'&gt;
-              &lt;div className='amm-top-line'&gt;
-                &lt;h1 className='amm-name'&gt;{name}&lt;/h1&gt;
-                &lt;img 
-                  className='amm-x'
-                  alt='Click here to exit'
-                  name='Exit' 
-                  onClick={this.handleClick} 
-                  src={require('../../utils/assets/x.svg')}/&gt;
+          &lt;div&gt;
+            &lt;div className='amm-basic-info'&gt;
+              &lt;img
+                className='amm-pic'
+                src={require('../../utils/assets/amm-pic.svg')}
+                alt='Mentor profile'
+              /&gt;
+              &lt;div className='amm-header-info'&gt;
+                &lt;div className='amm-top-line'&gt;
+                  &lt;h1 className='amm-name'&gt;{name}&lt;/h1&gt;
+                  &lt;img 
+                    className='amm-x'
+                    alt='Click here to exit'
+                    name='Exit' 
+                    onClick={this.handleClick} 
+                    src={require('../../utils/assets/x.svg')}/&gt;
+                &lt;/div&gt;
+                &lt;p className='amm-job'&gt;{current_title} @ {current_employer}&lt;/p&gt;
+                &lt;div className='amm-bottom-line'&gt;
+                  &lt;div className='amm-location-container'&gt;
+                      &lt;img 
+                        className='amm-matched'
+                        src={require(`../../utils/assets/matched-${matched}.svg`)}
+                        alt={`Matched = ${matched}`} /&gt;
+                      &lt;p className='amm-location'&gt;{city}, {state}, {country}&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p className='amm-pronoun'&gt;{`(${pronouns})`}&lt;/p&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
-              &lt;p className='amm-job'&gt;{current_title} @ {current_employer}&lt;/p&gt;
-              &lt;div className='amm-bottom-line'&gt;
-                &lt;div className='amm-location-container'&gt;
-                    &lt;img 
-                      className='amm-matched'
-                      src={require(`../../utils/assets/matched-${matched}.svg`)}
-                      alt={`Matched = ${matched}`} /&gt;
-                    &lt;p className='amm-location'&gt;{city}, {state}, {country}&lt;/p&gt;
+            &lt;/div&gt;
+&nbsp;
+            &lt;div className='amm-assign-student'&gt;
+              &lt;div className='amm-bio'&gt;
+                &lt;h3&gt;Bio&lt;/h3&gt;
+                &lt;p&gt;{background}&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;h3&gt;Current Mentees&lt;/h3&gt;
+                { mentees }
+&nbsp;
+              &lt;/div&gt;
+              &lt;div className='amm-match-dropdown-container'&gt;
+                &lt;h3&gt;Match&lt;/h3&gt;
+                &lt;select 
+                  name='menteeToAssign'
+                  onChange={this.handleChange} 
+                  className='amm-match-dropdown'
+                &gt;
+                  &lt;option value=''&gt;Select a Student&lt;/option&gt;
+                  { studentOptions }
+                &lt;/select&gt;
+                &lt;button
+                  className='amm-assign-btn' 
+                  onClick={this.assignMentee}
+                  disabled={!mentee_capacity || !menteeToAssign} 
+                &gt;Assign&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+&nbsp;
+            &lt;div className='amm-card-container'&gt;
+              &lt;div className='amm-card amm-contact'&gt;
+                &lt;h3 className='amm-contact-title'&gt;Contact&lt;/h3&gt;
+                  &lt;div className='amm-flex'&gt;
+                    &lt;h4&gt;Email:&lt;/h4&gt;
+                    &lt;p className='amm-email'&gt;{email}&lt;/p&gt;
                   &lt;/div&gt;
-                  &lt;p className='amm-pronoun'&gt;{`(${pronouns})`}&lt;/p&gt;
+                  &lt;div className='amm-flex'&gt;
+                    &lt;h4&gt;Slack:&lt;/h4&gt;
+                    &lt;p className='amm-slack'&gt;{slack_username}&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+&nbsp;
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;Industry Knowlegde&lt;/h3&gt;
+                {this.getList(industries)}
+              &lt;/div&gt;
+&nbsp;
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;How I Can Help&lt;/h3&gt;
+                {this.getList(ways_to_mentor)}
+              &lt;/div&gt;
+              
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;Tech Expertise&lt;/h3&gt;
+                {this.getList(expertise_tech)}
+              &lt;/div&gt;
+&nbsp;
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;Non-Tech Expertise&lt;/h3&gt;
+                {this.getList(expertise_non_tech)}
+              &lt;/div&gt;
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;Capacity&lt;/h3&gt;
+                {this.getMenteeIcons(mentee_capacity)}
+              &lt;/div&gt;
+&nbsp;
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;Meeting Location&lt;/h3&gt;
+                {this.getList(meeting_location)}
+              &lt;/div&gt;
+&nbsp;
+              &lt;div className='amm-card'&gt;
+                &lt;h3&gt;Mentee Preferences&lt;/h3&gt;
+                {this.getPreferencesIcons(identity_preference)}
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-&nbsp;
-          &lt;div className='amm-assign-student'&gt;
-            &lt;div className='amm-bio'&gt;
-              &lt;h3&gt;Bio&lt;/h3&gt;
-              &lt;p&gt;{background}&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-              &lt;h3&gt;Current Mentees&lt;/h3&gt;
-              { mentees }
-&nbsp;
-            &lt;/div&gt;
-            &lt;div className='amm-match-dropdown-container'&gt;
-              &lt;h3&gt;Match&lt;/h3&gt;
-              &lt;select 
-                name='menteeToAssign'
-                onChange={this.handleChange} 
-                className='amm-match-dropdown'
-              &gt;
-                &lt;option value=''&gt;Select a Student&lt;/option&gt;
-                { studentOptions }
-              &lt;/select&gt;
-              &lt;button 
-                className='amm-assign-btn' 
-                onClick={this.assignMentee} 
-                disabled={!mentee_capacity || !menteeToAssign} 
-              &gt;Assign&lt;/button&gt;
-            &lt;/div&gt;
+          &lt;div&gt;
+            &lt;button 
+              className='amm-edit-btn' 
+              name='Edit' 
+              onClick={this.handleClick}&gt;
+              Edit
+            &lt;/button&gt;
           &lt;/div&gt;
-&nbsp;
-          &lt;div className='amm-card-container'&gt;
-            &lt;div className='amm-card amm-contact'&gt;
-              &lt;h3 className='amm-contact-title'&gt;Contact&lt;/h3&gt;
-                &lt;div className='amm-flex'&gt;
-                  &lt;h4&gt;Email:&lt;/h4&gt;
-                  &lt;p className='amm-email'&gt;{email}&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div className='amm-flex'&gt;
-                  &lt;h4&gt;Slack:&lt;/h4&gt;
-                  &lt;p className='amm-slack'&gt;{slack_username}&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-&nbsp;
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;Industry Knowlegde&lt;/h3&gt;
-              {this.getList(industries)}
-            &lt;/div&gt;
-&nbsp;
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;How I Can Help&lt;/h3&gt;
-              {this.getList(ways_to_mentor)}
-            &lt;/div&gt;
-            
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;Tech Expertise&lt;/h3&gt;
-              {this.getList(expertise_tech)}
-            &lt;/div&gt;
-&nbsp;
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;Non-Tech Expertise&lt;/h3&gt;
-              {this.getList(expertise_non_tech)}
-            &lt;/div&gt;
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;Capacity&lt;/h3&gt;
-              {this.getMenteeIcons(mentee_capacity)}
-            &lt;/div&gt;
-&nbsp;
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;Meeting Location&lt;/h3&gt;
-              &lt;p&gt;{meeting_location}&lt;/p&gt;
-            &lt;/div&gt;
-&nbsp;
-            &lt;div className='amm-card'&gt;
-              &lt;h3&gt;Mentee Preferences&lt;/h3&gt;
-              {this.getPreferencesIcons(identity_preference)}
-            &lt;/div&gt;
-          &lt;/div&gt;
-          
-          &lt;button 
-            className='amm-edit-btn' 
-            name='Edit' 
-            onClick={this.handleClick}&gt;
-            Edit
-          &lt;/button&gt;
         &lt;/div&gt;
       )
     } else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.modalInfo &amp;&amp; isEditable) {
@@ -1126,7 +1140,8 @@ export const mapStateToProps = (state) =&gt; ({
   mentors: state.mentors,
   isEditable: state.isEditable,
   students: state.students,
-  relationships: state.relationships
+  relationships: state.relationships,
+  token: state.token
 });
 &nbsp;
 export const mapDispatchToProps = (dispatch) =&gt; ({
@@ -1135,7 +1150,7 @@ export const mapDispatchToProps = (dispatch) =&gt; ({
   openEditMentor: bool =&gt; dispatch(isEditable(bool)),
   makeStudentInactive: studentId =&gt; dispatch(makeStudentInactive(studentId)),
   addModalMentees: mentees =&gt; dispatch(addModalMentees(mentees)),
-  retrieveRelationships: () =&gt; dispatch(retrieveRelationships())
+  retrieveRelationships: (token) =&gt; dispatch(retrieveRelationships(token))
 });
 &nbsp;
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMentorModal));</pre></td></tr>
@@ -1144,7 +1159,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdminMent
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 14 2019 12:01:41 GMT-0700 (MST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 22 2019 11:26:14 GMT-0700 (MST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

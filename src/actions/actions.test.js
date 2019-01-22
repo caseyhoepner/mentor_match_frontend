@@ -86,6 +86,16 @@ describe('General Action creators', () => {
     const result = GeneralActions.hasErrored(true)
     expect(result).toEqual(expected)
   });
+
+  it('should have a type of SET_TOKEN', () => {
+    const expected = {
+      type: "SET_TOKEN",
+      token: '1234ABCD'
+    }
+
+    const result = GeneralActions.setToken('1234ABCD')
+    expect(result).toEqual(expected)
+  });
 });
 
 describe('Mentor Action creators', () => {

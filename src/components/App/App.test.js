@@ -24,43 +24,73 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('mapStateToProps function', () => {
-    it('should return an object with an array of mentorsand the mentor modalInfo', () => {
-      const mockState = { 
-        mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ],
-        modalInfo: { name: 'Jo-jo', identity_preference: [ 'Veteran' ] },
-        somethingElse: 'somethingElse' 
-      }
-      const expected = { 
-        mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ],
-        modalInfo: { name: 'Jo-jo', identity_preference: [ 'Veteran' ] }
-      }
-      const mappedProps = mapStateToProps(mockState)
-      expect(mappedProps).toEqual(expected)
-    });
+  it('matches the snapshot when no token is in the location object', () => {
+    wrapper = shallow(<App 
+      retrieveMentors={mockThunk} 
+      retrieveStudents={mockThunk2} 
+      retrieveRelationships={mockThunk3} 
+      setToken={mockFunc4}
+      location={{ search: '' }}
+    />)
+    expect(wrapper).toMatchSnapshot()
   });
 
-  describe('mapDispatchToProps function', () => {
-    const mockDispatch = jest.fn()
-    let mappedProps;
-
-    beforeEach(() => {
-      mappedProps = mapDispatchToProps(mockDispatch)
+  describe('cleanToken function', () => {
+    it('should clean the token passed in', () => {
+      let mockParam = '?token=123efg'
+      let result = wrapper.instance().cleanToken(mockParam)
+      expect(result).toEqual('123efg')
     });
 
-    it('should call dispatch when retrieveMentors is called', () => {
-      mappedProps.retrieveMentors()
-      expect(mockDispatch).toHaveBeenCalled()
+    it('should return if there is not a token', () => {
+      let mockParam = '123efg'
+      let result = wrapper.instance().cleanToken(mockParam)
+      expect(result).toBeUndefined()
     });
+  });
+});
 
-    it('should call dispatch when retrieveStudents is called', () => {
-      mappedProps.retrieveStudents()
-      expect(mockDispatch).toHaveBeenCalled()
-    });
+describe('mapStateToProps function', () => {
+  it('should return an object with an array of mentorsand the mentor modalInfo', () => {
+    const mockState = { 
+      mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ],
+      modalInfo: { name: 'Jo-jo', identity_preference: [ 'Veteran' ] },
+      somethingElse: 'somethingElse' 
+    }
+    const expected = { 
+      mentors: [ { name: 'Joan', preferences: { title: 'Being Joan' } } ],
+      modalInfo: { name: 'Jo-jo', identity_preference: [ 'Veteran' ] }
+    }
+    const mappedProps = mapStateToProps(mockState)
+    expect(mappedProps).toEqual(expected)
+  });
+});
 
-    it('should call dispatch when retrieveRelationships is called', () => {
-      mappedProps.retrieveRelationships()
-      expect(mockDispatch).toHaveBeenCalled()
-    });
+describe('mapDispatchToProps function', () => {
+  const mockDispatch = jest.fn()
+  let mappedProps;
+
+  beforeEach(() => {
+    mappedProps = mapDispatchToProps(mockDispatch)
+  });
+
+  it('should call dispatch when retrieveMentors is called', () => {
+    mappedProps.retrieveMentors()
+    expect(mockDispatch).toHaveBeenCalled()
+  });
+
+  it('should call dispatch when retrieveStudents is called', () => {
+    mappedProps.retrieveStudents()
+    expect(mockDispatch).toHaveBeenCalled()
+  });
+
+  it('should call dispatch when retrieveRelationships is called', () => {
+    mappedProps.retrieveRelationships()
+    expect(mockDispatch).toHaveBeenCalled()
+  });
+
+  it('should call dispatch when setToken is called', () => {
+    mappedProps.setToken()
+    expect(mockDispatch).toHaveBeenCalled()
   });
 });

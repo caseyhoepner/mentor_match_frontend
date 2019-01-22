@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NewMentorForm } from './';
+import { NewMentorForm, mapStateToProps, mapDispatchToProps } from './';
 import * as API from '../../utils/api';
 
 describe('NewMentorForm', () => {
@@ -53,6 +53,20 @@ describe('NewMentorForm', () => {
 
   it('matches the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  describe('cleanToken function', () => {
+    it('should clean the token passed in', () => {
+      let mockParam = '?token=123efg'
+      let result = wrapper.instance().cleanToken(mockParam)
+      expect(result).toEqual('123efg')
+    });
+
+    it('should return if there is not a token', () => {
+      let mockParam = '123efg'
+      let result = wrapper.instance().cleanToken(mockParam)
+      expect(result).toBeUndefined()
+    });
   });
 
   describe('postNewMentor function', () => {
@@ -536,5 +550,33 @@ describe('NewMentorForm', () => {
       wrapper.instance().handleClick(mockClickEvent)
       expect(wrapper.state().meeting_location).toEqual(['not Turing'])
     });
+  });
+});
+
+describe('mapStateToProps function', () => {
+  it('should return an object with the current token', () => {
+    const mockState = {
+      token: '123ABC',
+      somethingElse: 'w00t!'
+    }
+    const expected = {
+      token: '123ABC'
+    }
+    const mappedProps = mapStateToProps(mockState)
+    expect(mappedProps).toEqual(expected)
+  });
+});
+
+describe('mapDispatchToProps function', () => {
+  const mockDispatch = jest.fn()
+  let mappedProps;
+
+  beforeEach(() => {
+    mappedProps = mapDispatchToProps(mockDispatch)
+  });
+
+  it('should call dispatch when setToken is fired', () => {
+    mappedProps.setToken('123efg')
+    expect(mockDispatch).toHaveBeenCalled()
   });
 });

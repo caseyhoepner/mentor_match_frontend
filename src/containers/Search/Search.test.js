@@ -62,9 +62,18 @@ describe('Search', () => {
   });
 
   describe('mapStateToProps function', () => {
-    it('should return an object with the locale currently assigned', () => {
-      const mockState = { locale: 'Denver', somethingElse: 'wooooooo' }
-      const expected = { locale: 'Denver' }
+    it('should return an object with the seach params currently assigned', () => {
+      const mockState = { 
+        locale: 'Denver',
+        searchTerm: 'booyah',
+        showingAllMentors: true, 
+        somethingElse: 'wooooooo' 
+      }
+      const expected = { 
+        locale: 'Denver',
+        searchTerm: 'booyah',
+        showingAllMentors: true 
+      }
       const mappedProps = mapStateToProps(mockState)
       expect(mappedProps).toEqual(expected)
     });
@@ -85,6 +94,11 @@ describe('Search', () => {
 
     it('should call dispatch when setSearch is called', () => {
       mappedProps.setSearch()
+      expect(mockDispatch).toHaveBeenCalled()
+    });
+
+    it('should call dispatch when toggleShowingMentors is called', () => {
+      mappedProps.toggleShowingMentors(true)
       expect(mockDispatch).toHaveBeenCalled()
     });
   });

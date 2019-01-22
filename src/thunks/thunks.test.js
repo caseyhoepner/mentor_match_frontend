@@ -30,6 +30,15 @@ describe('retriveMentors thunk', () => {
     expect(API.fetchMentors).toHaveBeenCalled()
   });
 
+  it('should fire adminFetchMentors with correct params when token is passed in', () => {
+    API.adminFetchMentors = jest.fn()
+    const thunk = retrieveMentors(12345)
+
+    thunk(mockDispatch)
+
+    expect(API.adminFetchMentors).toHaveBeenCalledWith(12345)
+  });
+
   it('should dispatch with isLoading(false) with fetch returns data', async () => {
     API.fetchMentors = jest.fn(() => Promise.resolve([ { name: 'Dan', preferences: { title: 'Being Dan' } } ]))
     const thunk = await retrieveMentors()

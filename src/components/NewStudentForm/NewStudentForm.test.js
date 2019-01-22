@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NewStudentForm } from './';
+import { NewStudentForm, mapStateToProps, mapDispatchToProps } from './';
 
 describe ('NewStudentForm', () => {
   let wrapper;
@@ -16,7 +16,21 @@ describe ('NewStudentForm', () => {
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
-  })
+  });
+
+  describe('cleanToken function', () => {
+    it('should clean the token passed in', () => {
+      let mockParam = '?token=123efg'
+      let result = wrapper.instance().cleanToken(mockParam)
+      expect(result).toEqual('123efg')
+    });
+
+    it('should return if there is not a token', () => {
+      let mockParam = '123efg'
+      let result = wrapper.instance().cleanToken(mockParam)
+      expect(result).toBeUndefined()
+    });
+  });
 
   describe('postNewStudent function', () => {
     it('should set hasErrored in state to true is the validation fails', async () => {
@@ -84,10 +98,38 @@ describe ('NewStudentForm', () => {
       expect(wrapper.state().industries[0]).toEqual('Firefighter')
     });
 
-    it('Should remove the industgry from state if it is already there', () => {
+    it('Should remove the industry from state if it is already there', () => {
       wrapper.instance().setState({ industries: [ 'Fry-cook' ] })
       wrapper.instance().checkIndustries('Fry-cook', 'industries')
       expect(wrapper.state().industries).toEqual([])
     });
+  });
+});
+
+describe('mapStateToProps function', () => {
+  it('should return an object with the current token', () => {
+    const mockState = {
+      token: '123ABC',
+      somethingElse: 'w00t!'
+    }
+    const expected = {
+      token: '123ABC'
+    }
+    const mappedProps = mapStateToProps(mockState)
+    expect(mappedProps).toEqual(expected)
+  });
+});
+
+describe('mapDispatchToProps function', () => {
+  const mockDispatch = jest.fn()
+  let mappedProps;
+
+  beforeEach(() => {
+    mappedProps = mapDispatchToProps(mockDispatch)
+  });
+
+  it('should call dispatch when setToken is fired', () => {
+    mappedProps.setToken('123efg')
+    expect(mockDispatch).toHaveBeenCalled()
   });
 });
