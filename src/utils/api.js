@@ -35,6 +35,7 @@ export const patchMentor = async (mentor, token) => {
  };
 
 export const fetchStudents = async (token) => {
+  console.log(token, 'student token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/students';
   const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
   const response = await fetch(url, {
@@ -71,6 +72,7 @@ export const patchStudent = async (student, token) => {
  };
 
 export const fetchRelationships = async (token) => {
+  console.log(token, 'relationship token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
   const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
   const response = await fetch(url, {
