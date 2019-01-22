@@ -20,6 +20,19 @@ export class NewStudentForm extends Component {
     }
   }
 
+  componentDidMount = () => {
+    let cleanedToken = this.cleanToken(location.search)
+    this.props.setToken(cleanedToken)
+  }
+
+  cleanToken = (urlParam) => {
+    if(urlParam.startsWith('?token=')) {
+      return urlParam.slice(7)
+    } else {
+      return
+    }
+  }
+
   postNewStudent = async () => {
     const { location } = this.props.history;
     const { history, token } = this.props;
@@ -295,4 +308,8 @@ export const mapStateToProps = (state) => ({
   token: state.token
 })
 
-export default connect(mapStateToProps)(NewStudentForm);
+export const mapDispatchToProps = (dispatch) => ({
+  setToken: (token) => dispatch(setToken(token))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewStudentForm);

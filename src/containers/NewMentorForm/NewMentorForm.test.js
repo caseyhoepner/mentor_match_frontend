@@ -5,6 +5,7 @@ import * as API from '../../utils/api';
 
 describe('NewMentorForm', () => {
   let wrapper;
+  let mockFunc = jest.fn()
   let mockHistory = {
     location: '/new-mentor-form',
     push: jest.fn()
@@ -43,7 +44,10 @@ describe('NewMentorForm', () => {
     }
   
   beforeEach(() => {
-    wrapper = shallow(<NewMentorForm history={mockHistory} />)
+    wrapper = shallow(<NewMentorForm 
+      history={mockHistory} 
+      setToken={mockFunc}
+    />)
   });
 
   it('matches the snapshot', () => {
