@@ -40,7 +40,7 @@ export const fetchStudents = async (token) => {
   const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
   const response = await fetch(url, {
     method: "GET",
-    headers: { "Authorization": token }
+    headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }
   });
   const students = await response.json();
   return cleanData(students);
@@ -77,7 +77,7 @@ export const fetchRelationships = async (token) => {
   const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
   const response = await fetch(url, {
     method: "GET",
-    headers: { "Authorization": token }
+    headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }
   });
   const relationships = await response.json();
   return cleanRelationshipData(relationships);
