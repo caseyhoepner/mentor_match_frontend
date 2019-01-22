@@ -24,7 +24,8 @@ export const postMentor = async (mentor, token) => {
   console.log(mentor, 'mentor')
   console.log(token, 'token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
-  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors';
+  // const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors';
+  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/mentors';
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }, 
