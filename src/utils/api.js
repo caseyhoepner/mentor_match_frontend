@@ -10,9 +10,12 @@ export const fetchMentors = async () => {
   return cleanData(mentors);
 };
 
-export const adminFetchMentors = async () => {
+export const adminFetchMentors = async (token) => {
   const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors'
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    method: "GET",
+    headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }
+  });
   const mentors = await response.json();
   return cleanData(mentors);
 }

@@ -10,7 +10,7 @@ export const retrieveMentors = (token) => {
       let mentors;
       
       if(token) {
-        mentors = await adminFetchMentors();
+        mentors = await adminFetchMentors(token);
       } else {
         mentors = await fetchMentors();
       }
