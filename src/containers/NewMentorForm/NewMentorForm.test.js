@@ -7,7 +7,7 @@ describe('NewMentorForm', () => {
   let wrapper;
   let mockFunc = jest.fn()
   let mockHistory = {
-    location: '/new-mentor-form',
+    location: { search: '/new-mentor-form?token=4' },
     push: jest.fn()
   }
   let mockState = {

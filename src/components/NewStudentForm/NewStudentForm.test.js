@@ -17,7 +17,7 @@ describe ('NewStudentForm', () => {
   describe('postNewStudent function', () => {
     it('should set hasErrored in state to true is the validation fails', async () => {
       wrapper = shallow(<NewStudentForm 
-        history={ { location: '/admin-dashboard' } } 
+        history={ { location: { search: '/admin-dashboard?token=3' } } } 
         setToken={mockFunc}
       />)
       await wrapper.instance().postNewStudent()
