@@ -8,9 +8,10 @@ ShallowWrapper {
       Object {
         "identity_preference": Array [
           "female-identifying",
+          "lgbtq+",
         ],
         "matched": true,
-        "name": "Casey",
+        "name": "Diane",
       }
     }
   />,
@@ -42,7 +43,7 @@ ShallowWrapper {
         <p
           className="amc-name"
         >
-          Casey
+          Diane
         </p>,
         <p
           className="amc-stack"
@@ -61,6 +62,18 @@ ShallowWrapper {
               }
             }
             title="female-identifying"
+          />
+          <img
+            alt="lgbtq preference indicator"
+            className="amc-pref-icon"
+            src={
+              Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "lgbtq.svg",
+              }
+            }
+            title="lgbtq"
           />
         </div>,
         <div
@@ -106,11 +119,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Casey",
+          "children": "Diane",
           "className": "amc-name",
         },
         "ref": null,
-        "rendered": "Casey",
+        "rendered": "Diane",
         "type": "p",
       },
       Object {
@@ -143,6 +156,18 @@ ShallowWrapper {
               }
               title="female-identifying"
             />,
+            <img
+              alt="lgbtq preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "lgbtq.svg",
+                }
+              }
+              title="lgbtq"
+            />,
           ],
           "className": "amc-prefs",
         },
@@ -161,6 +186,24 @@ ShallowWrapper {
                 "default": "female-identifying.svg",
               },
               "title": "female-identifying",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": "lgbtq",
+            "nodeType": "host",
+            "props": Object {
+              "alt": "lgbtq preference indicator",
+              "className": "amc-pref-icon",
+              "src": Object {
+                "ReactComponent": [Function],
+                "__esModule": true,
+                "default": "lgbtq.svg",
+              },
+              "title": "lgbtq",
             },
             "ref": null,
             "rendered": null,
@@ -231,7 +274,7 @@ ShallowWrapper {
           <p
             className="amc-name"
           >
-            Casey
+            Diane
           </p>,
           <p
             className="amc-stack"
@@ -250,6 +293,18 @@ ShallowWrapper {
                 }
               }
               title="female-identifying"
+            />
+            <img
+              alt="lgbtq preference indicator"
+              className="amc-pref-icon"
+              src={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "lgbtq.svg",
+                }
+              }
+              title="lgbtq"
             />
           </div>,
           <div
@@ -295,11 +350,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Casey",
+            "children": "Diane",
             "className": "amc-name",
           },
           "ref": null,
-          "rendered": "Casey",
+          "rendered": "Diane",
           "type": "p",
         },
         Object {
@@ -332,6 +387,18 @@ ShallowWrapper {
                 }
                 title="female-identifying"
               />,
+              <img
+                alt="lgbtq preference indicator"
+                className="amc-pref-icon"
+                src={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "lgbtq.svg",
+                  }
+                }
+                title="lgbtq"
+              />,
             ],
             "className": "amc-prefs",
           },
@@ -350,6 +417,24 @@ ShallowWrapper {
                   "default": "female-identifying.svg",
                 },
                 "title": "female-identifying",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": "lgbtq",
+              "nodeType": "host",
+              "props": Object {
+                "alt": "lgbtq preference indicator",
+                "className": "amc-pref-icon",
+                "src": Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "lgbtq.svg",
+                },
+                "title": "lgbtq",
               },
               "ref": null,
               "rendered": null,

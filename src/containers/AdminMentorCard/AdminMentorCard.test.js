@@ -5,8 +5,8 @@ import { AdminMentorCard, mapDispatchToProps } from './';
 describe('AdminMentorCard', () => {
   let wrapper;
   let mockMentor = {
-      name: 'Casey',
-      identity_preference: ['female-identifying'],
+      name: 'Diane',
+      identity_preference: ['female-identifying', 'lgbtq+'],
       matched: true
     }
   let mockFunc = jest.fn()
@@ -27,7 +27,6 @@ describe('AdminMentorCard', () => {
       expect(mockFunc).toHaveBeenCalled()
     });
   });
-
 });
 
 describe('mapDispatchToProps function', () => {

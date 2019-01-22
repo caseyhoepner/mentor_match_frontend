@@ -1,5 +1,5 @@
 import { setLocale, setSearch, toggleShowingMentors } from './search-reducers';
-import { setMentors, setMentorModal, isLoading, isEditable, hasErrored } from './mentors-reducers';
+import { setMentors, setMentorModal, isLoading, isEditable, hasErrored, setToken } from './mentors-reducers';
 import { setStudents, setRelationships } from './students-reducers';
 import { changeMentorFilters } from './preferences-reducers';
 
@@ -69,6 +69,28 @@ describe('isEditable reducer', () => {
 
     const result = isEditable(undefined, mockAction)
     expect(result).toEqual(expected)
+  });
+});
+
+describe('setToken reducer', () => {
+  it('should update state with token that is passed in', () => {
+    const mockAction = {
+      type: "SET_TOKEN",
+      token: '1234ABCD'
+    }
+    const expected = '1234ABCD'
+
+    const result = setToken(undefined, mockAction)
+    expect(result).toEqual(expected)
+  });
+
+  it('should return default state if nothing is passed in', () => {
+    const mockAction = {
+      token: '1234ABCD'
+    }
+    
+    const result = setToken(undefined, mockAction)
+    expect(result).toEqual('')
   });
 });
 

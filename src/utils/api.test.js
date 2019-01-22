@@ -113,6 +113,33 @@ describe('API fetch calls', () => {
     });
   });
 
+  describe('GET request - Mentors - admin', () => {
+    it('should call fetch', async () => {
+      window.fetch - jest.fn().mockImplementation(() => 
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(mockMentors)
+        })
+      );
+
+      await API.adminFetchMentors(20)
+      expect(window.fetch).toHaveBeenCalled()
+    });
+
+    it('should call cleanData with proper params after fetched info comes back', async () => {
+      window.fetch = jest.fn().mockImplementation(() => 
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(mockMentors)
+        })
+      );
+      let spy = jest.spyOn(Helper, 'cleanData')
+
+      await API.adminFetchMentors(20)
+      expect(spy).toHaveBeenCalledWith(mockMentors)
+    });
+  });
+
   describe('GET request - Students', () => {
     it('should call fetch', async () => {
       window.fetch = jest.fn().mockImplementation(() => 
