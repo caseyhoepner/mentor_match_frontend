@@ -3,14 +3,16 @@ import { cleanData, cleanRelationshipData } from './helper';
 //need new fetch call for landing page to fetch mentors
 
 export const fetchMentors = async () => {
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
+  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
+  const url = 'https://quiet-bastion-15603.herokuapp.com.api/vi/mentors'
   const response = await fetch(url);
   const mentors = await response.json();
   return cleanData(mentors);
 };
 
 export const postMentor = async (mentor, token) => {
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
+  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
+  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors';
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": token }, 
@@ -24,7 +26,8 @@ export const postMentor = async (mentor, token) => {
 
 export const patchMentor = async (mentor, token) => {
   //  const url = `https://mentor-match-api.herokuapp.com/api/v1/mentors/${mentor.id}`;
-   const url = `https://mentor-match-api.herokuapp.com/api/v1/admin/mentors/${mentor.id}`;
+  //  const url = `https://mentor-match-api.herokuapp.com/api/v1/admin/mentors/${mentor.id}`;
+   const url = `https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors/${mentor.id}`;
    const response = await fetch(url, {
     method: "PATCH",
      headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token },
@@ -37,7 +40,8 @@ export const patchMentor = async (mentor, token) => {
 export const fetchStudents = async (token) => {
   console.log(token, 'student token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/students';
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
+  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
+  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/students';
   const response = await fetch(url, {
     method: "GET",
     headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }
@@ -48,7 +52,8 @@ export const fetchStudents = async (token) => {
 
 export const postStudent = async (student, token) => {
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/students';
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
+  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
+  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/students';
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": token }, 
@@ -61,7 +66,8 @@ export const postStudent = async (student, token) => {
 
 export const patchStudent = async (student, token) => {
   //  const url = `https://mentor-match-api.herokuapp.com/api/v1/students/${student.id}`;
-   const url = `https://mentor-match-api.herokuapp.com/api/v1/admin/students/${student.id}`;
+  //  const url = `https://mentor-match-api.herokuapp.com/api/v1/admin/students/${student.id}`;
+   const url = `https://quiet-bastion-15603.herokuapp.com/api/v1/admin/students/${student.id}`;
    const response = await fetch(url, {
     method: "PATCH",
      headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token },
@@ -74,7 +80,8 @@ export const patchStudent = async (student, token) => {
 export const fetchRelationships = async (token) => {
   console.log(token, 'relationship token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
+  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
+  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/student_mentors';
   const response = await fetch(url, {
     method: "GET",
     headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }
@@ -85,7 +92,8 @@ export const fetchRelationships = async (token) => {
 
 export const postRelationship = async (studentId, mentorId, token) => {
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
-  const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
+  // const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
+  const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/student_mentors';
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": token }, 
@@ -101,7 +109,8 @@ export const postRelationship = async (studentId, mentorId, token) => {
 
 export const patchRelationship = async (studentId, mentorId, relationshipId, token) => {
   //  const url = `https://mentor-match-api.herokuapp.com/api/v1/student_mentors/${relationshipId}}`;
-   const url = `https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors/${relationshipId}}`;
+  //  const url = `https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors/${relationshipId}}`;
+   const url = `https://quiet-bastion-15603.herokuapp.com/api/v1/admin/student_mentors/${relationshipId}}`;
    const response = await fetch(url, {
     method: "PATCH",
      headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token },
