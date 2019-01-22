@@ -4,6 +4,16 @@ exports[`NewStudentForm should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NewStudentForm
+    history={
+      Object {
+        "location": "/admin-dashboard",
+      }
+    }
+    location={
+      Object {
+        "search": "/admin-dashboard?token=3",
+      }
+    }
     setToken={
       [MockFunction] {
         "calls": Array [

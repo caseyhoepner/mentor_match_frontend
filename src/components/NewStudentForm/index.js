@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewStudentForm.css';
 import { postStudent } from '../../utils/api';
+import { setToken } from '../../actions';
 import { connect } from 'react-redux';
 
 export class NewStudentForm extends Component {
@@ -21,7 +22,7 @@ export class NewStudentForm extends Component {
   }
 
   componentDidMount = () => {
-    let cleanedToken = this.cleanToken(location.search)
+    let cleanedToken = this.cleanToken(this.props.location.search)
     this.props.setToken(cleanedToken)
   }
 

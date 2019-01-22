@@ -7,7 +7,7 @@ describe('NewMentorForm', () => {
   let wrapper;
   let mockFunc = jest.fn()
   let mockHistory = {
-    location: { search: '/new-mentor-form?token=4' },
+    location: '/new-mentor-form',
     push: jest.fn()
   }
   let mockState = {
@@ -46,6 +46,7 @@ describe('NewMentorForm', () => {
   beforeEach(() => {
     wrapper = shallow(<NewMentorForm 
       history={mockHistory} 
+      location={{ search: '/new-mentor-form?token=4' }}
       setToken={mockFunc}
     />)
   });

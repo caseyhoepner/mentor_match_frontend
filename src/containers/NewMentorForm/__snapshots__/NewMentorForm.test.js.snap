@@ -10,6 +10,11 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
+    location={
+      Object {
+        "search": "/new-mentor-form?token=4",
+      }
+    }
     setToken={
       [MockFunction] {
         "calls": Array [
