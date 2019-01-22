@@ -4,14 +4,14 @@ import { cleanData, cleanRelationshipData } from './helper';
 
 export const fetchMentors = async () => {
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
-  const url = 'https://quiet-bastion-15603.herokuapp.com.api/vi/mentors'
+  const url = 'https://quiet-bastion-15603.herokuapp.com.api/v1/mentors'
   const response = await fetch(url);
   const mentors = await response.json();
   return cleanData(mentors);
 };
 
 export const adminFetchMentors = async () => {
-  const url = 'https://quiet-bastion-15603.herokuapp.com.api/vi/admin/mentors'
+  const url = 'https://quiet-bastion-15603.herokuapp.com.api/v1/admin/mentors'
   const response = await fetch(url);
   const mentors = await response.json();
   return cleanData(mentors);
