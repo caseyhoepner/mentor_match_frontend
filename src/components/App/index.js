@@ -27,12 +27,12 @@ export class App extends Component {
 
     if(location.search !== '') {
       let cleanedToken = this.cleanToken(location.search)
-      retrieveMentors();
+      retrieveMentors(cleanedToken);
       retrieveStudents(cleanedToken);
       retrieveRelationships(cleanedToken);
       setToken(cleanedToken)
     } else {
-      return
+      retrieveMentors();
     }
   }
 
@@ -68,7 +68,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  retrieveMentors: () => dispatch(retrieveMentors()),
+  retrieveMentors: (token) => dispatch(retrieveMentors(token)),
   retrieveStudents: (token) => dispatch(retrieveStudents(token)),
   retrieveRelationships: (token) => dispatch(retrieveRelationships(token)),
   setToken: (token) => dispatch(setToken(token))

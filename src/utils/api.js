@@ -10,6 +10,13 @@ export const fetchMentors = async () => {
   return cleanData(mentors);
 };
 
+export const adminFetchMentors = async () => {
+  const url = 'https://quiet-bastion-15603.herokuapp.com.api/vi/admin/mentors'
+  const response = await fetch(url);
+  const mentors = await response.json();
+  return cleanData(mentors);
+}
+
 export const postMentor = async (mentor, token) => {
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
   const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors';
