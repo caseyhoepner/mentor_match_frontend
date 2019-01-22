@@ -164,7 +164,7 @@ export class AdminDashboard extends Component {
   }
 
   render() {
-    let { mentors, showingAllMentors, searchTerm, mentorFilters, locale } = this.props;
+    let { mentors, showingAllMentors, searchTerm, mentorFilters, locale, token } = this.props;
     let mentorCards;
     let modal;
     let studentCards;
@@ -213,7 +213,7 @@ export class AdminDashboard extends Component {
               className='ad-turing-logo' />
             <div className='ad-nav-btn-container'>
               <NavLink
-                to='/new-student-form'
+                to={`/new-student-form?token=${token}`}
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -226,7 +226,7 @@ export class AdminDashboard extends Component {
                 </div>
               </NavLink>
               <NavLink
-                to='/new-mentor-form'
+                to={`/new-mentor-form?token=${token}`}
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -294,7 +294,8 @@ export const mapStateToProps = (state) => ({
   searchTerm: state.searchTerm,
   locale: state.locale,
   isEditable: state.isEditable,
-  students: state.students
+  students: state.students,
+  token: state.token
 })
 
 export default connect(mapStateToProps)(AdminDashboard);

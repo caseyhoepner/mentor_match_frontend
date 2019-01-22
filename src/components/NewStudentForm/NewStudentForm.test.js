@@ -4,9 +4,14 @@ import { NewStudentForm } from './';
 
 describe ('NewStudentForm', () => {
   let wrapper;
+  let mockFunc = jest.fn()
 
   beforeEach(() => {
-    wrapper = shallow(<NewStudentForm />)
+    wrapper = shallow(<NewStudentForm
+      history={ { location: '/admin-dashboard' } } 
+      location={{ search: '/admin-dashboard?token=3' }}
+      setToken={mockFunc} 
+    />)
   })
 
   it('should match the snapshot', () => {
@@ -15,7 +20,11 @@ describe ('NewStudentForm', () => {
 
   describe('postNewStudent function', () => {
     it('should set hasErrored in state to true is the validation fails', async () => {
-      wrapper = shallow(<NewStudentForm history={ { location: '/admin-dashboard' } } />)
+      wrapper = shallow(<NewStudentForm 
+        history={ { location: '/admin-dashboard' } } 
+        location={{ search: '/admin-dashboard?token=3' }}
+        setToken={mockFunc}
+      />)
       await wrapper.instance().postNewStudent()
       expect(wrapper.state().hasErrored).toEqual(true)
     });

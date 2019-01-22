@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewMentorForm.css';
 import { postMentor } from '../../utils/api';
+import { setToken } from '../../actions';
 import { connect } from 'react-redux';
 
 export class NewMentorForm extends Component {
@@ -28,6 +29,19 @@ export class NewMentorForm extends Component {
       selected1to1: 'No',
       stack_preference: 'No Preference',
       hasErrored: false
+    }
+  }
+
+  componentDidMount = () => {
+    let cleanedToken = this.cleanToken(this.props.location.search)
+    this.props.setToken(cleanedToken)
+  }
+
+  cleanToken = (urlParam) => {
+    if(urlParam.startsWith('?token=')) {
+      return urlParam.slice(7)
+    } else {
+      return
     }
   }
 
@@ -605,4 +619,8 @@ export const mapStateToProps = (state) => ({
   token: state.token
 })
 
-export default connect(mapStateToProps)(NewMentorForm);
+export const mapDispatchToProps = (dispatch) => ({
+  setToken: (token) => dispatch(setToken(token))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewMentorForm);

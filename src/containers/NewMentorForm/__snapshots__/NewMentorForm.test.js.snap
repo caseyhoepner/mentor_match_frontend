@@ -10,6 +10,26 @@ ShallowWrapper {
         "push": [MockFunction],
       }
     }
+    location={
+      Object {
+        "search": "/new-mentor-form?token=4",
+      }
+    }
+    setToken={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            undefined,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

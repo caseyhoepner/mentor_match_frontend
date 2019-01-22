@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewStudentForm.css';
 import { postStudent } from '../../utils/api';
+import { setToken } from '../../actions';
 import { connect } from 'react-redux';
 
 export class NewStudentForm extends Component {
@@ -17,6 +18,19 @@ export class NewStudentForm extends Component {
       identity_marker: [],
       stack: '',
       hasErrored: false
+    }
+  }
+
+  componentDidMount = () => {
+    let cleanedToken = this.cleanToken(this.props.location.search)
+    this.props.setToken(cleanedToken)
+  }
+
+  cleanToken = (urlParam) => {
+    if(urlParam.startsWith('?token=')) {
+      return urlParam.slice(7)
+    } else {
+      return
     }
   }
 
@@ -295,4 +309,8 @@ export const mapStateToProps = (state) => ({
   token: state.token
 })
 
-export default connect(mapStateToProps)(NewStudentForm);
+export const mapDispatchToProps = (dispatch) => ({
+  setToken: (token) => dispatch(setToken(token))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewStudentForm);
