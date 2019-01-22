@@ -12,7 +12,9 @@ ShallowWrapper {
     retrieveMentors={
       [MockFunction] {
         "calls": Array [
-          Array [],
+          Array [
+            "3",
+          ],
         ],
         "results": Array [
           Object {

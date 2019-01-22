@@ -27,7 +27,7 @@ export class App extends Component {
 
     if(location.search !== '') {
       let cleanedToken = this.cleanToken(location.search)
-      retrieveMentors(token);
+      retrieveMentors(cleanedToken);
       retrieveStudents(cleanedToken);
       retrieveRelationships(cleanedToken);
       setToken(cleanedToken)
