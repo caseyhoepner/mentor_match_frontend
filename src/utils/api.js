@@ -21,11 +21,13 @@ export const adminFetchMentors = async (token) => {
 }
 
 export const postMentor = async (mentor, token) => {
+  console.log(mentor, 'mentor')
+  console.log(token, 'token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/mentors';
   const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/mentors';
   const response = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Authorization": token }, 
+    headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }, 
     accept: "application/json",
     body: JSON.stringify(mentor)
   });
@@ -61,12 +63,14 @@ export const fetchStudents = async (token) => {
 };
 
 export const postStudent = async (student, token) => {
+  console.log(student, 'student')
+  console.log(token, 'token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/students';
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/students';
   const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/students';
   const response = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Authorization": token }, 
+    headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }, 
     accept: "application/json",
     body: JSON.stringify(student)
   });
@@ -101,12 +105,15 @@ export const fetchRelationships = async (token) => {
 };
 
 export const postRelationship = async (studentId, mentorId, token) => {
+  console.log(studentId, 'studentId')
+  console.log(mentorId, 'mentorId')
+  console.log(token, 'token')
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/student_mentors';
   // const url = 'https://mentor-match-api.herokuapp.com/api/v1/admin/student_mentors';
   const url = 'https://quiet-bastion-15603.herokuapp.com/api/v1/admin/student_mentors';
   const response = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Authorization": token }, 
+    headers: { "Content-Type": "application/json", "Accept": "application/json", "Authorization": token }, 
     accept: "application/json",
     body: JSON.stringify({
       student_id: studentId,
