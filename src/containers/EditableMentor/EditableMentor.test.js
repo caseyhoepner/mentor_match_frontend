@@ -99,6 +99,13 @@ describe('EditableMEntor', () => {
       expect(wrapper.state().city).toEqual('Albuquerque')
     });
   });
+  
+  describe('exitEdit function', () => {
+    it('should fire the openEditMentor reducer with correct params', () => {
+      wrapper.instance().exitEdit()
+      expect(mockFunc).toHaveBeenCalledWith(false)
+    });
+  });
 
   describe('checkIndustries function', () => {
     it('should add the checkedItem to state if it is not already there', () => {
