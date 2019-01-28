@@ -106,6 +106,11 @@ export class EditableMentor extends Component {
     this.setState({ [name]: value });
   }
 
+  exitEdit = () => {
+    this.props.openEditMentor(false)
+    this.props.history.push('/admin-dashboard')
+  }
+
   handleClick = (event) => {
     const checkedItem = event.target.parentNode.innerText;
     const stateKey = event.target.parentNode.getAttribute('data-name');
@@ -167,8 +172,13 @@ export class EditableMentor extends Component {
     
     return (
       <div className='em-container'>
-      <h1 className='em-title'>Edit Mentor</h1>
-
+        <div className='em-title-box'>
+          <h1 className='em-title'>Edit Mentor</h1>
+          <button 
+            className='em-exit-btn' 
+            onClick={this.exitEdit}
+          >X</button>
+        </div>
         <h2 className='em-question'>Active?</h2>
         <label className="em-radio-container-1">No
           <input 

@@ -58,11 +58,21 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
-          className="em-title"
+        <div
+          className="em-title-box"
         >
-          Edit Mentor
-        </h1>,
+          <h1
+            className="em-title"
+          >
+            Edit Mentor
+          </h1>
+          <button
+            className="em-exit-btn"
+            onClick={[Function]}
+          >
+            X
+          </button>
+        </div>,
         <h2
           className="em-question"
         >
@@ -928,12 +938,50 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Edit Mentor",
-          "className": "em-title",
+          "children": Array [
+            <h1
+              className="em-title"
+            >
+              Edit Mentor
+            </h1>,
+            <button
+              className="em-exit-btn"
+              onClick={[Function]}
+            >
+              X
+            </button>,
+          ],
+          "className": "em-title-box",
         },
         "ref": null,
-        "rendered": "Edit Mentor",
-        "type": "h1",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Edit Mentor",
+              "className": "em-title",
+            },
+            "ref": null,
+            "rendered": "Edit Mentor",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "X",
+              "className": "em-exit-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "X",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -4342,11 +4390,21 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
-            className="em-title"
+          <div
+            className="em-title-box"
           >
-            Edit Mentor
-          </h1>,
+            <h1
+              className="em-title"
+            >
+              Edit Mentor
+            </h1>
+            <button
+              className="em-exit-btn"
+              onClick={[Function]}
+            >
+              X
+            </button>
+          </div>,
           <h2
             className="em-question"
           >
@@ -5212,12 +5270,50 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Edit Mentor",
-            "className": "em-title",
+            "children": Array [
+              <h1
+                className="em-title"
+              >
+                Edit Mentor
+              </h1>,
+              <button
+                className="em-exit-btn"
+                onClick={[Function]}
+              >
+                X
+              </button>,
+            ],
+            "className": "em-title-box",
           },
           "ref": null,
-          "rendered": "Edit Mentor",
-          "type": "h1",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Edit Mentor",
+                "className": "em-title",
+              },
+              "ref": null,
+              "rendered": "Edit Mentor",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "X",
+                "className": "em-exit-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "X",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,

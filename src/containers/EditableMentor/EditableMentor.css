@@ -10,8 +10,34 @@
   padding: 3%;
 }
 
+.em-title-box {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .em-title {
-  text-align: center;
+  /* text-align: center; */
+  margin: auto;
+}
+
+.em-exit-btn {
+  background-color: #fff;
+  color: #77CBD8;
+  border: none;
+  font-size: 1.5em;
+  height: 40px;
+  padding: 0;
+  width: 40px;
+}
+
+.em-exit-btn:active {
+  background-color: #77CBD8;
+  color: #fff;
+}
+
+.em-exit-btn:hover {
+  cursor: pointer;
 }
 
 .em-question {
