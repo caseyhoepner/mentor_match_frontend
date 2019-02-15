@@ -10,9 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Demo Videos
 
-![alt tag](https://github.com/caseyhoepner/mentor_match_frontend/blob/add-videos/src/utils/assets/MMAdminVideo.mov "Demo of Admin functionality")
-
-![alt tag](https://github.com/caseyhoepner/mentor_match_frontend/blob/add-videos/src/utils/assets/MMMentorVideo.mov "Demo of Mentor functionality")
+(Coming Soon)
 
 # Mentor Match
 
